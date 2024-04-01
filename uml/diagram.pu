@@ -1,0 +1,5 @@
+@startuml HelloWorld
+    skinparam style strictuml
+    skinparam SequenceMessageAlignment center
+    A -> B : Hello
+@enduml
