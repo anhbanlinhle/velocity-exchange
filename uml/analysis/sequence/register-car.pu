@@ -1,0 +1,42 @@
+@startuml Register car for auction
+hide footbox
+
+actor ":Seller" as seller
+boundary ":RegisterAuctionForm" as form
+control ":AuctionController" as controller
+entity ":Car" as car
+entity ":Auction" as auction
+
+autonumber
+autoactivate on
+
+seller -> form : // request to register auction()
+form -> controller : // request to register auction()
+controller -> car : // get car()
+car --> controller : car list
+controller --> form : car list
+form --> seller : display register form
+seller -> form : // enter information()
+form -> form : // validate information()
+
+alt valid information
+  form --> seller : display payment information
+  ref over seller, form : Make payment
+  alt payment successful
+    form -> controller : // submit information()
+    controller -> auction : // create approval auction request()
+    auction --> controller : request created
+    controller --> form : request created
+    form --> seller : request created
+  else payment failed
+    autonumber 10.1
+    form --> seller : payment failed message
+  end
+else missing information
+  autonumber 9.1
+  form --> seller : missing information message
+else invalid information
+  form --> seller : invalid information message
+
+end
+@enduml

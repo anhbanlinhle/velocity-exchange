@@ -1,0 +1,30 @@
+@startuml Create auction session
+hide footbox
+actor ":Seller" as seller
+boundary ":CreateAuctionView" as view
+control ":AuctionController" as controller
+entity ":Auction" as auction
+
+autonumber
+
+activate view
+  seller -> view: // enter information()
+  view -> view: // validate information()
+  alt valid information
+    view -> controller ++: // create auction()
+    controller -> auction ++: // create auction()
+    auction --> controller --: auction created
+    controller --> view --: auction created
+    view --> seller: auction created
+
+
+else missing information
+    autonumber 3.1
+    view --> seller: missing information
+else invalid information
+  view --> seller: invalid information
+end
+deactivate view
+
+
+@enduml

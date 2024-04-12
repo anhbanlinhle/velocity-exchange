@@ -1,0 +1,25 @@
+@startuml Participate in the auction
+hide footbox
+
+actor ":Customer" as customer
+boundary ":AuctionView" as view
+control ":AuctionController" as controller
+entity ":Auction" as auction
+
+autonumber
+
+activate view
+customer -> view: // request participate()
+view -> controller++: // participate()
+controller -> auction++: // participate()
+auction --> controller--: participate successfully
+controller --> view--: participate successfully
+view --> customer: participate successfully
+
+deactivate view
+
+ref over customer, view, controller, auction
+  Place bid
+end ref
+
+@enduml

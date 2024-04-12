@@ -1,0 +1,32 @@
+@startuml Cancel registration to participate in the auction
+hide footbox
+
+actor ":Customer" as customer
+boundary ":AuctionView" as view
+control ":AuctionController" as auctionController
+control ":PaymentController" as paymentController
+entity ":Payment" as payment
+boundary ":BankingSystemBoundary" as bankBoundary
+actor ":BankingSystem" as bank
+entity ":Auction" as auction
+
+autonumber
+
+customer -> view: // cancel registration()
+activate view
+view -> auctionController ++: // cancel registration()
+auctionController -> paymentController ++: // refund()
+paymentController -> payment ++: // get payment()
+payment --> paymentController --: payment
+paymentController -> bankBoundary ++: // refund()
+bankBoundary -> bank ++: // refund()
+bank --> bankBoundary --: refund success
+bankBoundary --> paymentController --: refund success
+paymentController --> auctionController --: refund success
+auctionController --> auction ++ : // cancel registration()
+auction --> auctionController --: cancel registration success
+auctionController --> view --: cancel registration success
+view --> customer --: display cancel \nregistration success
+
+
+@enduml

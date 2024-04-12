@@ -1,0 +1,18 @@
+@startuml View hosted auction
+hide footbox
+actor ":Seller" as seller
+boundary ":AuctionListView" as view
+control ":AuctionController" as controller
+entity ":Auction" as auction
+
+autonumber
+autoactivate on
+
+seller -> view : // view hosted auction()
+view -> controller : // get hosted auction()
+controller -> auction : // get hosted auction()
+auction --> controller : hosted auction
+controller --> view : hosted auction
+view --> seller : display hosted auction
+ref over seller, view, controller, auction : View auction information,
+@enduml

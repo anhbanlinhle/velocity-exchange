@@ -1,0 +1,17 @@
+@startuml View registered auction
+hide footbox
+actor ":Customer" as customer
+boundary ":AuctionListView" as view
+control ":AuctionListController" as controller
+entity ":Auction" as auction
+
+autonumber
+autoactivate on
+
+customer -> view : // view registered auction()
+view -> controller : // get registered auction()
+controller -> auction : // get registered auction()
+auction --> controller : registered auction
+controller --> view : registered auction
+view --> customer : display registered auction
+@enduml
