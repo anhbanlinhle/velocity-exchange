@@ -1,4 +1,4 @@
-@startuml View registered auction
+@startuml view_registered_auction
 hide footbox
 actor ":Customer" as customer
 boundary ":AuctionListView" as view

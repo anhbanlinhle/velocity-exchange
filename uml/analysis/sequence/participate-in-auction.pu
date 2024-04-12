@@ -1,4 +1,4 @@
-@startuml Participate in the auction
+@startuml participate_in_auction
 hide footbox
 
 actor ":Customer" as customer

@@ -1,4 +1,4 @@
-@startuml Create auction session
+@startuml create_auction
 hide footbox
 actor ":Seller" as seller
 boundary ":CreateAuctionView" as view

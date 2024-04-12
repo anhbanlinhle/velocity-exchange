@@ -1,4 +1,4 @@
-@startuml Register car for auction
+@startuml register_car
 hide footbox
 
 actor ":Seller" as seller

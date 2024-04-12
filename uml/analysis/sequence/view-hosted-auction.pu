@@ -1,4 +1,4 @@
-@startuml View hosted auction
+@startuml view_hosted_auction
 hide footbox
 actor ":Seller" as seller
 boundary ":AuctionListView" as view
