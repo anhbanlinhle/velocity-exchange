@@ -1,0 +1,62 @@
+@startuml
+hide footbox
+
+autonumber
+
+actor "::User" as User
+boundary "::PaymentInformationView" as PaymentInformationView
+control "::PaymentController" as PaymentController
+entity "::PaymentInformation" as PaymentInformation
+boundary "::BankingSystemBoundary" as BankingSystemBoundary
+actor "::BankingSystem" as BankingSystem
+
+activate User
+  User -> PaymentInformationView : // update current payment method()
+  activate PaymentInformationView
+    PaymentInformationView -> PaymentController : // update payment method()
+    activate PaymentController
+      PaymentController --> PaymentInformationView: // payment method form()
+    deactivate PaymentController
+    PaymentInformationView --> User: // display payment method form()
+  deactivate PaymentInformationView
+  User -> PaymentInformationView: // fill payment information()
+  activate PaymentInformationView
+    PaymentInformationView -> PaymentController: // payment information()
+    activate PaymentController
+      PaymentController --> BankingSystemBoundary: // authenticate information()
+      activate BankingSystemBoundary
+        BankingSystemBoundary --> BankingSystem: // authenticate request()
+        activate BankingSystem
+          BankingSystem --> BankingSystemBoundary: success authentication
+        deactivate BankingSystem
+        BankingSystemBoundary --> PaymentController: success authentication
+      deactivate BankingSystemBoundary
+      PaymentController -> PaymentInformation: // store new \npayment information()
+      activate PaymentInformation
+        PaymentInformation --> PaymentController: new payment information
+      deactivate PaymentInformation
+      PaymentController --> PaymentInformationView: new payment information
+    deactivate PaymentController
+    PaymentInformationView --> User: display new payment information
+  deactivate PaymentInformationView
+deactivate User
+
+alt Invalid information
+  autonumber 9.1
+  BankingSystem --> BankingSystemBoundary: fail authentication
+  autonumber inc A
+  activate BankingSystemBoundary
+    BankingSystemBoundary --> PaymentController: fail authentication
+    autonumber inc A
+  deactivate BankingSystemBoundary
+  activate PaymentController
+    PaymentController --> PaymentInformationView: error message
+    autonumber inc A
+  deactivate PaymentController
+  activate PaymentInformationView
+    PaymentInformationView --> User: display error
+    autonumber inc A
+  deactivate PaymentInformationView
+end
+
+@enduml
