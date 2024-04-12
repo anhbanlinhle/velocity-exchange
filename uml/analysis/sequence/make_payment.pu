@@ -1,7 +1,7 @@
 @startuml
 hide footbox
 
-actor "::Customer, Seller, \nBid Winner" as User
+actor "::User" as User
 boundary "::PaymentView" as PaymentView
 control "::PaymentController" as PaymentController
 entity "::Payment" as Payment
