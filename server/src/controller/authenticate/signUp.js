@@ -17,7 +17,6 @@ let signUp = async (req, res) => {
   try {
     let [mailCheck, dump1] = await pool.query('select * from account where mail = ?', [email])
     if (mailCheck.length > 0) {
-      console.log(mailCheck);
       return res.status(409).send({ErrorCode: 'ER_EMAIL_ALREADY_REGISTERED'})
     }
 
