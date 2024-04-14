@@ -1,0 +1,64 @@
+@startuml
+hide footbox
+
+autonumber
+
+actor ":Admin" as Admin
+boundary ":PendingRequestsView" as PendingRequestsView
+control ":VerificationRequest\nController" as VerificationRequestController
+entity ":PendingRequests" as PendingRequests
+
+activate Admin
+  Admin -> PendingRequestsView: // view pending requests()
+  activate PendingRequestsView
+    PendingRequestsView -> VerificationRequestController: // get pending requests()
+    activate VerificationRequestController
+      VerificationRequestController -> PendingRequests: // query requests()
+        activate PendingRequests
+        PendingRequests --> VerificationRequestController: query results
+        deactivate PendingRequests
+      VerificationRequestController --> PendingRequestsView: pending requests
+    deactivate VerificationRequestController
+    PendingRequestsView --> Admin: display pending requests
+  deactivate PendingRequestsView
+  Admin -> PendingRequestsView: // select specific request()
+  activate PendingRequestsView
+    PendingRequestsView -> VerificationRequestController: // get specific request()
+    activate VerificationRequestController
+      VerificationRequestController -> PendingRequests: // query specific request()
+        activate PendingRequests
+        PendingRequests --> VerificationRequestController: query results
+        deactivate PendingRequests
+      VerificationRequestController --> PendingRequestsView: specific request
+    deactivate VerificationRequestController
+    PendingRequestsView --> Admin: display specific request
+  deactivate PendingRequestsView
+  Admin -> PendingRequestsView: // update request status()
+  activate PendingRequestsView
+    PendingRequestsView -> VerificationRequestController: // update command()
+    activate VerificationRequestController
+      VerificationRequestController -> PendingRequests: // attempt update()
+        activate PendingRequests
+        PendingRequests --> VerificationRequestController: update success
+        deactivate PendingRequests
+      VerificationRequestController --> PendingRequestsView: updated results
+    deactivate VerificationRequestController
+    PendingRequestsView --> Admin: display updated request status
+  deactivate PendingRequestsView
+deactivate Admin
+
+alt Invalid status
+  autonumber 16.1
+  PendingRequests --> VerificationRequestController: invalid status
+  autonumber inc A
+  activate VerificationRequestController
+    VerificationRequestController --> PendingRequestsView: error message
+    autonumber inc A
+  deactivate VerificationRequestController
+  activate PendingRequestsView
+    PendingRequestsView --> Admin: display error
+    autonumber inc A
+  deactivate PendingRequestsView
+end
+
+@enduml

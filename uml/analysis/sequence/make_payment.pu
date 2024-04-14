@@ -1,0 +1,137 @@
+@startuml
+hide footbox
+
+actor ":User" as User
+boundary ":PaymentView" as PaymentView
+control ":PaymentController" as PaymentController
+entity ":Payment" as Payment
+boundary  ":BankingSystemBoundary" as BankingSystemBoundary
+actor ":Banking System" as BankingSystem
+
+autonumber
+
+activate User
+  User -> PaymentView: // initiate payment action()
+  activate PaymentView
+    PaymentView -> PaymentController: // initiate payment action()
+    activate PaymentController
+      PaymentController --> PaymentView: display payment details
+    deactivate PaymentController
+    PaymentView --> User: display payment details
+  deactivate PaymentView
+  
+  User -> PaymentView: // make payment()
+  activate PaymentView
+    PaymentView -> PaymentController: // make payment()
+    activate PaymentController
+      PaymentController ->  BankingSystemBoundary: // transmit payment request()
+      activate  BankingSystemBoundary
+         BankingSystemBoundary -> BankingSystem: // transmit payment request()
+        activate BankingSystem
+          BankingSystem -->  BankingSystemBoundary: authentication request()
+        deactivate BankingSystem
+        BankingSystemBoundary --> PaymentController: authentication request
+      deactivate  BankingSystemBoundary
+      PaymentController --> PaymentView: authentication request
+    deactivate PaymentController
+    PaymentView --> User: authentication request
+  deactivate PaymentView
+  User -> PaymentView: // provide authentication details()
+  activate PaymentView
+    PaymentView -> PaymentController: // provide authentication details()
+    activate PaymentController
+      PaymentController ->  BankingSystemBoundary: // transfer encrypted details()
+      activate  BankingSystemBoundary
+         BankingSystemBoundary -> BankingSystem: // transfer encrypted details()
+      deactivate  BankingSystemBoundary
+    deactivate PaymentController
+  deactivate PaymentView
+deactivate User
+
+alt Authentication Success
+  autonumber 17.1
+    BankingSystem -->  BankingSystemBoundary: success authentication
+    autonumber inc A
+    activate  BankingSystemBoundary
+      BankingSystemBoundary --> PaymentController: success authentication
+      autonumber inc A
+      activate PaymentController
+        PaymentController --> PaymentView: display payment confirmation
+        autonumber inc A
+    deactivate  BankingSystemBoundary
+        activate PaymentView
+          PaymentView --> User: display payment confirmation
+          autonumber inc A
+      deactivate PaymentController
+        deactivate PaymentView
+
+      activate User
+        User -> PaymentView: // confirm purchase()
+        autonumber inc A
+        activate PaymentView
+          PaymentView -> PaymentController: // confirm purchase()
+          autonumber inc A
+          activate PaymentController
+            PaymentController ->  BankingSystemBoundary: // transaction request()
+            autonumber inc A
+            activate  BankingSystemBoundary
+              BankingSystemBoundary -> BankingSystem: // transaction request()
+              autonumber inc A
+              activate BankingSystem
+                BankingSystem -->  BankingSystemBoundary: transaction response
+                autonumber inc A
+              deactivate BankingSystem
+              BankingSystemBoundary --> PaymentController: transaction response()
+              autonumber inc A
+            deactivate  BankingSystemBoundary
+            PaymentController -> Payment: // save payment details()
+            autonumber inc A
+            activate Payment
+              Payment --> PaymentController: payment details
+              autonumber inc A
+            deactivate Payment
+            PaymentController --> PaymentView: payment details
+            autonumber inc A
+          deactivate PaymentController
+          PaymentView --> User: display payment details
+          autonumber inc A
+        deactivate PaymentView
+      deactivate User
+
+    alt Insufficient Funds
+      autonumber 25.1.1
+      BankingSystem -->  BankingSystemBoundary: insufficient funds
+      autonumber inc A
+      activate  BankingSystemBoundary
+        BankingSystemBoundary --> PaymentController: insufficient funds
+        autonumber inc A
+        activate PaymentController
+          PaymentController --> PaymentView: display error
+          autonumber inc A
+          activate PaymentView
+            PaymentView --> User: display error
+            autonumber inc A
+          deactivate PaymentView
+        deactivate PaymentController
+      deactivate  BankingSystemBoundary
+    end
+
+else Authentication Failure
+  autonumber 17.2
+  BankingSystem -->  BankingSystemBoundary: fail authentication
+  autonumber inc A
+    activate  BankingSystemBoundary
+      BankingSystemBoundary --> PaymentController: fail authentication
+      autonumber inc A
+      activate PaymentController
+        PaymentController --> PaymentView: display error
+        autonumber inc A
+        activate PaymentView
+          PaymentView --> User: display error
+          autonumber inc A
+        deactivate PaymentView
+      deactivate PaymentController
+    deactivate  BankingSystemBoundary
+end
+
+@enduml
