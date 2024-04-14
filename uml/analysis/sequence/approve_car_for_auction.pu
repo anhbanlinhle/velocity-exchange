@@ -3,10 +3,10 @@ hide footbox
 
 autonumber
 
-actor "::Admin" as Admin
-boundary "::PendingRequestsView" as PendingRequestsView
-control "::VerificationRequest\nController" as VerificationRequestController
-entity "::PendingRequests" as PendingRequests
+actor ":Admin" as Admin
+boundary ":PendingRequestsView" as PendingRequestsView
+control ":VerificationRequest\nController" as VerificationRequestController
+entity ":PendingRequests" as PendingRequests
 
 activate Admin
   Admin -> PendingRequestsView: // view pending requests()

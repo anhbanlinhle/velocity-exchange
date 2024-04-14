@@ -1,12 +1,12 @@
 @startuml
 hide footbox
 
-actor "::User" as User
-boundary "::PaymentView" as PaymentView
-control "::PaymentController" as PaymentController
-entity "::Payment" as Payment
-boundary  "::BankingSystemBoundary" as BankingSystemBoundary
-actor "::Banking System" as BankingSystem
+actor ":User" as User
+boundary ":PaymentView" as PaymentView
+control ":PaymentController" as PaymentController
+entity ":Payment" as Payment
+boundary  ":BankingSystemBoundary" as BankingSystemBoundary
+actor ":Banking System" as BankingSystem
 
 autonumber
 

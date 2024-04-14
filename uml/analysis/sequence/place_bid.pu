@@ -3,10 +3,10 @@ hide footbox
 
 autonumber
 
-actor Customer
-boundary AuctionView
-control AuctionController
-entity Bid
+actor ":Customer" as Customer
+boundary ":AuctionView" as AuctionView
+control ":AuctionController" as AuctionController
+entity ":Bid" as Bid
 
 activate Customer
   Customer -> AuctionView : // enter bid amount()

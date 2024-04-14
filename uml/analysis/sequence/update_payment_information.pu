@@ -3,12 +3,12 @@ hide footbox
 
 autonumber
 
-actor "::User" as User
-boundary "::PaymentInformationView" as PaymentInformationView
-control "::PaymentController" as PaymentController
-entity "::PaymentInformation" as PaymentInformation
-boundary "::BankingSystemBoundary" as BankingSystemBoundary
-actor "::BankingSystem" as BankingSystem
+actor ":User" as User
+boundary ":PaymentInformationView" as PaymentInformationView
+control ":PaymentController" as PaymentController
+entity ":PaymentInformation" as PaymentInformation
+boundary ":BankingSystemBoundary" as BankingSystemBoundary
+actor ":BankingSystem" as BankingSystem
 
 activate User
   User -> PaymentInformationView : // update current payment method()

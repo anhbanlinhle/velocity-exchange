@@ -1,10 +1,10 @@
 @startuml
 hide footbox
 
-actor "::User" as User
-boundary "::AuctionView" as AuctionView
-control "::SearchController" as SearchController
-entity "::Auction" as Auction
+actor ":User" as User
+boundary ":AuctionView" as AuctionView
+control ":SearchController" as SearchController
+entity ":Auction" as Auction
 
 autonumber
 
