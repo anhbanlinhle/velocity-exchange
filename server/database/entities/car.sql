@@ -1,0 +1,17 @@
+CREATE TABLE `velocity_exchange`.`car` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `current_owner` VARCHAR(45) NOT NULL,
+  `brand` VARCHAR(45) NOT NULL,
+  `model_code` VARCHAR(45) NULL,
+  `color` VARCHAR(45) NULL,
+  `class` VARCHAR(45) NULL,
+  `door` INT NULL,
+  `seat` INT NULL,
+  `layout` VARCHAR(45) NULL,
+  `transmission` VARCHAR(45) NULL,
+  `engine_cylinders` INT NULL,
+  `engine capacity` INT NULL,
+  `image` VARCHAR(45) NULL,
+  `location` VARCHAR(45) NULL,
+  `status_in_storage` VARCHAR(45) NULL,
+  PRIMARY KEY (`id`));
