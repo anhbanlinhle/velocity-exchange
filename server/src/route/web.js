@@ -12,6 +12,7 @@ const initWebRoute = (app) => {
 
   // section - authenticate
   router.post('/auth/sign-up', authController.signUp)
+  router.post('/auth/login', authController.login)
 
   return app.use('/', router)
 }
