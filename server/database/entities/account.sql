@@ -1,7 +1,7 @@
 CREATE TABLE `velocity_exchange`.`account` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `mail` VARCHAR(45) NOT NULL,
-  `password` VARCHAR(45) NOT NULL,
+  `password` VARCHAR(64) NOT NULL,
   `username` VARCHAR(45) NOT NULL,
   `first_name` VARCHAR(45) NOT NULL,
   `last_name` VARCHAR(45) NOT NULL,
