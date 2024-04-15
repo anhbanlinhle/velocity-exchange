@@ -1,0 +1,51 @@
+@startuml Register Account
+hide footbox
+actor "User" as Users
+boundary "RegisterAccountForm" as RegisterBoundary
+control "RegisterAccountController" as AccountController
+entity "Account" as AccountEntity
+boundary "DatabaseSystem" as DatabaseBoundary
+database "Database" as DatabaseActor
+
+autonumber
+autoactivate on
+Users -> RegisterBoundary: // fill info()
+
+RegisterBoundary -> RegisterBoundary: // check valid()
+
+alt valid information
+
+    RegisterBoundary -> AccountController: // create account()
+    AccountController -> AccountEntity: // create account()
+    AccountEntity -> DatabaseBoundary: // create account()
+    DatabaseBoundary -> DatabaseActor: // create account()
+
+    alt username, password, email and\nphone number is unique
+
+        DatabaseActor --> DatabaseBoundary: account created
+        DatabaseBoundary --> AccountController: account created
+        AccountController --> RegisterBoundary: account created
+        RegisterBoundary --> Users: register account successful msg
+
+    else username, password, email an\nphone number is not unique
+
+        autonumber 7.1 
+        DatabaseActor --> DatabaseBoundary: information existed
+        autonumber inc A
+        DatabaseBoundary --> AccountController: information existed
+        autonumber inc A
+        AccountController --> RegisterBoundary: information existed
+        autonumber inc A
+        RegisterBoundary --> Users: information existed msg
+
+    end
+
+
+
+else invalid information
+    
+    autonumber 3.1
+    RegisterBoundary --> Users: invalid information msg
+
+end
+@enduml
