@@ -1,0 +1,65 @@
+@startuml
+hide footbox
+
+actor ":User" as User
+boundary ":AuctionView" as AuctionView
+control ":SearchController" as SearchController
+entity ":Auction" as Auction
+
+autonumber
+
+opt Manual Search
+  autonumber 1.1
+    User -> AuctionView: // fill search bar()
+    autonumber inc A
+    activate User
+    activate AuctionView
+      AuctionView -> SearchController: // fill search bar()
+      autonumber inc A
+      activate SearchController
+        SearchController -> Auction: // query by keywords()
+          autonumber inc A
+          activate Auction
+            Auction --> SearchController: query result
+            autonumber inc A
+          deactivate Auction
+        SearchController --> AuctionView: search result
+        autonumber inc A
+      deactivate SearchController
+      AuctionView --> User: display search result
+      autonumber inc A
+    deactivate AuctionView
+  deactivate User
+end
+
+opt Filter Search
+  autonumber 1.2
+  User -> AuctionView: // select filter attributes()
+  autonumber inc A
+  autonumber inc B
+    activate User
+    activate AuctionView
+      AuctionView -> SearchController: // select filter attributes()
+      autonumber inc A
+      autonumber inc B
+      activate SearchController
+        SearchController -> Auction: // query by attributes()
+          autonumber inc A
+          autonumber inc B
+          activate Auction
+            Auction --> SearchController: filter result
+            autonumber inc A
+            autonumber inc B
+          deactivate Auction
+        SearchController --> AuctionView: filter result
+        autonumber inc A
+        autonumber inc B
+      deactivate SearchController
+      AuctionView --> User: display filter result
+      autonumber inc A
+      autonumber inc B
+    deactivate AuctionView
+  deactivate User
+end
+
+@enduml
