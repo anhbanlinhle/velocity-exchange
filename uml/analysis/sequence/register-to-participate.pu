@@ -1,0 +1,26 @@
+@startuml register_to_participate
+hide footbox
+
+actor ":Customer" as customer
+boundary ":RegisterParitipateView" as view
+control ":AuctionController" as controller
+entity ":Auction" as auction
+
+autonumber
+autoactivate on
+
+customer -> view: // register to participate()
+view --> customer: display payment information
+ref over customer, view: Make payment
+alt payment success
+    view -> controller: // register to participate()
+    controller -> auction: // register to participate()
+    auction --> controller: register successful
+    controller --> view: register successful
+    view --> customer : display success message
+else payment failed
+    autonumber 3.1
+    view --> customer : display payment failed
+end
+
+@enduml

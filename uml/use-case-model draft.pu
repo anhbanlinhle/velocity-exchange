@@ -1,0 +1,70 @@
+@startuml Use case model
+left to right direction
+' User
+(Register account) as (register-account)
+(Login) as (login)
+(Update profile \ninfomation) as (update-profile)
+(View auction \ninfomation) as (view-auction-info)
+(View public \nauction) as (view-public-auction)
+(Update payment \ninformation) as (update-payment-info)
+(Make payment) as (make-payment)
+(Search for \nauction) as (search-for-auction)
+
+' Admin
+(Approve car \nfor auction) as (approve-car)
+
+
+' Seller
+(Register car \nfor auction) as (register-car)
+(Create auction \nsession) as (create-auction-session)
+(Update auction \nsession information) as (update-auction-info)
+(View hosted \nauction) as (view-hosted-auction)
+
+' Customer
+(Register to \nparticipate in \nthe auction) as (register-to-participate)
+(Cancel registration \nto participate in \nthe auction) as (cancel-registration-to-participate)
+(Participate in \nthe auction) as (participate-in-auction)
+(Place bid) as (place-bid)
+(View registered \n auction) as (view-registered-auction)
+
+' Bid Winner
+(View item \nstatus) as (view-item-status)
+
+
+
+:User:
+User --> (view-public-auction)
+User --> (view-auction-info)
+User --> (update-payment-info)
+User --> (make-payment)
+(register-account) <-- User
+(login) <-- User
+(update-profile) <-- User
+(search-for-auction) <-- User
+
+:Administrator:
+(approve-car) <-- Administrator
+
+:Seller:
+(register-car) <-- Seller
+(create-auction-session) <-- Seller
+Seller --> (update-auction-info)
+Seller --> (view-hosted-auction)
+
+:Customer:
+(view-registered-auction) <-- Customer
+Customer --> (participate-in-auction)
+Customer --> (place-bid)
+Customer --> (cancel-registration-to-participate)
+(register-to-participate) <-- Customer
+
+:BankingSystem:
+(make-payment) --> BankingSystem
+(cancel-registration-to-participate) --> BankingSystem
+
+
+:Bid Winner: as bidWinner
+(view-item-status) <-- bidWinner
+
+
+@enduml
