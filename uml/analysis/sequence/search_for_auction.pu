@@ -12,7 +12,6 @@ opt Manual Search
   autonumber 1.1
     User -> AuctionView: // fill search bar()
     autonumber inc A
-    activate User
     activate AuctionView
       AuctionView -> SearchController: // fill search bar()
       autonumber inc A
@@ -29,7 +28,6 @@ opt Manual Search
       AuctionView --> User: display search result
       autonumber inc A
     deactivate AuctionView
-  deactivate User
 end
 
 opt Filter Search
@@ -37,7 +35,6 @@ opt Filter Search
   User -> AuctionView: // select filter attributes()
   autonumber inc A
   autonumber inc B
-    activate User
     activate AuctionView
       AuctionView -> SearchController: // select filter attributes()
       autonumber inc A
@@ -59,7 +56,6 @@ opt Filter Search
       autonumber inc A
       autonumber inc B
     deactivate AuctionView
-  deactivate User
 end
 
 @enduml

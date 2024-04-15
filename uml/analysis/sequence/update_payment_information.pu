@@ -10,7 +10,6 @@ entity ":PaymentInformation" as PaymentInformation
 boundary ":BankingSystemBoundary" as BankingSystemBoundary
 actor ":BankingSystem" as BankingSystem
 
-activate User
   User -> PaymentInformationView : // update current payment method()
   activate PaymentInformationView
     PaymentInformationView -> PaymentController : // update payment method()
@@ -39,7 +38,6 @@ activate User
     deactivate PaymentController
     PaymentInformationView --> User: display new payment information
   deactivate PaymentInformationView
-deactivate User
 
 alt Invalid information
   autonumber 9.1

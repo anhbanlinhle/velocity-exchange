@@ -12,7 +12,6 @@ opt Manual Search
   autonumber 1.1
     User -> AuctionView: // get auction details()
     autonumber inc A
-    activate User
     activate AuctionView
       AuctionView -> SearchController: // get auction details()
       autonumber inc A
@@ -29,7 +28,6 @@ opt Manual Search
       AuctionView --> User: display auction information
       autonumber inc A
     deactivate AuctionView
-  deactivate User
 end
 
 @enduml
