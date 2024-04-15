@@ -1,0 +1,18 @@
+@startuml Update Account Information
+hide footbox
+actor "User" as User
+boundary "PublicAuctionView" as PABoundary
+control "PublicAuctionController" as PAController
+entity "Auction" as AuctionEntity
+
+autonumber
+autoactivate on
+
+User -> PABoundary: // Request public auction list()
+PABoundary -> PAController: // Request public auction list()
+PAController -> AuctionEntity: //  Request public auction list()
+AuctionEntity --> PAController: Public auction list fetched
+PAController --> PABoundary: Public auction list fetched
+PABoundary --> User: Show public auction list
+
+@enduml

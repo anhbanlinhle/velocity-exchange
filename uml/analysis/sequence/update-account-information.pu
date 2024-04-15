@@ -1,0 +1,36 @@
+@startuml Update Account Information
+hide footbox
+actor ":User" as User
+boundary ":UpdateAuctionInfoForm" as UpdateAccountBoundary
+control ":AuctionController" as AccountController
+entity ":Auction" as AccountEntity
+
+autonumber
+activate User
+User -> UpdateAccountBoundary: // fill info()
+activate UpdateAccountBoundary
+
+UpdateAccountBoundary -> UpdateAccountBoundary: // check valid()
+activate UpdateAccountBoundary
+deactivate UpdateAccountBoundary
+
+alt valid information
+
+    UpdateAccountBoundary -> AccountController: // update account info()
+    activate AccountController
+    AccountController -> AccountEntity: // update account info()
+    activate AccountEntity
+    AccountEntity --> AccountController: account info updated
+    deactivate AccountEntity
+    AccountController --> UpdateAccountBoundary: account info updated
+    deactivate AccountController
+    UpdateAccountBoundary --> User: account info updated successful msg
+
+
+else invalid information
+    
+    autonumber 3.1
+    UpdateAccountBoundary --> User: invalid information msg
+
+end
+@enduml
