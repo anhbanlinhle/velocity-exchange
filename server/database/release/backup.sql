@@ -1,15 +1,13 @@
-CREATE DATABASE  IF NOT EXISTS `velocity_exchange` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
-USE `velocity_exchange`;
--- MySQL dump 10.13  Distrib 8.0.36, for macos14 (x86_64)
+-- MySQL dump 10.13  Distrib 8.2.0, for macos13 (x86_64)
 --
--- Host: localhost    Database: velocity_exchange
+-- Host: 127.0.0.1    Database: velocity_exchange
 -- ------------------------------------------------------
 -- Server version	8.2.0
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!50503 SET NAMES utf8 */;
+/*!50503 SET NAMES utf8mb4 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -26,16 +24,16 @@ DROP TABLE IF EXISTS `account`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `account` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `mail` varchar(45) NOT NULL,
+  `mail` varchar(64) NOT NULL,
   `password` varchar(64) NOT NULL,
-  `username` varchar(45) NOT NULL,
-  `first_name` varchar(45) NOT NULL,
-  `last_name` varchar(45) NOT NULL,
-  `dob` datetime DEFAULT NULL,
-  `phone_num` varchar(15) DEFAULT NULL,
+  `username` varchar(64) NOT NULL,
+  `first_name` varchar(64) NOT NULL,
+  `last_name` varchar(64) NOT NULL,
+  `dob` date DEFAULT NULL,
+  `phone_num` varchar(10) DEFAULT NULL,
   `is_admin` tinyint DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -56,13 +54,13 @@ DROP TABLE IF EXISTS `auction`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `auction` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `name` varchar(45) NOT NULL,
+  `name` varchar(64) NOT NULL,
   `host_id` int NOT NULL,
   `car_id` int NOT NULL,
   `date_created` datetime DEFAULT NULL,
   `date_started` datetime DEFAULT NULL,
   `date_expired` datetime DEFAULT NULL,
-  `status` varchar(45) DEFAULT 'INCOMING',
+  `status` varchar(64) DEFAULT 'INCOMING',
   `winner_id` int DEFAULT NULL,
   `bid_step` double NOT NULL,
   `initial_price` double NOT NULL,
@@ -185,20 +183,22 @@ DROP TABLE IF EXISTS `car`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `car` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `current_owner` varchar(45) NOT NULL,
-  `brand` varchar(45) NOT NULL,
-  `model_code` varchar(45) DEFAULT NULL,
-  `color` varchar(45) DEFAULT NULL,
-  `class` varchar(45) DEFAULT NULL,
+  `current_owner` varchar(64) NOT NULL,
+  `brand` varchar(64) NOT NULL,
+  `model_code` varchar(64) DEFAULT NULL,
+  `color` varchar(64) DEFAULT NULL,
+  `class` varchar(64) DEFAULT NULL,
   `door` int DEFAULT NULL,
   `seat` int DEFAULT NULL,
-  `layout` varchar(45) DEFAULT NULL,
-  `transmission` varchar(45) DEFAULT NULL,
+  `layout` varchar(64) DEFAULT NULL,
+  `transmission` varchar(64) DEFAULT NULL,
   `engine_cylinders` int DEFAULT NULL,
   `engine capacity` int DEFAULT NULL,
-  `image` varchar(45) DEFAULT NULL,
-  `location` varchar(45) DEFAULT NULL,
+  `image` varchar(64) DEFAULT NULL,
+  `location` varchar(64) DEFAULT NULL,
   `status_in_storage` varchar(45) DEFAULT NULL,
+  `fuel` varchar(64) DEFAULT NULL,
+  `odometer` double DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -222,7 +222,7 @@ DROP TABLE IF EXISTS `payment`;
 CREATE TABLE `payment` (
   `id` int NOT NULL AUTO_INCREMENT,
   `user_id` int NOT NULL,
-  `transaction_id` varchar(45) NOT NULL,
+  `transaction_id` varchar(64) NOT NULL,
   `amount` double NOT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_account_payment` (`user_id`),
@@ -248,8 +248,8 @@ DROP TABLE IF EXISTS `payment_info`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `payment_info` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `bank_name` varchar(45) NOT NULL,
-  `bank_number` varchar(45) NOT NULL,
+  `bank_name` varchar(64) NOT NULL,
+  `bank_number` varchar(16) NOT NULL,
   `user_id` int DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_account_payment_info` (`user_id`),
@@ -277,7 +277,7 @@ CREATE TABLE `verification_request` (
   `id` int NOT NULL AUTO_INCREMENT,
   `seller_id` int NOT NULL,
   `car_id` int NOT NULL,
-  `status` varchar(45) NOT NULL DEFAULT 'PENDING',
+  `status` varchar(64) NOT NULL DEFAULT 'PENDING',
   `time` datetime NOT NULL,
   `admin_id` int NOT NULL,
   `payment_id` int NOT NULL,
@@ -311,4 +311,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-04-14 15:12:22
+-- Dump completed on 2024-04-16 11:54:15
