@@ -4,6 +4,10 @@
 -- ------------------------------------------------------
 -- Server version	8.2.0
 
+DROP DATABASE IF EXISTS `velocity_exchange`;
+CREATE DATABASE `velocity_exchange`;
+USE `velocity_exchange`;
+
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
