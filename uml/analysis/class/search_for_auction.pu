@@ -1,0 +1,35 @@
+@startuml 
+skinparam classAttributeIconSize 0
+skinparam linetype ortho
+hide circle
+class AuctionView <<boundary>> {
+
+    + // fillSearchBar()
+    + // selectFilterAttributes()
+    + // displaySearchResults()
+
+    }
+
+class SearchController <<controller>> {
+    
+    + // queryAuctionByKeywords()
+    + // queryAuctionByAttributes()
+
+    }
+
+class Auction <<entity>> {
+    - name
+    - id
+    - description
+
+    + // getAuctionList()
+
+    }
+
+
+AuctionView "1" -- "1" SearchController
+
+SearchController "1" -- "0..*" Auction
+
+
+@enduml
