@@ -1,0 +1,51 @@
+@startuml Login
+hide footbox
+actor ":User" as Users
+boundary ":LoginForm" as LoginBoundary
+control ":LoginController" as AccountController
+entity ":Account" as AccountEntity
+
+autonumber
+
+activate LoginBoundary
+Users -> LoginBoundary: // fill info()
+
+LoginBoundary -> LoginBoundary: // check valid()
+activate LoginBoundary
+deactivate LoginBoundary
+
+alt valid information
+    
+    LoginBoundary -> AccountController: // login account()
+    activate AccountController
+    AccountController -> AccountEntity: // login account()
+    activate AccountEntity
+
+
+    alt account does exist
+
+        AccountEntity --> AccountController: login success
+        AccountController --> LoginBoundary: login success
+        LoginBoundary --> Users: login success msg
+
+    else account does not existed
+
+        autonumber 5.1
+        AccountEntity --> AccountController --: account does not exist
+        autonumber inc A
+        AccountController --> LoginBoundary: account does not exist
+        deactivate AccountController
+        autonumber inc A
+        LoginBoundary --> Users: invalid information msg
+
+    end
+
+
+
+else invalid information
+    
+    autonumber 3.1
+    LoginBoundary --> Users: invalid input data field msg
+
+end
+@enduml
