@@ -3,7 +3,7 @@ hide footbox
 
 actor ":User" as User
 boundary ":AuctionDetailView" as AuctionView
-control ":SearchController" as SearchController
+control ":AuctionController" as SearchController
 entity ":Auction" as Auction
 
 autonumber
