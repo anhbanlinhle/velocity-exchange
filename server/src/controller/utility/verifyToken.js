@@ -3,7 +3,7 @@ import jwt from 'jsonwebtoken'
 let verifyToken = (req, res, next) => {
   const token = req.get('Authorization') || req.session.token;
   if (!token) {
-    return res.sendStatus(401)
+    return res.status(401).send({ErrorCode: "ER_MISSING_TOKEN"})
   }
   try {
     const verified = jwt.verify(token, process.env.SECRET)
@@ -18,7 +18,7 @@ let verifyToken = (req, res, next) => {
   }
   catch (err) {
     console.log(err)
-    return res.status(403).send({ErrorCode: "ER_INVALID_TOKEN"})
+    return res.status(401).send({ErrorCode: "ER_INVALID_TOKEN"})
   }
 }
 

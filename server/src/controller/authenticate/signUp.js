@@ -3,7 +3,7 @@ import pool from '../../config/database'
 
 let signUp = async (req, res) => {
   let email = req.body.email
-  let password = crypto.createHash('sha256').update(req.body.password).digest('hex')
+  let password = req.body.password
   let username = req.body.username
   let first_name = req.body.first_name
   let last_name = req.body.last_name
@@ -24,6 +24,8 @@ let signUp = async (req, res) => {
     if (usernameCheck.length > 0) {
       return res.status(409).send({ErrorCode: 'ER_USERNAME_ALREADY_REGISTERED'})
     }
+
+    password = crypto.createHash('sha256').update(password).digest('hex')
 
     let query = 'insert into account (mail, password, username, first_name, last_name, dob, phone_num, is_admin) values (?, ?, ?, ?, ?, ?, ?, ?)'
 

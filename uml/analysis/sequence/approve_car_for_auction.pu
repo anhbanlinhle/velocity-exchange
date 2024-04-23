@@ -8,7 +8,6 @@ boundary ":PendingRequestsView" as PendingRequestsView
 control ":VerificationRequest\nController" as VerificationRequestController
 entity ":PendingRequests" as PendingRequests
 
-activate Admin
   Admin -> PendingRequestsView: // view pending requests()
   activate PendingRequestsView
     PendingRequestsView -> VerificationRequestController: // get pending requests()
@@ -45,7 +44,6 @@ activate Admin
     deactivate VerificationRequestController
     PendingRequestsView --> Admin: display updated request status
   deactivate PendingRequestsView
-deactivate Admin
 
 alt Invalid status
   autonumber 16.1

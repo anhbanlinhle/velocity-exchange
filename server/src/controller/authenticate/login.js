@@ -4,13 +4,15 @@ import pool from '../../config/database'
 
 let login = async (req, res) => {
   let email = req.body.email
-  let password = crypto.createHash('sha256').update(req.body.password).digest('hex')
+  let password = req.body.password
 
   if (email === undefined || password === undefined) {
     return res.status(422).send({ErrorCode: 'ER_MISSING_PARAM'})
   }
 
   try {
+    password = crypto.createHash('sha256').update(password).digest('hex')
+
     let [account, dump] = await pool.query('select * from account where mail = ? and password = ?', [email, password])
     if (account.length === 0) {
       return res.status(403).send({ErrorCode: 'ER_INVALID_CREDENTIAL'})

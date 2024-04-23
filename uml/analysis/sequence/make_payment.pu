@@ -10,7 +10,6 @@ actor ":Banking System" as BankingSystem
 
 autonumber
 
-activate User
   User -> PaymentView: // initiate payment action()
   activate PaymentView
     PaymentView -> PaymentController: // initiate payment action()
@@ -46,7 +45,6 @@ activate User
       deactivate  BankingSystemBoundary
     deactivate PaymentController
   deactivate PaymentView
-deactivate User
 
 alt Authentication Success
   autonumber 17.1
@@ -65,7 +63,6 @@ alt Authentication Success
       deactivate PaymentController
         deactivate PaymentView
 
-      activate User
         User -> PaymentView: // confirm purchase()
         autonumber inc A
         activate PaymentView
@@ -96,7 +93,6 @@ alt Authentication Success
           PaymentView --> User: display payment details
           autonumber inc A
         deactivate PaymentView
-      deactivate User
 
     alt Insufficient Funds
       autonumber 25.1.1
