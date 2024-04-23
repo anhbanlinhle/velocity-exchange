@@ -1,0 +1,46 @@
+@startuml 
+skinparam classAttributeIconSize 0
+skinparam linetype ortho
+hide circle
+class PaymentInformationView <<boundary>> {
+    - bankName
+    - accountNumber
+
+    + // requestUpdatePaymentInformation()
+    + // sendPaymentInformation()
+    + // displayPaymentInformation()
+    + // displayErrorMessages()
+
+    }
+
+class PaymentController <<controller>> {
+    
+
+    + // authenticateInformation()
+    + // updatePaymentInformation()
+
+    }
+
+class PaymentInformation <<entity>> {
+    -bankName
+    -accountNumber
+
+    + // getPaymentInformation()
+
+    }
+
+class BankingSystemBoundary <<boundary>> {
+    
+
+    + // authenticateRequest()
+
+
+    }
+
+PaymentInformationView "1..*" -- "1" PaymentController
+
+PaymentController "1" -- "0..*" PaymentInformation
+
+PaymentController "1" -- "1" BankingSystemBoundary
+
+@enduml
