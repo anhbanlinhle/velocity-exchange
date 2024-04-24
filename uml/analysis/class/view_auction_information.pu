@@ -1,0 +1,41 @@
+@startuml 
+left to right direction
+skinparam classAttributeIconSize 0
+skinparam linetype ortho
+hide circle
+class AuctionView <<boundary>> {
+
+    + // selectAuction()
+
+    }
+
+class SearchController <<control>> {
+    
+    + // queryAuctionByDetails()
+
+    }
+
+class Auction <<entity>> {
+    - name
+    - id
+    - description
+    - status
+    - beginTime
+    - endTime
+    - carInformation
+    - initialPrice
+    - minimumStep
+    - currentPrice
+    - depositCost
+
+    + // getAuctionDetails()
+
+    }
+
+
+AuctionView "1" -- "1" SearchController
+
+SearchController "1" -- "0..*" Auction
+
+
+@enduml
