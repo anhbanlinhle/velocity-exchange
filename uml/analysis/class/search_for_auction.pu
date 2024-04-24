@@ -2,7 +2,7 @@
 skinparam classAttributeIconSize 0
 skinparam linetype ortho
 hide circle
-class AuctionView <<boundary>> {
+class AuctionListView <<boundary>> {
 
     // fill search bar ()
     // select filter attributes ()
@@ -27,7 +27,7 @@ class Auction <<entity>> {
     }
 
 
-AuctionView "1" --- "1" SearchController
+AuctionListView "1" --- "1" SearchController
 
 SearchController "1" --- "0..*" Auction
 

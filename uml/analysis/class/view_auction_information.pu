@@ -3,13 +3,13 @@ left to right direction
 skinparam classAttributeIconSize 0
 skinparam linetype ortho
 hide circle
-class AuctionView <<boundary>> {
+class AuctionDetailView <<boundary>> {
 
     // select auction ()
 
     }
 
-class SearchController <<control>> {
+class AuctionController <<control>> {
     
     // query auction by details ()
 
@@ -33,9 +33,9 @@ class Auction <<entity>> {
     }
 
 
-AuctionView "1" --- "1" SearchController
+AuctionDetailView "1" --- "1" AuctionController
 
-SearchController "1" --- "0..*" Auction
+AuctionController "1" --- "0..*" Auction
 
 
 @enduml
