@@ -1,0 +1,37 @@
+@startuml 
+left to right direction
+skinparam classAttributeIconSize 0
+skinparam linetype ortho
+hide circle
+class VerificationRequestView <<boundary>> {
+    // view pending requests ()
+    // view specific request ()
+    // update request status ()
+    // display error message ()
+
+    }
+
+class VerificationRequestController <<control>> {
+    // get pending requests ()
+    // get specific request ()
+    // update request status ()
+
+    }
+
+class VerificationRequest <<entity>> {
+    name
+    status
+    detail
+
+    // get request list ()
+    // get request details ()
+    // update request status ()
+    }
+
+
+VerificationRequestView "1" --- "1" VerificationRequestController
+
+VerificationRequestController "1" --- "0..*" VerificationRequest
+
+
+@enduml
