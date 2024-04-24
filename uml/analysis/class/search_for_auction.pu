@@ -4,32 +4,32 @@ skinparam linetype ortho
 hide circle
 class AuctionView <<boundary>> {
 
-    + // fillSearchBar()
-    + // selectFilterAttributes()
-    + // displaySearchResults()
+    // fill search bar ()
+    // select filter attributes ()
+    // display search results ()
 
     }
 
 class SearchController <<control>> {
     
-    + // queryAuctionByKeywords()
-    + // queryAuctionByAttributes()
+    // query auction by keywords ()
+    // query auction by attributes ()
 
     }
 
 class Auction <<entity>> {
-    - name
-    - id
-    - description
+    name
+    id
+    description
 
-    + // getAuctionList()
+    // get auction list ()
 
     }
 
 
-AuctionView "1" -- "1" SearchController
+AuctionView "1" --- "1" SearchController
 
-SearchController "1" -- "0..*" Auction
+SearchController "1" --- "0..*" Auction
 
 
 @enduml

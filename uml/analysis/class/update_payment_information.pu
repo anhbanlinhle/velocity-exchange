@@ -3,44 +3,44 @@ skinparam classAttributeIconSize 0
 skinparam linetype ortho
 hide circle
 class PaymentInformationView <<boundary>> {
-    - bankName
-    - accountNumber
+    bank name
+    account number
 
-    + // requestUpdatePaymentInformation()
-    + // sendPaymentInformation()
-    + // displayPaymentInformation()
-    + // displayErrorMessages()
+    // request update payment information ()
+    // send payment information ()
+    // display payment information ()
+    // display error messages ()
 
     }
 
 class PaymentController <<control>> {
     
 
-    + // authenticateInformation()
-    + // updatePaymentInformation()
+    // authenticate information ()
+    // update payment information ()
 
     }
 
 class PaymentInformation <<entity>> {
-    -bankName
-    -accountNumber
+    bank name
+    account number
 
-    + // getPaymentInformation()
+    // get payment information ()
 
     }
 
 class BankingSystemBoundary <<boundary>> {
     
 
-    + // authenticateRequest()
+    // authenticate request ()
 
 
     }
 
-PaymentInformationView "1..*" -- "1" PaymentController
+PaymentInformationView "1..*" --- "1" PaymentController
 
-PaymentController "1" -- "0..*" PaymentInformation
+PaymentController "1" --- "0..*" PaymentInformation
 
-PaymentController "1" -- "1" BankingSystemBoundary
+PaymentController "1" --- "1" BankingSystemBoundary
 
 @enduml

@@ -45,10 +45,10 @@ class BankingSystemBoundary <<boundary>> {
 
     }
 
-PaymentView "1..*" -- "1" PaymentController
+PaymentView "1..*" --- "1" PaymentController
 
-PaymentController "1" -- "0..*" Payment
+PaymentController "1" --- "0..*" Payment
 
-PaymentController "1" -- "1" BankingSystemBoundary
+PaymentController "1" --- "1" BankingSystemBoundary
 
 @enduml
