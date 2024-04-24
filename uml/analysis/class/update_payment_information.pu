@@ -13,7 +13,7 @@ class PaymentInformationView <<boundary>> {
 
     }
 
-class PaymentController <<controller>> {
+class PaymentController <<control>> {
     
 
     + // authenticateInformation()

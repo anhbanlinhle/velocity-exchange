@@ -10,7 +10,7 @@ class AuctionView <<boundary>> {
 
     }
 
-class SearchController <<controller>> {
+class SearchController <<control>> {
     
     + // queryAuctionByKeywords()
     + // queryAuctionByAttributes()
