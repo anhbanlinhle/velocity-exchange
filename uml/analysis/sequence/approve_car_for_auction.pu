@@ -7,7 +7,7 @@ actor ":Admin" as Admin
 boundary ":VerificationRequestView" as PendingRequestsView
 control ":VerificationRequest\nController" as VerificationRequestController
 entity ":VerificationRequest" as PendingRequests
-
+Admin ++
   Admin -> PendingRequestsView: // view pending requests()
   activate PendingRequestsView
     PendingRequestsView -> VerificationRequestController: // get pending requests()

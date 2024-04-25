@@ -7,7 +7,7 @@ control ":SearchController" as SearchController
 entity ":Auction" as Auction
 
 autonumber
-
+User ++
 opt Manual Search
   autonumber 1.1
     User -> AuctionView: // fill search bar()

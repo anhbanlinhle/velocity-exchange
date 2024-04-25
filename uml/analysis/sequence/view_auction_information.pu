@@ -6,6 +6,7 @@ boundary ":AuctionDetailView" as AuctionView
 control ":AuctionController" as SearchController
 entity ":Auction" as Auction
 
+User ++
 autonumber
   User -> AuctionView: // get auction details()
   activate AuctionView
