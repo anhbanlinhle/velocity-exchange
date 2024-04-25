@@ -197,7 +197,7 @@ CREATE TABLE `car` (
   `layout` varchar(64) DEFAULT NULL,
   `transmission` varchar(64) DEFAULT NULL,
   `engine_cylinders` int DEFAULT NULL,
-  `engine capacity` int DEFAULT NULL,
+  `engine_capacity` int DEFAULT NULL,
   `image` varchar(64) DEFAULT NULL,
   `location` varchar(64) DEFAULT NULL,
   `status_in_storage` varchar(45) DEFAULT NULL,
