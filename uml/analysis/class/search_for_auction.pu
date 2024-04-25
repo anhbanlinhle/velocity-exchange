@@ -1,6 +1,7 @@
 @startuml 
 skinparam classAttributeIconSize 0
 skinparam linetype ortho
+left to right direction
 hide circle
 class AuctionListView <<boundary>> {
 
