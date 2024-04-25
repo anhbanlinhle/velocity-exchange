@@ -1,0 +1,29 @@
+@startuml Update Account Information
+hide footbox
+actor ":User" as User
+boundary ":InventoryView" as PABoundary
+control ":CarController" as PAController
+entity ":Car" as AuctionEntity
+
+autonumber
+autoactivate on
+
+User -> PABoundary: // Request inventory()
+PABoundary -> PAController: // Fetch inventory()
+PAController -> AuctionEntity: // Fetch inventory()
+AuctionEntity --> PAController: Inventory fetched
+PAController --> PABoundary: Inventory fetched
+PABoundary --> User: Display inventory
+
+opt View item details
+
+    User -> PABoundary: // request item details()
+    PABoundary -> PAController: // Fetch item details()
+    PAController -> AuctionEntity: // Fetch item details()
+    AuctionEntity --> PAController: item details fetched
+    PAController --> PABoundary: item details fetched
+    PABoundary --> User: Display item details
+
+end
+
+@enduml

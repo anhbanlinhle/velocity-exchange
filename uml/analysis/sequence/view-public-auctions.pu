@@ -4,8 +4,6 @@ actor "User" as User
 boundary "PublicAuctionView" as PABoundary
 control "PublicAuctionController" as PAController
 entity "Auction" as AuctionEntity
-boundary "DatabaseSystem" as DatabaseBoundary
-database "Database" as DatabaseActor
 
 autonumber
 autoactivate on
@@ -13,12 +11,8 @@ autoactivate on
 User -> PABoundary: // Request public auction list()
 PABoundary -> PAController: // Request public auction list()
 PAController -> AuctionEntity: //  Request public auction list()
-AuctionEntity -> DatabaseBoundary: // Request public auction list()
-DatabaseBoundary -> DatabaseActor: // Request public auction list()
-DatabaseActor --> DatabaseBoundary: Fetch public auction list successful
-DatabaseBoundary --> AuctionEntity: Fetch public auction list successful
-AuctionEntity --> PAController: Fetch public auction list successful
-PAController --> PABoundary: Fetch public auction list successful
+AuctionEntity --> PAController: Public auction list fetched
+PAController --> PABoundary: Public auction list fetched
 PABoundary --> User: Show public auction list
 
 @enduml

@@ -1,6 +1,3 @@
-import { config } from 'dotenv'
-config()
-
 import { dbHealth } from './health/dbHealth'
 
 let homepage = async (req, res) => {

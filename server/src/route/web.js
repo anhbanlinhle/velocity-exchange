@@ -1,5 +1,6 @@
 import express from 'express'
 import homeController from '../controller/homeController'
+import authController from '../controller/authController'
 let router = express.Router()
 
 const initWebRoute = (app) => {
@@ -8,6 +9,10 @@ const initWebRoute = (app) => {
 
   // section - health 
   router.get('/health/db', homeController.dbHealth)
+
+  // section - authenticate
+  router.post('/auth/sign-up', authController.signUp)
+  router.post('/auth/login', authController.login)
 
   return app.use('/', router)
 }
