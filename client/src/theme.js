@@ -1,17 +1,17 @@
-import { createTheme } from "@mui/material/styles";
+import { createTheme } from '@mui/material/styles';
 
 const theme = createTheme({
   palette: {
-    mode: "light",
+    mode: 'light',
     primary: {
-      main: "#033090",
+      main: '#033090',
     },
     secondary: {
-      main: "#ffb838",
+      main: '#ffb838',
     },
-    type: "light",
+    type: 'light',
   },
-  direction: "rtl",
+  direction: 'rtl',
   spacing: 8,
   shape: {
     borderRadius: 4,
@@ -21,7 +21,7 @@ const theme = createTheme({
     button: {
       textTransform: 'none',
       fontWeight: 650,
-    }
+    },
   },
 });
 

@@ -1,7 +1,8 @@
-import Header from "./layout/Header";
+import React from 'react';
+import MainLayout from './layout/MainLayout';
 
 function App() {
-  return <Header />;
+  return <MainLayout />;
 }
 
 export default App;
