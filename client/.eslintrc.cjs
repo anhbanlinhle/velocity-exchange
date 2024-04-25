@@ -14,5 +14,6 @@ module.exports = {
     'max-len': 'off',
     'react/jsx-first-prop-new-line': 'error',
     "linebreak-style": 0,
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": true}]
   },
 };
