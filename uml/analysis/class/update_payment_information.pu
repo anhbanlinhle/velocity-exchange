@@ -4,8 +4,8 @@ skinparam linetype ortho
 left to right direction
 hide circle
 class PaymentInformationView <<boundary>> {
-    bank name
-    account number
+    bank name: String
+    account number: String
 
     // request update payment information ()
     // send payment information ()
@@ -23,10 +23,12 @@ class PaymentController <<control>> {
     }
 
 class PaymentInformation <<entity>> {
-    bank name
-    account number
+    bank name: String
+    account number: String
 
     // get payment information ()
+    // set payment information ()
+    // update payment information ()
 
     }
 

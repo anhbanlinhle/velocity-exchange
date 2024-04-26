@@ -4,9 +4,10 @@ skinparam linetype ortho
 left to right direction
 hide circle
 class PaymentView <<boundary>> {
-    pay amount
-    payment method
-    authentication detail
+    pay amount: Float
+    payment method: String
+    bank name: String
+    password: String
 
     // initiate payment action ()
     // display payment information ()
@@ -28,13 +29,15 @@ class PaymentController <<control>> {
     }
 
 class Payment <<entity>> {
-    pay amount
-    bank name
-    account number
-    payment information
+    pay amount: Float
+    bank name: String
+    account number: String
+    user id: Int
+    transaction id: String
 
-    // setPaymentInformation()
-    // getPaymentInformation()
+    // set payment detail ()
+    // get payment detail ()
+    // update payment detail ()
 
     }
 

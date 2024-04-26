@@ -19,9 +19,21 @@ class VerificationRequestController <<control>> {
     }
 
 class VerificationRequest <<entity>> {
-    name
-    status
-    detail
+    current owner name: String
+    manufacturing brand: String
+    model code: String
+    manufacturing year: Int
+    color: String
+    class: String
+    number of door: Int
+    number of seat: Int
+    layout: String
+    fuel: String
+    transmission: String
+    number of cylinder: Int
+    engine capacity: Int
+    image: String
+    location: String
 
     // get request list ()
     // get request details ()
