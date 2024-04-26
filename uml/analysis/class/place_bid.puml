@@ -4,6 +4,7 @@ skinparam classAttributeIconSize 0
 skinparam linetype ortho
 hide circle
 class AuctionView <<boundary>> {
+    id: Int
     bid amount: Float
 
     // fill bid amount ()
@@ -22,14 +23,13 @@ class AuctionController <<control>> {
     }
 
 class Bid <<entity>> {
+    id: Int
     amount: Float
     bidder: String
     time stamp: String
-
     // get bid ()
-    // set bid ()
+    // get bid ()
     // update bid ()
-
     }
 
 

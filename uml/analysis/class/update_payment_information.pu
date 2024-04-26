@@ -23,6 +23,7 @@ class PaymentController <<control>> {
     }
 
 class PaymentInformation <<entity>> {
+    id: Int
     bank name: String
     account number: String
 

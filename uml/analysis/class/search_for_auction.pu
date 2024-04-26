@@ -19,18 +19,17 @@ class SearchController <<control>> {
     }
 
 class Auction <<entity>> {
+    id: Int
     name: String
-    id: String
     start date: String
     end date: String
     create date: String
     status: String
-    winner: String
+    winner: Int
     bid step: Float
     initial price: Float
     current price: Float
     deposit rate: Float
-
     // get auction list ()
     // set auction ()
     // get auction ()

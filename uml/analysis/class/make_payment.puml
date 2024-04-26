@@ -29,13 +29,12 @@ class PaymentController <<control>> {
     }
 
 class Payment <<entity>> {
+    id: Int
     pay amount: Float
     bank name: String
     account number: String
     user id: Int
     transaction id: String
-
-    // set payment detail ()
     // get payment detail ()
     // update payment detail ()
 
