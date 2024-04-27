@@ -29,8 +29,7 @@ class VerificationRequest <<entity>> {
     // get request()
     // set request ()
     // get request list ()
-    // get request details ()
-    // update request status ()
+    // update request ()
     }
 
 

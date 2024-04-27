@@ -27,7 +27,7 @@ class Bid <<entity>> {
     amount: Float
     bidder: String
     time stamp: String
-    // get bid ()
+    // create bid ()
     // get bid ()
     // update bid ()
     }
