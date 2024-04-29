@@ -6,55 +6,46 @@ boundary ":AuctionListView" as AuctionView
 control ":SearchController" as SearchController
 entity ":Auction" as Auction
 
-autonumber
 User ++
 opt Manual Search
-  autonumber 1.1
-    User -> AuctionView: // fill search bar()
-    autonumber inc A
+    User -> AuctionView: 1.1. // fill search bar
+    
     activate AuctionView
-      AuctionView -> SearchController: // fill search bar()
-      autonumber inc A
+      AuctionView -> SearchController: 2.1. // search by keywords ()
+      
       activate SearchController
-        SearchController -> Auction: // query by keywords()
-          autonumber inc A
+        SearchController -> Auction: 3.1. // query by keywords ()
+          
           activate Auction
-            Auction --> SearchController: query result
-            autonumber inc A
-          deactivate Auction
-        SearchController --> AuctionView: search result
-        autonumber inc A
-      deactivate SearchController
-      AuctionView --> User: display search result
-      autonumber inc A
-    deactivate AuctionView
+            Auction --> SearchController: query result message
+            
+        SearchController --> AuctionView: query result message
+        
+      AuctionView --> User: query result message
+      
 end
 
 opt Filter Search
-  autonumber 1.2
-  User -> AuctionView: // select filter attributes()
-  autonumber inc A
-  autonumber inc B
-    activate AuctionView
-      AuctionView -> SearchController: // select filter attributes()
-      autonumber inc A
-      autonumber inc B
-      activate SearchController
-        SearchController -> Auction: // query by attributes()
-          autonumber inc A
-          autonumber inc B
-          activate Auction
-            Auction --> SearchController: filter result
-            autonumber inc A
-            autonumber inc B
+  User -> AuctionView: 1.2. // select filter attributes
+  
+  
+      AuctionView -> SearchController: 2.2. // search by filter attributes ()
+      
+      
+        SearchController -> Auction: 3.2. // query by attributes ()
+          
+          
+            Auction --> SearchController: filter result message
+            
+            
           deactivate Auction
-        SearchController --> AuctionView: filter result
-        autonumber inc A
-        autonumber inc B
+        SearchController --> AuctionView: filter result message
+        
+        
       deactivate SearchController
-      AuctionView --> User: display filter result
-      autonumber inc A
-      autonumber inc B
+      AuctionView --> User: filter result message
+      
+      
     deactivate AuctionView
 end
 
