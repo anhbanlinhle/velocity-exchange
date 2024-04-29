@@ -28,15 +28,15 @@ Admin ++
     PendingRequestsView -> VerificationRequestController: 10. // update request ()
       VerificationRequestController -> PendingRequests: 11. // update request ()
         PendingRequests --> VerificationRequestController: update success message
-      VerificationRequestController --> PendingRequestsView: updated results message
-    PendingRequestsView --> Admin: updated request status message
+      VerificationRequestController --> PendingRequestsView: update success message
+    PendingRequestsView --> Admin: update success message
 
 alt Invalid status
   PendingRequests --> VerificationRequestController: invalid status message
   PendingRequests --
-    VerificationRequestController --> PendingRequestsView: error message
+    VerificationRequestController --> PendingRequestsView: invalid status message
     VerificationRequestController --
-    PendingRequestsView --> Admin: error message
+    PendingRequestsView --> Admin: invalid status message
     PendingRequestsView --
 end
 
