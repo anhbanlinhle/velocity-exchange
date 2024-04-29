@@ -1,4 +1,4 @@
-@startuml Use case model
+@startuml Use_case_model
 left to right direction
 ' User
 (Register account) as (register-account)
@@ -9,6 +9,7 @@ left to right direction
 (Update payment \ninformation) as (update-payment-info)
 (Make payment) as (make-payment)
 (Search for \nauction) as (search-for-auction)
+(View inventory) as (view-inventory)
 
 ' Admin
 (Approve car \nfor auction) as (approve-car)
@@ -27,10 +28,6 @@ left to right direction
 (Place bid) as (place-bid)
 (View registered \n auction) as (view-registered-auction)
 
-' Bid Winner
-(View item \nstatus) as (view-item-status)
-
-
 
 :User:
 User --> (view-public-auction)
@@ -41,6 +38,7 @@ User --> (make-payment)
 (login) <-- User
 (update-profile) <-- User
 (search-for-auction) <-- User
+(view-inventory) <-- User
 
 :Administrator:
 (approve-car) <-- Administrator
@@ -61,10 +59,6 @@ Customer --> (cancel-registration-to-participate)
 :BankingSystem:
 (make-payment) --> BankingSystem
 (cancel-registration-to-participate) --> BankingSystem
-
-
-:Bid Winner: as bidWinner
-(view-item-status) <-- bidWinner
 
 
 @enduml
