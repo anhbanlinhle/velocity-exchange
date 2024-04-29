@@ -7,7 +7,7 @@ actor ":Customer" as Customer
 boundary ":AuctionView" as AuctionView
 control ":AuctionController" as AuctionController
 entity ":Bid" as Bid
-
+Customer ++
   Customer -> AuctionView : // enter bid amount()
   activate AuctionView
     AuctionView -> AuctionController : // validate bid()

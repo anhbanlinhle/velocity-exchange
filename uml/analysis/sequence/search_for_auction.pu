@@ -2,12 +2,12 @@
 hide footbox
 
 actor ":User" as User
-boundary ":AuctionView" as AuctionView
+boundary ":AuctionListView" as AuctionView
 control ":SearchController" as SearchController
 entity ":Auction" as Auction
 
 autonumber
-
+User ++
 opt Manual Search
   autonumber 1.1
     User -> AuctionView: // fill search bar()

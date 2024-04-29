@@ -9,7 +9,7 @@ boundary  ":BankingSystemBoundary" as BankingSystemBoundary
 actor ":Banking System" as BankingSystem
 
 autonumber
-
+User ++
   User -> PaymentView: // initiate payment action()
   activate PaymentView
     PaymentView -> PaymentController: // initiate payment action()
