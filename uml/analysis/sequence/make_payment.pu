@@ -8,126 +8,83 @@ entity ":Payment" as Payment
 boundary  ":BankingSystemBoundary" as BankingSystemBoundary
 actor ":Banking System" as BankingSystem
 
-autonumber
 User ++
-  User -> PaymentView: // initiate payment action()
-  activate PaymentView
-    PaymentView -> PaymentController: // initiate payment action()
-    activate PaymentController
-      PaymentController --> PaymentView: display payment details
-    deactivate PaymentController
-    PaymentView --> User: display payment details
-  deactivate PaymentView
+  User -> PaymentView: 1. // initiate payment action
+  PaymentView ++
+    PaymentView -> PaymentController: 2. // trigger payment ()
+    PaymentController ++
+      PaymentController --> PaymentView: 3. // display payment details ()
+
   
-  User -> PaymentView: // make payment()
-  activate PaymentView
-    PaymentView -> PaymentController: // make payment()
-    activate PaymentController
-      PaymentController ->  BankingSystemBoundary: // transmit payment request()
-      activate  BankingSystemBoundary
-         BankingSystemBoundary -> BankingSystem: // transmit payment request()
-        activate BankingSystem
-          BankingSystem -->  BankingSystemBoundary: authentication request()
-        deactivate BankingSystem
-        BankingSystemBoundary --> PaymentController: authentication request
-      deactivate  BankingSystemBoundary
-      PaymentController --> PaymentView: authentication request
-    deactivate PaymentController
-    PaymentView --> User: authentication request
-  deactivate PaymentView
-  User -> PaymentView: // provide authentication details()
-  activate PaymentView
-    PaymentView -> PaymentController: // provide authentication details()
-    activate PaymentController
-      PaymentController ->  BankingSystemBoundary: // transfer encrypted details()
-      activate  BankingSystemBoundary
-         BankingSystemBoundary -> BankingSystem: // transfer encrypted details()
-      deactivate  BankingSystemBoundary
-    deactivate PaymentController
-  deactivate PaymentView
+  User -> PaymentView: 4. // make payment
+    PaymentView -> PaymentController: 5. // make payment ()
+      PaymentController ->  BankingSystemBoundary: 6. // transmit payment request()
+      BankingSystemBoundary ++
+         BankingSystemBoundary -> BankingSystem: 7. // transmit payment request()
+        BankingSystem ++
+          BankingSystem -->  BankingSystemBoundary: authentication request message
+
+        BankingSystemBoundary --> PaymentController: authentication request message
+      PaymentController --> PaymentView: authentication request message
+    PaymentView --> User: authentication request message
+  User -> PaymentView: 8. // provide authentication details ()
+    PaymentView -> PaymentController: 9. // provide authentication details()
+      PaymentController ->  BankingSystemBoundary: 10. // transfer encrypted details()
+         BankingSystemBoundary -> BankingSystem: 11. // transfer encrypted details()
 
 alt Authentication Success
-  autonumber 17.1
-    BankingSystem -->  BankingSystemBoundary: success authentication
-    autonumber inc A
-    activate  BankingSystemBoundary
-      BankingSystemBoundary --> PaymentController: success authentication
-      autonumber inc A
-      activate PaymentController
-        PaymentController --> PaymentView: display payment confirmation
-        autonumber inc A
-    deactivate  BankingSystemBoundary
-        activate PaymentView
-          PaymentView --> User: display payment confirmation
-          autonumber inc A
-      deactivate PaymentController
-        deactivate PaymentView
+    BankingSystem -->  BankingSystemBoundary: success authentication message
+    
+      BankingSystemBoundary --> PaymentController: success authentication message
+      
+        PaymentController --> PaymentView: 12. // display payment confirmation ()
+        
+          PaymentView --> User: ask for confirmation
 
-        User -> PaymentView: // confirm purchase()
-        autonumber inc A
-        activate PaymentView
-          PaymentView -> PaymentController: // confirm purchase()
-          autonumber inc A
-          activate PaymentController
-            PaymentController ->  BankingSystemBoundary: // transaction request()
-            autonumber inc A
-            activate  BankingSystemBoundary
-              BankingSystemBoundary -> BankingSystem: // transaction request()
-              autonumber inc A
-              activate BankingSystem
-                BankingSystem -->  BankingSystemBoundary: transaction response
-                autonumber inc A
-              deactivate BankingSystem
-              BankingSystemBoundary --> PaymentController: transaction response()
-              autonumber inc A
-            deactivate  BankingSystemBoundary
-            PaymentController -> Payment: // save payment details()
-            autonumber inc A
-            activate Payment
-              Payment --> PaymentController: payment details
-              autonumber inc A
-            deactivate Payment
-            PaymentController --> PaymentView: payment details
-            autonumber inc A
-          deactivate PaymentController
-          PaymentView --> User: display payment details
-          autonumber inc A
-        deactivate PaymentView
+
+        User -> PaymentView: 13. // confirm purchase
+        
+          PaymentView -> PaymentController: 14. // confirm purchase ()
+          
+            PaymentController ->  BankingSystemBoundary: 15. // transaction request ()
+            
+              BankingSystemBoundary -> BankingSystem: 16. // transaction request ()
+              
+                BankingSystem -->  BankingSystemBoundary: transaction response message
+                
+              BankingSystemBoundary --> PaymentController: transaction response message
+              
+            PaymentController -> Payment: 17. // save payment details ()
+            
+            Payment ++
+              Payment --> PaymentController: payment details message
+              
+            Payment --
+            PaymentController --> PaymentView: 18. // display payment details ()
+          
 
     alt Insufficient Funds
-      autonumber 25.1.1
-      BankingSystem -->  BankingSystemBoundary: insufficient funds
-      autonumber inc A
-      activate  BankingSystemBoundary
-        BankingSystemBoundary --> PaymentController: insufficient funds
-        autonumber inc A
-        activate PaymentController
-          PaymentController --> PaymentView: display error
-          autonumber inc A
-          activate PaymentView
-            PaymentView --> User: display error
-            autonumber inc A
-          deactivate PaymentView
-        deactivate PaymentController
-      deactivate  BankingSystemBoundary
+      BankingSystem -->  BankingSystemBoundary: insufficient funds message
+      
+        BankingSystemBoundary --> PaymentController: insufficient funds message
+        
+          PaymentController --> PaymentView: insufficient funds message
+          
+            PaymentView --> User: insufficient funds message
+            
     end
 
 else Authentication Failure
-  autonumber 17.2
-  BankingSystem -->  BankingSystemBoundary: fail authentication
-  autonumber inc A
-    activate  BankingSystemBoundary
-      BankingSystemBoundary --> PaymentController: fail authentication
-      autonumber inc A
-      activate PaymentController
-        PaymentController --> PaymentView: display error
-        autonumber inc A
-        activate PaymentView
-          PaymentView --> User: display error
-          autonumber inc A
+  BankingSystem -->  BankingSystemBoundary: fail authentication message
+      BankingSystem --
+      BankingSystemBoundary --> PaymentController: fail authentication message
+      BankingSystemBoundary --
+        PaymentController --> PaymentView: fail authentication message
+        PaymentController --
+          PaymentView --> User: fail authentication message
+          
         deactivate PaymentView
       deactivate PaymentController
-    deactivate  BankingSystemBoundary
 end
 
 @enduml
