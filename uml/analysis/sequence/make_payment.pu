@@ -37,30 +37,30 @@ alt Authentication Success
     
       BankingSystemBoundary --> PaymentController: success authentication message
       
-        PaymentController --> PaymentView: 12. // display payment confirmation ()
+        PaymentController --> PaymentView: 12.1. // display payment confirmation ()
         
           PaymentView --> User: ask for confirmation
 
 
-        User -> PaymentView: 13. // confirm purchase
+        User -> PaymentView: 13.1. // confirm purchase
         
-          PaymentView -> PaymentController: 14. // confirm purchase ()
+          PaymentView -> PaymentController: 14.1. // confirm purchase ()
           
-            PaymentController ->  BankingSystemBoundary: 15. // transaction request ()
+            PaymentController ->  BankingSystemBoundary: 15.1. // transaction request ()
             
-              BankingSystemBoundary -> BankingSystem: 16. // transaction request ()
+              BankingSystemBoundary -> BankingSystem: 16.1. // transaction request ()
               
                 BankingSystem -->  BankingSystemBoundary: transaction response message
                 
               BankingSystemBoundary --> PaymentController: transaction response message
               
-            PaymentController -> Payment: 17. // save payment details ()
+            PaymentController -> Payment: 17.1. // save payment details ()
             
             Payment ++
               Payment --> PaymentController: payment details message
               
             Payment --
-            PaymentController --> PaymentView: 18. // display payment details ()
+            PaymentController --> PaymentView: 18.1. // display payment details ()
           
 
     alt Insufficient Funds
