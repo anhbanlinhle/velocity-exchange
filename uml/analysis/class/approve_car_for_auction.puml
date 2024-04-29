@@ -26,10 +26,10 @@ class VerificationRequest <<entity>> {
     time: String
     admin id: Int
     payment id: Int
-    // get request()
+    // create request()
+    // get request ()
     // set request ()
     // get request list ()
-    // update request ()
     }
 
 

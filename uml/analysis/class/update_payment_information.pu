@@ -27,9 +27,9 @@ class PaymentInformation <<entity>> {
     bank name: String
     account number: String
 
+    // create payment information ()
     // get payment information ()
     // set payment information ()
-    // update payment information ()
 
     }
 

@@ -30,10 +30,10 @@ class Auction <<entity>> {
     initial price: Float
     current price: Float
     deposit rate: Float
+    // create auction ()
     // get auction list ()
     // set auction ()
     // get auction ()
-    // update auction ()
 
     }
 

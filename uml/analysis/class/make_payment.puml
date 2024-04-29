@@ -35,8 +35,9 @@ class Payment <<entity>> {
     account number: String
     user id: Int
     transaction id: String
+    // create payment ()
+    // set payment detail ()
     // get payment detail ()
-    // update payment detail ()
 
     }
 
