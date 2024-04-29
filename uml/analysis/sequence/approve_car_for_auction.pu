@@ -1,62 +1,43 @@
 @startuml
 hide footbox
 
-autonumber
 
 actor ":Admin" as Admin
 boundary ":VerificationRequestView" as PendingRequestsView
 control ":VerificationRequest\nController" as VerificationRequestController
 entity ":VerificationRequest" as PendingRequests
+
 Admin ++
-  Admin -> PendingRequestsView: // view pending requests()
-  activate PendingRequestsView
-    PendingRequestsView -> VerificationRequestController: // get pending requests()
-    activate VerificationRequestController
-      VerificationRequestController -> PendingRequests: // query requests()
-        activate PendingRequests
-        PendingRequests --> VerificationRequestController: query results
-        deactivate PendingRequests
-      VerificationRequestController --> PendingRequestsView: pending requests
-    deactivate VerificationRequestController
-    PendingRequestsView --> Admin: display pending requests
-  deactivate PendingRequestsView
-  Admin -> PendingRequestsView: // select specific request()
-  activate PendingRequestsView
-    PendingRequestsView -> VerificationRequestController: // get specific request()
-    activate VerificationRequestController
-      VerificationRequestController -> PendingRequests: // query specific request()
-        activate PendingRequests
-        PendingRequests --> VerificationRequestController: query results
-        deactivate PendingRequests
-      VerificationRequestController --> PendingRequestsView: specific request
-    deactivate VerificationRequestController
-    PendingRequestsView --> Admin: display specific request
-  deactivate PendingRequestsView
-  Admin -> PendingRequestsView: // update request status()
-  activate PendingRequestsView
-    PendingRequestsView -> VerificationRequestController: // update command()
-    activate VerificationRequestController
-      VerificationRequestController -> PendingRequests: // attempt update()
-        activate PendingRequests
-        PendingRequests --> VerificationRequestController: update success
-        deactivate PendingRequests
-      VerificationRequestController --> PendingRequestsView: updated results
-    deactivate VerificationRequestController
-    PendingRequestsView --> Admin: display updated request status
-  deactivate PendingRequestsView
+  Admin -> PendingRequestsView: 1. // choose view pending requests
+  PendingRequestsView ++
+    PendingRequestsView -> VerificationRequestController: 2. // get pending requests ()
+    VerificationRequestController ++
+      VerificationRequestController -> PendingRequests: 3. // query requests ()
+        PendingRequests ++
+        PendingRequests --> VerificationRequestController: query results message
+      VerificationRequestController --> PendingRequestsView: 4. // display pending requests ()
+
+
+  Admin -> PendingRequestsView: // select specific request
+    PendingRequestsView -> VerificationRequestController: // 5. get specific request ()
+      VerificationRequestController -> PendingRequests: // 6. query specific request ()
+        PendingRequests --> VerificationRequestController: query results message
+      VerificationRequestController --> PendingRequestsView: 7. // display specific request ()
+
+  Admin -> PendingRequestsView: // update request status ()
+    PendingRequestsView -> VerificationRequestController: // 8. update request ()
+      VerificationRequestController -> PendingRequests: // 9. update request ()
+        PendingRequests --> VerificationRequestController: update success message
+      VerificationRequestController --> PendingRequestsView: updated results message
+    PendingRequestsView --> Admin: updated request status message
 
 alt Invalid status
-  autonumber 16.1
-  PendingRequests --> VerificationRequestController: invalid status
-  autonumber inc A
-  activate VerificationRequestController
+  PendingRequests --> VerificationRequestController: invalid status message
+  PendingRequests --
     VerificationRequestController --> PendingRequestsView: error message
-    autonumber inc A
-  deactivate VerificationRequestController
-  activate PendingRequestsView
-    PendingRequestsView --> Admin: display error
-    autonumber inc A
-  deactivate PendingRequestsView
+    VerificationRequestController --
+    PendingRequestsView --> Admin: error message
+    PendingRequestsView --
 end
 
 @enduml
