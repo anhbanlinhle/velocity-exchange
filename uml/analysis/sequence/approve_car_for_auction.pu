@@ -15,14 +15,14 @@ Admin ++
       VerificationRequestController -> PendingRequests: 3. // query requests ()
         PendingRequests ++
         PendingRequests --> VerificationRequestController: query results message
-      VerificationRequestController --> PendingRequestsView: 4. // display pending requests ()
+      VerificationRequestController -> PendingRequestsView: 4. // display pending requests ()
 
 
   Admin -> PendingRequestsView: 5. // select specific request
     PendingRequestsView -> VerificationRequestController: 6. // get specific request ()
       VerificationRequestController -> PendingRequests: 7. // query specific request ()
         PendingRequests --> VerificationRequestController: query results message
-      VerificationRequestController --> PendingRequestsView: 8. // display specific request ()
+      VerificationRequestController -> PendingRequestsView: 8. // display specific request ()
 
   Admin -> PendingRequestsView: 9. // update request status
     PendingRequestsView -> VerificationRequestController: 10. // update request ()

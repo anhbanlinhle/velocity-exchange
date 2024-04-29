@@ -14,7 +14,7 @@ User ++
   activate PaymentInformationView
     PaymentInformationView -> PaymentController : 2. // get payment method ()
     activate PaymentController
-      PaymentController --> PaymentInformationView: 3. // display payment method form ()
+      PaymentController -> PaymentInformationView: 3. // display payment method form ()
   User -> PaymentInformationView: 4. // fill payment information
     PaymentInformationView -> PaymentController: 5. // new payment information ()
       PaymentController --> BankingSystemBoundary: 6. // authenticate information ()

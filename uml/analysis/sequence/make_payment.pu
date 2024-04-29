@@ -13,7 +13,7 @@ User ++
   PaymentView ++
     PaymentView -> PaymentController: 2. // trigger payment ()
     PaymentController ++
-      PaymentController --> PaymentView: 3. // display payment details ()
+      PaymentController -> PaymentView: 3. // display payment details ()
 
   
   User -> PaymentView: 4. // make payment
@@ -37,7 +37,7 @@ alt Authentication Success
     
       BankingSystemBoundary --> PaymentController: success authentication message
       
-        PaymentController --> PaymentView: 12.1. // display payment confirmation ()
+        PaymentController -> PaymentView: 12.1. // display payment confirmation ()
         
           PaymentView --> User: ask for confirmation
 
