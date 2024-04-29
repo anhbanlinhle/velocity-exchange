@@ -1,56 +1,40 @@
 @startuml
 hide footbox
 
-autonumber
 
 actor ":Customer" as Customer
 boundary ":AuctionView" as AuctionView
 control ":AuctionController" as AuctionController
 entity ":Bid" as Bid
 Customer ++
-  Customer -> AuctionView : // enter bid amount()
+  Customer -> AuctionView : 1. // enter bid amount
   activate AuctionView
-    AuctionView -> AuctionController : // validate bid()
+    AuctionView -> AuctionController : 2. // validate bid ()
     activate AuctionController
-      AuctionController -> AuctionController : // validate bid()
-      AuctionController -> Bid : // update highest bid()
+      AuctionController -> AuctionController : 3. // validate bid ()
+      AuctionController -> Bid : 4. // update highest bid ()
       activate Bid
-        Bid --> AuctionController : new highest bid
-      deactivate Bid
-      AuctionController --> AuctionView : new highest bid
-    deactivate AuctionController
-    AuctionView --> Customer : display new highest bid
-  deactivate AuctionView
+        Bid --> AuctionController : new highest bid message
+
+      AuctionController --> AuctionView : new highest bid message
+    AuctionView --> Customer : new highest bid message
 
 alt Invalid Bid Amount
-  autonumber 4.1
-  AuctionController --> AuctionView : invalid bid
-  autonumber inc A
-  activate AuctionView
-    AuctionView --> Customer : reject message
-  deactivate AuctionView
+  AuctionController --> AuctionView : invalid bid message
+    AuctionView --> Customer : invalid bid message
 end
 
 opt Automatic Bid
-  autonumber 1.1
-    Customer -> AuctionView : // set max bid()
-    autonumber inc A
-    activate AuctionView
-      AuctionView -> AuctionController : // set max bid()
-      autonumber inc A
-    deactivate AuctionView
+    Customer -> AuctionView : 1.1. // set max bid ()
+      AuctionView -> AuctionController : 2.1. // set max bid ()
     loop Until Auction Ends
       alt Not Top Bidder & Max Bid Not Exceeded
-        AuctionController -> Bid : // update highest bid()
-        autonumber inc A
-        activate Bid
-          Bid --> AuctionController : new highest bid
+        AuctionController -> Bid : 3.2 // update highest bid ()
+          Bid --> AuctionController : new highest bid message
         deactivate Bid
-        activate AuctionController
-          AuctionController --> AuctionView : new highest bid
+          AuctionController --> AuctionView : new highest bid message
         deactivate AuctionController
-        activate AuctionView
-          AuctionView --> Customer : display new highest bid
+          AuctionView --> Customer : new highest bid message
         deactivate AuctionView
       end
     end
