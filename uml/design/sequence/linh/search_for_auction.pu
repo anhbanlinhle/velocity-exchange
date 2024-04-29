@@ -1,0 +1,52 @@
+@startuml UC_6
+hide footbox
+
+actor ":User" as User
+boundary ":AuctionListView" as AuctionView
+control ":SearchController" as SearchController
+entity ":Auction" as Auction
+
+User ++
+opt Manual Search
+    User -> AuctionView: 1.1. // fill search bar
+    
+    activate AuctionView
+      AuctionView -> SearchController: 2.1. // search by keywords ()
+      
+      activate SearchController
+        SearchController -> Auction: 3.1. // query by keywords ()
+          
+          activate Auction
+            Auction --> SearchController: query result message
+            
+        SearchController --> AuctionView: query result message
+        
+      AuctionView --> User: query result message
+      
+end
+
+opt Filter Search
+  User -> AuctionView: 1.2. // select filter attributes
+  
+  
+      AuctionView -> SearchController: 2.2. // search by filter attributes ()
+      
+      
+        SearchController -> Auction: 3.2. // query by attributes ()
+          
+          
+            Auction --> SearchController: filter result message
+            
+            
+          deactivate Auction
+        SearchController --> AuctionView: filter result message
+        
+        
+      deactivate SearchController
+      AuctionView --> User: filter result message
+      
+      
+    deactivate AuctionView
+end
+
+@enduml

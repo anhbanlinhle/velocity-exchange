@@ -1,0 +1,23 @@
+@startuml UC_7
+hide footbox
+
+actor ":User" as User
+boundary ":AuctionDetailView" as AuctionView
+control ":AuctionController" as SearchController
+entity ":Auction" as Auction
+
+User ++
+  User -> AuctionView: 1. // view auction details
+  activate AuctionView
+    AuctionView -> SearchController: 2. // get auction details ()
+    activate SearchController
+      SearchController -> Auction: 3. // query auction details ()
+        activate Auction
+          Auction --> SearchController: query result message
+        deactivate Auction
+      SearchController --> AuctionView: query result message
+    deactivate SearchController
+    AuctionView --> User: query result message
+  deactivate AuctionView
+
+@enduml

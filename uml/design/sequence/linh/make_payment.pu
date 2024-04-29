@@ -1,0 +1,90 @@
+@startuml UC_8
+hide footbox
+
+actor ":User" as User
+boundary ":PaymentView" as PaymentView
+control ":PaymentController" as PaymentController
+entity ":Payment" as Payment
+boundary  ":BankingSystemBoundary" as BankingSystemBoundary
+actor ":Banking System" as BankingSystem
+
+User ++
+  User -> PaymentView: 1. // initiate payment action
+  PaymentView ++
+    PaymentView -> PaymentController: 2. // trigger payment ()
+    PaymentController ++
+      PaymentController --> PaymentView: 3. // display payment details ()
+
+  
+  User -> PaymentView: 4. // make payment
+    PaymentView -> PaymentController: 5. // make payment ()
+      PaymentController ->  BankingSystemBoundary: 6. // transmit payment request()
+      BankingSystemBoundary ++
+         BankingSystemBoundary -> BankingSystem: 7. // transmit payment request()
+        BankingSystem ++
+          BankingSystem -->  BankingSystemBoundary: authentication request message
+
+        BankingSystemBoundary --> PaymentController: authentication request message
+      PaymentController --> PaymentView: authentication request message
+    PaymentView --> User: authentication request message
+  User -> PaymentView: 8. // provide authentication details ()
+    PaymentView -> PaymentController: 9. // provide authentication details()
+      PaymentController ->  BankingSystemBoundary: 10. // transfer encrypted details()
+         BankingSystemBoundary -> BankingSystem: 11. // transfer encrypted details()
+
+alt Authentication Success
+    BankingSystem -->  BankingSystemBoundary: success authentication message
+    
+      BankingSystemBoundary --> PaymentController: success authentication message
+      
+        PaymentController --> PaymentView: 12.1. // display payment confirmation ()
+        
+          PaymentView --> User: ask for confirmation
+
+
+        User -> PaymentView: 13.1. // confirm purchase
+        
+          PaymentView -> PaymentController: 14.1. // confirm purchase ()
+          
+            PaymentController ->  BankingSystemBoundary: 15.1. // transaction request ()
+            
+              BankingSystemBoundary -> BankingSystem: 16.1. // transaction request ()
+              
+                BankingSystem -->  BankingSystemBoundary: transaction response message
+                
+              BankingSystemBoundary --> PaymentController: transaction response message
+              
+            PaymentController -> Payment: 17.1. // save payment details ()
+            
+            Payment ++
+              Payment --> PaymentController: payment details message
+              
+            Payment --
+            PaymentController --> PaymentView: 18.1. // display payment details ()
+          
+
+    alt Insufficient Funds
+      BankingSystem -->  BankingSystemBoundary: insufficient funds message
+      
+        BankingSystemBoundary --> PaymentController: insufficient funds message
+        
+          PaymentController --> PaymentView: insufficient funds message
+          
+            PaymentView --> User: insufficient funds message
+            
+    end
+
+else Authentication Failure
+  BankingSystem -->  BankingSystemBoundary: fail authentication message
+      BankingSystem --
+      BankingSystemBoundary --> PaymentController: fail authentication message
+      BankingSystemBoundary --
+        PaymentController --> PaymentView: fail authentication message
+        PaymentController --
+          PaymentView --> User: fail authentication message
+          
+        deactivate PaymentView
+      deactivate PaymentController
+end
+
+@enduml

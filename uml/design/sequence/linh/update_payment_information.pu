@@ -1,0 +1,48 @@
+@startuml UC_4
+hide footbox
+
+
+actor ":User" as User
+boundary ":PaymentInformationView" as PaymentInformationView
+control ":PaymentController" as PaymentController
+entity ":PaymentInformation" as PaymentInformation
+boundary ":BankingSystemBoundary" as BankingSystemBoundary
+actor ":BankingSystem" as BankingSystem
+
+User ++
+  User -> PaymentInformationView : 1. // request payment method update
+  activate PaymentInformationView
+    PaymentInformationView -> PaymentController : 2. // get payment method ()
+    activate PaymentController
+      PaymentController --> PaymentInformationView: 3. // display payment method form ()
+  User -> PaymentInformationView: 4. // fill payment information
+    PaymentInformationView -> PaymentController: 5. // new payment information ()
+      PaymentController --> BankingSystemBoundary: 6. // authenticate information ()
+      activate BankingSystemBoundary
+        BankingSystemBoundary --> BankingSystem: 7. // authenticate request ()
+        activate BankingSystem
+          BankingSystem --> BankingSystemBoundary: success authentication message
+        BankingSystemBoundary --> PaymentController: success authentication message
+      PaymentController -> PaymentInformation: 8. // store new \npayment information ()
+      activate PaymentInformation
+        PaymentInformation --> PaymentController: new information message
+      deactivate PaymentInformation
+      PaymentController --> PaymentInformationView: new information message
+    PaymentInformationView --> User: new information message
+
+alt Invalid information
+  
+  BankingSystem --> BankingSystemBoundary: fail authentication message
+  BankingSystem --
+    BankingSystemBoundary --> PaymentController: fail authentication message
+    
+  deactivate BankingSystemBoundary
+    PaymentController --> PaymentInformationView: fail authentication message
+    
+  deactivate PaymentController
+    PaymentInformationView --> User: fail authentication message
+    
+  deactivate PaymentInformationView
+end
+
+@enduml
