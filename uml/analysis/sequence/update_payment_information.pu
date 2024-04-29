@@ -1,7 +1,6 @@
 @startuml
 hide footbox
 
-autonumber
 
 actor ":User" as User
 boundary ":PaymentInformationView" as PaymentInformationView
@@ -11,50 +10,38 @@ boundary ":BankingSystemBoundary" as BankingSystemBoundary
 actor ":BankingSystem" as BankingSystem
 
 User ++
-  User -> PaymentInformationView : // update current payment method()
+  User -> PaymentInformationView : 1. // request payment method update
   activate PaymentInformationView
-    PaymentInformationView -> PaymentController : // update payment method()
+    PaymentInformationView -> PaymentController : 2. // get payment method ()
     activate PaymentController
-      PaymentController --> PaymentInformationView: // payment method form()
-    deactivate PaymentController
-    PaymentInformationView --> User: // display payment method form()
-  deactivate PaymentInformationView
-  User -> PaymentInformationView: // fill payment information()
-  activate PaymentInformationView
-    PaymentInformationView -> PaymentController: // payment information()
-    activate PaymentController
-      PaymentController --> BankingSystemBoundary: // authenticate information()
+      PaymentController --> PaymentInformationView: 3. // display payment method form ()
+  User -> PaymentInformationView: 4. // fill payment information
+    PaymentInformationView -> PaymentController: 5. // new payment information ()
+      PaymentController --> BankingSystemBoundary: 6. // authenticate information ()
       activate BankingSystemBoundary
-        BankingSystemBoundary --> BankingSystem: // authenticate request()
+        BankingSystemBoundary --> BankingSystem: 7. // authenticate request ()
         activate BankingSystem
-          BankingSystem --> BankingSystemBoundary: success authentication
-        deactivate BankingSystem
-        BankingSystemBoundary --> PaymentController: success authentication
-      deactivate BankingSystemBoundary
-      PaymentController -> PaymentInformation: // store new \npayment information()
+          BankingSystem --> BankingSystemBoundary: success authentication message
+        BankingSystemBoundary --> PaymentController: success authentication message
+      PaymentController -> PaymentInformation: 8. // store new \npayment information ()
       activate PaymentInformation
-        PaymentInformation --> PaymentController: new payment information
+        PaymentInformation --> PaymentController: new information message
       deactivate PaymentInformation
-      PaymentController --> PaymentInformationView: new payment information
-    deactivate PaymentController
-    PaymentInformationView --> User: display new payment information
-  deactivate PaymentInformationView
+      PaymentController --> PaymentInformationView: new information message
+    PaymentInformationView --> User: new information message
 
 alt Invalid information
-  autonumber 9.1
-  BankingSystem --> BankingSystemBoundary: fail authentication
-  autonumber inc A
-  activate BankingSystemBoundary
-    BankingSystemBoundary --> PaymentController: fail authentication
-    autonumber inc A
+  
+  BankingSystem --> BankingSystemBoundary: fail authentication message
+  BankingSystem --
+    BankingSystemBoundary --> PaymentController: fail authentication message
+    
   deactivate BankingSystemBoundary
-  activate PaymentController
-    PaymentController --> PaymentInformationView: error message
-    autonumber inc A
+    PaymentController --> PaymentInformationView: fail authentication message
+    
   deactivate PaymentController
-  activate PaymentInformationView
-    PaymentInformationView --> User: display error
-    autonumber inc A
+    PaymentInformationView --> User: fail authentication message
+    
   deactivate PaymentInformationView
 end
 
