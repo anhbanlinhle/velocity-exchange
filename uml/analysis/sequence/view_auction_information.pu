@@ -7,11 +7,11 @@ control ":AuctionController" as SearchController
 entity ":Auction" as Auction
 
 User ++
-  User -> AuctionView: 1. // view auction details
+  User -> AuctionView: 1. // view auction details ()
   activate AuctionView
     AuctionView -> SearchController: 2. // get auction details ()
     activate SearchController
-      SearchController -> Auction: 3. // query auction details ()
+      SearchController -> Auction: 3. // get auction ()
         activate Auction
           Auction --> SearchController: query result message
         deactivate Auction

@@ -9,18 +9,19 @@ boundary  ":BankingSystemBoundary" as BankingSystemBoundary
 actor ":Banking System" as BankingSystem
 
 User ++
-  User -> PaymentView: 1. // initiate payment action
+  User -> PaymentView: 1. // initiate payment action ()
   PaymentView ++
     PaymentView -> PaymentController: 2. // trigger payment ()
     PaymentController ++
       PaymentController -> PaymentView: 3. // display payment details ()
+      PaymentView --> User: return payment details screen
 
   
-  User -> PaymentView: 4. // make payment
+  User -> PaymentView: 4. // make payment ()
     PaymentView -> PaymentController: 5. // make payment ()
-      PaymentController ->  BankingSystemBoundary: 6. // transmit payment request()
+      PaymentController ->  BankingSystemBoundary: 6. // transmit payment request ()
       BankingSystemBoundary ++
-         BankingSystemBoundary -> BankingSystem: 7. // transmit payment request()
+         BankingSystemBoundary -> BankingSystem: 7. // transmit payment request ()
         BankingSystem ++
           BankingSystem -->  BankingSystemBoundary: authentication request message
 
@@ -29,8 +30,8 @@ User ++
     PaymentView --> User: authentication request message
   User -> PaymentView: 8. // provide authentication details ()
     PaymentView -> PaymentController: 9. // provide authentication details()
-      PaymentController ->  BankingSystemBoundary: 10. // transfer encrypted details()
-         BankingSystemBoundary -> BankingSystem: 11. // transfer encrypted details()
+      PaymentController ->  BankingSystemBoundary: 10. // transfer encrypted details ()
+         BankingSystemBoundary -> BankingSystem: 11. // transfer encrypted details ()
 
 alt Authentication Success
     BankingSystem -->  BankingSystemBoundary: success authentication message
@@ -42,7 +43,7 @@ alt Authentication Success
           PaymentView --> User: ask for confirmation
 
 
-        User -> PaymentView: 13.1. // confirm purchase
+        User -> PaymentView: 13.1. // confirm purchase ()
         
           PaymentView -> PaymentController: 14.1. // confirm purchase ()
           
@@ -54,13 +55,14 @@ alt Authentication Success
                 
               BankingSystemBoundary --> PaymentController: transaction response message
               
-            PaymentController -> Payment: 17.1. // save payment details ()
+            PaymentController -> Payment: 17.1. // set payment details ()
             
             Payment ++
               Payment --> PaymentController: payment details message
               
             Payment --
             PaymentController -> PaymentView: 18.1. // display payment details ()
+            PaymentView --> User: return payment details screen
           
 
     alt Insufficient Funds

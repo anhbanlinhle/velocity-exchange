@@ -8,13 +8,13 @@ entity ":Auction" as Auction
 
 User ++
 opt Manual Search
-    User -> AuctionView: 1.1. // fill search bar
+    User -> AuctionView: 1.1. // fill search bar ()
     
     activate AuctionView
       AuctionView -> SearchController: 2.1. // search by keywords ()
       
       activate SearchController
-        SearchController -> Auction: 3.1. // query by keywords ()
+        SearchController -> Auction: 3.1. // get auction list ()
           
           activate Auction
             Auction --> SearchController: query result message
@@ -26,13 +26,13 @@ opt Manual Search
 end
 
 opt Filter Search
-  User -> AuctionView: 1.2. // select filter attributes
+  User -> AuctionView: 1.2. // select filter attributes ()
   
   
       AuctionView -> SearchController: 2.2. // search by filter attributes ()
       
       
-        SearchController -> Auction: 3.2. // query by attributes ()
+        SearchController -> Auction: 3.2. // get auction list ()
           
           
             Auction --> SearchController: filter result message
