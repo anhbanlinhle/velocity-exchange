@@ -5,15 +5,15 @@ left to right direction
 hide circle
 class AuctionListView <<boundary>> {
 
-    // search by keywords ()
-    // search by filter attributes ()
+    // fill search bar ()
+    // select filter attributes ()
 
     }
 
 class SearchController <<control>> {
     
-    // query by keywords ()
-    // query by attributes ()
+    // search by keywords ()
+    // search by filter attributes ()
 
     }
 
