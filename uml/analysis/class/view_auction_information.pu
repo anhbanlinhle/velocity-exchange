@@ -5,13 +5,13 @@ skinparam linetype ortho
 hide circle
 class AuctionDetailView <<boundary>> {
 
-    // select auction ()
+    // get auction details ()
 
     }
 
 class AuctionController <<control>> {
     
-    // query auction by details ()
+    // query auction details ()
 
     }
 
