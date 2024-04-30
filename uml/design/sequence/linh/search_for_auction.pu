@@ -2,19 +2,19 @@
 hide footbox
 
 actor ":User" as User
-boundary ":AuctionListView" as AuctionView
-control ":SearchController" as SearchController
-entity ":Auction" as Auction
+participant ":AuctionListView" as AuctionView
+participant ":SearchController" as SearchController
+participant ":IAuctionDatabase" as Auction
 
 User ++
 opt Manual Search
     User -> AuctionView: 1.1. // fill search bar
     
     activate AuctionView
-      AuctionView -> SearchController: 2.1. // search by keywords ()
+      AuctionView -> SearchController: 2.1. // searchByKeywords(listKeywords)
       
       activate SearchController
-        SearchController -> Auction: 3.1. // query by keywords ()
+        SearchController -> Auction: 3.1. // queryByKeywords(query)
           
           activate Auction
             Auction --> SearchController: query result message
@@ -29,10 +29,10 @@ opt Filter Search
   User -> AuctionView: 1.2. // select filter attributes
   
   
-      AuctionView -> SearchController: 2.2. // search by filter attributes ()
+      AuctionView -> SearchController: 2.2. // searchByFilterAttributes(listAttributes)
       
       
-        SearchController -> Auction: 3.2. // query by attributes ()
+        SearchController -> Auction: 3.2. // queryByAttributes(query)
           
           
             Auction --> SearchController: filter result message
