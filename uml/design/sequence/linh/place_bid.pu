@@ -7,12 +7,12 @@ boundary ":AuctionView" as AuctionView
 control ":AuctionController" as AuctionController
 entity ":Bid" as Bid
 Customer ++
-  Customer -> AuctionView : 1. // enter bid amount
+  Customer -> AuctionView : 1. // enter bid amount ()
   activate AuctionView
     AuctionView -> AuctionController : 2. // validate bid ()
     activate AuctionController
       AuctionController -> AuctionController : 3. // validate bid ()
-      AuctionController -> Bid : 4. // update highest bid ()
+      AuctionController -> Bid : 4. // create bid ()
       activate Bid
         Bid --> AuctionController : new highest bid message
 
@@ -29,7 +29,7 @@ opt Automatic Bid
       AuctionView -> AuctionController : 2.1. // set max bid ()
     loop Until Auction Ends
       alt Not Top Bidder & Max Bid Not Exceeded
-        AuctionController -> Bid : 3.2 // update highest bid ()
+        AuctionController -> Bid : 3.2 // create bid ()
           Bid --> AuctionController : new highest bid message
         deactivate Bid
           AuctionController --> AuctionView : new highest bid message
