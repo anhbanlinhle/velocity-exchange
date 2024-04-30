@@ -60,7 +60,7 @@ alt Authentication Success
               Payment --> PaymentController: payment details message
               
             Payment --
-            PaymentController --> PaymentView: 18.1. // display payment details ()
+            PaymentController -> PaymentView: 18.1. // display payment details ()
           
 
     alt Insufficient Funds
