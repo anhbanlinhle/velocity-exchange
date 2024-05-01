@@ -1,0 +1,41 @@
+@startuml 
+left to right direction
+skinparam classAttributeIconSize 0
+skinparam linetype ortho
+hide circle
+class AuctionView <<boundary>> {
+    id: Int
+    bid amount: Float
+
+    // fill bid amount ()
+    // validate bid amount ()
+    // set max bid ()
+    // display highest bid ()
+
+    }
+
+class AuctionController <<control>> {
+    // validate bid ()
+    // update highest bid ()
+
+
+
+    }
+
+class Bid <<entity>> {
+    id: Int
+    amount: Float
+    bidder: String
+    time stamp: String
+    // create bid ()
+    // get bid ()
+    // update bid ()
+    }
+
+
+AuctionView "1" --- "1" AuctionController
+
+AuctionController "1" --- "0..*" Bid
+
+
+@enduml

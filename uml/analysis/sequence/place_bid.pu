@@ -1,0 +1,59 @@
+@startuml
+hide footbox
+
+autonumber
+
+actor ":Customer" as Customer
+boundary ":AuctionView" as AuctionView
+control ":AuctionController" as AuctionController
+entity ":Bid" as Bid
+Customer ++
+  Customer -> AuctionView : // enter bid amount()
+  activate AuctionView
+    AuctionView -> AuctionController : // validate bid()
+    activate AuctionController
+      AuctionController -> AuctionController : // validate bid()
+      AuctionController -> Bid : // update highest bid()
+      activate Bid
+        Bid --> AuctionController : new highest bid
+      deactivate Bid
+      AuctionController --> AuctionView : new highest bid
+    deactivate AuctionController
+    AuctionView --> Customer : display new highest bid
+  deactivate AuctionView
+
+alt Invalid Bid Amount
+  autonumber 4.1
+  AuctionController --> AuctionView : invalid bid
+  autonumber inc A
+  activate AuctionView
+    AuctionView --> Customer : reject message
+  deactivate AuctionView
+end
+
+opt Automatic Bid
+  autonumber 1.1
+    Customer -> AuctionView : // set max bid()
+    autonumber inc A
+    activate AuctionView
+      AuctionView -> AuctionController : // set max bid()
+      autonumber inc A
+    deactivate AuctionView
+    loop Until Auction Ends
+      alt Not Top Bidder & Max Bid Not Exceeded
+        AuctionController -> Bid : // update highest bid()
+        autonumber inc A
+        activate Bid
+          Bid --> AuctionController : new highest bid
+        deactivate Bid
+        activate AuctionController
+          AuctionController --> AuctionView : new highest bid
+        deactivate AuctionController
+        activate AuctionView
+          AuctionView --> Customer : display new highest bid
+        deactivate AuctionView
+      end
+    end
+end
+
+@enduml
