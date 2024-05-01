@@ -1,0 +1,33 @@
+@startuml view_hosted_auction
+hide circle
+skinparam classAttributeIconSize 0
+left to right direction
+
+class AuctionListView <<boundary>> {
+  // view hosted auction ()
+  // display hosted auction ()
+}
+
+class AuctionController <<control>> {
+  // get hosted auction ()
+}
+
+class Auction <<entity>> {
+  id: Int
+  name: String
+  start date: String
+  end date: String
+  create date: String
+  status: String
+  winner: Int
+  bid step: Float
+  initial price: Float
+  current price: Float
+  deposit rate: Float
+  // get auction list ()
+}
+
+AuctionListView "1" -- "1" AuctionController
+AuctionController "1" -- "1" Auction
+
+@enduml
