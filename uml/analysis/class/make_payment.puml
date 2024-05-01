@@ -1,0 +1,58 @@
+@startuml 
+skinparam classAttributeIconSize 0
+skinparam linetype ortho
+left to right direction
+hide circle
+class PaymentView <<boundary>> {
+    pay amount: Float
+    payment method: String
+    bank name: String
+    password: String
+
+    // initiate payment action ()
+    // display payment information ()
+    // request payment ()
+    // send authentication details ()
+    // display confirmation ()
+    // confirm purchase ()
+    // display payment details ()
+    // display error ()
+
+    }
+
+class PaymentController <<control>> {
+    // transmit payment request ()
+    // transfer encrypted credentials ()
+    // request transaction ()
+    // save payment details ()
+
+    }
+
+class Payment <<entity>> {
+    id: Int
+    pay amount: Float
+    bank name: String
+    account number: String
+    user id: Int
+    transaction id: String
+    // create payment ()
+    // set payment detail ()
+    // get payment detail ()
+
+    }
+
+class BankingSystemBoundary <<boundary>> {
+    // transmit payment request ()
+    // transfer encrypted credentials ()
+    // request transaction ()
+    // response payment requests ()
+
+    }
+
+PaymentView "1..*" --- "1" PaymentController
+
+PaymentController "1" --- "0..*" Payment
+
+PaymentController "1" --- "1" BankingSystemBoundary
+
+@enduml

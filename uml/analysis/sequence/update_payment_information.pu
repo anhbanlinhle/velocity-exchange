@@ -10,6 +10,7 @@ entity ":PaymentInformation" as PaymentInformation
 boundary ":BankingSystemBoundary" as BankingSystemBoundary
 actor ":BankingSystem" as BankingSystem
 
+User ++
   User -> PaymentInformationView : // update current payment method()
   activate PaymentInformationView
     PaymentInformationView -> PaymentController : // update payment method()
