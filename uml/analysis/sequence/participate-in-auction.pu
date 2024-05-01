@@ -6,15 +6,20 @@ boundary ":AuctionView" as view
 control ":AuctionController" as controller
 entity ":Auction" as auction
 
-autonumber
+autonumber 1 1 "0."
 
 activate view
-customer -> view: // request participate()
-view -> controller++: // participate()
-controller -> auction++: // participate()
+
+customer ++
+customer -> view: // request participate ()
+view -> controller++: // participate ()
+controller -> auction++: // get auction ()
+autonumber stop
 auction --> controller--: participate successfully
-controller --> view--: participate successfully
-view --> customer: participate successfully
+autonumber resume
+controller -> view--: // display auction room ()
+autonumber stop
+view --> customer: return auction room screen
 
 deactivate view
 

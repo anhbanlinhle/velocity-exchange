@@ -5,14 +5,16 @@ boundary ":AuctionListView" as view
 control ":AuctionController" as controller
 entity ":Auction" as auction
 
-autonumber
-autoactivate on
-
-seller -> view : // view hosted auction()
-view -> controller : // get hosted auction()
-controller -> auction : // get hosted auction()
-auction --> controller : hosted auction
-controller --> view : hosted auction
-view --> seller : display hosted auction
-ref over seller, view, controller, auction : View auction information,
+autonumber 1 1 "0."
+seller ++
+seller -> view ++: // view hosted auction ()
+view -> controller ++ : // get hosted auction ()
+controller -> auction ++: // get auction list ()
+autonumber stop
+auction --> controller --: hosted auction message
+autonumber resume
+controller -> view --: // display hosted auction ()
+autonumber stop
+view --> seller : return hosted auction screen
+' ref over seller, view, controller, auction : View auction information.
 @enduml

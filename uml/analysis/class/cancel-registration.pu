@@ -1,0 +1,55 @@
+@startuml cancel_registration
+hide circle
+skinparam classAttributeIconSize 0
+left to right direction
+
+class AuctionDetailView <<boundary>> {
+  // cancel registration ()
+}
+
+class AuctionController <<control>>{
+  // cancel registration ()
+}
+
+class PaymentController <<control>>{
+  // refund ()
+}
+
+class BankingSystemBoundary <<boundary>> {
+  // refund ()
+}
+
+class Auction <<entity>> {
+  id: Int
+  name: String
+  start date: String
+  end date: String
+  create date: String
+  status: String
+  winner: Int
+  bid step: Float
+  initial price: Float
+  current price: Float
+  deposit rate: Float
+  // set auction ()
+  // get auction ()
+  }
+
+class Payment <<entity>> {
+  id: Int
+  pay amount: Float
+  bank name: String
+  account number: String
+  user id: Int
+  transaction id: String
+  // create payment ()
+  // set payment detail ()
+  // get payment detail ()
+}
+
+AuctionDetailView  "1" -- "1" AuctionController
+AuctionController "1" -- "1" PaymentController
+PaymentController "1" -- "1" BankingSystemBoundary
+AuctionController "1" -- "1" Auction
+PaymentController "1" -- "1" Payment
+@enduml

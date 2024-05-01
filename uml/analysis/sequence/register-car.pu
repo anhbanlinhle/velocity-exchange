@@ -2,38 +2,33 @@
 hide footbox
 
 actor ":Seller" as seller
-boundary ":RegisterAuctionForm" as form
-control ":AuctionController" as controller
+boundary ":RegisterCarForm" as form
+control ":VerificationRequest\nController" as controller
 entity ":Car" as car
-entity ":Auction" as auction
+entity ":VerificationRequest" as request
 
-autonumber
-autoactivate on
+autonumber 1 1 "0."
 
-seller -> form : // request to register auction()
-form -> controller : // request to register auction()
-controller -> car : // get car()
-car --> controller : car list
-controller --> form : car list
-form --> seller : display register form
-seller -> form : // enter information()
-form -> form : // validate information()
+activate seller
+seller -> form ++: // enter information ()
+form -> form : // validate information ()
 
+autonumber stop
 alt valid information
-  form --> seller : display payment information
+  form --> seller : payment information message
   ref over seller, form : Make payment
   alt payment successful
-    form -> controller : // submit information()
-    controller -> auction : // create approval auction request()
-    auction --> controller : request created
-    controller --> form : request created
-    form --> seller : request created
+    form -> controller ++: 3.1.1. // submit information ()
+    controller -> car ++: 4.1.1 // create car ()
+    car --> controller --: car created message
+    controller -> request ++: 5.1.1. // create request ()
+    request --> controller --: request created message
+    controller --> form --: request created message
+    form --> seller : request created message
   else payment failed
-    autonumber 10.1
     form --> seller : payment failed message
   end
 else missing information
-  autonumber 9.1
   form --> seller : missing information message
 else invalid information
   form --> seller : invalid information message
