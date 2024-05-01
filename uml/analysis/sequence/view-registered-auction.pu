@@ -2,16 +2,19 @@
 hide footbox
 actor ":Customer" as customer
 boundary ":AuctionListView" as view
-control ":AuctionListController" as controller
+control ":AuctionController" as controller
 entity ":Auction" as auction
 
-autonumber
-autoactivate on
-
-customer -> view : // view registered auction()
-view -> controller : // get registered auction()
-controller -> auction : // get registered auction()
-auction --> controller : registered auction
-controller --> view : registered auction
-view --> customer : display registered auction
+autonumber 1 1 "0."
+customer ++
+customer -> view ++: // view registered auction ()
+view -> controller ++ : // get registered auction ()
+controller -> auction ++ : // get auction list ()
+autonumber stop
+auction --> controller -- : registered auction message
+autonumber resume
+controller -> view -- : // display registered auction ()
+autonumber stop
+view --> customer -- : return registered auction screen
+' ref over customer, view, controller, auction : View auction information.
 @enduml

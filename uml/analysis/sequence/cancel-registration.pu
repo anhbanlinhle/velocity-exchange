@@ -2,7 +2,7 @@
 hide footbox
 
 actor ":Customer" as customer
-boundary ":AuctionView" as view
+boundary ":AuctionDetailView" as view
 control ":AuctionController" as auctionController
 control ":PaymentController" as paymentController
 entity ":Payment" as payment
@@ -10,23 +10,29 @@ boundary ":BankingSystemBoundary" as bankBoundary
 actor ":BankingSystem" as bank
 entity ":Auction" as auction
 
-autonumber
+autonumber 1 1 "0."
 
-customer -> view: // cancel registration()
+customer ++
+customer -> view: // cancel registration ()
 activate view
-view -> auctionController ++: // cancel registration()
-auctionController -> paymentController ++: // refund()
-paymentController -> payment ++: // get payment()
-payment --> paymentController --: payment
-paymentController -> bankBoundary ++: // refund()
-bankBoundary -> bank ++: // refund()
-bank --> bankBoundary --: refund success
-bankBoundary --> paymentController --: refund success
-paymentController --> auctionController --: refund success
-auctionController --> auction ++ : // cancel registration()
-auction --> auctionController --: cancel registration success
-auctionController --> view --: cancel registration success
-view --> customer --: display cancel \nregistration success
+view -> auctionController ++: // cancel registration ()
+auctionController -> paymentController ++: // refund ()
+paymentController -> payment ++: // get payment detail ()
+autonumber stop
+payment --> paymentController --: payment details message
+autonumber resume
+paymentController -> bankBoundary ++: // refund ()
+bankBoundary -> bank ++: // refund ()
+autonumber stop
+bank --> bankBoundary --: refund success message
+bankBoundary --> paymentController --: refund success message
+paymentController --> auctionController --: refund success message
+autonumber resume
+auctionController -> auction ++ : // set auction ()
+autonumber stop
+auction --> auctionController --: cancel registration success message
+auctionController --> view --: cancel registration\nsuccess message
+view --> customer --: cancel registration\nsuccess message
 
 
 @enduml

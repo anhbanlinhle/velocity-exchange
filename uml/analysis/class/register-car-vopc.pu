@@ -1,0 +1,59 @@
+@startuml register_car
+hide circle
+skinparam classAttributeIconSize 0
+left to right direction
+
+
+class RegisterCarForm <<boundary>> {
+  // enter information ()
+  // validate information ()
+}
+
+class RegisterAuctionController <<control>> {
+  // submit information ()
+}
+
+class Car <<entity>> {
+  id: Int
+  current owner: String
+  brand: String
+  model code: String
+  color: String
+  class: String
+  door: Int
+  seat: Int
+  layout: String
+  transmission: String
+  engine cylinders: Int
+  engine capacity: Int
+  image: String
+  location: String
+  status in storage: String
+  // create car ()
+  // set car ()
+  // get car ()
+  // update car ()
+  // get car list ()
+}
+
+class VerificationRequest <<entity>> {
+VerificationRequest
+  id: Int
+  seller id: Int
+  car id: Int
+  status: String
+  time: String
+  admin id: Int
+  payment id: Int
+  // create request ()
+  // get request ()
+  // set request ()
+  // get request list ()
+}
+
+RegisterCarForm "1" -- "1" RegisterAuctionController
+RegisterAuctionController "0..1" -- "0..1" VerificationRequest
+RegisterAuctionController "0..1" -- "0..1" Car
+VerificationRequest "1" -- "1" Car
+
+@enduml
