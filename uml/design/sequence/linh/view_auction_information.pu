@@ -2,16 +2,16 @@
 hide footbox
 
 actor ":User" as User
-boundary ":AuctionDetailView" as AuctionView
-control ":AuctionController" as SearchController
-entity ":Auction" as Auction
+participant ":AuctionDetailView" as AuctionView
+participant ":AuctionController" as SearchController
+participant ":IAuctionDatabase" as Auction
 
 User ++
-  User -> AuctionView: 1. // view auction details ()
+  User -> AuctionView: 1. viewAuctionDetails()
   activate AuctionView
-    AuctionView -> SearchController: 2. // get auction details ()
+    AuctionView -> SearchController: 2. getAuctionDetails()
     activate SearchController
-      SearchController -> Auction: 3. // get auction ()
+      SearchController -> Auction: 3. getAuction()
         activate Auction
           Auction --> SearchController: query result message
         deactivate Auction
