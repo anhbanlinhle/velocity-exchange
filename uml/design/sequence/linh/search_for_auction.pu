@@ -8,13 +8,13 @@ participant ":IAuctionDatabase" as Auction
 
 User ++
 opt Manual Search
-    User -> AuctionView: 1.1. fillSearchBar()
+    User -> AuctionView: 1.1. fillSearchBar(keywords)
     
     activate AuctionView
-      AuctionView -> SearchController: 2.1. searchByKeywords()
+      AuctionView -> SearchController: 2.1. searchByKeywords(keywords)
       
       activate SearchController
-        SearchController -> Auction: 3.1. getAuctionList()
+        SearchController -> Auction: 3.1. getAuctionList(query)
           
           activate Auction
             Auction --> SearchController: query result message
@@ -26,13 +26,13 @@ opt Manual Search
 end
 
 opt Filter Search
-  User -> AuctionView: 1.2. selectFilterAttributes()
+  User -> AuctionView: 1.2. selectFilterAttributes(filters)
   
   
-      AuctionView -> SearchController: 2.2. searchByFilterAttributes()
+      AuctionView -> SearchController: 2.2. searchByFilterAttributes(filters)
       
       
-        SearchController -> Auction: 3.2. getAuctionList()
+        SearchController -> Auction: 3.2. getAuctionList(query)
           
           
             Auction --> SearchController: filter result message
