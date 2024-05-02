@@ -26,7 +26,7 @@ Admin ++
       VerificationRequestController -> PendingRequestsView: 8. // display specific request ()
       PendingRequestsView --> Admin: return request details screen
 
-  Admin -> PendingRequestsView: 9. // set request status
+  Admin -> PendingRequestsView: 9. // set request status ()
     PendingRequestsView -> VerificationRequestController: 10. // update request status ()
       VerificationRequestController -> PendingRequests: 11. // set request ()
         PendingRequests --> VerificationRequestController: update success message
