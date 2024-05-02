@@ -3,7 +3,7 @@ left to right direction
 skinparam classAttributeIconSize 0
 skinparam linetype ortho
 hide circle
-class AuctionView <<boundary>> {
+class AuctionView {
     - id: Int
     - bidAmount: Float
 
@@ -12,7 +12,7 @@ class AuctionView <<boundary>> {
 
     }
 
-class AuctionController <<control>> {
+class AuctionController {
     + validateBid(amount: Float)
     + setMaxBid(amount: Float)
 

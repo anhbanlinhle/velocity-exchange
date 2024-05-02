@@ -3,14 +3,14 @@ skinparam classAttributeIconSize 0
 skinparam linetype ortho
 left to right direction
 hide circle
-class AuctionListView <<boundary>> {
+class AuctionListView {
 
     + fillSearchBar(keywords: List<String>)
     + selectFilterAttributes(filters: List<String>)
 
     }
 
-class SearchController <<control>> {
+class SearchController {
     
     + searchByKeywords(keywords: List<String>)
     + searchByFilterAttributes(filters: List<String>)
