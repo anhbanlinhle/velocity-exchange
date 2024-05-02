@@ -1,4 +1,4 @@
-@startuml UC_7
+@startuml 
 hide footbox
 
 actor ":User" as User
