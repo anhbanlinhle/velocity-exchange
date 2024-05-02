@@ -3,46 +3,39 @@ skinparam classAttributeIconSize 0
 skinparam linetype ortho
 left to right direction
 hide circle
-class PaymentInformationView <<boundary>> {
-    bank name: String
-    account number: String
+class PaymentInformationView {
+    - bankName: String
+    - accountNumber: String
 
-    // request payment method update ()
-    // dispay payment method form ()
-    // fill payment information ()
-
-    }
-
-class PaymentController <<control>> {
-    // get payment method ()
-    // new payment information ()
-
+    + requestPaymentMethodUpdate(userId: Int)
+    + dispayPaymentMethodForm()
+    + fillPaymentInformation(bankName: String, accountNumber: String)
 
     }
 
-class PaymentInformation <<entity>> {
-    id: Int
-    bank name: String
-    account number: String
-
-    // create payment information ()
-    // get payment information ()
-    // set payment information ()
-
+class PaymentController {
+    + getPaymentMethod(userId: Int)
+    + newPaymentInformation(bankName: String, accountNumber: String)
     }
 
-class BankingSystemBoundary <<boundary>> {
-    
+class PaymentInformation {
+    - id: Int
+    - bankName: String
+    - accountNumber: String
 
-    // authenticate information ()
-
-
+    + getId(): Int
+    + getBankName(): String
+    + getAccountNumber(): String
     }
 
-PaymentInformationView "1..*" --- "1" PaymentController
+class BankingSystemBoundary {
+    + authenticateInformation(bankName: String, accountNumber: String): Boolean
+    }
 
-PaymentController "1" --- "0..*" PaymentInformation
-
-PaymentController "1" --- "1" BankingSystemBoundary
+class IPaymentInformationDatabase <<interface>> {
+    + createPaymentInformation(bankName: String, accountNumber: String): PaymentInformation
+    + getPaymentInformation(id: Int): PaymentInformation
+    + setPaymentInformation(id: Int, bankName: String, accountNumber: String)
+    }
 
 @enduml
