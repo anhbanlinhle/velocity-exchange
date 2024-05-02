@@ -3,53 +3,57 @@ skinparam classAttributeIconSize 0
 skinparam linetype ortho
 left to right direction
 hide circle
-class PaymentView <<boundary>> {
-    pay amount: Float
-    payment method: String
-    bank name: String
-    password: String
+class PaymentView {
+    - payAmount: Float
+    - paymentMethod: String
+    - bankName: String
+    - password: String
 
-    // initiate payment action ()
-    // display payment details ()
-    // make payment ()
-    // provide authentication details ()
-    // display payment confirmation ()
-    // confirm purchase ()
-
-    }
-
-class PaymentController <<control>> {
-    // trigger payment ()
-    // make payment ()
-    // provide authentication details ()
-    // confirm purchase ()
+    + initiatePaymentAction(amount: Float)
+    + displayPaymentDetails()
+    + makePayment(amount: Float)
+    + provideAuthenticationDetails(password: String)
+    + displayPaymentConfirmation()
+    + confirmPurchase()
 
     }
 
-class Payment <<entity>> {
-    id: Int
-    pay amount: Float
-    bank name: String
-    account number: String
-    user id: Int
-    transaction id: String
-    // create payment ()
-    // set payment detail ()
-    // get payment detail ()
+class PaymentController {
+    + triggerPayment(amount: Float)
+    + makePayment(amount: Float)
+    + provideAuthenticationDetails(password: String)
+    + confirmPurchase()
 
     }
 
-class BankingSystemBoundary <<boundary>> {
-    // transmit payment request ()
-    // transfer encrypted details ()
-    // transaction request ()
+class Payment {
+    - id: Int
+    - payAmount: Float
+    - bankName: String
+    - accountNumber: String
+    - userId: Int
+    - transactionId: String
+
+    + getId(): Int
+    + getPayAmount(): Float
+    + getBankName(): String
+    + getAccountNumber(): String
+    + getUserId(): Int
+    + getTransactionId(): String
 
     }
 
-PaymentView "1..*" --- "1" PaymentController
+class BankingSystemBoundary {
+    + transmitPaymentRequest(bankNumber: String, amount: Float)
+    + transferEncryptedDetails(password: String)
+    + transactionRequest(transactionToken: String): String
 
-PaymentController "1" --- "0..*" Payment
+    }
 
-PaymentController "1" --- "1" BankingSystemBoundary
+class IPaymentDatabase <<interface>> {
+    + createPayment(payAmount: Float, bankName: String, accountNumber: String, userId: Int, transactionId: String): Payment
+    + setPaymentDetail(id: Int, payAmount: Float, accountNumber: String)
+    + getPaymentDetail(id: Int): Payment
+    }
 
 @enduml
