@@ -3,28 +3,28 @@ hide footbox
 
 
 actor ":User" as User
-boundary ":PaymentInformationView" as PaymentInformationView
-control ":PaymentController" as PaymentController
-entity ":PaymentInformation" as PaymentInformation
-boundary ":BankingSystemBoundary" as BankingSystemBoundary
+participant ":PaymentInformationView" as PaymentInformationView
+participant ":PaymentController" as PaymentController
+participant ":PaymentInformation" as PaymentInformation
+participant ":BankingSystemBoundary" as BankingSystemBoundary
 actor ":BankingSystem" as BankingSystem
 
 User ++
-  User -> PaymentInformationView : 1. // request payment method update ()
+  User -> PaymentInformationView : 1. requestPaymentMethodUpdate()
   activate PaymentInformationView
-    PaymentInformationView -> PaymentController : 2. // get payment method ()
+    PaymentInformationView -> PaymentController : 2. getPaymentMethod ()
     activate PaymentController
-      PaymentController -> PaymentInformationView: 3. // display payment method form ()
+      PaymentController -> PaymentInformationView: 3. displayPaymentMethodForm()
       PaymentInformationView --> User: return payment form screen
-  User -> PaymentInformationView: 4. // fill payment information ()
-    PaymentInformationView -> PaymentController: 5. // new payment information ()
-      PaymentController -> BankingSystemBoundary: 6. // authenticate information ()
+  User -> PaymentInformationView: 4. fillPaymentInformation()
+    PaymentInformationView -> PaymentController: 5.newPaymentInformation()
+      PaymentController -> BankingSystemBoundary: 6. authenticateInformation()
       activate BankingSystemBoundary
-        BankingSystemBoundary -> BankingSystem: 7. // authenticate request ()
+        BankingSystemBoundary -> BankingSystem: 7. authenticateRequest()
         activate BankingSystem
           BankingSystem --> BankingSystemBoundary: success authentication message
         BankingSystemBoundary --> PaymentController: success authentication message
-      PaymentController -> PaymentInformation: 8. // set payment information ()
+      PaymentController -> PaymentInformation: 8. setPaymentInformation()
       activate PaymentInformation
         PaymentInformation --> PaymentController: new information message
       deactivate PaymentInformation
