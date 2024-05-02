@@ -29,7 +29,7 @@ User ++
       PaymentController --> PaymentView: authentication request message
     PaymentView --> User: authentication request message
   User -> PaymentView: 8. // provide authentication details ()
-    PaymentView -> PaymentController: 9. // provide authentication details()
+    PaymentView -> PaymentController: 9. // provide authentication details ()
       PaymentController ->  BankingSystemBoundary: 10. // transfer encrypted details ()
          BankingSystemBoundary -> BankingSystem: 11. // transfer encrypted details ()
 
