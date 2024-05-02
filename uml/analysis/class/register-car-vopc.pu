@@ -32,7 +32,6 @@ class Car <<entity>> {
   // create car ()
   // set car ()
   // get car ()
-  // update car ()
   // get car list ()
 }
 
