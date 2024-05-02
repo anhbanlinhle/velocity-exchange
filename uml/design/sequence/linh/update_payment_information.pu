@@ -10,21 +10,21 @@ participant ":BankingSystemBoundary" as BankingSystemBoundary
 actor ":BankingSystem" as BankingSystem
 
 User ++
-  User -> PaymentInformationView : 1. requestPaymentMethodUpdate()
+  User -> PaymentInformationView : 1. requestPaymentMethodUpdate(userId)
   activate PaymentInformationView
-    PaymentInformationView -> PaymentController : 2. getPaymentMethod ()
+    PaymentInformationView -> PaymentController : 2. getPaymentMethod(userId)
     activate PaymentController
       PaymentController -> PaymentInformationView: 3. displayPaymentMethodForm()
       PaymentInformationView --> User: return payment form screen
-  User -> PaymentInformationView: 4. fillPaymentInformation()
-    PaymentInformationView -> PaymentController: 5.newPaymentInformation()
-      PaymentController -> BankingSystemBoundary: 6. authenticateInformation()
+  User -> PaymentInformationView: 4. fillPaymentInformation(...)
+    PaymentInformationView -> PaymentController: 5.newPaymentInformation(...)
+      PaymentController -> BankingSystemBoundary: 6. authenticateInformation(...)
       activate BankingSystemBoundary
-        BankingSystemBoundary -> BankingSystem: 7. authenticateRequest()
+        BankingSystemBoundary -> BankingSystem: 7. authenticateRequest(...)
         activate BankingSystem
           BankingSystem --> BankingSystemBoundary: success authentication message
         BankingSystemBoundary --> PaymentController: success authentication message
-      PaymentController -> PaymentInformation: 8. setPaymentInformation()
+      PaymentController -> PaymentInformation: 8. setPaymentInformation(...)
       activate PaymentInformation
         PaymentInformation --> PaymentController: new information message
       deactivate PaymentInformation
