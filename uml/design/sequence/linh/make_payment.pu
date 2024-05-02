@@ -17,21 +17,21 @@ User ++
       PaymentView --> User: return payment details screen
 
   
-  User -> PaymentView: 4. makePayment()
-    PaymentView -> PaymentController: 5. makePayment()
-      PaymentController ->  BankingSystemBoundary: 6. transmitPaymentRequest()
+  User -> PaymentView: 4. makePayment(...)
+    PaymentView -> PaymentController: 5. makePayment(...)
+      PaymentController ->  BankingSystemBoundary: 6. transmitPaymentRequest(...)
       BankingSystemBoundary ++
-        BankingSystemBoundary -> BankingSystem: 7. transmitPaymentRequest()
+        BankingSystemBoundary -> BankingSystem: 7. transmitPaymentRequest(...)
         BankingSystem ++
           BankingSystem -->  BankingSystemBoundary: authentication request message
 
         BankingSystemBoundary --> PaymentController: authentication request message
       PaymentController --> PaymentView: authentication request message
     PaymentView --> User: authentication request message
-  User -> PaymentView: 8. provideAuthenticationDetails()
-    PaymentView -> PaymentController: 9. provideAuthenticationDetails()
-      PaymentController ->  BankingSystemBoundary: 10. transferEncryptedDetails()
-        BankingSystemBoundary -> BankingSystem: 11. transferEncryptedDetails()
+  User -> PaymentView: 8. provideAuthenticationDetails(...)
+    PaymentView -> PaymentController: 9. provideAuthenticationDetails(...)
+      PaymentController ->  BankingSystemBoundary: 10. transferEncryptedDetails(...)
+        BankingSystemBoundary -> BankingSystem: 11. transferEncryptedDetails(...)
 
 alt Authentication Success
     BankingSystem -->  BankingSystemBoundary: success authentication message
@@ -47,15 +47,15 @@ alt Authentication Success
         
           PaymentView -> PaymentController: 14.1. confirmPurchase()
           
-            PaymentController ->  BankingSystemBoundary: 15.1. transactionRequest()
+            PaymentController ->  BankingSystemBoundary: 15.1. transactionRequest(...)
             
-              BankingSystemBoundary -> BankingSystem: 16.1. transactionRequest()
+              BankingSystemBoundary -> BankingSystem: 16.1. transactionRequest(...)
               
                 BankingSystem -->  BankingSystemBoundary: transaction response message
                 
               BankingSystemBoundary --> PaymentController: transaction response message
               
-            PaymentController -> Payment: 17.1. setPaymentDetails()
+            PaymentController -> Payment: 17.1. setPaymentDetails(...)
             
             Payment ++
               Payment --> PaymentController: payment details message
