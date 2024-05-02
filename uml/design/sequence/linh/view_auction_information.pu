@@ -7,11 +7,11 @@ participant ":AuctionController" as SearchController
 participant ":IAuctionDatabase" as Auction
 
 User ++
-  User -> AuctionView: 1. viewAuctionDetails()
+  User -> AuctionView: 1. viewAuctionDetails(id)
   activate AuctionView
-    AuctionView -> SearchController: 2. getAuctionDetails()
+    AuctionView -> SearchController: 2. getAuctionDetails(id)
     activate SearchController
-      SearchController -> Auction: 3. getAuction()
+      SearchController -> Auction: 3. getAuction(id)
         activate Auction
           Auction --> SearchController: query result message
         deactivate Auction
