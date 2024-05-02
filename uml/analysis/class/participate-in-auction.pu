@@ -23,8 +23,10 @@ class Auction <<entity>> {
   initial price: Float
   current price: Float
   deposit rate: Float
-  // get auction ()
+  // create auction ()
   // get auction list ()
+  // set auction ()
+  // get auction ()
 }
 
 AuctionView "1" -- "1" AuctionController
