@@ -8,27 +8,27 @@ participant ":VerificationRequestController" as VerificationRequestController
 participant ":IVerificationRequestDatabase" as PendingRequests
 
 Admin ++
-  Admin -> PendingRequestsView: 1. viewPendingRequests()
+  Admin -> PendingRequestsView: 1. viewPendingRequests(pageNo, pageSize)
   PendingRequestsView ++
-    PendingRequestsView -> VerificationRequestController: 2. getPendingRequests()
+    PendingRequestsView -> VerificationRequestController: 2. getPendingRequests(pageNo, pageSize)
     VerificationRequestController ++
-      VerificationRequestController -> PendingRequests: 3. getRequestList()
+      VerificationRequestController -> PendingRequests: 3. getRequestList(query)
         PendingRequests ++
         PendingRequests --> VerificationRequestController: query results message
       VerificationRequestController -> PendingRequestsView: 4. displayPendingRequests()
       PendingRequestsView --> Admin: return request list screen
 
 
-  Admin -> PendingRequestsView: 5. selectSpecificRequest()
-    PendingRequestsView -> VerificationRequestController: 6. getSpecificRequest()
-      VerificationRequestController -> PendingRequests: 7. getRequest()
+  Admin -> PendingRequestsView: 5. selectSpecificRequest(id)
+    PendingRequestsView -> VerificationRequestController: 6. getSpecificRequest(id)
+      VerificationRequestController -> PendingRequests: 7. getRequest(id)
         PendingRequests --> VerificationRequestController: query results message
       VerificationRequestController -> PendingRequestsView: 8. displaySpecificRequest()
       PendingRequestsView --> Admin: return request details screen
 
-  Admin -> PendingRequestsView: 9. setRequestStatus()
-    PendingRequestsView -> VerificationRequestController: 10. updateRequestStatus()
-      VerificationRequestController -> PendingRequests: 11. setRequest()
+  Admin -> PendingRequestsView: 9. setRequestStatus(status)
+    PendingRequestsView -> VerificationRequestController: 10. updateRequestStatus(status)
+      VerificationRequestController -> PendingRequests: 11. setRequest(...)
         PendingRequests --> VerificationRequestController: update success message
       VerificationRequestController --> PendingRequestsView: update success message
     PendingRequestsView --> Admin: update success message
