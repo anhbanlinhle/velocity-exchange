@@ -9,9 +9,9 @@ participant  ":BankingSystemBoundary" as BankingSystemBoundary
 actor ":Banking System" as BankingSystem
 
 User ++
-  User -> PaymentView: 1. initiatePaymentAction()
+  User -> PaymentView: 1. initiatePaymentAction(...)
   PaymentView ++
-    PaymentView -> PaymentController: 2.triggerPayment()
+    PaymentView -> PaymentController: 2.triggerPayment(...)
     PaymentController ++
       PaymentController -> PaymentView: 3. displayPaymentDetails()
       PaymentView --> User: return payment details screen
