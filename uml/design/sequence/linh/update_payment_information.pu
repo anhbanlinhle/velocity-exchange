@@ -5,7 +5,7 @@ hide footbox
 actor ":User" as User
 participant ":PaymentInformationView" as PaymentInformationView
 participant ":PaymentController" as PaymentController
-participant ":PaymentInformation" as PaymentInformation
+participant ":IPaymentInformationDatabase" as PaymentInformation
 participant ":BankingSystemBoundary" as BankingSystemBoundary
 actor ":BankingSystem" as BankingSystem
 
