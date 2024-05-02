@@ -4,34 +4,40 @@ skinparam classAttributeIconSize 0
 skinparam linetype ortho
 hide circle
 class AuctionView <<boundary>> {
-    id: Int
-    bid amount: Float
+    - id: Int
+    - bidAmount: Float
 
-    // enter bid amount ()
-    // set max bid ()
+    + enterBidAmount(amount: Float)
+    + setMaxBid(amount: Float)
 
     }
 
 class AuctionController <<control>> {
-    // validate bid ()
-    // set max bid ()
+    + validateBid(amount: Float)
+    + setMaxBid(amount: Float)
 
     }
 
-class Bid <<entity>> {
-    id: Int
-    amount: Float
-    bidder: String
-    time stamp: String
-    // create bid ()
-    // get bid ()
-    // set bid ()
+class Bid {
+    - id: Int
+    - amount: Float
+    - bidderId: Int
+    - auctionId: Int
+    - timeStamp: String
+
+    + getId(): Int
+    + getAmount(): Float
+    + getBidderId(): Int
+    + getAuctionId(): Int
+    + getTimeStamp(): String
     }
 
+class IBidDatabase <<interface>> {
+    + createBid(amount: Float, bidderId: Int, auctionId: Int, timeStamp: String): Bid
+    + getBid(id: Int): Bid
+    + setBid(id: Int, amount: Float, bidderId: Int, auctionId: Int, timeStamp: String)
+    }
 
-AuctionView "1" --- "1" AuctionController
-
-AuctionController "1" --- "0..*" Bid
 
 
 @enduml
