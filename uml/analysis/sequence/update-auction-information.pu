@@ -1,0 +1,33 @@
+@startuml Register Account
+hide footbox
+actor ":User" as User
+boundary ":UpdateAuctionInfoView" as RegisterBoundary
+control ":AuctionController" as AccountController
+entity ":Auction" as AccountEntity
+
+autonumber
+User -> RegisterBoundary: // fill info()
+activate RegisterBoundary
+
+RegisterBoundary -> RegisterBoundary: // check valid()
+activate RegisterBoundary
+deactivate RegisterBoundary
+
+alt valid information
+
+    RegisterBoundary -> AccountController: // update auction info()
+    activate AccountController
+    AccountController -> AccountEntity: // update auction info()
+    activate AccountEntity
+
+    AccountEntity --> AccountController --: auction info updated
+    AccountController --> RegisterBoundary --: auction info updated
+    RegisterBoundary --> User: auction info updated successful msg
+    
+else invalid information
+    
+    autonumber 3.1
+    RegisterBoundary --> User: invalid information msg
+
+end
+@enduml

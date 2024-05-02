@@ -1,42 +1,41 @@
 @startuml Register Account
 hide footbox
-actor "User" as Users
-boundary "RegisterAccountForm" as RegisterBoundary
-control "RegisterAccountController" as AccountController
-entity "Account" as AccountEntity
-boundary "DatabaseSystem" as DatabaseBoundary
-database "Database" as DatabaseActor
+actor ":User" as User
+boundary ":RegisterAccountForm" as RegisterBoundary
+control ":RegisterAccountController" as AccountController
+entity ":Account" as AccountEntity
 
 autonumber
-autoactivate on
-Users -> RegisterBoundary: // fill info()
+User -> RegisterBoundary: // fill info()
+activate RegisterBoundary
 
 RegisterBoundary -> RegisterBoundary: // check valid()
+activate RegisterBoundary
+deactivate RegisterBoundary
 
 alt valid information
 
     RegisterBoundary -> AccountController: // create account()
+    activate AccountController
     AccountController -> AccountEntity: // create account()
-    AccountEntity -> DatabaseBoundary: // create account()
-    DatabaseBoundary -> DatabaseActor: // create account()
+    activate AccountEntity
 
     alt username, password, email and\nphone number is unique
 
-        DatabaseActor --> DatabaseBoundary: account created
-        DatabaseBoundary --> AccountController: account created
+        AccountEntity --> AccountController: account created
         AccountController --> RegisterBoundary: account created
-        RegisterBoundary --> Users: register account successful msg
-
+        RegisterBoundary --> User: account created successful msg
+    
     else username, password, email an\nphone number is not unique
 
-        autonumber 7.1 
-        DatabaseActor --> DatabaseBoundary: information existed
-        autonumber inc A
-        DatabaseBoundary --> AccountController: information existed
+        autonumber 5.1 
+        AccountEntity --> AccountController: information existed
+        deactivate AccountEntity
         autonumber inc A
         AccountController --> RegisterBoundary: information existed
+        deactivate
         autonumber inc A
-        RegisterBoundary --> Users: information existed msg
+        RegisterBoundary --> User: information existed msg
 
     end
 
@@ -45,7 +44,7 @@ alt valid information
 else invalid information
     
     autonumber 3.1
-    RegisterBoundary --> Users: invalid information msg
+    RegisterBoundary --> User: invalid information msg
 
 end
 @enduml
