@@ -1,5 +1,4 @@
 @startuml 
-left to right direction
 skinparam classAttributeIconSize 0
 skinparam linetype ortho
 hide circle
@@ -27,6 +26,7 @@ class VerificationRequest {
     - time: String
     - adminId: Int
     - paymentId: Int
+
     + getId(): Int
     + getSellerId(): Int
     + getCarId(): Int
@@ -43,6 +43,11 @@ class IVerificationRequestDatabase <<interface>> {
     + getRequestList(query: String): List<VerificationRequest>
     }
 
+VerificationRequestView "1" -- "1" VerificationRequestController
+
+VerificationRequestController ..r> IVerificationRequestDatabase
+
+IVerificationRequestDatabase ..u> VerificationRequest
 
 
 @enduml

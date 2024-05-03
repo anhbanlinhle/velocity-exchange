@@ -1,7 +1,6 @@
 @startuml 
 skinparam classAttributeIconSize 0
 skinparam linetype ortho
-left to right direction
 hide circle
 class PaymentView {
     - payAmount: Float
@@ -55,5 +54,13 @@ class IPaymentDatabase <<interface>> {
     + setPaymentDetail(id: Int, payAmount: Float, accountNumber: String)
     + getPaymentDetail(id: Int): Payment
     }
+
+PaymentView "1" -- "1" PaymentController
+
+PaymentController ..r> IPaymentDatabase
+
+PaymentController ..d> BankingSystemBoundary
+
+IPaymentDatabase ..u> Payment
 
 @enduml

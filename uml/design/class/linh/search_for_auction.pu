@@ -1,7 +1,6 @@
 @startuml 
 skinparam classAttributeIconSize 0
 skinparam linetype ortho
-left to right direction
 hide circle
 class AuctionListView {
 
@@ -25,6 +24,8 @@ class Auction {
     - createDate: String
     - status: String
     - winner: Int
+    - winnerPayment: Int
+    - participantPaymentList: Map<Int, Int>
     - bidStep: Float
     - initialPrice: Float
     - currentPrice: Float
@@ -41,6 +42,8 @@ class Auction {
     + getInitialPrice(): Float
     + getCurrentPrice(): Float
     + getDepositRate(): Float
+    + getRegisterPaymentList(): Map <Int, Int>
+    + getWinnerPayment(): Int
     }
 
 class IAuctionDatabase <<interface>> {
@@ -48,7 +51,14 @@ class IAuctionDatabase <<interface>> {
     + getAuctionList(query: String): List<Auction>
     + setAuction(id: Int, name: String, startDate: String, endDate: String, bidStep: Float, initialPrice: Float)
     + getAuction(id: Int): Auction
+    + addRegisterPayment(auctionId: Int, customerId, paymentId: Int)
+    + deleteRegisterPayment(auctionId: Int, customerId)
 }
 
+AuctionListView "1" -- "1" SearchController
+
+SearchController ..r> IAuctionDatabase
+
+IAuctionDatabase ..u> Auction
 
 @enduml

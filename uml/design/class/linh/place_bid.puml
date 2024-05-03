@@ -38,6 +38,10 @@ class IBidDatabase <<interface>> {
     + setBid(id: Int, amount: Float, bidderId: Int, auctionId: Int, timeStamp: String)
     }
 
+AuctionView "1" -- "1" AuctionController
 
+AuctionController ..r> IBidDatabase
+
+IBidDatabase ..u> Bid
 
 @enduml
