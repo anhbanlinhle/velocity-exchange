@@ -23,15 +23,17 @@ class Auction <<entity>> {
     create date: String
     status: String
     winner: Int
+    winner payment: Int
+    participant payment list: Map<Int, Int>
     bid step: Float
     initial price: Float
     current price: Float
     deposit rate: Float
+
     // create auction ()
     // get auction list ()
     // set auction ()
     // get auction ()
-
     }
 
 
