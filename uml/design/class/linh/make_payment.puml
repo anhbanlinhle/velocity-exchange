@@ -50,17 +50,17 @@ class BankingSystemBoundary {
     }
 
 class IPaymentDatabase <<interface>> {
-    + createPayment(payAmount: Float, bankName: String, accountNumber: String, userId: Int, transactionId: String): Payment
+    + createPayment(payAmount: Float, bankName: String, accountNumber: String,\n userId: Int, transactionId: String): Payment
     + setPaymentDetail(id: Int, payAmount: Float, accountNumber: String)
     + getPaymentDetail(id: Int): Payment
     }
 
-PaymentView "1" -- "1" PaymentController
+PaymentView "1" -d- "1" PaymentController
 
-PaymentController ..r> IPaymentDatabase
+PaymentController ..d> IPaymentDatabase
 
-PaymentController ..d> BankingSystemBoundary
+PaymentController ..u> BankingSystemBoundary
 
-IPaymentDatabase ..u> Payment
+IPaymentDatabase ..d> Payment
 
 @enduml
