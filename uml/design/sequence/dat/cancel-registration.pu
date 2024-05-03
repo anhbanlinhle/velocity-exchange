@@ -1,0 +1,38 @@
+@startuml cancel_registration
+hide footbox
+
+actor ":Customer" as customer
+participant ":AuctionDetailView" as view
+participant ":AuctionController" as auctionController
+participant ":PaymentController" as paymentController
+participant ":IPaymentDatabase" as payment
+participant ":BankingSystemBoundary" as bankBoundary
+actor ":BankingSystem" as bank
+participant ":IAuctionDatabase" as auction
+
+autonumber 1 1 "0."
+
+customer ++
+customer -> view: canceRegistration(auctionId, customerId)
+activate view
+view -> auctionController ++: canceRegistration(auctionId, customerId)
+auctionController -> paymentController ++: refund(paymentId)
+paymentController -> payment ++: getPaymentDetail(paymentId)
+autonumber stop
+payment --> paymentController --: payment details message
+autonumber resume
+paymentController -> bankBoundary ++: refund(auctionId, customerId)
+bankBoundary -> bank ++: refund(paymentId)
+autonumber stop
+bank --> bankBoundary --: refund success message
+bankBoundary --> paymentController --: refund success message
+paymentController --> auctionController --: refund success message
+autonumber resume
+auctionController -> auction ++ : deleteRegisterPayment(auctionId, customerId)
+autonumber stop
+auction --> auctionController --: cancel registration success message
+auctionController --> view --: cancel registration\nsuccess message
+view --> customer --: cancel registration\nsuccess message
+
+
+@enduml

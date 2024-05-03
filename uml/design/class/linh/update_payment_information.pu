@@ -1,0 +1,48 @@
+@startuml 
+skinparam classAttributeIconSize 0
+skinparam linetype ortho
+hide circle
+class PaymentInformationView {
+    - bankName: String
+    - accountNumber: String
+
+    + requestPaymentMethodUpdate(userId: Int)
+    + dispayPaymentMethodForm()
+    + fillPaymentInformation(bankName: String,\n accountNumber: String)
+
+    }
+
+class PaymentController {
+    + getPaymentMethod(userId: Int)
+    + newPaymentInformation(bankName: String,\n accountNumber: String)
+    }
+
+class PaymentInformation {
+    - id: Int
+    - bankName: String
+    - accountNumber: String
+
+    + getId(): Int
+    + getBankName(): String
+    + getAccountNumber(): String
+    }
+
+class BankingSystemBoundary {
+    + authenticateInformation(bankName: String,\n accountNumber: String): Boolean
+    }
+
+class IPaymentInformationDatabase <<interface>> {
+    + createPaymentInformation(bankName: String,\n accountNumber: String): PaymentInformation
+    + getPaymentInformation(id: Int): PaymentInformation
+    + setPaymentInformation(id: Int, bankName: String,\n accountNumber: String)
+    }
+
+PaymentInformationView "1" -d- "1" PaymentController
+
+PaymentController ..d> IPaymentInformationDatabase
+
+PaymentController "1" -u- "1" BankingSystemBoundary
+
+IPaymentInformationDatabase ..u> PaymentInformation
+
+@enduml

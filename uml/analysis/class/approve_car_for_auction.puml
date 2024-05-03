@@ -5,9 +5,10 @@ skinparam linetype ortho
 hide circle
 class VerificationRequestView <<boundary>> {
     // view pending requests ()
-    // view specific request ()
-    // update request status ()
-    // display error message ()
+    // display pending requests ()
+    // select specific request ()
+    // display specific request ()
+    // set request status ()
 
     }
 
@@ -26,7 +27,7 @@ class VerificationRequest <<entity>> {
     time: String
     admin id: Int
     payment id: Int
-    // create request()
+    // create request ()
     // get request ()
     // set request ()
     // get request list ()

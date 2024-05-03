@@ -1,0 +1,47 @@
+@startuml 
+left to right direction
+skinparam classAttributeIconSize 0
+skinparam linetype ortho
+hide circle
+class AuctionView {
+    - id: Int
+    - bidAmount: Float
+
+    + enterBidAmount(amount: Float)
+    + setMaxBid(amount: Float)
+
+    }
+
+class AuctionController {
+    + validateBid(amount: Float)
+    + setMaxBid(amount: Float)
+
+    }
+
+class Bid {
+    - id: Int
+    - amount: Float
+    - bidderId: Int
+    - auctionId: Int
+    - timeStamp: String
+
+    + getId(): Int
+    + getAmount(): Float
+    + getBidderId(): Int
+    + getAuctionId(): Int
+    + getTimeStamp(): String
+    }
+
+class IBidDatabase <<interface>> {
+    + createBid(amount: Float, bidderId: Int,\n auctionId: Int, timeStamp: String): Bid
+    + getBid(id: Int): Bid
+    + setBid(id: Int, amount: Float, bidderId: Int,\n auctionId: Int, timeStamp: String)
+    }
+
+AuctionView "1" -- "1" AuctionController
+
+AuctionController ..r> IBidDatabase
+
+IBidDatabase ..u> Bid
+
+@enduml
