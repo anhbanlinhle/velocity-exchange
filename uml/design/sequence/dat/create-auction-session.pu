@@ -1,0 +1,31 @@
+@startuml create_auction
+hide footbox
+actor ":Seller" as seller
+participant ":CreateAuctionView" as view
+participant ":AuctionController" as controller
+participant ":IAuctionDatabase" as auction
+
+autonumber 1 1 "0."
+
+activate view
+activate seller
+  seller -> view: enterInformation(...)
+  view -> view: validateInformation()
+autonumber stop
+  alt valid information
+    view -> controller ++: 3.1. createAuction(...)
+    controller -> auction ++: 4.1. createAuction(...)
+    auction --> controller --: auction created message
+    controller --> view --: auction created message
+    view --> seller: auction created message
+
+
+else missing information
+    view --> seller: missing information message
+else invalid information
+  view --> seller: invalid information message
+end
+deactivate view
+
+
+@enduml

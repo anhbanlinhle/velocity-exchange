@@ -1,0 +1,56 @@
+@startuml view_hosted_auction
+hide circle
+skinparam classAttributeIconSize 0
+
+class AuctionListView {
+  + viewHostedAuction()
+  + displayHostedAuction()
+}
+
+class AuctionController {
+  + getHostedAuction(): List<Auction>
+}
+
+class IAuctionDatabase <<interface>> {
++ createAuction(name: String, startDate: String,\nendDate: String, bidStep: Float, initialPrice: Float): Auction
++ getAuctionList(query: String): List<Auction>
++ setAuction(id: Int, name: String, startDate: String,\nendDate: String, bidStep: Float, initialPrice: Float)
++ getAuction(id: Int): Auction
++ addRegisterPayment(auctionId: Int, customerId, paymentId: Int)
++ deleteRegisterPayment(auctionId: Int, customerId)
+}
+
+class Auction {
+- id: Int
+- name: String
+- startDate: String
+- endDate: String
+- createDate: String
+- status: String
+- winner: Int
+- winnerPayment: Int
+- participantPaymentList: Map<Int, Int>
+- bidStep: Float
+- initialPrice: Float
+- currentPrice: Float
+- depositRate: Float
++ getId(): Int
++ getName(): String
++ getStartDate(): String
++ getEndDate(): String
++ getCreateDate(): String
++ getStatus(): String
++ getWinner(): Int
++ getBidStep(): Float
++ getInitialPrice(): Float
++ getCurrentPrice(): Float
++ getDepositRate(): Float
++ getRegisterPaymentList(): Map <Int, Int>
++ getWinnerPayment(): Int
+}
+
+AuctionListView "1" -- "1" AuctionController
+AuctionController ..> IAuctionDatabase
+IAuctionDatabase .r.> Auction
+
+@enduml

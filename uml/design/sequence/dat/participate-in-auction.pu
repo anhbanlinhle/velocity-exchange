@@ -1,0 +1,30 @@
+@startuml participate_in_auction
+hide footbox
+
+actor ":Customer" as customer
+participant ":AuctionView" as view
+participant ":AuctionController" as controller
+participant ":IAuctionDatabase" as auction
+
+autonumber 1 1 "0."
+
+activate view
+
+customer ++
+customer -> view: requestParticipate(auctionId, customerId)
+view -> controller++: participate(auctionId, customerId)
+controller -> auction++: getAuction(auctionId)
+autonumber stop
+auction --> controller--: participate successfully
+autonumber resume
+controller -> view--: displayAuctionRoom()
+autonumber stop
+view --> customer: return auction room screen
+
+deactivate view
+
+ref over customer, view, controller, auction
+  Place bid
+end ref
+
+@enduml

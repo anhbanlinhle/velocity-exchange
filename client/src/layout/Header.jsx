@@ -11,10 +11,9 @@ import {
   Button,
   Avatar,
   Tooltip,
-  Link,
   InputBase,
 } from '@mui/material';
-// import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from 'react-router-dom';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import { styled, alpha } from '@mui/material/styles';
@@ -58,9 +57,6 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     transition: theme.transitions.create('width'),
     [theme.breakpoints.up('sm')]: {
       width: '25vw',
-      '&:focus': {
-        width: '30vw',
-      },
     },
   },
 }));
@@ -68,21 +64,29 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 function Header() {
   const [anchorElNav, setAnchorElNav] = useState(null);
   const [anchorElUser, setAnchorElUser] = useState(null);
-  const [userLoggedIn, setUserLoggedIn] = useState(false);
+  const [userLoggedIn, setUserLoggedIn] = useState(true);
+  const [isAdmin, setIsAdmin] = useState(false);
   const logoWidth = '9rem';
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
   // Default navigation menu items for guest users
   let pages = ['Home', 'About'];
-  // let routes = ["/", "/about"];
-  let settings = [];
-  // let settingRoutes = [];
+  let routes = ['/', '/about'];
+  const settings = [];
+  const settingRoutes = [];
 
   // Navigation menu items for logged in users (members)
   if (userLoggedIn) {
-    pages = ['Inventory', 'My Auction', 'About'];
-    // routes = ["/", "/missions", "/about"];
-    settings = ['Profile'];
-    // settingRoutes = ["/profile"];
+    pages = ['Home', 'Inventory', 'About'];
+    routes = ['/', '/inventory', '/about'];
+    // settings = ['Profile'];
+    // settingRoutes = ['/profile'];
+  }
+
+  if (isAdmin) {
+    pages = ['Home', 'Verification Request'];
+    routes = ['/', '/admin/verification'];
+    // settings = ['Profile'];
+    // settingRoutes = ['/profile'];
   }
 
   const handleOpenNavMenu = (event) => {
@@ -100,12 +104,11 @@ function Header() {
     setAnchorElUser(null);
   };
 
+  // TODO: Logout function
   const handleLogout = () => {
     setUserLoggedIn(false);
-  };
-
-  const handleLogin = () => {
-    setUserLoggedIn(true);
+    setIsAdmin(false);
+    navigate('/');
   };
 
   return (
@@ -124,7 +127,7 @@ function Header() {
                 '&:hover': { cursor: 'pointer' },
               }}
             >
-              <Link href="/">
+              <Link to="/">
                 <Logo />
               </Link>
             </Box>
@@ -159,8 +162,13 @@ function Header() {
                   display: { xs: 'block', md: 'none' },
                 }}
               >
-                {pages.map((page) => (
-                  <MenuItem key={page} onClick={handleCloseNavMenu}>
+                {pages.map((page, index) => (
+                  <MenuItem
+                    key={page}
+                    onClick={handleCloseNavMenu}
+                    component={Link}
+                    to={routes[index]}
+                  >
                     <Typography textAlign="center">{page}</Typography>
                   </MenuItem>
                 ))}
@@ -180,24 +188,27 @@ function Header() {
                 '&:hover': { cursor: 'pointer' },
               }}
             >
-              <Link href="/">
+              <Link to="/">
                 <Logo />
               </Link>
             </Box>
 
             {/* Large Screen Navigation Menu */}
             <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-              {pages.map((page) => (
+              {pages.map((page, index) => (
                 <Button
                   key={page}
                   onClick={handleCloseNavMenu}
-                  sx={{ my: 2, color: 'inherit', display: 'block' }}
+                  sx={{
+                    my: 2, color: 'inherit', display: 'block', textAlign: 'center',
+                  }}
+                  component={Link}
+                  to={routes[index]}
                 >
                   {page}
                 </Button>
               ))}
-              <CustomButton>Sell Your Car</CustomButton>
-
+              {userLoggedIn && (<CustomButton component={Link} to="/auction/create">Sell Your Car</CustomButton>)}
             </Box>
 
             {/* Avatar */}
@@ -209,7 +220,7 @@ function Header() {
                       <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
                     </IconButton>
                   </Tooltip>
-                  {/* User Menu */}
+                  {/* Avatar Menu */}
                   <Menu
                     sx={{ mt: '45px' }}
                     id="menu-appbar"
@@ -226,8 +237,13 @@ function Header() {
                     open={Boolean(anchorElUser)}
                     onClose={handleCloseUserMenu}
                   >
-                    {settings.map((setting) => (
-                      <MenuItem key={setting} onClick={handleCloseUserMenu}>
+                    {settings.map((setting, index) => (
+                      <MenuItem
+                        key={setting}
+                        onClick={handleCloseUserMenu}
+                        component={Link}
+                        to={settingRoutes[index]}
+                      >
                         <Typography textAlign="center">{setting}</Typography>
                       </MenuItem>
                     ))}
@@ -239,12 +255,20 @@ function Header() {
 
               ) : (
                 // TODO: Login button
-                <Button
-                  onClick={handleLogin}
-                  sx={{ my: 2, color: 'inherit', display: 'block' }}
-                >
-                  Log in
-                </Button>
+                <Box sx={{ display: 'flex', flexDirection: 'row' }}>
+                  <Button
+                    onClick={() => navigate('/login')}
+                    sx={{ my: 2, color: 'inherit', display: 'block' }}
+                  >
+                    Log in
+                  </Button>
+                  <Button
+                    onClick={() => navigate('/signup')}
+                    sx={{ my: 2, color: 'inherit', display: 'block' }}
+                  >
+                    Sign up
+                  </Button>
+                </Box>
               )}
 
             </Box>
@@ -253,22 +277,25 @@ function Header() {
       </AppBar>
 
       {/* Search Bar */}
-      <AppBar position="static" sx={{ background: '#000' }}>
-        <Container maxWidth="xl">
-          <Toolbar disableGutters sx={{ justifyContent: 'left' }}>
+      { userLoggedIn && (
+        <AppBar position="static" sx={{ background: '#000' }}>
+          <Container maxWidth="xl">
+            <Toolbar disableGutters sx={{ justifyContent: 'left' }}>
 
-            <Search>
-              <SearchIconWrapper>
-                <SearchIcon />
-              </SearchIconWrapper>
-              <StyledInputBase
-                placeholder="Search…"
-                inputProps={{ 'aria-label': 'search' }}
-              />
-            </Search>
-          </Toolbar>
-        </Container>
-      </AppBar>
+              <Search>
+                <SearchIconWrapper>
+                  <SearchIcon />
+                </SearchIconWrapper>
+                <StyledInputBase
+                  placeholder="Search…"
+                  inputProps={{ 'aria-label': 'search' }}
+                />
+              </Search>
+            </Toolbar>
+          </Container>
+        </AppBar>
+      )}
+
     </>
   );
 }
