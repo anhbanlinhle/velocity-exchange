@@ -1,6 +1,9 @@
 import express from 'express'
+import { verifyToken } from '../controller/utility/verifyToken'
+
 import homeController from '../controller/homeController'
 import authController from '../controller/authController'
+
 let router = express.Router()
 
 const initWebRoute = (app) => {
