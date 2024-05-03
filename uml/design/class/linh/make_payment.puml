@@ -1,0 +1,66 @@
+@startuml 
+skinparam classAttributeIconSize 0
+skinparam linetype ortho
+hide circle
+class PaymentView {
+    - payAmount: Float
+    - paymentMethod: String
+    - bankName: String
+    - password: String
+
+    + initiatePaymentAction(amount: Float)
+    + displayPaymentDetails()
+    + makePayment(amount: Float)
+    + provideAuthenticationDetails(password: String)
+    + displayPaymentConfirmation()
+    + confirmPurchase()
+
+    }
+
+class PaymentController {
+    + triggerPayment(amount: Float)
+    + makePayment(amount: Float)
+    + provideAuthenticationDetails(password: String)
+    + confirmPurchase()
+
+    }
+
+class Payment {
+    - id: Int
+    - payAmount: Float
+    - bankName: String
+    - accountNumber: String
+    - userId: Int
+    - transactionId: String
+
+    + getId(): Int
+    + getPayAmount(): Float
+    + getBankName(): String
+    + getAccountNumber(): String
+    + getUserId(): Int
+    + getTransactionId(): String
+
+    }
+
+class BankingSystemBoundary {
+    + transmitPaymentRequest(\nbankNumber: String, amount: Float)
+    + transferEncryptedDetails(\npassword: String)
+    + transactionRequest(\ntransactionToken: String): String
+
+    }
+
+class IPaymentDatabase <<interface>> {
+    + createPayment(payAmount: Float, bankName: String, \n accountNumber: String, userId: Int, transactionId: String): Payment
+    + setPaymentDetail(id: Int, payAmount: Float, accountNumber: String)
+    + getPaymentDetail(id: Int): Payment
+    }
+
+PaymentView "1" -d- "1" PaymentController
+
+PaymentController ..d> IPaymentDatabase
+
+PaymentController "1" -u- "1" BankingSystemBoundary
+
+IPaymentDatabase ..d> Payment
+
+@enduml

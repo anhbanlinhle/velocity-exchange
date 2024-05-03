@@ -7,18 +7,14 @@ class AuctionView <<boundary>> {
     id: Int
     bid amount: Float
 
-    // fill bid amount ()
-    // validate bid amount ()
+    // enter bid amount ()
     // set max bid ()
-    // display highest bid ()
 
     }
 
 class AuctionController <<control>> {
     // validate bid ()
-    // update highest bid ()
-
-
+    // set max bid ()
 
     }
 
@@ -29,7 +25,7 @@ class Bid <<entity>> {
     time stamp: String
     // create bid ()
     // get bid ()
-    // update bid ()
+    // set bid ()
     }
 
 

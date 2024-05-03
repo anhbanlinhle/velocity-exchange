@@ -1,18 +1,18 @@
-@startuml
+@startuml 
 hide footbox
 
 
 actor ":Customer" as Customer
-boundary ":AuctionView" as AuctionView
-control ":AuctionController" as AuctionController
-entity ":Bid" as Bid
+participant ":AuctionView" as AuctionView
+participant ":AuctionController" as AuctionController
+participant ":IBidDatabase" as Bid
 Customer ++
-  Customer -> AuctionView : 1. // enter bid amount ()
+  Customer -> AuctionView : 1. enterBidAmount(amount)
   activate AuctionView
-    AuctionView -> AuctionController : 2. // validate bid ()
+    AuctionView -> AuctionController : 2.validateBid(amount)
     activate AuctionController
-      AuctionController -> AuctionController : 3. // validate bid ()
-      AuctionController -> Bid : 4. // create bid ()
+      AuctionController -> AuctionController : 3. validateBid(amount)
+      AuctionController -> Bid : 4. createBid(...)
       activate Bid
         Bid --> AuctionController : new highest bid message
 
@@ -25,11 +25,11 @@ alt Invalid Bid Amount
 end
 
 opt Automatic Bid
-    Customer -> AuctionView : 1.1. // set max bid ()
-      AuctionView -> AuctionController : 2.1. // set max bid ()
+    Customer -> AuctionView : 1.1. setMaxBid(amount)
+      AuctionView -> AuctionController : 2.1. setMaxBid(amount)
     loop Until Auction Ends
       alt Not Top Bidder & Max Bid Not Exceeded
-        AuctionController -> Bid : 3.2 // create bid ()
+        AuctionController -> Bid : 3.2 createBid(...)
           Bid --> AuctionController : new highest bid message
         deactivate Bid
           AuctionController --> AuctionView : new highest bid message

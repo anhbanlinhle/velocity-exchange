@@ -1,0 +1,53 @@
+@startuml 
+skinparam classAttributeIconSize 0
+skinparam linetype ortho
+hide circle
+class VerificationRequestView {
+    + viewPendingRequests(pageNo: Int, pageSize: Int)
+    + displayPendingRequests()
+    + selectSpecificRequest(id: Int)
+    + displaySpecificRequest()
+    + setRequestStatus(status: String)
+
+    }
+
+class VerificationRequestController  {
+    + getPendingRequests(pageNo: Int, pageSize: Int)
+    + getSpecificRequest(id: Int)
+    + updateRequestStatus(status: String)
+
+    }
+
+class VerificationRequest {
+    - id: Int
+    - sellerId: Int
+    - carId: Int
+    - status: String
+    - time: String
+    - adminId: Int
+    - paymentId: Int
+
+    + getId(): Int
+    + getSellerId(): Int
+    + getCarId(): Int
+    + getStatus(): String
+    + getTime(): String
+    + getAdminId(): Int
+    + getPaymentId(): Int
+    }
+
+class IVerificationRequestDatabase <<interface>> {
+    + createRequest(id: Int, sellerId: Int, carId: Int,\n status: String, paymentId: Int): VerificationRequest
+    + setRequest(status: String, adminId: Int, time: String)
+    + getRequest(id: Int): VerificationRequest
+    + getRequestList(query: String): List<VerificationRequest>
+    }
+
+VerificationRequestView "1" -- "1" VerificationRequestController
+
+VerificationRequestController ..r> IVerificationRequestDatabase
+
+IVerificationRequestDatabase ..u> VerificationRequest
+
+
+@enduml

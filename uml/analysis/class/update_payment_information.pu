@@ -7,18 +7,16 @@ class PaymentInformationView <<boundary>> {
     bank name: String
     account number: String
 
-    // request update payment information ()
-    // send payment information ()
-    // display payment information ()
-    // display error messages ()
+    // request payment method update ()
+    // dispay payment method form ()
+    // fill payment information ()
 
     }
 
 class PaymentController <<control>> {
-    
+    // get payment method ()
+    // new payment information ()
 
-    // authenticate information ()
-    // update payment information ()
 
     }
 
@@ -36,7 +34,7 @@ class PaymentInformation <<entity>> {
 class BankingSystemBoundary <<boundary>> {
     
 
-    // authenticate request ()
+    // authenticate information ()
 
 
     }
