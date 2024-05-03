@@ -1,0 +1,37 @@
+@startuml create_auction
+hide circle
+skinparam classAttributeIconSize 0
+left to right direction
+
+class CreateAuctionView <<boundary>> {
+  // enter information ()
+  // validate information ()
+}
+
+class AuctionController <<control>> {
+  // create auction ()
+}
+
+class Auction <<entity>> {
+  id: Int
+  name: String
+  start date: String
+  end date: String
+  create date: String
+  status: String
+  winner: Int
+  winner payment: Int
+  participant payment list: Map<Int, Int>
+  bid step: Float
+  initial price: Float
+  current price: Float
+  deposit rate: Float
+  // create auction ()
+  // get auction list ()
+  // set auction ()
+  // get auction ()
+}
+
+CreateAuctionView "1" -- "1" AuctionController
+AuctionController "1" -- "1" Auction
+@enduml
