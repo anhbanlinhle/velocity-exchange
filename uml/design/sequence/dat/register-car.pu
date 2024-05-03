@@ -1,0 +1,37 @@
+@startuml register_car
+hide footbox
+
+actor ":Seller" as seller
+participant ":RegisterCarForm" as form
+participant ":VerificationRequest\nController" as controller
+participant ":ICarDatabase" as car
+participant ":IVerificationRequestDatabase" as request
+
+autonumber 1 1 "0."
+
+activate seller
+seller -> form ++: enterInformation(...)
+form -> form : validateInformation()
+
+autonumber stop
+alt valid information
+  form --> seller : payment information message
+  ref over seller, form : Make payment
+  alt payment successful
+    form -> controller ++: 3.1.1. submitInformation(...)
+    controller -> car ++: 4.1.1 createCar(...)
+    car --> controller --: car created message
+    controller -> request ++: 5.1.1. createRequest(...)
+    request --> controller --: request created message
+    controller --> form --: request created message
+    form --> seller : request created message
+  else payment failed
+    form --> seller : payment failed message
+  end
+else missing information
+  form --> seller : missing information message
+else invalid information
+  form --> seller : invalid information message
+
+end
+@enduml

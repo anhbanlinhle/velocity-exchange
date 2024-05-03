@@ -1,0 +1,88 @@
+@startuml cancel_registration
+hide circle
+skinparam classAttributeIconSize 0
+
+
+class AuctionDetailView {
+  + canceRegistration(auctionId: Int, customerId: Int)
+}
+
+class AuctionController {
+  + canceRegistration(auctionId: Int, customerId: Int)
+}
+
+class IAuctionDatabase <<interface>> {
++ createAuction(name: String, startDate: String,\nendDate: String, bidStep: Float, initialPrice: Float): Auction
++ getAuctionList(query: String): List<Auction>
++ setAuction(id: Int, name: String, startDate: String,\nendDate: String, bidStep: Float, initialPrice: Float)
++ getAuction(id: Int): Auction
++ addRegisterPayment(auctionId: Int, customerId, paymentId: Int)
++ deleteRegisterPayment(auctionId: Int, customerId)
+}
+
+class PaymentController {
+  + refund(auctionId: Int, customerId: Int)
+}
+
+class BankingSystemBoundary {
+  + refund(paymentId: Int)
+}
+
+class Auction {
+- id: Int
+- name: String
+- startDate: String
+- endDate: String
+- createDate: String
+- status: String
+- winner: Int
+- winnerPayment: Int
+- participantPaymentList: Map<Int, Int>
+- bidStep: Float
+- initialPrice: Float
+- currentPrice: Float
+- depositRate: Float
++ getId(): Int
++ getName(): String
++ getStartDate(): String
++ getEndDate(): String
++ getCreateDate(): String
++ getStatus(): String
++ getWinner(): Int
++ getBidStep(): Float
++ getInitialPrice(): Float
++ getCurrentPrice(): Float
++ getDepositRate(): Float
++ getRegisterPaymentList(): Map <Int, Int>
++ getWinnerPayment(): Int
+}
+
+class IPaymentDatabase <<interface>> {
++ createPayment(payAmount: Float, bankName: String,\naccountNumber: String, userId: Int, transactionId: String): Payment
++ setPaymentDetail(id: Int, payAmount: Float, accountNumber: String)
++ getPaymentDetail(id: Int): Payment
+}
+
+class Payment {
+- id: Int
+- payAmount: Float
+- bankName: String
+- accountNumber: String
+- userId: Int
+- transactionId: String
++ getId(): Int
++ getPayAmount(): Float
++ getBankName(): String
++ getAccountNumber(): String
++ getUserId(): Int
++ getTransactionId(): String
+}
+
+AuctionDetailView  "1" -- "1" AuctionController
+AuctionController "1" -- "1" PaymentController
+PaymentController ..> IPaymentDatabase
+PaymentController "1" -- "1" BankingSystemBoundary
+PaymentController ..> IAuctionDatabase
+IPaymentDatabase .u.> Payment
+IAuctionDatabase .u.> Auction
+@enduml
