@@ -10,21 +10,19 @@ class PaymentView <<boundary>> {
     password: String
 
     // initiate payment action ()
-    // display payment information ()
-    // request payment ()
-    // send authentication details ()
-    // display confirmation ()
-    // confirm purchase ()
     // display payment details ()
-    // display error ()
+    // make payment ()
+    // provide authentication details ()
+    // display payment confirmation ()
+    // confirm purchase ()
 
     }
 
 class PaymentController <<control>> {
-    // transmit payment request ()
-    // transfer encrypted credentials ()
-    // request transaction ()
-    // save payment details ()
+    // trigger payment ()
+    // make payment ()
+    // provide authentication details ()
+    // confirm purchase ()
 
     }
 
@@ -43,9 +41,8 @@ class Payment <<entity>> {
 
 class BankingSystemBoundary <<boundary>> {
     // transmit payment request ()
-    // transfer encrypted credentials ()
-    // request transaction ()
-    // response payment requests ()
+    // transfer encrypted details ()
+    // transaction request ()
 
     }
 
