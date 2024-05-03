@@ -1,5 +1,4 @@
 @startuml 
-left to right direction
 skinparam classAttributeIconSize 0
 skinparam linetype ortho
 hide circle
@@ -54,10 +53,10 @@ class IAuctionDatabase <<interface>> {
     + deleteRegisterPayment(auctionId: Int, customerId)
     }
 
-AuctionDetailView "1" -- "1" AuctionController
+AuctionDetailView "1" -u- "1" AuctionController
 
 AuctionController ..r> IAuctionDatabase
 
-IAuctionDatabase ..u> Auction
+IAuctionDatabase ..d> Auction
 
 @enduml
