@@ -37,7 +37,7 @@ class VerificationRequest {
     }
 
 class IVerificationRequestDatabase <<interface>> {
-    + createRequest(id: Int, sellerId: Int, carId: Int, status: String, paymentId: Int): VerificationRequest
+    + createRequest(id: Int, sellerId: Int, carId: Int,\n status: String, paymentId: Int): VerificationRequest
     + setRequest(status: String, adminId: Int, time: String)
     + getRequest(id: Int): VerificationRequest
     + getRequestList(query: String): List<VerificationRequest>

@@ -43,14 +43,14 @@ class Payment {
     }
 
 class BankingSystemBoundary {
-    + transmitPaymentRequest(bankNumber: String, amount: Float)
-    + transferEncryptedDetails(password: String)
-    + transactionRequest(transactionToken: String): String
+    + transmitPaymentRequest(\nbankNumber: String, amount: Float)
+    + transferEncryptedDetails(\npassword: String)
+    + transactionRequest(\ntransactionToken: String): String
 
     }
 
 class IPaymentDatabase <<interface>> {
-    + createPayment(payAmount: Float, bankName: String, accountNumber: String,\n userId: Int, transactionId: String): Payment
+    + createPayment(payAmount: Float, bankName: String, \n accountNumber: String, userId: Int, transactionId: String): Payment
     + setPaymentDetail(id: Int, payAmount: Float, accountNumber: String)
     + getPaymentDetail(id: Int): Payment
     }
@@ -59,7 +59,7 @@ PaymentView "1" -d- "1" PaymentController
 
 PaymentController ..d> IPaymentDatabase
 
-PaymentController ..u> BankingSystemBoundary
+PaymentController "1" -u- "1" BankingSystemBoundary
 
 IPaymentDatabase ..d> Payment
 

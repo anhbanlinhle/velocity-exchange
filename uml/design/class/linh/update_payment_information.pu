@@ -8,13 +8,13 @@ class PaymentInformationView {
 
     + requestPaymentMethodUpdate(userId: Int)
     + dispayPaymentMethodForm()
-    + fillPaymentInformation(bankName: String, accountNumber: String)
+    + fillPaymentInformation(bankName: String,\n accountNumber: String)
 
     }
 
 class PaymentController {
     + getPaymentMethod(userId: Int)
-    + newPaymentInformation(bankName: String, accountNumber: String)
+    + newPaymentInformation(bankName: String,\n accountNumber: String)
     }
 
 class PaymentInformation {
@@ -28,20 +28,20 @@ class PaymentInformation {
     }
 
 class BankingSystemBoundary {
-    + authenticateInformation(bankName: String, accountNumber: String): Boolean
+    + authenticateInformation(bankName: String,\n accountNumber: String): Boolean
     }
 
 class IPaymentInformationDatabase <<interface>> {
-    + createPaymentInformation(bankName: String, accountNumber: String): PaymentInformation
+    + createPaymentInformation(bankName: String,\n accountNumber: String): PaymentInformation
     + getPaymentInformation(id: Int): PaymentInformation
-    + setPaymentInformation(id: Int, bankName: String, accountNumber: String)
+    + setPaymentInformation(id: Int, bankName: String,\n accountNumber: String)
     }
 
-PaymentInformationView "1" -- "1" PaymentController
+PaymentInformationView "1" -d- "1" PaymentController
 
-PaymentController ..r> IPaymentInformationDatabase
+PaymentController ..d> IPaymentInformationDatabase
 
-PaymentController ..d> BankingSystemBoundary
+PaymentController "1" -u- "1" BankingSystemBoundary
 
 IPaymentInformationDatabase ..u> PaymentInformation
 

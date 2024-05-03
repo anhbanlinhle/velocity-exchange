@@ -33,9 +33,9 @@ class Bid {
     }
 
 class IBidDatabase <<interface>> {
-    + createBid(amount: Float, bidderId: Int, auctionId: Int, timeStamp: String): Bid
+    + createBid(amount: Float, bidderId: Int,\n auctionId: Int, timeStamp: String): Bid
     + getBid(id: Int): Bid
-    + setBid(id: Int, amount: Float, bidderId: Int, auctionId: Int, timeStamp: String)
+    + setBid(id: Int, amount: Float, bidderId: Int,\n auctionId: Int, timeStamp: String)
     }
 
 AuctionView "1" -- "1" AuctionController

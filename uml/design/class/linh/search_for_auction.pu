@@ -47,9 +47,9 @@ class Auction {
     }
 
 class IAuctionDatabase <<interface>> {
-    + createAuction(name: String, startDate: String, endDate: String, bidStep: Float, initialPrice: Float): Auction
+    + createAuction(name: String, startDate: String,\n endDate: String, bidStep: Float, initialPrice: Float): Auction
     + getAuctionList(query: String): List<Auction>
-    + setAuction(id: Int, name: String, startDate: String, endDate: String, bidStep: Float, initialPrice: Float)
+    + setAuction(id: Int, name: String, startDate: String,\n endDate: String, bidStep: Float, initialPrice: Float)
     + getAuction(id: Int): Auction
     + addRegisterPayment(auctionId: Int, customerId, paymentId: Int)
     + deleteRegisterPayment(auctionId: Int, customerId)
