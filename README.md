@@ -10,11 +10,19 @@ cd client
 npm ci
 ```
 
-### 2. Environment variables
+### 2. Config
+#### 2.1. Client
 - Clone the `/client/.env.template` file into `/client/.env`
 - Fill in empty fields (if any)
 
+#### 2.2. Server
+1. Clone the `/server/.env.example` file into `/server/.env` and fill in empty fields
+- Fill in empty fields
+
+2. Clone the `/server/src/config/database_config_template.js` file into `/server/src/config/database.js` and fill in MySQL connection information
+3. Open MySQL, execute `/server/database/release/backup.sql` and `/server/database/release/fakedata.sql` to create local database
 ## Boot the application
+Run MySQL server
 
 ### The Back-end
 
