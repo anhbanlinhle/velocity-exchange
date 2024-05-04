@@ -37,7 +37,7 @@ CREATE TABLE `account` (
   `phone_num` varchar(10) DEFAULT NULL,
   `is_admin` tinyint DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -282,8 +282,8 @@ CREATE TABLE `verification_request` (
   `seller_id` int NOT NULL,
   `car_id` int NOT NULL,
   `status` varchar(64) NOT NULL DEFAULT 'PENDING',
-  `time` datetime NOT NULL,
-  `admin_id` int NOT NULL,
+  `time` datetime DEFAULT NULL,
+  `admin_id` int DEFAULT NULL,
   `payment_id` int NOT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_account_verification_request_1` (`seller_id`),
