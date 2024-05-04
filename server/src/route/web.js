@@ -8,7 +8,7 @@ let router = express.Router()
 
 const initWebRoute = (app) => {
   // section - homepage 
-  router.get('/', homeController.homepage)
+  router.get('/', homeController.root)
 
   // section - health 
   router.get('/health/db', homeController.dbHealth)

@@ -1,6 +1,6 @@
 import { dbHealth } from './health/dbHealth'
 
-let homepage = async (req, res) => {
+let root = async (req, res) => {
   console.log(
     req.session.id === undefined ? `Session: ` : `\x1b[4mSession\x1b[0m: `,
     req.session.id
@@ -24,6 +24,6 @@ let homepage = async (req, res) => {
 }
 
 module.exports = {
-  homepage,
+  root,
   dbHealth
 }
