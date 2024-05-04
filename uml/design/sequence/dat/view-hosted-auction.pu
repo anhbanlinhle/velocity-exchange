@@ -1,0 +1,20 @@
+@startuml view_hosted_auction
+hide footbox
+actor ":Seller" as seller
+participant ":AuctionListView" as view
+participant ":AuctionController" as controller
+participant ":IAuctionDatabase" as auction
+
+autonumber 1 1 "0."
+seller ++
+seller -> view ++: viewHostedAuction()
+view -> controller ++ : getHostedAuction()
+controller -> auction ++: getAuctionList(hosted)
+autonumber stop
+auction --> controller --: hosted auction message
+autonumber resume
+controller -> view --: displayHostedAuction()
+autonumber stop
+view --> seller : return hosted auction screen
+' ref over seller, view, controller, auction : View auction information.
+@enduml

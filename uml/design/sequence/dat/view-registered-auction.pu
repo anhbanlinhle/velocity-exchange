@@ -1,0 +1,20 @@
+@startuml view_registered_auction
+hide footbox
+actor ":Customer" as customer
+participant ":AuctionListView" as view
+participant ":AuctionController" as controller
+participant ":IAuctionDatabase" as auction
+
+autonumber 1 1 "0."
+customer ++
+customer -> view ++: viewRegisteredAuction()
+view -> controller ++ : getRegisteredAuction()
+controller -> auction ++ : getAuctionList(registered)
+autonumber stop
+auction --> controller -- : registered auction message
+autonumber resume
+controller -> view -- : displayRegisteredAuction()
+autonumber stop
+view --> customer -- : return registered auction screen
+' ref over customer, view, controller, auction : View auction information.
+@enduml

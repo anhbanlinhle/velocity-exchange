@@ -1,0 +1,88 @@
+@startuml register_car
+hide circle
+skinparam classAttributeIconSize 0
+
+
+class RegisterCarForm {
+  + enterInformation()
+  + validateInformation()
+}
+
+class RegisterAuctionController {
+  // submit information ()
+}
+
+class Car {
+  - id: Int
+  - currentOwner: String
+  - brand: String
+  - modelCode: String
+  - color: String
+  - class: String
+  - door: Int
+  - seat: Int
+  - layout: String
+  - transmission: String
+  - engineCylinders: Int
+  - engineCapacity: Int
+  - image: String
+  - location: String
+  - statusInStorage: String
+  + getId(): Int
+  + getCurrentOwner(): String
+  + getBrand(): String
+  + getModelCode(): String
+  + getColor(): String
+  + getClass(): String
+  + getDoor(): Int
+  + getSeat(): Int
+  + getLayout(): String
+  + getTransmission(): String
+  + getEngineCylinders(): Int
+  + getEngineCapacity(): Int
+  + getImage(): String
+  + getLocation(): String
+  + getStatusInStorage(): String
+}
+
+class ICarDatabase <<interface>> {
++ createCar(currentOwner: String, brand: String, modelCode: String,\ncolor: String, class: String, door: Int, seat: Int, layout: String, tranmission: String,\nengineCylinders: Int, enginCapacity: Int, image: String, statusInStorage: String): Car
++ setCar(currentOwner: String, brand: String, modelCode: String,\ncolor: String, class: String, door: Int, seat: Int, layout: String, tranmission: String,\nengineCylinders: Int, enginCapacity: Int, image: String, statusInStorage: String)
++ getCar(): Car
++ getCarList(): List<Car>
+}
+
+class IVerificationRequestDatabase <<interface>> {
++ createRequest(id: Int, sellerId: Int, carId: Int, status: String, paymentId: Int): VerificationRequest
++ setRequest(status: String, adminId: Int, time: String)
++ getRequest(id: Int): VerificationRequest
++ getRequestList(query: String): List<VerificationRequest>
+}
+
+
+class VerificationRequest {
+VerificationRequest
+- id: Int
+- sellerId: Int
+- carId: Int
+- status: String
+- time: String
+- adminId: Int
+- paymentId: Int
++ getId(): Int
++ getSellerId(): Int
++ getCarId(): Int
++ getStatus(): String
++ getTime(): String
++ getAdminId(): Int
++ getPaymentId(): Int
+}
+
+RegisterCarForm "1" -- "1" RegisterAuctionController
+RegisterAuctionController ..> ICarDatabase
+RegisterAuctionController ..> IVerificationRequestDatabase
+ICarDatabase .u.> Car
+IVerificationRequestDatabase .u.> VerificationRequest
+
+
+@enduml

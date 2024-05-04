@@ -1,0 +1,26 @@
+@startuml register_to_participate
+hide footbox
+
+actor ":Customer" as customer
+participant ":AuctionDetailView" as view
+participant ":AuctionController" as controller
+participant ":IAuctionDatabase" as auction
+
+autonumber 1 1 "0."
+
+customer ++
+customer -> view ++: registerToParticipate(auctionId, customerId)
+autonumber stop
+view --> customer: payment information message
+ref over customer, view: Make payment
+alt payment success
+    view -> controller ++ : 2.1. registerToParticipate(...)
+    controller -> auction ++ : 3.1. addRegisterPayment(...)
+    auction --> controller --: register success message
+    controller --> view: register success message
+    view --> customer : register success message
+else payment failed
+    view --> customer : payment failed message
+end
+
+@enduml
