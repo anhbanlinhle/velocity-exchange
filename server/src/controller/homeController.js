@@ -1,4 +1,5 @@
 import { dbHealth } from './health/dbHealth'
+import { homepage } from './home/homePage'
 
 let root = async (req, res) => {
   console.log(
@@ -25,5 +26,6 @@ let root = async (req, res) => {
 
 module.exports = {
   root,
-  dbHealth
+  dbHealth,
+  homepage
 }
