@@ -3,6 +3,7 @@ import { verifyToken } from '../controller/utility/verifyToken'
 
 import homeController from '../controller/homeController'
 import authController from '../controller/authController'
+import auctionController from '../controller/auctionController'
 
 let router = express.Router()
 
@@ -17,6 +18,9 @@ const initWebRoute = (app) => {
   // section - authenticate
   router.post('/auth/sign-up', authController.signUp)
   router.post('/auth/login', authController.login)
+
+  // section - auction 
+  router.post('/auction/detail', auctionController.auctionDetail)
 
   return app.use('/', router)
 }
