@@ -18,6 +18,7 @@ const theme = createTheme({
   },
   typography: {
     fontFamily: '"Red Hat Display", "Roboto", sans-serif',
+    fontSize: 18,
     button: {
       textTransform: 'none',
       fontWeight: 650,

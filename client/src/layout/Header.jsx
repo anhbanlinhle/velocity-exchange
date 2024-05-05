@@ -20,6 +20,7 @@ import { styled, alpha } from '@mui/material/styles';
 
 import Logo from '../component/Logo';
 import CustomButton from '../component/CustomButton';
+import isLoggedIn from '../utils/auth';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -64,8 +65,10 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 function Header() {
   const [anchorElNav, setAnchorElNav] = useState(null);
   const [anchorElUser, setAnchorElUser] = useState(null);
-  const [userLoggedIn, setUserLoggedIn] = useState(true);
-  const [isAdmin, setIsAdmin] = useState(false);
+  const userLoggedIn = isLoggedIn();
+  const username = localStorage.getItem('username');
+  // TODO: Get user's role
+  const isAdmin = false;
   const logoWidth = '9rem';
   const navigate = useNavigate();
   // Default navigation menu items for guest users
@@ -106,8 +109,7 @@ function Header() {
 
   // TODO: Logout function
   const handleLogout = () => {
-    setUserLoggedIn(false);
-    setIsAdmin(false);
+    localStorage.clear();
     navigate('/');
   };
 
@@ -215,9 +217,9 @@ function Header() {
             <Box sx={{ flexGrow: 0 }}>
               {userLoggedIn ? (
                 <>
-                  <Tooltip title="Open settings">
+                  <Tooltip title={username}>
                     <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                      <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                      <Avatar alt="User Avatar">{username.charAt(0).toLowerCase()}</Avatar>
                     </IconButton>
                   </Tooltip>
                   {/* Avatar Menu */}
@@ -254,19 +256,13 @@ function Header() {
                 </>
 
               ) : (
-                // TODO: Login button
                 <Box sx={{ display: 'flex', flexDirection: 'row' }}>
+                  <CustomButton component={Link} to="/signup">Sign up</CustomButton>
                   <Button
                     onClick={() => navigate('/login')}
                     sx={{ my: 2, color: 'inherit', display: 'block' }}
                   >
                     Log in
-                  </Button>
-                  <Button
-                    onClick={() => navigate('/signup')}
-                    sx={{ my: 2, color: 'inherit', display: 'block' }}
-                  >
-                    Sign up
                   </Button>
                 </Box>
               )}
