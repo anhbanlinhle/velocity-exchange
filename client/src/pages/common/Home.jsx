@@ -96,7 +96,7 @@ function Home() {
           <Grid item xs={12} sm={6} md={3} key={auction.id} style={{ display: 'flex' }}>
             <CustomCard
               name={auction.name}
-              image="https://i.ibb.co/jR6yTTL/Lamborghini-Sesto-Elemento-1080x608.jpg"
+              image={auction.image}
               description={{
                 'Start Date': auction.date_started,
                 'End Date': auction.date_expired,
@@ -117,7 +117,7 @@ function Home() {
         open={openDetail}
         onClose={handleCloseDetail}
         name={auctionDetails.name}
-        image="https://i.ibb.co/jR6yTTL/Lamborghini-Sesto-Elemento-1080x608.jpg"
+        image={auctionDetails.image}
         description={{
           'Start Date': auctionDetails.date_started,
           'End Date': auctionDetails.date_expired,
