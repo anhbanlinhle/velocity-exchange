@@ -20,6 +20,7 @@ import { styled, alpha } from '@mui/material/styles';
 
 import Logo from '../component/Logo';
 import CustomButton from '../component/CustomButton';
+import { isLoggedIn } from '../utils/auth';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -64,10 +65,12 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 function Header() {
   const [anchorElNav, setAnchorElNav] = useState(null);
   const [anchorElUser, setAnchorElUser] = useState(null);
-  const [userLoggedIn, setUserLoggedIn] = useState(true);
-  const [isAdmin, setIsAdmin] = useState(false);
+  const userLoggedIn = isLoggedIn();
+  const userRole = localStorage.getItem('userRole');
+  const username = localStorage.getItem('username');
   const logoWidth = '9rem';
   const navigate = useNavigate();
+
   // Default navigation menu items for guest users
   let pages = ['Home', 'About'];
   let routes = ['/', '/about'];
@@ -75,16 +78,16 @@ function Header() {
   const settingRoutes = [];
 
   // Navigation menu items for logged in users (members)
-  if (userLoggedIn) {
+  if (userRole === 'USER') {
     pages = ['Home', 'Inventory', 'About'];
     routes = ['/', '/inventory', '/about'];
     // settings = ['Profile'];
     // settingRoutes = ['/profile'];
   }
 
-  if (isAdmin) {
-    pages = ['Home', 'Verification Request'];
-    routes = ['/', '/admin/verification'];
+  if (userRole === 'ADMIN') {
+    pages = ['Home', 'Verification', 'About'];
+    routes = ['/', '/admin/verification', '/about'];
     // settings = ['Profile'];
     // settingRoutes = ['/profile'];
   }
@@ -104,10 +107,9 @@ function Header() {
     setAnchorElUser(null);
   };
 
-  // TODO: Logout function
   const handleLogout = () => {
-    setUserLoggedIn(false);
-    setIsAdmin(false);
+    setAnchorElUser(null);
+    localStorage.clear();
     navigate('/');
   };
 
@@ -208,16 +210,16 @@ function Header() {
                   {page}
                 </Button>
               ))}
-              {userLoggedIn && (<CustomButton component={Link} to="/auction/create">Sell Your Car</CustomButton>)}
+              {userRole === 'USER' && (<CustomButton component={Link} to="/auction/create">Sell Your Car</CustomButton>)}
             </Box>
 
             {/* Avatar */}
             <Box sx={{ flexGrow: 0 }}>
               {userLoggedIn ? (
                 <>
-                  <Tooltip title="Open settings">
+                  <Tooltip title={username}>
                     <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                      <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                      <Avatar alt="User Avatar">{username.charAt(0).toLowerCase()}</Avatar>
                     </IconButton>
                   </Tooltip>
                   {/* Avatar Menu */}
@@ -254,19 +256,13 @@ function Header() {
                 </>
 
               ) : (
-                // TODO: Login button
                 <Box sx={{ display: 'flex', flexDirection: 'row' }}>
+                  <CustomButton component={Link} to="/signup">Sign up</CustomButton>
                   <Button
                     onClick={() => navigate('/login')}
                     sx={{ my: 2, color: 'inherit', display: 'block' }}
                   >
                     Log in
-                  </Button>
-                  <Button
-                    onClick={() => navigate('/signup')}
-                    sx={{ my: 2, color: 'inherit', display: 'block' }}
-                  >
-                    Sign up
                   </Button>
                 </Box>
               )}
