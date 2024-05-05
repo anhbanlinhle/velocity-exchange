@@ -1,13 +1,13 @@
 import mysql from 'mysql2/promise'
+import { config } from 'dotenv'
+config()
 
 console.log('Creating connection pool...')
 
-// Fill in your MySQL connection information
-// REMOVE password if you don't have one
 const pool = mysql.createPool({
   host: 'localhost',
   user: 'root',
-  password: '',
+  password: process.env.MYSQL_PASSWORD,
   database: 'velocity_exchange',
   dateStrings: true
 })
