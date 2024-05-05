@@ -1,21 +1,5 @@
 # Velocity Exchange backend module
 
-## Installation and Boot command
-
-To install prerequisites, run
-
-```
-npm ci
-```
-
-To boot server, run
-
-```
-npm start
-```
-
-Server is ready at _http://localhost:1111_
-
 ## Usage
 
 ### 1. Home Page
