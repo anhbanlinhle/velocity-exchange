@@ -1,4 +1,4 @@
-import { registCar } from '../car/carService.js'
+import { registCar } from './car/registCar.js'
 
 module.exports = {
   registCar
