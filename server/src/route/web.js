@@ -25,12 +25,13 @@ const initWebRoute = (app) => {
   router.post('/auction/detail', auctionController.auctionDetail)
   router.post('/auction/create', auctionController.createAuction)
 
-  // section - car
+  // section - car 
   router.post('/car/regist', verifyToken, carController.registCar)
-  // section - admin
+
+  // section - admin 
   router.post('/admin/request', adminController.pendingList)
-  router.get('/admin/verification_request_details', adminController.verificationRequestDetails)
-  router.post('/admin/approval_request', adminController.approvalRequest)
+  router.post('/admin/request/detail', adminController.verificationRequestDetails)
+  router.post('/admin/request/handle', adminController.approvalRequest)
 
 
   return app.use('/', router)
