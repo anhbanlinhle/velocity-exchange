@@ -210,7 +210,7 @@ function Header() {
                   {page}
                 </Button>
               ))}
-              {userRole === 'USER' && (<CustomButton component={Link} to="/auction/create">Sell Your Car</CustomButton>)}
+              {userRole === 'USER' && (<CustomButton component={Link} to="/car-register">Sell Your Car</CustomButton>)}
             </Box>
 
             {/* Avatar */}
