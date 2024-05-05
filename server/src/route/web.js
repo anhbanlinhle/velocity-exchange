@@ -11,7 +11,7 @@ let router = express.Router()
 const initWebRoute = (app) => {
   // section - homepage 
   router.get('/', homeController.root)
-  router.get('/home', homeController.homepage)
+  router.post('/home', homeController.homepage)
 
   // section - health 
   router.get('/health/db', homeController.dbHealth)
@@ -22,6 +22,7 @@ const initWebRoute = (app) => {
 
   // section - auction 
   router.post('/auction/detail', auctionController.auctionDetail)
+  router.post('/auction/create', auctionController.createAuction)
 
   // section - car
   router.post('/car/regist', verifyToken, carController.registCar)
