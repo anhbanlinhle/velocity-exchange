@@ -8,7 +8,7 @@ let approvalRequest = async (req, res) => {
   if (requestId === undefined || adminId === undefined || status === undefined) {
     return res.status(422).send({ ErrorCode: "ER_MISSING_PARAM" })
   }
-  if (status !== 'APPROVED' || status !== 'REJECTED') {
+  if (status !== 'APPROVED' && status !== 'REJECTED') {
     return res.status(400).send({ ErrorCode: 'ER_INVALID_STATUS' })
   }
 
