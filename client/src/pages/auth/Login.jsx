@@ -4,7 +4,7 @@ import {
 } from '@mui/material';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import isLoggedIn from '../../utils/auth';
+import { isLoggedIn } from '../../utils/auth';
 
 function Login() {
   const [email, setEmail] = useState('');
@@ -65,6 +65,12 @@ function Login() {
         localStorage.setItem('token', data.token);
         localStorage.setItem('username', data.username);
         localStorage.setItem('userId', data.userId);
+        if (data.is_admin) {
+          localStorage.setItem('userRole', 'ADMIN');
+        } else {
+          localStorage.setItem('userRole', 'USER');
+        }
+        localStorage.setItem('isAdmin', data.is_admin);
         navigate('/');
       } catch (errorResponse) {
         errorResponse.json().then((error) => {
@@ -91,7 +97,6 @@ function Login() {
         open={message !== null}
         onClose={handleCloseAlert}
         autoHideDuration={5000}
-        onExited={() => setMessage(null)}
       >
         {message !== null && (
           <Alert severity="success" onClose={handleCloseAlert}>

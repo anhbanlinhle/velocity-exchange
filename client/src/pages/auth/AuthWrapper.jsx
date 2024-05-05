@@ -1,17 +1,13 @@
 import React from 'react';
 import { Outlet, Navigate, useLocation } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import isLoggedIn from '../../utils/auth';
+import { isLoggedIn } from '../../utils/auth';
 
 function AuthWrapper({ allowedRoles }) {
   const location = useLocation();
   const isUserLoggedIn = isLoggedIn();
 
-  // TODO: Get user's role
-  let userRole;
-  if (isUserLoggedIn) {
-    userRole = 'USER';
-  }
+  const userRole = localStorage.getItem('userRole');
 
   if (allowedRoles.includes(userRole)) {
     return <Outlet />;

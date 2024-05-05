@@ -20,7 +20,7 @@ import { styled, alpha } from '@mui/material/styles';
 
 import Logo from '../component/Logo';
 import CustomButton from '../component/CustomButton';
-import isLoggedIn from '../utils/auth';
+import { isLoggedIn } from '../utils/auth';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -66,11 +66,11 @@ function Header() {
   const [anchorElNav, setAnchorElNav] = useState(null);
   const [anchorElUser, setAnchorElUser] = useState(null);
   const userLoggedIn = isLoggedIn();
+  const userRole = localStorage.getItem('userRole');
   const username = localStorage.getItem('username');
-  // TODO: Get user's role
-  const isAdmin = false;
   const logoWidth = '9rem';
   const navigate = useNavigate();
+
   // Default navigation menu items for guest users
   let pages = ['Home', 'About'];
   let routes = ['/', '/about'];
@@ -78,16 +78,16 @@ function Header() {
   const settingRoutes = [];
 
   // Navigation menu items for logged in users (members)
-  if (userLoggedIn) {
+  if (userRole === 'USER') {
     pages = ['Home', 'Inventory', 'About'];
     routes = ['/', '/inventory', '/about'];
     // settings = ['Profile'];
     // settingRoutes = ['/profile'];
   }
 
-  if (isAdmin) {
-    pages = ['Home', 'Verification Request'];
-    routes = ['/', '/admin/verification'];
+  if (userRole === 'ADMIN') {
+    pages = ['Home', 'Verification', 'About'];
+    routes = ['/', '/admin/verification', '/about'];
     // settings = ['Profile'];
     // settingRoutes = ['/profile'];
   }
@@ -107,8 +107,8 @@ function Header() {
     setAnchorElUser(null);
   };
 
-  // TODO: Logout function
   const handleLogout = () => {
+    setAnchorElUser(null);
     localStorage.clear();
     navigate('/');
   };
@@ -210,7 +210,7 @@ function Header() {
                   {page}
                 </Button>
               ))}
-              {userLoggedIn && (<CustomButton component={Link} to="/auction/create">Sell Your Car</CustomButton>)}
+              {userRole === 'USER' && (<CustomButton component={Link} to="/auction/create">Sell Your Car</CustomButton>)}
             </Box>
 
             {/* Avatar */}
