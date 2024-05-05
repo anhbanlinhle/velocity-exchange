@@ -28,7 +28,7 @@ const initWebRoute = (app) => {
   // section - car
   router.post('/car/regist', verifyToken, carController.registCar)
   // section - admin
-  router.get('/admin/pendingList', adminController.pendingList)
+  router.post('/admin/request', adminController.pendingList)
   router.get('/admin/verification_request_details', adminController.verificationRequestDetails)
   router.post('/admin/approval_request', adminController.approvalRequest)
 
