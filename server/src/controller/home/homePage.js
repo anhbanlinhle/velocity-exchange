@@ -19,7 +19,7 @@ let homepage = async (req, res) => {
 
     let [totalResult, dump2] = await pool.query('select count(*) as total from auction')
 
-    return res.status(200).send({data: rows, total: totalResult[0].total})
+    return res.status(200).send({data: rows, pages: Math.ceil(totalResult[0].total / pageSize)})
   }
   catch (err) {
     console.log(err)
