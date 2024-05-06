@@ -33,13 +33,15 @@ function CustomCard({
         },
       }}
     >
-      <CardMedia
-        component="img"
-        height="140"
-        image={image}
-        alt={name}
-        onClick={handleDetailClick}
-      />
+      {image && (
+        <CardMedia
+          component="img"
+          height="140"
+          image={image}
+          alt={name}
+          onClick={handleDetailClick}
+        />
+      )}
       <CardContent onClick={handleDetailClick}>
         <Typography variant="h6" component="div" sx={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
           {name}
@@ -80,7 +82,7 @@ function CustomCard({
 
 CustomCard.propTypes = {
   name: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired,
+  image: PropTypes.string,
   description: PropTypes.shape({}).isRequired,
   type: PropTypes.string.isRequired,
   handleDetailClick: PropTypes.func.isRequired,
@@ -88,6 +90,7 @@ CustomCard.propTypes = {
 };
 
 CustomCard.defaultProps = {
+  image: null,
   registered: false,
 };
 
