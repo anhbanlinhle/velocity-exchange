@@ -33,6 +33,18 @@ let registAuction = async (req, res) => {
     `
     let [payment, dump1] = await pool.query(insertPayment, [transactionId, userId, amount])
 
+    let check = `
+      select id
+      from auction_registration
+      where auction_id = ? and customer_id = ?
+    `
+
+    let [checkResult, dump3] = await pool.query(check, [auctionId, userId])
+
+    if (checkResult.length > 0) {
+      return res.status(400).send({ErrorCode: 'ER_ALREADY_REGISTERED'})
+    }
+
     let regist = `
       insert into auction_registration (auction_id, customer_id, payment_id)
       values (?, ?, ?)
