@@ -1,10 +1,10 @@
-import pool from "../../config/database";
+import pool from "../../config/database"
 
-let verificationRequestDetails = async (req, res) => {
-  let requestId = req.body.requestId;
+let requestDetail = async (req, res) => {
+  let requestId = req.body.requestId
 
   if (requestId === undefined) {
-    return res.status(422).send({ ErrorCode: "ER_MISSING_PARAM" });
+    return res.status(422).send({ ErrorCode: "ER_MISSING_PARAM" })
   }
 
   try {
@@ -21,10 +21,11 @@ let verificationRequestDetails = async (req, res) => {
     return res.status(200).send({ data: rows })
 
   } catch (err) {
+    console.log(err)
     return res.status(500).send({ ErrorCode: err.code, ErrorNo: err.errno })
   }
-};
+}
 
 module.exports = {
-  verificationRequestDetails,
-};
+  requestDetail
+}

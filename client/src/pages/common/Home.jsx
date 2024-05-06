@@ -5,11 +5,12 @@ import Spinner from '../../component/Spinner';
 import CustomCard from '../../component/CustomCard';
 import formatCurrency from '../../utils/currencyFormat';
 import CustomModal from '../../component/CustomModal';
+import { CardType } from '../../constant';
+import NoDataFound from '../../component/NoDataFound';
 
 function Home() {
   const serverUrl = import.meta.env.VITE_API_URL;
   const auctionListEndpoint = `${serverUrl}/home`;
-  console.log(auctionListEndpoint);
   const auctionDetailEndpoint = `${serverUrl}/auction/detail/`;
   const [auctionList, setAuctionList] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -75,6 +76,7 @@ function Home() {
   };
 
   useEffect(() => {
+    setIsLoading(true);
     fetchAuctionList();
   }, [page]);
 
@@ -84,61 +86,66 @@ function Home() {
 
   return (
     <>
-      {/* {console.log(auctionList)} */}
       <Spinner isLoading={isLoading} />
       <PageTitle title="Public Auction" />
-      <Box sx={{ display: 'flex', justifyContent: 'center', marginBottom: '2rem' }}>
-        <Pagination count={totalPages} page={page} onChange={handlePageChange} />
-      </Box>
+      {auctionList.length === 0 && !isLoading ? (
+        <NoDataFound />
+      ) : (
+        <>
+          <Box sx={{ display: 'flex', justifyContent: 'center', marginBottom: '2rem' }}>
+            <Pagination count={totalPages} page={page} onChange={handlePageChange} />
+          </Box>
 
-      <Grid container spacing={{ xs: 2, md: 4 }}>
-        {auctionList.map((auction) => (
-          <Grid item xs={12} sm={6} md={3} key={auction.id} style={{ display: 'flex' }}>
-            <CustomCard
-              name={auction.name}
-              image={auction.image}
-              description={{
-                'Start Date': auction.date_started,
-                'End Date': auction.date_expired,
-                'Bid Step': formatCurrency(auction.bid_step),
-                'Initial Price': formatCurrency(auction.initial_price),
-                'Current Price': formatCurrency(auction.current_price),
-              }}
-              type="auction"
-              handleDetailClick={() => handleDetailClick(auction.id)}
-              // TODO: Add registered prop
-            />
+          <Grid container spacing={{ xs: 2, md: 4 }}>
+            {auctionList.map((auction) => (
+              <Grid item xs={12} sm={6} md={3} key={auction.id} style={{ display: 'flex' }}>
+                <CustomCard
+                  name={auction.name}
+                  image={auction.image}
+                  description={{
+                    'Start Date': auction.date_started,
+                    'End Date': auction.date_expired,
+                    'Bid Step': formatCurrency(auction.bid_step),
+                    'Initial Price': formatCurrency(auction.initial_price),
+                    'Current Price': formatCurrency(auction.current_price),
+                  }}
+                  type={CardType.AUCTION}
+                  handleDetailClick={() => handleDetailClick(auction.id)}
+                  // TODO: Add registered prop
+                />
+              </Grid>
+            ))}
           </Grid>
-        ))}
-      </Grid>
 
-      {/* Details modal */}
-      <CustomModal
-        open={openDetail}
-        onClose={handleCloseDetail}
-        name={auctionDetails.name}
-        image={auctionDetails.image}
-        description={{
-          'Start Date': auctionDetails.date_started,
-          'End Date': auctionDetails.date_expired,
-          'Bid Step': formatCurrency(auctionDetails.bid_step),
-          'Initial Price': formatCurrency(auctionDetails.initial_price),
-          'Current Price': formatCurrency(auctionDetails.highest_bid),
-          'Current Owner': auctionDetails.current_owner,
-          Brand: auctionDetails.brand,
-          Model: auctionDetails.model_code,
-          Color: auctionDetails.color,
-          Class: auctionDetails.class,
-          Doors: auctionDetails.door,
-          Seats: auctionDetails.seat,
-          Layout: auctionDetails.layout,
-          Tranmission: auctionDetails.transmission,
-          'Engine Cylinder': auctionDetails.engine_cylinders,
-          'Engine Capacity': auctionDetails.engine_capacity,
-          Fuel: auctionDetails.fuel,
-          Odometer: auctionDetails.odometer,
-        }}
-      />
+          {/* Details modal */}
+          <CustomModal
+            open={openDetail}
+            onClose={handleCloseDetail}
+            name={auctionDetails.name}
+            image={auctionDetails.image}
+            description={{
+              'Start Date': auctionDetails.date_started,
+              'End Date': auctionDetails.date_expired,
+              'Bid Step': formatCurrency(auctionDetails.bid_step),
+              'Initial Price': formatCurrency(auctionDetails.initial_price),
+              'Current Price': formatCurrency(auctionDetails.highest_bid),
+              'Current Owner': auctionDetails.current_owner,
+              Brand: auctionDetails.brand,
+              Model: auctionDetails.model_code,
+              Color: auctionDetails.color,
+              Class: auctionDetails.class,
+              Doors: auctionDetails.door,
+              Seats: auctionDetails.seat,
+              Layout: auctionDetails.layout,
+              Tranmission: auctionDetails.transmission,
+              'Engine Cylinder': auctionDetails.engine_cylinders,
+              'Engine Capacity': auctionDetails.engine_capacity,
+              Fuel: auctionDetails.fuel,
+              Odometer: auctionDetails.odometer,
+            }}
+          />
+        </>
+      )}
     </>
   );
 }

@@ -64,7 +64,7 @@ function Login() {
         const data = await response.json();
         localStorage.setItem('token', data.token);
         localStorage.setItem('username', data.username);
-        localStorage.setItem('userId', data.userId);
+        localStorage.setItem('userId', data.id);
         if (data.is_admin) {
           localStorage.setItem('userRole', 'ADMIN');
         } else {
