@@ -17,6 +17,7 @@ let pendingList = async (req, res) => {
 
     return res.status(200).send({data: rows, pages: Math.ceil(totalResult[0].total / pageSize)})
   } catch (err) {
+    console.log(err)
     return res.status(500).send({ ErrorCode: err.code, ErrorNo: err.errno })
   }
 };

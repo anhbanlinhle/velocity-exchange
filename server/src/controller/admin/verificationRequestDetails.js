@@ -21,6 +21,7 @@ let verificationRequestDetails = async (req, res) => {
     return res.status(200).send({ data: rows })
 
   } catch (err) {
+    console.log(err)
     return res.status(500).send({ ErrorCode: err.code, ErrorNo: err.errno })
   }
 };
