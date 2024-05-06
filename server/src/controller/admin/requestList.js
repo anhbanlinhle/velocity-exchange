@@ -6,8 +6,11 @@ let requestList = async (req, res) => {
 
   try {
     let query = `
-      select * from verification_request
-      where status = 'PENDING'
+      select v.id, c.model_code, a.first_name, a.last_name, v.status, v.time
+      from verification_request as v
+      join car as c on c.id = v.car_id
+      join account as a on a.id = v.seller_id
+      order by v.id desc
       limit ? offset ?
     `
 
