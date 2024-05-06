@@ -29,7 +29,7 @@ const initWebRoute = (app) => {
 
   // section - car 
   router.post('/car/regist', carController.registCar)
-  router.get('/car/inventory', carController.inventoryRequest)
+  router.post('/car/inventory', carController.inventoryRequest)
 
   // section - admin 
   router.post('/admin/request', adminController.requestList)
