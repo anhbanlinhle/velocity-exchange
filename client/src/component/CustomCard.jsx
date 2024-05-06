@@ -4,9 +4,10 @@ import {
 } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import { CardType, Status } from '../constant';
 
 function CustomCard({
-  name, image, description, type, handleDetailClick, registered,
+  name, image, description, type, handleDetailClick, registered, handleApproveClick, handleRejectClick, status,
 }) {
   const navigate = useNavigate();
 
@@ -17,6 +18,34 @@ function CustomCard({
 
   const handleCreateAuctionClick = () => {
     navigate('/auction/create');
+  };
+
+  const renderButtons = () => {
+    switch (type) {
+    case CardType.AUCTION:
+      return (
+        <Button variant="contained" color="secondary" onClick={handleRegisterClick}>
+          {registered ? 'Unregister' : 'Register'}
+        </Button>
+      );
+    case CardType.VERIFICATION_REQUEST:
+      return (
+        <>
+          <Button variant="outlined" color="success" onClick={handleApproveClick} disabled={!status === Status.PENDING}>
+            {status === Status.APPROVED ? 'Approved' : 'Approve'}
+          </Button>
+          <Button variant="outlined" color="error" onClick={handleRejectClick} disabled={!status === Status.PENDING}>
+            {status === Status.REJECTED ? 'Rejected' : 'Reject'}
+          </Button>
+        </>
+      );
+    default:
+      return (
+        <Button variant="contained" color="secondary" onClick={handleCreateAuctionClick}>
+          Create Auction
+        </Button>
+      );
+    }
   };
 
   return (
@@ -62,18 +91,10 @@ function CustomCard({
       </CardContent>
 
       <CardActions sx={{ display: 'flex', justifyContent: 'flex-end' }}>
-        <Button color="primary" onClick={handleDetailClick}>
+        <Button variant="outlined" color="primary" onClick={handleDetailClick}>
           Detail
         </Button>
-        {type === 'auction' ? (
-          <Button variant="contained" color="secondary" onClick={handleRegisterClick}>
-            {registered ? 'Unregister' : 'Register'}
-          </Button>
-        ) : (
-          <Button variant="contained" color="secondary" onClick={handleCreateAuctionClick}>
-            Create Auction
-          </Button>
-        )}
+        {renderButtons()}
       </CardActions>
 
     </Card>
@@ -87,11 +108,17 @@ CustomCard.propTypes = {
   type: PropTypes.string.isRequired,
   handleDetailClick: PropTypes.func.isRequired,
   registered: PropTypes.bool,
+  handleApproveClick: PropTypes.func,
+  handleRejectClick: PropTypes.func,
+  status: PropTypes.string,
 };
 
 CustomCard.defaultProps = {
   image: null,
   registered: false,
+  handleApproveClick: null,
+  handleRejectClick: null,
+  status: Status.PENDING,
 };
 
 export default CustomCard;
