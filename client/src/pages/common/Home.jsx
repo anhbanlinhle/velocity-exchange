@@ -117,24 +117,29 @@ function Home() {
   return (
     <>
       <Spinner isLoading={isLoading} />
+
+      {/* Title and filter options */}
       <Box sx={{ display: 'flex', justifyContent: 'space-between', marginTop: '1rem' }}>
         <PageTitle title="Public Auction" />
-        <TextField
-          id="filter"
-          label="Filter"
-          variant="outlined"
-          size="small"
-          sx={{ minWidth: '14ch' }}
-          value={filter}
-          onChange={(e) => { setPage(1); setFilter(e.target.value); }}
-          select
-        >
-          {Object.values(AuctionFilter).map((filterOption) => (
-            <MenuItem key={filterOption} value={filterOption}>
-              {filterOption.charAt(0).toUpperCase() + filterOption.slice(1).toLowerCase()}
-            </MenuItem>
-          ))}
-        </TextField>
+        {userId !== 0 && (
+          <TextField
+            id="filter"
+            label="Filter"
+            variant="outlined"
+            size="small"
+            sx={{ minWidth: '14ch' }}
+            value={filter}
+            onChange={(e) => { setPage(1); setFilter(e.target.value); }}
+            select
+          >
+            {Object.values(AuctionFilter).map((filterOption) => (
+              <MenuItem key={filterOption} value={filterOption}>
+                {filterOption.charAt(0).toUpperCase() + filterOption.slice(1).toLowerCase()}
+              </MenuItem>
+            ))}
+          </TextField>
+        )}
+
       </Box>
       {auctionList.length === 0 && !isLoading ? (
         <NoDataFound />
