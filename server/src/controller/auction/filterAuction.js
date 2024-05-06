@@ -29,6 +29,7 @@ let filterAuction = async (req, res) => {
         left join car as c on a.car_id = c.id
         where r.customer_id = ?
         group by a.id
+        order by a.id desc
         limit ? offset ?
       `
       total = `
@@ -51,6 +52,7 @@ let filterAuction = async (req, res) => {
         join auction_registration as r on a.id = r.auction_id
         where r.customer_id = ?)
         group by a.id
+        order by a.id desc
         limit ? offset ?
       `
       total = `

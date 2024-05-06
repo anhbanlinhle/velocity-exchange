@@ -35,7 +35,7 @@ let homepage = async (req, res) => {
       where r.customer_id = ?)
       group by a.id
       )
-      order by id
+      order by id desc
       limit ? offset ?
     `
     let offset = (pageNo - 1) * pageSize

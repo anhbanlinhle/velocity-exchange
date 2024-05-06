@@ -1,13 +1,16 @@
 import pool from '../../config/database'
 
-let pendingList = async (req, res) => {
+let requestList = async (req, res) => {
   let pageNo = req.body.pageNo || 1
   let pageSize = req.body.pageSize || 8
 
   try {
     let query = `
-      select * from verification_request
-      where status = 'PENDING'
+      select v.id, c.model_code, a.first_name, a.last_name, v.status, v.time
+      from verification_request as v
+      join car as c on c.id = v.car_id
+      join account as a on a.id = v.seller_id
+      order by v.id desc
       limit ? offset ?
     `
 
@@ -23,5 +26,5 @@ let pendingList = async (req, res) => {
 };
 
 module.exports = {
-  pendingList
+  requestList
 }

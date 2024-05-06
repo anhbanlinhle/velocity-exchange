@@ -32,9 +32,10 @@ const initWebRoute = (app) => {
   router.get('/car/inventory', carController.inventoryRequest)
 
   // section - admin 
-  router.post('/admin/request', adminController.pendingList)
-  router.post('/admin/request/detail', adminController.verificationRequestDetails)
-  router.post('/admin/request/handle', adminController.approvalRequest)
+  router.post('/admin/request', adminController.requestList)
+  router.post('/admin/request/detail', adminController.requestDetail)
+  router.post('/admin/request/handle', adminController.handleRequest)
+  router.post('/admin/request/filter', adminController.requestFilter)
 
 
   return app.use('/', router)

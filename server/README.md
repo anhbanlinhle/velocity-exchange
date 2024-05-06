@@ -69,6 +69,8 @@ work in process
 
 |Parameter|Description|
 |-|-|
+|`pageNo`|Index of page|
+|`pageSize`|Number of results per page|
 |`status`|*PENDING* or *APPROVED* or *REJECTED*|
 
 ### 9. Verification Request Details

@@ -1,7 +1,11 @@
-import { pendingList } from './admin/pendingList'
-import { verificationRequestDetails } from './admin/verificationRequestDetails'
-import { approvalRequest } from './admin/approvalRequest'
+import { requestList } from './admin/requestList'
+import { requestDetail } from './admin/requestDetail'
+import { handleRequest } from './admin/handleRequest'
+import { requestFilter } from './admin/requestFilter'
 
 module.exports = {
-  pendingList, verificationRequestDetails, approvalRequest
+  requestList, 
+  requestDetail, 
+  handleRequest,
+  requestFilter
 }
