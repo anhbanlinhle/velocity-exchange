@@ -1,6 +1,6 @@
 import pool from '../../config/database'
 
-let pendingList = async (req, res) => {
+let requestList = async (req, res) => {
   let pageNo = req.body.pageNo || 1
   let pageSize = req.body.pageSize || 8
 
@@ -23,5 +23,5 @@ let pendingList = async (req, res) => {
 };
 
 module.exports = {
-  pendingList
+  requestList
 }

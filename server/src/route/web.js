@@ -30,7 +30,7 @@ const initWebRoute = (app) => {
   router.post('/car/regist', carController.registCar)
 
   // section - admin 
-  router.post('/admin/request', adminController.pendingList)
+  router.post('/admin/request', adminController.requestList)
   router.post('/admin/request/detail', adminController.verificationRequestDetails)
   router.post('/admin/request/handle', adminController.approvalRequest)
 
