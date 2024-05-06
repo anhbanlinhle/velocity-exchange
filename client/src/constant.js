@@ -10,6 +10,12 @@ export const Status = Object.freeze({
   REJECTED: 'REJECTED',
 });
 
+export const AuctionFilter = Object.freeze({
+  ALL: 'ALL',
+  REGISTERED: 'REGISTERED',
+  UNREGISTERED: 'UNREGISTERED',
+});
+
 export const brandOptions = [
   'Chevrolet',
   'Volkswagen',

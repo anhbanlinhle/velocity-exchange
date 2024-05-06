@@ -4,7 +4,7 @@ import { Typography } from '@mui/material';
 
 function PageTitle({ title }) {
   return (
-    <Typography variant="h5" marginTop="1.5rem">
+    <Typography variant="h5" marginY="1rem">
       {title}
     </Typography>
   );
