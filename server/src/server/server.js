@@ -8,6 +8,10 @@ config()
 const app = express()
 const port = process.env.PORT || 1111
 const cors = require("cors")
+const bodyParser = require("body-parser")
+
+app.use(bodyParser.json({ limit: '10mb' }));
+app.use(bodyParser.urlencoded({ extended: true, limit: '10mb' }));
 
 app.use(cors({ 
   credentials: true, 
