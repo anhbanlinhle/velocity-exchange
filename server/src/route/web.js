@@ -31,8 +31,8 @@ const initWebRoute = (app) => {
 
   // section - admin 
   router.post('/admin/request', adminController.requestList)
-  router.post('/admin/request/detail', adminController.verificationRequestDetails)
-  router.post('/admin/request/handle', adminController.approvalRequest)
+  router.post('/admin/request/detail', adminController.requestDetail)
+  router.post('/admin/request/handle', adminController.handleRequest)
   router.post('/admin/request/filter', adminController.requestFilter)
 
 
