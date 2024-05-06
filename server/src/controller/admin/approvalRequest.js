@@ -32,6 +32,7 @@ let approvalRequest = async (req, res) => {
 
     return res.status(200).send({message: 'success'})
   } catch (err) {
+    console.log(err)
     return res.status(500).send({ ErrorCode: err.code, ErrorNo: err.errno })
   }
 }
