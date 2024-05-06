@@ -1,22 +1,27 @@
 import React, { useEffect, useState } from 'react';
-import { Grid, Pagination, Box } from '@mui/material';
+import {
+  Grid, Pagination, Box, TextField, MenuItem,
+} from '@mui/material';
 import PageTitle from '../../component/PageTitle';
 import Spinner from '../../component/Spinner';
 import CustomCard from '../../component/CustomCard';
 import formatCurrency from '../../utils/currencyFormat';
 import CustomModal from '../../component/CustomModal';
-import { CardType } from '../../constant';
+import { CardType, AuctionFilter } from '../../constant';
 import NoDataFound from '../../component/NoDataFound';
 
 function Home() {
+  const userId = localStorage.getItem('userId') || 0;
   const serverUrl = import.meta.env.VITE_API_URL;
   const auctionListEndpoint = `${serverUrl}/home`;
+  const filteredAuctionListEndpoint = `${serverUrl}/auction/filter`;
   const auctionDetailEndpoint = `${serverUrl}/auction/detail/`;
   const [auctionList, setAuctionList] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(0);
-  const itemsPerPage = 8; // Change this to the number of items you want per page
+  const itemsPerPage = 8;
+  const [filter, setFilter] = useState(AuctionFilter.ALL);
 
   const [openDetail, setOpenDetail] = useState(false);
   const [auctionDetails, setAuctionDetails] = useState({});
@@ -52,33 +57,58 @@ function Home() {
   };
 
   const fetchAuctionList = async () => {
-    try {
-      const requestOptions = {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ pageSize: itemsPerPage, pageNo: page }),
-      };
+    if (filter === AuctionFilter.ALL) {
+      try {
+        const requestOptions = {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ userId, pageSize: itemsPerPage, pageNo: page }),
+        };
 
-      const response = await fetch(auctionListEndpoint, requestOptions);
-      if (!response.ok) {
-        throw response;
+        const response = await fetch(auctionListEndpoint, requestOptions);
+        if (!response.ok) {
+          throw response;
+        }
+        const data = await response.json();
+        setAuctionList(data.data);
+        setTotalPages(data.pages);
+      } catch (error) {
+        console.log(error);
+      } finally {
+        setIsLoading(false);
       }
-      const data = await response.json();
-      setAuctionList(data.data);
-      setTotalPages(data.pages);
-    } catch (error) {
-      console.log(error);
-    } finally {
-      setIsLoading(false);
+    } else {
+      try {
+        const requestOptions = {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            userId, pageSize: itemsPerPage, pageNo: page, filter,
+          }),
+        };
+        const response = await fetch(filteredAuctionListEndpoint, requestOptions);
+        if (!response.ok) {
+          throw response;
+        }
+        const data = await response.json();
+        setAuctionList(data.data);
+        setTotalPages(data.pages);
+      } catch (error) {
+        console.log(error);
+      } finally {
+        setIsLoading(false);
+      }
     }
   };
 
   useEffect(() => {
     setIsLoading(true);
     fetchAuctionList();
-  }, [page]);
+  }, [page, filter]);
 
   const handlePageChange = (event, value) => {
     setPage(value);
@@ -87,15 +117,34 @@ function Home() {
   return (
     <>
       <Spinner isLoading={isLoading} />
-      <PageTitle title="Public Auction" />
+
+      {/* Title and filter options */}
+      <Box sx={{ display: 'flex', justifyContent: 'space-between', marginTop: '1rem' }}>
+        <PageTitle title="Public Auction" />
+        {userId !== 0 && (
+          <TextField
+            id="filter"
+            label="Filter"
+            variant="outlined"
+            size="small"
+            sx={{ minWidth: '14ch' }}
+            value={filter}
+            onChange={(e) => { setPage(1); setFilter(e.target.value); }}
+            select
+          >
+            {Object.values(AuctionFilter).map((filterOption) => (
+              <MenuItem key={filterOption} value={filterOption}>
+                {filterOption.charAt(0).toUpperCase() + filterOption.slice(1).toLowerCase()}
+              </MenuItem>
+            ))}
+          </TextField>
+        )}
+
+      </Box>
       {auctionList.length === 0 && !isLoading ? (
         <NoDataFound />
       ) : (
         <>
-          <Box sx={{ display: 'flex', justifyContent: 'center', marginBottom: '2rem' }}>
-            <Pagination count={totalPages} page={page} onChange={handlePageChange} />
-          </Box>
-
           <Grid container spacing={{ xs: 2, md: 4 }}>
             {auctionList.map((auction) => (
               <Grid item xs={12} sm={6} md={3} key={auction.id} style={{ display: 'flex' }}>
@@ -112,10 +161,14 @@ function Home() {
                   type={CardType.AUCTION}
                   handleDetailClick={() => handleDetailClick(auction.id)}
                   // TODO: Add registered prop
+                  registered={auction.isRegist || filter === AuctionFilter.REGISTERED}
                 />
               </Grid>
             ))}
           </Grid>
+          <Box sx={{ display: 'flex', justifyContent: 'center', marginTop: '2rem' }}>
+            <Pagination count={totalPages} page={page} onChange={handlePageChange} />
+          </Box>
 
           {/* Details modal */}
           <CustomModal
