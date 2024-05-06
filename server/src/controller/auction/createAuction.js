@@ -15,24 +15,48 @@ let createAuction = async (req, res) => {
   }
 
   try {
-    let createdTime = new Date().toISOString().slice(0, 19).replace('T', ' ')
-    console.log(createdTime)
-
-    /* example request body
-    {
-      "name": "auction 1",
-      "hostId": 1,
-      "carId": 1,
-      "startTime": "2021-08-01 00:00:00",
-      "endTime": "2021-08-02 00:00:00",
-      "bidStep": 100000,
-      "initialPrice": 1000000,
-      "deposit": 1000000
+    let car_status = `
+    select status_in_storage from car where id = ?
+    `
+    let [rows5, dump5] = await pool.query(car_status, [carId])
+    if (rows5.length === 0) {
+      return res.status(404).send({ErrorCode: 'ER_CAR_NOT_FOUND'})
     }
-    
+    if (rows5[0].status_in_storage !== 'Available') {
+      return res.status(400).send({ErrorCode: 'ER_CAR_NOT_AVAILABLE'})
+    }
 
-    */
-    return res.status(200).send({data: 'success'})
+    let createdTime = new Date(new Date().getTime() + (new Date().getTimezoneOffset() * 60000) + (14 * 3600 * 1000)).toISOString().slice(0, 19).replace('T', ' ');
+
+    let query = `
+    insert into auction (name, host_id, car_id, date_created, date_started, date_expired, bid_step, initial_price, deposit_price)
+    values (?, ?, ?, ?, ?, ?, ?, ?, ?)
+    `
+    let [rows, dump1] = await pool.query(query, [name, hostId, carId, createdTime, startTime, endTime, bidStep, initialPrice, deposit])
+
+    let auctionId = rows.insertId
+
+    let first_bid = `
+    insert into bid (auction_id, customer_id, timestamp, price)
+    values (?, ?, ?, ?)
+    `
+    let [rows2, dump2] = await pool.query(first_bid, [auctionId, hostId, createdTime, initialPrice])
+
+    let car_storage = `
+    update car set status_in_storage = 'Auctioning' where id = ?
+    `
+
+    let [rows4, dump4] = await pool.query(car_storage, [carId])
+
+    let startedTime = new Date(startTime).getTime()
+    if (startedTime <= new Date().getTime()) {
+      let query3 = `
+        update auction set status = 'ONGOING' where id = ?
+      `
+      let [rows3, dump3] = await pool.query(query3, [auctionId])
+    }
+
+    return res.status(200).send({message: 'success'})
   }
   catch (err) {
     console.log(err)

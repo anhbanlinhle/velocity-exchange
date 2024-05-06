@@ -1,21 +1,26 @@
-import pool from '../../config/database';
+import pool from '../../config/database'
 
 let pendingList = async (req, res) => {
-  let query = 'SELECT * FROM verification_request WHERE status = "PENDING"';
+  let pageNo = req.body.pageNo || 1
+  let pageSize = req.body.pageSize || 8
 
   try {
-    let [rows, fields] = await pool.query(query);
+    let query = `
+      select * from verification_request
+      where status = 'PENDING'
+      limit ? offset ?
+    `
 
-    if (rows.length === 0) {
-      return res.status(200).send({ ErrorCode: 'NO_DATA', ErrorNo: 'No data found' });
-    } else {
-      return res.status(200).send({data: rows}); // Send the query result in the response
-    }
+    let [rows, fields] = await pool.query(query, [pageSize, (pageNo - 1) * pageSize])
+
+    let [totalResult, dump2] = await pool.query('select count(*) as total from verification_request')
+
+    return res.status(200).send({data: rows, pages: Math.ceil(totalResult[0].total / pageSize)})
   } catch (err) {
-    return res.status(500).send({ ErrorCode: err.code, ErrorNo: err.errno });
+    return res.status(500).send({ ErrorCode: err.code, ErrorNo: err.errno })
   }
 };
 
 module.exports = {
   pendingList
-};
+}
