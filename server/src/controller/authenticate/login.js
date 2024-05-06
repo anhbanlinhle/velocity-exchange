@@ -31,7 +31,7 @@ let login = async (req, res) => {
     req.session.token = authToken
     console.log('\t\t\x1b[4mLogin succeeded\x1b[0m')
 
-    res.status(200).send({token: authToken, id: account[0].id})
+    res.status(200).send({token: authToken, id: account[0].id, username: account[0].username, is_admin: account[0].is_admin})
   }
   catch (err) {
     console.log(err)

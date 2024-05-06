@@ -1,29 +1,32 @@
 # velocity-exchange
 ## First-time set-up
-### 1. Package installation
+### Installation
 
-```sh
-cd server
-npm ci
-cd ..
-cd client
-npm ci
-```
+- Run [`install.sh`](https://github.com/anhbanlinhle/velocity-exchange/blob/main/install.sh)
 
-### 2. Environment variables
-- Clone the `/client/.env.template` file into `/client/.env`
-- Fill in empty fields (if any)
+### Configuration
+#### Client
+- Clone [`.env.template`](https://github.com/anhbanlinhle/velocity-exchange/blob/main/client/.env.template) into `/client/.env`
+- Fill the empty fields (if any)
 
+#### Server
+- Clone [`.env.example`](https://github.com/anhbanlinhle/velocity-exchange/blob/main/server/.env.example) into `/server/.env`
+- Fill the empty fields (if any)
+
+#### Database
+- Open MySQL
+- Execute [`backup.sql`](https://github.com/anhbanlinhle/velocity-exchange/blob/main/server/database/release/backup.sql)
 ## Boot the application
+Run MySQL Server
 
-### The Back-end
+### Backend module
 
 ```sh
 cd server
 npm start
 ```
 
-### The front-end
+### Frontend module
 
 ```sh
 cd client
@@ -32,7 +35,7 @@ npm run dev
 
 ## Technologies
 
-This project is built with:
+This project was built with:
 
 - [Node.js](https://nodejs.org/)
 - [Express](https://expressjs.com/)

@@ -5,7 +5,7 @@ import About from './pages/common/About';
 import Inventory from './pages/common/Inventory';
 import Login from './pages/auth/Login';
 import Logout from './pages/auth/Logout';
-import Signup from './pages/auth/Signup';
+import SignUp from './pages/auth/Signup';
 import Verification from './pages/admin/Verification';
 import Auction from './pages/customer/Auction';
 import CreateAuction from './pages/seller/CreateAuction';
@@ -29,7 +29,7 @@ function App() {
     },
     {
       path: '/signup',
-      element: <Signup />,
+      element: <SignUp />,
       allowedRoles: [],
     },
 

@@ -3,13 +3,16 @@ import { verifyToken } from '../controller/utility/verifyToken'
 
 import homeController from '../controller/homeController'
 import authController from '../controller/authController'
+import auctionController from '../controller/auctionController'
+import carController from '../controller/carController'
 import adminController from '../controller/adminController'
 
 let router = express.Router()
 
 const initWebRoute = (app) => {
   // section - homepage 
-  router.get('/', homeController.homepage)
+  router.get('/', homeController.root)
+  router.post('/home', homeController.homepage)
 
   // section - health 
   router.get('/health/db', homeController.dbHealth)
@@ -18,10 +21,17 @@ const initWebRoute = (app) => {
   router.post('/auth/sign-up', authController.signUp)
   router.post('/auth/login', authController.login)
 
-  // section - admin
-  router.get('/admin/pendingList', adminController.pendingList)
-  router.get('/admin/verification_request_details', adminController.verificationRequestDetails)
-  router.post('/admin/approval_request', adminController.approvalRequest)
+  // section - auction 
+  router.post('/auction/detail', auctionController.auctionDetail)
+  router.post('/auction/create', auctionController.createAuction)
+
+  // section - car 
+  router.post('/car/regist', verifyToken, carController.registCar)
+
+  // section - admin 
+  router.post('/admin/request', adminController.pendingList)
+  router.post('/admin/request/detail', adminController.verificationRequestDetails)
+  router.post('/admin/request/handle', adminController.approvalRequest)
 
 
   return app.use('/', router)
