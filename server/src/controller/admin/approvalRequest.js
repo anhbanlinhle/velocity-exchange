@@ -22,15 +22,18 @@ let approvalRequest = async (req, res) => {
     `;
     let [rows1, dump1] = await pool.query(requestStatus, [requestId]);
 
-    if (rows1[0].status !== "PENDING") {
-      return res.status(400).send({ ErrorCode: "ER_REQUEST_PROCESSED" });
+    if (rows1.length === 0) {
+      return res.status(404).send({ ErrorCode: 'ER_REQUEST_NOT_FOUND' })
+    }
+    if (rows1[0].status !== 'PENDING') {
+      return res.status(400).send({ ErrorCode: 'ER_REQUEST_PROCESSED' })
     }
 
     let query = `
-      update verification_request 
-      set status = ?, time = NOW(), adminId = ? 
-      where id = ?
-    `;
+    update verification_request 
+    set status = ?, time = NOW(), admin_id = ? 
+    where id = ?
+    `
 
     let [rows, fields] = await pool.query(query, [status, adminId, requestId]);
 
