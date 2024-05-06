@@ -1,5 +1,5 @@
-const pool = require("../../config/database");
-const { imgbbUpload } = require("../../imgbb/imgbb");
+import pool from "../../config/database";
+const imgbbUploader = require("imgbb-uploader");
 
 let registCar = async (req, res) => {
   let userId = req.body.userId;
@@ -22,8 +22,16 @@ let registCar = async (req, res) => {
 
   try {
     // Upload image to imgbb and get the URL
-    let imageUrl = await imgbbUpload(image);
+    const options = {
+      apiKey: "4b5afd5caf4c66ab6f10a723d2e48cbe", // MANDATORY
+      base64string: image,
+      // OPTIONAL: pass base64-encoded image (max 32Mb)
+    };
 
+    let imageURL;
+    await imgbbUploader(options)
+      .then((response) => (imageURL = response.image.url))
+      .catch((error) => console.error(error));
     // Insert payment data
     let paymentQuery = `
       INSERT INTO payment (user_id, transaction_id, amount)
@@ -53,9 +61,9 @@ let registCar = async (req, res) => {
       capacity,
       fuel,
       odometer,
-      imageUrl, // Use the image URL obtained from imgbb
+      imageURL, // Use the image URL obtained from imgbb
       location,
-      storageStatus
+      storageStatus,
     ]);
     let carId = carRows.insertId;
 
@@ -68,10 +76,10 @@ let registCar = async (req, res) => {
     await pool.query(verificationRequestQuery, [userId, carId, paymentId]);
 
     // Send success response
-    return res.status(200).send({message: 'success'})
-  } catch (error) {
-    console.log(err)
-    return res.status(500).send({ErrorCode: 'ER_INTERNAL_SERVER_ERROR'})
+    return res.status(200).send({ message: "success" });
+  } catch (err) {
+    console.log(err);
+    return res.status(500).send({ ErrorCode: "ER_INTERNAL_SERVER_ERROR" });
   }
 };
 

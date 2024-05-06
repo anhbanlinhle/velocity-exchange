@@ -26,7 +26,7 @@ const initWebRoute = (app) => {
   router.post('/auction/create', auctionController.createAuction)
 
   // section - car 
-  router.post('/car/regist', verifyToken, carController.registCar)
+  router.post('/car/regist', carController.registCar)
 
   // section - admin 
   router.post('/admin/request', adminController.pendingList)
