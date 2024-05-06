@@ -63,7 +63,15 @@ work in process
 |`pageNo`|Index of page|
 |`pageSize`|Number of results per page|
 
-### 8. Verification Request Details
+### 8. Filter Verification Request
+
+`/admin/request/filter/`
+
+|Parameter|Description|
+|-|-|
+|`status`|*PENDING* or *APPROVED* or *REJECTED*|
+
+### 9. Verification Request Details
 
 `/admin/request/detail/`
 
@@ -71,7 +79,7 @@ work in process
 |-|-|
 |`requestId`|Verification request's ID|
 
-### 9. Handle Verification Requests
+### 10. Handle Verification Requests
 
 `/admin/request/handle/`
 
@@ -81,7 +89,7 @@ work in process
 |`adminId`|Admin's account ID|
 |`status`|*APPROVED* or *REJECTED*|
 
-### 10. Create Auction
+### 11. Create Auction
 
 `/auction/create/`
 
@@ -96,13 +104,13 @@ work in process
 |`initialPrice`|Minimum price|
 |`deposit`|Cost to participate in the auction|
 
-### 11. Join Auction
+### 12. Join Auction
 
 `/auction/join/`
 
 work in process
 
-### 12. Registered/Unregistered Auctions List
+### 13. Registered/Unregistered Auctions List
 
 `/auction/filter/`
 
@@ -113,9 +121,7 @@ work in process
 |`userId`|Account's ID|
 |`filter`|*REGISTERED* or *UNREGISTERED*|
 
-work in process
-
-### 13. Place Bid
+### 14. Place Bid
 
 `/auction/bid/`
 
