@@ -1,22 +1,26 @@
-import pool from "../../config/database"
+import pool from "../../config/database";
 
 let approvalRequest = async (req, res) => {
-  let requestId = req.body.requestId
-  let adminId = req.body.adminId
-  let status = req.body.status
+  let requestId = req.body.requestId;
+  let adminId = req.body.adminId;
+  let status = req.body.status;
 
-  if (requestId === undefined || adminId === undefined || status === undefined) {
-    return res.status(422).send({ ErrorCode: "ER_MISSING_PARAM" })
+  if (
+    requestId === undefined ||
+    adminId === undefined ||
+    status === undefined
+  ) {
+    return res.status(422).send({ ErrorCode: "ER_MISSING_PARAM" });
   }
-  if (status !== 'APPROVED' && status !== 'REJECTED') {
-    return res.status(400).send({ ErrorCode: 'ER_INVALID_STATUS' })
+  if (status !== "APPROVED" && status !== "REJECTED") {
+    return res.status(400).send({ ErrorCode: "ER_INVALID_STATUS" });
   }
 
   try {
     let requestStatus = `
-    select status from verification_request where id = ?
-    `
-    let [rows1, dump1] = await pool.query(requestStatus, [requestId])
+      select status from verification_request where id = ?
+    `;
+    let [rows1, dump1] = await pool.query(requestStatus, [requestId]);
 
     if (rows1.length === 0) {
       return res.status(404).send({ ErrorCode: 'ER_REQUEST_NOT_FOUND' })
@@ -31,15 +35,15 @@ let approvalRequest = async (req, res) => {
     where id = ?
     `
 
-    let [rows, fields] = await pool.query(query, [status, adminId, requestId])
+    let [rows, fields] = await pool.query(query, [status, adminId, requestId]);
 
-    return res.status(200).send({message: 'success'})
+    return res.status(200).send({ message: "success" });
   } catch (err) {
-    console.log(err)
-    return res.status(500).send({ ErrorCode: err.code, ErrorNo: err.errno })
+    console.log(err);
+    return res.status(500).send({ ErrorCode: err.code, ErrorNo: err.errno });
   }
-}
+};
 
 module.exports = {
-  approvalRequest
-}
+  approvalRequest,
+};
