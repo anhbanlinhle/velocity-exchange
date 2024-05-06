@@ -87,7 +87,7 @@ function Home() {
       {/* {console.log(auctionList)} */}
       <Spinner isLoading={isLoading} />
       <PageTitle title="Public Auction" />
-      <Box sx={{ display: 'flex', justifyContent: 'center', marginY: '2rem' }}>
+      <Box sx={{ display: 'flex', justifyContent: 'center', marginBottom: '2rem' }}>
         <Pagination count={totalPages} page={page} onChange={handlePageChange} />
       </Box>
 
@@ -123,7 +123,7 @@ function Home() {
           'End Date': auctionDetails.date_expired,
           'Bid Step': formatCurrency(auctionDetails.bid_step),
           'Initial Price': formatCurrency(auctionDetails.initial_price),
-          'Current Price': formatCurrency(auctionDetails.current_price),
+          'Current Price': formatCurrency(auctionDetails.highest_bid),
           'Current Owner': auctionDetails.current_owner,
           Brand: auctionDetails.brand,
           Model: auctionDetails.model_code,
