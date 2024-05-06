@@ -33,6 +33,7 @@ const initWebRoute = (app) => {
   router.post('/admin/request', adminController.requestList)
   router.post('/admin/request/detail', adminController.verificationRequestDetails)
   router.post('/admin/request/handle', adminController.approvalRequest)
+  router.post('/admin/request/filter', adminController.requestFilter)
 
 
   return app.use('/', router)
