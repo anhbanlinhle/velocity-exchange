@@ -102,9 +102,16 @@ work in process
 
 work in process
 
-### 12. Registered Auctions List
+### 12. Registered/Unregistered Auctions List
 
-`/auction/registered/`
+`/auction/filter/`
+
+|Parameter|Description|
+|-|-|
+|`pageNo`|Index of page|
+|`pageSize`|Number of results per page|
+|`userId`|Account's ID|
+|`filter`|*REGISTERED* or *UNREGISTERED*|
 
 work in process
 
