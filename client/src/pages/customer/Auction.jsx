@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import {
@@ -11,6 +12,7 @@ import {
 import CountdownTimer from '../../component/CountdownTimer';
 import PageTitle from '../../component/PageTitle';
 import formatCurrency from '../../utils/currencyFormat';
+import ResultDialog from '../../component/ResultDialog';
 
 function Auction() {
   const { id } = useParams();
@@ -19,6 +21,7 @@ function Auction() {
   const [currentPrice, setCurrentPrice] = useState(0);
   const [bid, setBid] = useState(0);
   const [isWinner, setIsWinner] = useState(false);
+  const [openResult, setOpenResult] = useState(false);
   const serverUrl = import.meta.env.VITE_API_URL;
   const auctionDetailEndpoint = `${serverUrl}/auction/detail/`;
   const placeBidEndpoint = `${serverUrl}/auction/bid`;
@@ -48,7 +51,7 @@ function Auction() {
   useEffect(() => {
     const interval = setInterval(() => {
       fetchAuctionDetails();
-    }, 1000);
+    }, 3000);
     return () => clearInterval(interval);
   }, []);
 
@@ -116,9 +119,49 @@ function Auction() {
 
   const handleEndAuction = () => {
     updateWinning();
-    console.log('Auction ended');
-    console.log(`Is winner${isWinner}`);
+    setOpenResult(true);
   };
+
+  const AuctionInfo = React.memo(({ detail, descript }) => (
+    <Card sx={{
+      width: '100%',
+      height: '100%',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      borderRadius: '0.5rem',
+      '&:hover': {
+        cursor: 'pointer',
+      },
+    }}
+    >
+      <CardMedia
+        component="img"
+        height="140"
+        image={detail.image}
+        alt={detail.name}
+      />
+      <CardContent>
+        <Typography variant="h6" component="div" sx={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+          {detail.name}
+        </Typography>
+        <Typography variant="body2" color="text.secondary" sx={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+          {Object.entries(descript).map(([key, value]) => (
+            <React.Fragment key={key}>
+              <Box component="span" fontWeight="fontWeightBold">
+                {key}
+                :
+              </Box>
+              {' '}
+              {value}
+              <br />
+            </React.Fragment>
+          ))}
+        </Typography>
+      </CardContent>
+    </Card>
+  ));
 
   return (
     <>
@@ -135,9 +178,9 @@ function Auction() {
         }}
       >
         <Grid container spacing={5} sx={{ gridAutoRows: '1 fr' }}>
-          <Grid item xs={12} sm={6}>
-            {/* Auction info */}
-            <Card sx={{
+          {/* <Grid item xs={12} sm={6}> */}
+          {/* Auction info */}
+          {/* <Card sx={{
               width: '100%',
               height: '100%',
               display: 'flex',
@@ -177,6 +220,9 @@ function Auction() {
                 </Typography>
               </CardContent>
             </Card>
+          </Grid> */}
+          <Grid item xs={12} sm={6}>
+            <AuctionInfo detail={auctionDetail} descript={description} />
           </Grid>
           <Grid item xs={12} sm={6}>
             <Card sx={{
@@ -186,10 +232,8 @@ function Auction() {
               flexDirection: 'column',
               alignContent: 'center',
               justifyContent: 'space-around',
-              boxShadow: '0 8px 40px -12px #033090',
               borderRadius: '0.5rem',
               '&:hover': {
-                boxShadow: '0 16px 70px -12.125px #033090',
                 cursor: 'pointer',
               },
             }}
@@ -264,6 +308,7 @@ function Auction() {
           </Grid>
         </Grid>
       </Box>
+      <ResultDialog open={openResult} isWinner={isWinner} winningBid={currentPrice} />
     </>
   );
 }

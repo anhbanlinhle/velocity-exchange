@@ -107,7 +107,7 @@ function CustomCard({
         </Typography>
       </CardContent>
 
-      <CardActions sx={{ display: 'flex', justifyContent: 'flex-end' }} hidden={disabledActions}>
+      <CardActions sx={{ display: 'flex', justifyContent: 'flex-end' }}>
         <Button variant="outlined" color="primary" onClick={handleDetailClick}>
           Detail
         </Button>

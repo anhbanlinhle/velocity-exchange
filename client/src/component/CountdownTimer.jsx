@@ -21,16 +21,16 @@ function CountdownTimer({ endTime, handleEnded = () => {} }) {
   }, [endTime, handleEnded]);
 
   const formatTime = (time) => {
-    const days = Math.floor(time / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((time % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((time % (1000 * 60)) / 1000);
+    const seconds = Math.floor(time / 1000);
+    const minutes = Math.floor(seconds / 60);
+    const hours = Math.floor(minutes / 60);
+    const days = Math.floor(hours / 24);
 
     let formattedTime = '';
     if (days > 0) formattedTime += `${days}d `;
-    if (hours > 0) formattedTime += `${hours}h `;
-    if (minutes > 0) formattedTime += `${minutes}m `;
-    formattedTime += `${seconds}s`;
+    if (hours % 24 > 0) formattedTime += `${hours % 24}h `;
+    if (minutes % 60 > 0) formattedTime += `${minutes % 60}m `;
+    formattedTime += `${seconds % 60}s`;
 
     return formattedTime;
   };
