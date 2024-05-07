@@ -51,7 +51,7 @@ let filterAuction = async (req, res) => {
         from auction as a
         join auction_registration as r on a.id = r.auction_id
         where r.customer_id = ?)
-        and (a.status = 'ONGOING' or a.status = 'PENDING')
+        and (a.status = 'ONGOING' or a.status = 'INCOMING')
         group by a.id
         order by a.id desc
         limit ? offset ?
@@ -64,7 +64,7 @@ let filterAuction = async (req, res) => {
         from auction as a
         join auction_registration as r on a.id = r.auction_id
         where r.customer_id = ?)
-        and (a.status = 'ONGOING' or a.status = 'PENDING')
+        and (a.status = 'ONGOING' or a.status = 'INCOMING')
       `
     }
     
