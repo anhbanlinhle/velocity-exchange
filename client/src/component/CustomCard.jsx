@@ -7,14 +7,9 @@ import PropTypes from 'prop-types';
 import { CardType, Status } from '../constant';
 
 function CustomCard({
-  name, image, description, type, handleDetailClick, registered, handleApproveClick, handleRejectClick, status,
+  name, image, description, type, handleDetailClick, registered, handleRegisterClick, handleApproveClick, handleRejectClick, status,
 }) {
   const navigate = useNavigate();
-
-  const handleRegisterClick = () => {
-    // Display a modal with payment information to deposit
-    // This also depends on how you're handling modals in your application
-  };
 
   const handleCreateAuctionClick = () => {
     navigate('/auction/create');
@@ -108,6 +103,7 @@ CustomCard.propTypes = {
   type: PropTypes.string.isRequired,
   handleDetailClick: PropTypes.func.isRequired,
   registered: PropTypes.bool,
+  handleRegisterClick: PropTypes.func,
   handleApproveClick: PropTypes.func,
   handleRejectClick: PropTypes.func,
   status: PropTypes.string,
@@ -116,6 +112,7 @@ CustomCard.propTypes = {
 CustomCard.defaultProps = {
   image: null,
   registered: false,
+  handleRegisterClick: null,
   handleApproveClick: null,
   handleRejectClick: null,
   status: Status.PENDING,
