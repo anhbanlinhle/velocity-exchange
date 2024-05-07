@@ -21,7 +21,7 @@ let registAuction = async (req, res) => {
     if (auction.length === 0) {
       return res.status(404).send({ErrorCode: 'ER_NOT_FOUND'})
     }
-    if (auction[0].status !== 'ONGOING') {
+    if (auction[0].status !== 'INCOMING' && auction[0].status !== 'ONGOING') {
       return res.status(400).send({ErrorCode: 'ER_AUCTION_CLOSED'})
     }
 
