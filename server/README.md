@@ -155,3 +155,11 @@ work in process
 |`auctionId`|Auction ID|
 |`price`|Price of the bid|
 
+### 17. Check Auction Winner
+
+`/auction/winner/`
+
+|Parameter|Description|
+|-|-|
+|`userId`|User's account ID|
+|`auctionId`|Auction ID|
