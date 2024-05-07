@@ -4,10 +4,10 @@ import {
 } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { CardType, Status } from '../constant';
+import { CardType, Status, AuctionStatus } from '../constant';
 
 function CustomCard({
-  name, image, description, type, handleDetailClick, registered, handleRegisterClick, handleApproveClick, handleRejectClick, status,
+  name, image, description, type, handleDetailClick, registered, auctionStatus, handleRegisterClick, handleJoinClick, handleApproveClick, handleRejectClick, status,
 }) {
   const navigate = useNavigate();
 
@@ -15,13 +15,41 @@ function CustomCard({
     navigate('/auction/create');
   };
 
+  const auctionButton = () => {
+    if (!registered) {
+      return (
+        <Button variant="contained" color="secondary" onClick={handleRegisterClick}>
+          Register
+        </Button>
+      );
+    }
+    if (auctionStatus === AuctionStatus.INCOMING) {
+      return (
+        <Button variant="contained" color="primary" onClick={handleRegisterClick}>
+          Unregister
+        </Button>
+      );
+    }
+    if (auctionStatus === AuctionStatus.ONGOING) {
+      return (
+        <Button variant="contained" color="success" onClick={handleJoinClick}>
+          Join
+        </Button>
+      );
+    }
+    return (
+      <Button variant="contained" color="secondary" disabled>
+        Finished
+      </Button>
+    );
+  };
+
   const renderButtons = () => {
     switch (type) {
     case CardType.AUCTION:
+
       return (
-        <Button variant="contained" color="secondary" onClick={handleRegisterClick}>
-          {registered ? 'Unregister' : 'Register'}
-        </Button>
+        auctionButton()
       );
     case CardType.VERIFICATION_REQUEST:
       return (
@@ -103,7 +131,9 @@ CustomCard.propTypes = {
   type: PropTypes.string.isRequired,
   handleDetailClick: PropTypes.func.isRequired,
   registered: PropTypes.bool,
+  auctionStatus: PropTypes.string,
   handleRegisterClick: PropTypes.func,
+  handleJoinClick: PropTypes.func,
   handleApproveClick: PropTypes.func,
   handleRejectClick: PropTypes.func,
   status: PropTypes.string,
@@ -112,7 +142,9 @@ CustomCard.propTypes = {
 CustomCard.defaultProps = {
   image: null,
   registered: false,
+  auctionStatus: null,
   handleRegisterClick: null,
+  handleJoinClick: null,
   handleApproveClick: null,
   handleRejectClick: null,
   status: Status.PENDING,

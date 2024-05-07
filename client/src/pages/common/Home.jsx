@@ -167,6 +167,10 @@ function Home() {
     }
   };
 
+  const handleJoinClick = (auctionId) => {
+    navigate(`/auction/room/${auctionId}`);
+  };
+
   return (
     <>
       <Spinner isLoading={isLoading} />
@@ -212,9 +216,11 @@ function Home() {
                     'Current Price': formatCurrency(auction.current_price),
                   }}
                   type={CardType.AUCTION}
+                  auctionStatus={auction.status}
                   handleDetailClick={() => handleDetailClick(auction.id)}
                   registered={auction.isRegist || filter === AuctionFilter.REGISTERED}
                   handleRegisterClick={() => handleRegistClick(auction.id, auction.isRegist || filter === AuctionFilter.REGISTERED)}
+                  handleJoinClick={() => handleJoinClick(auction.id)}
                 />
               </Grid>
             ))}
