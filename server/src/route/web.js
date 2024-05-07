@@ -18,7 +18,7 @@ const initWebRoute = (app) => {
   // section - health 
   router.get('/health/db', homeController.dbHealth)
 
-  // section - authenticate
+  // section - authenticate 
   router.post('/auth/sign-up', authController.signUp)
   router.post('/auth/login', authController.login)
 
@@ -33,6 +33,7 @@ const initWebRoute = (app) => {
   // section - car 
   router.post('/car/regist', carController.registCar)
   router.post('/car/inventory', updateDB, carController.inventoryRequest)
+  router.post('/car/detail', updateDB, carController.detail)
 
   // section - admin 
   router.post('/admin/request', adminController.requestList)
