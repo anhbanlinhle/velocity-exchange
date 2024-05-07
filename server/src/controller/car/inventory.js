@@ -16,7 +16,7 @@ let inventoryRequest = async (req, res) => {
     join verification_request as v on c.id = v.car_id
     left join auction as a on a.car_id = c.id
     join account as ac on ac.id = v.seller_id
-    where v.seller_id = 1
+    where v.seller_id = ?
     and (v.car_id, v.id) in
       (select v.car_id, max(v.id)
       from car as c
