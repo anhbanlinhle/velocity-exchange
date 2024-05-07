@@ -106,13 +106,25 @@ work in process
 |`initialPrice`|Minimum price|
 |`deposit`|Cost to participate in the auction|
 
-### 12. Join Auction
+### 12. Regist Auction
 
-`/auction/join/`
+`/auction/regist/`
 
-work in process
+|Parameter|Description|
+|-|-|
+|`userId`|Account's ID|
+|`auctionId`|Auction's ID|
 
-### 13. Registered/Unregistered Auctions List
+### 13. Unregist Auction
+
+`/auction/unregist/`
+
+|Parameter|Description|
+|-|-|
+|`userId`|Account's ID|
+|`auctionId`|Auction's ID|
+
+### 14. Registered/Unregistered Auctions List
 
 `/auction/filter/`
 
@@ -123,7 +135,7 @@ work in process
 |`userId`|Account's ID|
 |`filter`|*REGISTERED* or *UNREGISTERED*|
 
-### 14. Place Bid
+### 15. Place Bid
 
 `/auction/bid/`
 

@@ -11150,3 +11150,6945 @@
                         INSERT INTO bid_winner (user_id, pay_status, payment_id)
                         VALUES (42, 1, 962);
                     
+                        
+                INSERT INTO car (current_owner, brand, model_code, color, class, door, seat, layout, transmission, engine_cylinders, engine_capacity, fuel, odometer, image, location, status_in_storage)
+                VALUES ('Dr. David Nixon', 'Hyundai', 'Hyundai 3 Series-8992', 'GoldenRod', 'Hypercar', 4, 6, 'Right-hand drive', 'Automatic', 10, 3540, 'Diesel', 20161.384385168632, 'https://i.ibb.co/GxGTsy3/2013-Ferrari-F12-berlinetta-1024x640.jpg', 'Fisherside', 'Auctioning');
+            
+
+                INSERT INTO payment (user_id, transaction_id, amount)
+                VALUES (43, 'd2d1f0e0-9a74-4e9d-9a6d-f319f72b82ad', 56000000);
+            
+
+                INSERT INTO verification_request (seller_id, car_id, status, time, admin_id, payment_id)
+                VALUES (43, 201, 'APPROVED', '2024-04-28 17:58:01', 2, 963);
+            
+
+                    INSERT INTO auction (name, host_id, car_id, date_created, date_started, date_expired, status, winner_id, bid_step, initial_price, deposit_price)
+                    VALUES ('Hyundai 3 Series-8992', 43, 201, '2024-05-01 17:58:01', '2024-05-03 17:58:01', '2024-07-13 17:58:01', 'ONGOING', NULL, 2270000, 28000000, 56000000);
+                
+
+                    INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                    VALUES (77, 43, '2024-05-03 17:58:01', 28000000);
+                
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (92, '23226767-cf97-4e53-ae73-d74bfe6048ee', 56000000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (77, 92, 964);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (55, '217b53a0-7e27-41af-b7c9-e2bb8b8e6adf', 56000000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (77, 55, 965);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (93, '4b1b81ef-379b-4000-8b1e-27967d8b05c1', 56000000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (77, 93, 966);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (17, 'b9bb5ba1-b218-4944-b4e0-45b25822b2a4', 56000000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (77, 17, 967);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (32, '604b0419-fdac-4fc9-bd93-182439bde723', 56000000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (77, 32, 968);
+                        
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (77, 92, '2024-07-09 17:05:52', 103061480);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (77, 93, '2024-07-09 17:05:52', 51033393);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (77, 32, '2024-07-09 17:05:52', 121889763);
+                            
+
+                INSERT INTO car (current_owner, brand, model_code, color, class, door, seat, layout, transmission, engine_cylinders, engine_capacity, fuel, odometer, image, location, status_in_storage)
+                VALUES ('Tammy Buck', 'Honda', 'Honda Jetta-9061', 'DarkOrchid', 'Hypercar', 4, 5, 'Right-hand drive', 'Manual', 4, 4326, 'Diesel', 137015.09467988508, 'https://i.ibb.co/nBg2yPH/861054.jpg', 'Lake Alisha', 'Auctioning');
+            
+
+                INSERT INTO payment (user_id, transaction_id, amount)
+                VALUES (41, 'a9a272d8-2c5e-42cf-a212-0e27caff57b1', 199000000);
+            
+
+                INSERT INTO verification_request (seller_id, car_id, status, time, admin_id, payment_id)
+                VALUES (41, 202, 'APPROVED', '2024-04-26 18:58:18', 1, 969);
+            
+
+                    INSERT INTO auction (name, host_id, car_id, date_created, date_started, date_expired, status, winner_id, bid_step, initial_price, deposit_price)
+                    VALUES ('Honda Jetta-9061', 41, 202, '2024-04-27 18:58:18', '2024-04-28 18:58:18', '2024-07-20 18:58:18', 'ONGOING', NULL, 2080000, 99500000, 199000000);
+                
+
+                    INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                    VALUES (78, 41, '2024-04-28 18:58:18', 99500000);
+                
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (51, '663edf5c-741c-4b5a-8da6-0af32d8d0870', 199000000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (78, 51, 970);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (21, 'fd0b6c7a-d8cf-4389-8c9e-cb9deca8107e', 199000000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (78, 21, 971);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (50, '7567fa29-d2e1-4cf7-99da-21c5b7fd649c', 199000000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (78, 50, 972);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (85, '5fa3495d-96bd-4cdc-96f1-d26095a5c53d', 199000000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (78, 85, 973);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (100, 'e074ff08-fb8e-4150-91b2-d1b39bf8c977', 199000000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (78, 100, 974);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (94, '51e94385-39cf-4a33-855b-18351a011503', 199000000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (78, 94, 975);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (74, '91edf0ae-f976-4756-9d93-60eafde01c00', 199000000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (78, 74, 976);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (99, 'c645c616-6983-4915-ad3a-35d1e7678330', 199000000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (78, 99, 977);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (22, '8721cf2f-ebb4-4f0c-8183-fb9f5ab44809', 199000000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (78, 22, 978);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (44, 'b84cd0fe-15b4-4673-ad84-8bf099985b9a', 199000000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (78, 44, 979);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (27, '7c60ca6e-9a41-485c-af03-272656ea968f', 199000000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (78, 27, 980);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (41, '9c91b217-3001-4b08-bb94-0c4c85b3b639', 199000000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (78, 41, 981);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (73, '065022ab-4efa-4093-9484-81bf16366ac1', 199000000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (78, 73, 982);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (16, '166c5535-9553-44f2-93b8-068d5d5cea02', 199000000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (78, 16, 983);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (83, 'ea30fbff-4952-4466-8203-fad6a3d206c6', 199000000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (78, 83, 984);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (13, 'f7b3734d-63db-4ea2-9f55-53d8fd9a344a', 199000000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (78, 13, 985);
+                        
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (78, 51, '2024-06-16 23:53:17', 197608637);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (78, 21, '2024-06-16 23:53:17', 477189631);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (78, 85, '2024-06-16 23:53:17', 385221255);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (78, 22, '2024-06-16 23:53:17', 213662868);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (78, 41, '2024-06-16 23:53:17', 259129101);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (78, 73, '2024-06-16 23:53:17', 354306532);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (78, 16, '2024-06-16 23:53:17', 106893744);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (78, 83, '2024-06-16 23:53:17', 227016061);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (78, 13, '2024-06-16 23:53:17', 321579558);
+                            
+
+                INSERT INTO car (current_owner, brand, model_code, color, class, door, seat, layout, transmission, engine_cylinders, engine_capacity, fuel, odometer, image, location, status_in_storage)
+                VALUES ('Erin Lopez', 'Hyundai', 'Hyundai Corolla-4393', 'SkyBlue', 'Supercar', 5, 6, 'Left-hand drive', 'Manual', 8, 3430, 'Diesel', 53628.758988819696, 'https://i.ibb.co/GxGTsy3/2013-Ferrari-F12-berlinetta-1024x640.jpg', 'South Bretthaven', 'Auctioning');
+            
+
+                INSERT INTO payment (user_id, transaction_id, amount)
+                VALUES (58, 'a793a8a8-a459-41db-9c3c-414a6fe90795', 68600000);
+            
+
+                INSERT INTO verification_request (seller_id, car_id, status, time, admin_id, payment_id)
+                VALUES (58, 203, 'APPROVED', '2024-04-24 04:15:57', 2, 986);
+            
+
+                    INSERT INTO auction (name, host_id, car_id, date_created, date_started, date_expired, status, winner_id, bid_step, initial_price, deposit_price)
+                    VALUES ('Hyundai Corolla-4393', 58, 203, '2024-04-27 04:15:57', '2024-04-29 04:15:57', '2024-07-12 04:15:57', 'ONGOING', NULL, 9450000, 34300000, 68600000);
+                
+
+                    INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                    VALUES (79, 58, '2024-04-29 04:15:57', 34300000);
+                
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (71, '8b1f491e-c0fe-47dc-bd67-350d6b4317c3', 68600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (79, 71, 987);
+                        
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (79, 71, '2024-05-06 08:13:55', 86721779);
+                            
+
+                INSERT INTO car (current_owner, brand, model_code, color, class, door, seat, layout, transmission, engine_cylinders, engine_capacity, fuel, odometer, image, location, status_in_storage)
+                VALUES ('Andrea Whitaker', 'Kia', 'Kia Altima-5095', 'Khaki', 'Hypercar', 2, 7, 'Left-hand drive', 'Manual', 6, 1492, 'Hybrid', 80945.08231034753, 'https://i.ibb.co/hYJ6Fcp/2010-Ferrari-599-GTO-0-1024.jpg', 'West Jamie', 'Auctioning');
+            
+
+                INSERT INTO payment (user_id, transaction_id, amount)
+                VALUES (88, '794ca5cb-3b7e-4c0f-b763-694f871d4e2b', 119600000);
+            
+
+                INSERT INTO verification_request (seller_id, car_id, status, time, admin_id, payment_id)
+                VALUES (88, 204, 'APPROVED', '2024-04-29 22:22:04', 3, 988);
+            
+
+                    INSERT INTO auction (name, host_id, car_id, date_created, date_started, date_expired, status, winner_id, bid_step, initial_price, deposit_price)
+                    VALUES ('Kia Altima-5095', 88, 204, '2024-04-30 22:22:04', '2024-05-03 22:22:04', '2024-07-08 22:22:04', 'ONGOING', NULL, 5960000, 59800000, 119600000);
+                
+
+                    INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                    VALUES (80, 88, '2024-05-03 22:22:04', 59800000);
+                
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (23, '6f588352-508d-4f90-a9f6-8ae45eacb186', 119600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (80, 23, 989);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (55, '0e15ba4f-3435-432f-ac2f-b32ba9e6167b', 119600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (80, 55, 990);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (11, 'd2398db4-7001-409c-a321-007a1330868f', 119600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (80, 11, 991);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (76, 'fa2a025f-a571-498a-8705-7dc3411ad4f1', 119600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (80, 76, 992);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (42, 'b1bc40ec-d1fc-480e-9f10-530d2255927d', 119600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (80, 42, 993);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (53, '0e250f41-012d-45a1-80d9-a223880b4d9b', 119600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (80, 53, 994);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (29, 'a07be690-67ac-4690-92e3-cf35bbced34d', 119600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (80, 29, 995);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (90, '9ada3e9e-eae5-4c6b-b10f-48895deadddf', 119600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (80, 90, 996);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (71, 'cf13e144-7623-475d-bf33-45b640ce50cd', 119600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (80, 71, 997);
+                        
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (80, 23, '2024-06-19 06:35:23', 91930126);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (80, 55, '2024-06-19 06:35:23', 132993674);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (80, 11, '2024-06-19 06:35:23', 213954852);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (80, 42, '2024-06-19 06:35:23', 229882578);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (80, 53, '2024-06-19 06:35:23', 84999221);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (80, 29, '2024-06-19 06:35:23', 154785611);
+                            
+
+                INSERT INTO car (current_owner, brand, model_code, color, class, door, seat, layout, transmission, engine_cylinders, engine_capacity, fuel, odometer, image, location, status_in_storage)
+                VALUES ('Jose Sanders', 'Toyota', 'Toyota Corolla-1436', 'Beige', 'Hypercar', 4, 8, 'Left-hand drive', 'Automatic', 4, 4630, 'Diesel', 136377.43376289535, 'https://i.ibb.co/1rSGp9b/2012-Lexus-LFANrburgring-Package1.jpg', 'South Staceyland', 'Auctioning');
+            
+
+                INSERT INTO payment (user_id, transaction_id, amount)
+                VALUES (98, 'aa2c0326-8ae5-49ed-86fc-6be315396dbf', 32000000);
+            
+
+                INSERT INTO verification_request (seller_id, car_id, status, time, admin_id, payment_id)
+                VALUES (98, 205, 'APPROVED', '2024-04-27 14:39:01', 1, 998);
+            
+
+                    INSERT INTO auction (name, host_id, car_id, date_created, date_started, date_expired, status, winner_id, bid_step, initial_price, deposit_price)
+                    VALUES ('Toyota Corolla-1436', 98, 205, '2024-04-28 14:39:01', '2024-04-29 14:39:01', '2024-06-12 14:39:01', 'ONGOING', NULL, 7480000, 16000000, 32000000);
+                
+
+                    INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                    VALUES (81, 98, '2024-04-29 14:39:01', 16000000);
+                
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (59, 'fa3f5cfe-d147-489a-9af4-a4c5096ba2e3', 32000000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (81, 59, 999);
+                        
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (81, 59, '2024-06-03 23:12:16', 25646085);
+                            
+
+                INSERT INTO car (current_owner, brand, model_code, color, class, door, seat, layout, transmission, engine_cylinders, engine_capacity, fuel, odometer, image, location, status_in_storage)
+                VALUES ('Anna Carlson', 'Hyundai', 'Hyundai Silverado-7980', 'RoyalBlue', 'Hypercar', 2, 2, 'Right-hand drive', 'Manual', 6, 3651, 'Gasoline', 107236.96469062385, 'https://i.ibb.co/qNmTn3W/2012-Lamborghini-Aventador-J6.jpg', 'Port Denise', 'Auctioning');
+            
+
+                INSERT INTO payment (user_id, transaction_id, amount)
+                VALUES (38, '7a719731-7731-4a38-917d-c384eea88ca4', 162000000);
+            
+
+                INSERT INTO verification_request (seller_id, car_id, status, time, admin_id, payment_id)
+                VALUES (38, 206, 'APPROVED', '2024-04-28 07:44:06', 3, 1000);
+            
+
+                    INSERT INTO auction (name, host_id, car_id, date_created, date_started, date_expired, status, winner_id, bid_step, initial_price, deposit_price)
+                    VALUES ('Hyundai Silverado-7980', 38, 206, '2024-05-01 07:44:06', '2024-05-03 07:44:06', '2024-06-20 07:44:06', 'ONGOING', NULL, 3990000, 81000000, 162000000);
+                
+
+                    INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                    VALUES (82, 38, '2024-05-03 07:44:06', 81000000);
+                
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (56, '2beb410a-6160-44c8-ab89-95c441d83314', 162000000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (82, 56, 1001);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (32, '7950e549-b314-4f86-a70d-94b07592a9ab', 162000000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (82, 32, 1002);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (31, '35b83ff3-da67-4a56-96fc-5eda8f77701a', 162000000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (82, 31, 1003);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (8, 'cd6f06c5-952b-46f6-8e60-685541c5a048', 162000000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (82, 8, 1004);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (23, '0526a8a7-3ccd-4e87-9818-8dc40128af35', 162000000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (82, 23, 1005);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (98, 'b97d8f36-22ec-4e2e-816f-bf2f0fa2bfed', 162000000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (82, 98, 1006);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (44, '8f10b12c-6c65-4ea4-af98-dc342fa9a0fc', 162000000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (82, 44, 1007);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (48, '3768fc42-10dc-4083-b776-cfe303cdfa35', 162000000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (82, 48, 1008);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (36, '27b60e2a-ea98-4226-8a5d-8ef4ce17d080', 162000000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (82, 36, 1009);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (50, 'faf23672-5784-4ede-8cc9-f9246eb5a121', 162000000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (82, 50, 1010);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (15, 'fcf1afd1-9d2b-4a25-8b4d-436de96bd202', 162000000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (82, 15, 1011);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (26, 'ef7db10d-a736-4f4e-81c7-b3bfc0622c44', 162000000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (82, 26, 1012);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (87, '9226893c-6e31-4389-ab6a-994f52a2d990', 162000000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (82, 87, 1013);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (66, '1df09285-0adb-4bf6-ac56-fc655cd538e1', 162000000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (82, 66, 1014);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (43, '09e4d696-9b14-40b7-93f2-8d74d27266c3', 162000000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (82, 43, 1015);
+                        
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (82, 32, '2024-05-13 12:51:01', 222905230);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (82, 31, '2024-05-13 12:51:01', 322609426);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (82, 23, '2024-05-13 12:51:01', 285231982);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (82, 15, '2024-05-13 12:51:01', 349895003);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (82, 43, '2024-05-13 12:51:01', 190527530);
+                            
+
+                INSERT INTO car (current_owner, brand, model_code, color, class, door, seat, layout, transmission, engine_cylinders, engine_capacity, fuel, odometer, image, location, status_in_storage)
+                VALUES ('Rose Byrd', 'Chevrolet', 'Chevrolet F-150-9709', 'SeaShell', 'Supercar', 3, 7, 'Left-hand drive', 'Manual', 8, 3697, 'Gasoline', 106843.08253280462, 'https://i.ibb.co/hYJ6Fcp/2010-Ferrari-599-GTO-0-1024.jpg', 'Rowefort', 'Auctioning');
+            
+
+                INSERT INTO payment (user_id, transaction_id, amount)
+                VALUES (59, 'bdf47c82-687b-4582-91a3-930d921354fd', 38800000);
+            
+
+                INSERT INTO verification_request (seller_id, car_id, status, time, admin_id, payment_id)
+                VALUES (59, 207, 'APPROVED', '2024-04-23 22:27:13', 2, 1016);
+            
+
+                    INSERT INTO auction (name, host_id, car_id, date_created, date_started, date_expired, status, winner_id, bid_step, initial_price, deposit_price)
+                    VALUES ('Chevrolet F-150-9709', 59, 207, '2024-04-24 22:27:13', '2024-04-27 22:27:13', '2024-06-16 22:27:13', 'ONGOING', NULL, 4580000, 19400000, 38800000);
+                
+
+                    INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                    VALUES (83, 59, '2024-04-27 22:27:13', 19400000);
+                
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (85, '72693f92-b404-4b67-b3b1-38c934814faa', 38800000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (83, 85, 1017);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (77, '75a74ca8-6bc2-4334-9f56-fa5b52cb57c7', 38800000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (83, 77, 1018);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (34, 'fbecb7ae-f8f2-4941-9032-614aae760c48', 38800000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (83, 34, 1019);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (10, '41f62b16-0a27-41b9-9046-c1cef2c684e9', 38800000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (83, 10, 1020);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (69, '13fc4261-81b6-4f07-84ec-a657a7babddf', 38800000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (83, 69, 1021);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (53, '268bcbd3-37ef-4f74-a185-187ee0bdbe9f', 38800000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (83, 53, 1022);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (22, '038f9beb-36a9-4fd4-b916-42d30bbc514f', 38800000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (83, 22, 1023);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (9, '9a4286a9-733c-49de-bc52-bf3fa5f86d8f', 38800000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (83, 9, 1024);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (41, '3052a38c-8805-4914-b9b5-fa2a9cca7f82', 38800000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (83, 41, 1025);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (78, 'cefb3171-75df-4de4-b5da-e351bbf9f170', 38800000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (83, 78, 1026);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (40, 'abfd0cdc-4cde-4500-b1f1-f040a9d35799', 38800000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (83, 40, 1027);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (35, 'ba47fc00-7298-4e9b-b74b-1a2e279a274b', 38800000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (83, 35, 1028);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (19, '8e50f97c-e360-4618-99da-28addeb485d8', 38800000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (83, 19, 1029);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (16, 'cdd20ae2-f9e1-4a8b-a965-d16e0679112c', 38800000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (83, 16, 1030);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (97, '7a5e1bc0-d730-4638-9ed3-099f9cd6cef8', 38800000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (83, 97, 1031);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (50, 'c76dc7cb-e296-45dd-bd39-6242b6b0180e', 38800000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (83, 50, 1032);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (43, 'c931402e-32fb-45af-914c-9c152cdbc6ea', 38800000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (83, 43, 1033);
+                        
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (83, 85, '2024-05-01 06:33:03', 71868029);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (83, 10, '2024-05-01 06:33:03', 58674567);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (83, 69, '2024-05-01 06:33:03', 58181989);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (83, 53, '2024-05-01 06:33:03', 33188210);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (83, 22, '2024-05-01 06:33:03', 24684012);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (83, 9, '2024-05-01 06:33:03', 59475522);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (83, 78, '2024-05-01 06:33:03', 41922903);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (83, 40, '2024-05-01 06:33:03', 58919294);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (83, 16, '2024-05-01 06:33:03', 90367225);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (83, 97, '2024-05-01 06:33:03', 21179905);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (83, 50, '2024-05-01 06:33:03', 45271243);
+                            
+
+                INSERT INTO car (current_owner, brand, model_code, color, class, door, seat, layout, transmission, engine_cylinders, engine_capacity, fuel, odometer, image, location, status_in_storage)
+                VALUES ('Alison King', 'Ford', 'Ford Jetta-4123', 'HotPink', 'Supercar', 2, 5, 'Left-hand drive', 'Automatic', 10, 3323, 'Diesel', 123422.43677176363, 'https://i.ibb.co/qNmTn3W/2012-Lamborghini-Aventador-J6.jpg', 'South Linda', 'Auctioning');
+            
+
+                INSERT INTO payment (user_id, transaction_id, amount)
+                VALUES (40, '6c3e8f4e-59d3-469a-9042-9ac4de1caec3', 166400000);
+            
+
+                INSERT INTO verification_request (seller_id, car_id, status, time, admin_id, payment_id)
+                VALUES (40, 208, 'APPROVED', '2024-04-29 08:19:17', 1, 1034);
+            
+
+                    INSERT INTO auction (name, host_id, car_id, date_created, date_started, date_expired, status, winner_id, bid_step, initial_price, deposit_price)
+                    VALUES ('Ford Jetta-4123', 40, 208, '2024-04-30 08:19:17', '2024-05-01 08:19:17', '2024-07-22 08:19:17', 'ONGOING', NULL, 2360000, 83200000, 166400000);
+                
+
+                    INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                    VALUES (84, 40, '2024-05-01 08:19:17', 83200000);
+                
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (58, 'f67f2401-7bf8-47de-a30e-deff102dce40', 166400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (84, 58, 1035);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (49, '3538e303-2b3c-487f-8f33-3626e631d4c9', 166400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (84, 49, 1036);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (61, 'e1ae234a-3cde-4512-a21b-6a640b93e0b4', 166400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (84, 61, 1037);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (62, '493ae96e-0c56-4bff-8128-3c5228e07b57', 166400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (84, 62, 1038);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (41, '738552d0-e360-4447-80b6-f7607cfd393f', 166400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (84, 41, 1039);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (69, '45f02329-ec0a-49a3-be54-af942912e9f1', 166400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (84, 69, 1040);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (35, '6019b073-9469-437f-8be4-9318e38ac90a', 166400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (84, 35, 1041);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (90, '026a88c9-3708-4919-85c2-79f6b5a1b2ea', 166400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (84, 90, 1042);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (60, '3c2be419-8d8d-4924-b2e2-1839774306db', 166400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (84, 60, 1043);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (22, 'c6f23d7c-79f2-4812-9b5c-90ba7e89fd76', 166400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (84, 22, 1044);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (73, '20985ade-0f5e-4433-94b3-68b24a0eb7b0', 166400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (84, 73, 1045);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (56, '23628336-f007-4f1f-bd04-de5447fa0665', 166400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (84, 56, 1046);
+                        
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (84, 58, '2024-06-20 04:50:59', 172831140);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (84, 49, '2024-06-20 04:50:59', 247962002);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (84, 35, '2024-06-20 04:50:59', 409650581);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (84, 90, '2024-06-20 04:50:59', 382325569);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (84, 22, '2024-06-20 04:50:59', 121461066);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (84, 73, '2024-06-20 04:50:59', 359559247);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (84, 56, '2024-06-20 04:50:59', 322735730);
+                            
+
+                INSERT INTO car (current_owner, brand, model_code, color, class, door, seat, layout, transmission, engine_cylinders, engine_capacity, fuel, odometer, image, location, status_in_storage)
+                VALUES ('Michael Morales', 'BMW', 'BMW Corolla-4105', 'Chartreuse', 'Supercar', 3, 4, 'Left-hand drive', 'Automatic', 8, 1228, 'Gasoline', 15233.563913987577, 'https://i.ibb.co/hYJ6Fcp/2010-Ferrari-599-GTO-0-1024.jpg', 'Lake Taylor', 'Auctioning');
+            
+
+                INSERT INTO payment (user_id, transaction_id, amount)
+                VALUES (57, '628694b7-dd3e-4565-b7ea-41f7426e52ff', 96800000);
+            
+
+                INSERT INTO verification_request (seller_id, car_id, status, time, admin_id, payment_id)
+                VALUES (57, 209, 'APPROVED', '2024-04-27 05:55:04', 2, 1047);
+            
+
+                    INSERT INTO auction (name, host_id, car_id, date_created, date_started, date_expired, status, winner_id, bid_step, initial_price, deposit_price)
+                    VALUES ('BMW Corolla-4105', 57, 209, '2024-04-28 05:55:04', '2024-04-29 05:55:04', '2024-06-24 05:55:04', 'ONGOING', NULL, 8380000, 48400000, 96800000);
+                
+
+                    INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                    VALUES (85, 57, '2024-04-29 05:55:04', 48400000);
+                
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (76, '496b5bf5-4a65-4d03-80ed-d710ed4e9b1d', 96800000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (85, 76, 1048);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (41, 'faeff409-39ba-4370-b027-2bfc3fc10f03', 96800000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (85, 41, 1049);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (28, 'ad27607e-6b8f-4484-93de-05e475357972', 96800000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (85, 28, 1050);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (74, '066b2305-c62d-428b-8d75-4ee71ee5ff0f', 96800000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (85, 74, 1051);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (25, '6b435b93-2932-42bf-bd9b-1348b7555cdf', 96800000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (85, 25, 1052);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (27, '8757b763-f14d-43f4-b606-d4e7a2a0e2ef', 96800000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (85, 27, 1053);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (54, '0f64606c-3024-41c3-a978-4989d621b4a4', 96800000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (85, 54, 1054);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (84, '5633d640-dd32-4daf-836e-b5182b205048', 96800000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (85, 84, 1055);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (42, 'f74e0427-27df-45d8-85fa-519ef47b00f4', 96800000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (85, 42, 1056);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (39, '11ce9bcd-3efd-4313-baba-3869efe99cab', 96800000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (85, 39, 1057);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (51, 'cbc38ef6-c670-4df3-bfd3-23ca7e766b5c', 96800000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (85, 51, 1058);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (61, '3afc8d0f-e2cb-49c6-a1b0-f8f0ad449d4f', 96800000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (85, 61, 1059);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (22, '38c6801c-5b08-4c9d-8759-dafdf3492a4b', 96800000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (85, 22, 1060);
+                        
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (85, 76, '2024-05-05 17:30:53', 63559493);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (85, 41, '2024-05-05 17:30:53', 124312540);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (85, 28, '2024-05-05 17:30:53', 179715196);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (85, 25, '2024-05-05 17:30:53', 111801023);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (85, 54, '2024-05-05 17:30:53', 227164624);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (85, 22, '2024-05-05 17:30:53', 124101278);
+                            
+
+                INSERT INTO car (current_owner, brand, model_code, color, class, door, seat, layout, transmission, engine_cylinders, engine_capacity, fuel, odometer, image, location, status_in_storage)
+                VALUES ('Patricia Miller', 'Chevrolet', 'Chevrolet Elantra-8502', 'LightBlue', 'Supercar', 4, 8, 'Right-hand drive', 'Automatic', 10, 1174, 'Hybrid', 99981.82014513391, 'https://i.ibb.co/nBg2yPH/861054.jpg', 'South Nancyland', 'Auctioning');
+            
+
+                INSERT INTO payment (user_id, transaction_id, amount)
+                VALUES (69, '4ed94e3a-9698-47cc-a54d-431f1685197d', 185200000);
+            
+
+                INSERT INTO verification_request (seller_id, car_id, status, time, admin_id, payment_id)
+                VALUES (69, 210, 'APPROVED', '2024-04-28 02:32:12', 3, 1061);
+            
+
+                    INSERT INTO auction (name, host_id, car_id, date_created, date_started, date_expired, status, winner_id, bid_step, initial_price, deposit_price)
+                    VALUES ('Chevrolet Elantra-8502', 69, 210, '2024-04-29 02:32:12', '2024-05-02 02:32:12', '2024-07-25 02:32:12', 'ONGOING', NULL, 9670000, 92600000, 185200000);
+                
+
+                    INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                    VALUES (86, 69, '2024-05-02 02:32:12', 92600000);
+                
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (82, 'e89a1e5b-e5a7-4d9e-9ffd-90bd8184d33d', 185200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (86, 82, 1062);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (6, '190fb3ff-d079-4942-b46a-e1f08013b3fc', 185200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (86, 6, 1063);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (20, 'c6244741-9818-49bd-9adf-e40eb5d66b12', 185200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (86, 20, 1064);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (58, '5baee09c-0c8c-401d-ba41-e4d7da37c445', 185200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (86, 58, 1065);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (36, 'c2f45822-ce71-4e7e-bc2c-d2e493964336', 185200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (86, 36, 1066);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (41, 'b5ee7f4e-4e09-435e-b992-a373201bd396', 185200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (86, 41, 1067);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (99, '7bb60400-2763-4e49-843a-689d84fbe878', 185200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (86, 99, 1068);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (43, '837eb0c9-2377-4e4c-acee-1b47af2dba44', 185200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (86, 43, 1069);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (8, 'c92928f9-2062-42b7-a501-d02bebbf8ae8', 185200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (86, 8, 1070);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (55, 'c1ca6ae4-cf3c-41f2-9e1b-60071644e691', 185200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (86, 55, 1071);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (46, '23e74e81-f50f-4ab9-bbf7-515edb2683bc', 185200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (86, 46, 1072);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (9, '40cd7a9c-9de9-42cb-b12e-91eb2bfc42c5', 185200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (86, 9, 1073);
+                        
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (86, 82, '2024-07-17 11:48:47', 351854460);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (86, 20, '2024-07-17 11:48:47', 216664407);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (86, 8, '2024-07-17 11:48:47', 243696131);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (86, 55, '2024-07-17 11:48:47', 201179027);
+                            
+
+                INSERT INTO car (current_owner, brand, model_code, color, class, door, seat, layout, transmission, engine_cylinders, engine_capacity, fuel, odometer, image, location, status_in_storage)
+                VALUES ('Becky Rodgers', 'Honda', 'Honda Sportage-9234', 'Turquoise', 'Supercar', 3, 7, 'Right-hand drive', 'Manual', 6, 1398, 'Hybrid', 90686.33040297007, 'https://i.ibb.co/nPLdXNR/2010-Mc-Laren-MP412-C3.jpg', 'Smithland', 'Auctioning');
+            
+
+                INSERT INTO payment (user_id, transaction_id, amount)
+                VALUES (42, '33bc71b3-73eb-4dda-93ea-47acf465ee89', 90200000);
+            
+
+                INSERT INTO verification_request (seller_id, car_id, status, time, admin_id, payment_id)
+                VALUES (42, 211, 'APPROVED', '2024-04-27 05:48:32', 1, 1074);
+            
+
+                    INSERT INTO auction (name, host_id, car_id, date_created, date_started, date_expired, status, winner_id, bid_step, initial_price, deposit_price)
+                    VALUES ('Honda Sportage-9234', 42, 211, '2024-04-29 05:48:32', '2024-04-30 05:48:32', '2024-06-16 05:48:32', 'ONGOING', NULL, 7930000, 45100000, 90200000);
+                
+
+                    INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                    VALUES (87, 42, '2024-04-30 05:48:32', 45100000);
+                
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (41, '364e3d72-afc3-4d4c-aa84-6f97e2b474f7', 90200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (87, 41, 1075);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (38, 'bba0af7f-101e-49a0-af34-d688015b5a4a', 90200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (87, 38, 1076);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (27, '3c65b361-e392-42db-a657-6e268ff3ba18', 90200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (87, 27, 1077);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (53, 'd3f25cb8-bfbe-41a7-a1cb-60256abfe412', 90200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (87, 53, 1078);
+                        
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (87, 41, '2024-06-09 13:58:33', 103842817);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (87, 38, '2024-06-09 13:58:33', 89577916);
+                            
+
+                INSERT INTO car (current_owner, brand, model_code, color, class, door, seat, layout, transmission, engine_cylinders, engine_capacity, fuel, odometer, image, location, status_in_storage)
+                VALUES ('Hannah Gilmore', 'Chevrolet', 'Chevrolet Elantra-1151', 'Crimson', 'Hypercar', 3, 6, 'Left-hand drive', 'Automatic', 8, 2578, 'Gasoline', 93060.06477287915, 'https://i.ibb.co/jR6yTTL/Lamborghini-Sesto-Elemento-1080x608.jpg', 'Michaelchester', 'Auctioning');
+            
+
+                INSERT INTO payment (user_id, transaction_id, amount)
+                VALUES (35, '0cfe36e8-9c75-4895-84c2-16478f07a8c2', 24200000);
+            
+
+                INSERT INTO verification_request (seller_id, car_id, status, time, admin_id, payment_id)
+                VALUES (35, 212, 'APPROVED', '2024-04-29 21:46:50', 2, 1079);
+            
+
+                    INSERT INTO auction (name, host_id, car_id, date_created, date_started, date_expired, status, winner_id, bid_step, initial_price, deposit_price)
+                    VALUES ('Chevrolet Elantra-1151', 35, 212, '2024-05-01 21:46:50', '2024-05-03 21:46:50', '2024-06-11 21:46:50', 'ONGOING', NULL, 2680000, 12100000, 24200000);
+                
+
+                    INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                    VALUES (88, 35, '2024-05-03 21:46:50', 12100000);
+                
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (5, 'f8a60913-6930-4e92-a9dd-d16cd7f0d17a', 24200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (88, 5, 1080);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (82, '6ba52e27-ede9-4091-b375-3d4b22edee76', 24200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (88, 82, 1081);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (74, 'c9b85bf2-d19b-4c57-b976-70bb9a3a1dcf', 24200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (88, 74, 1082);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (83, 'efb6ea7b-002e-4c21-9030-a6521c412cde', 24200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (88, 83, 1083);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (6, '746d88c0-7f6b-421d-96e4-521aa6c3a19f', 24200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (88, 6, 1084);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (31, '04c49dd7-9704-4084-b59f-b23d52cd8321', 24200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (88, 31, 1085);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (52, '090d0cc6-1cf9-44b6-8d5c-da902ec3eabb', 24200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (88, 52, 1086);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (36, '00923819-10e0-46d1-9bb9-45b31ab2c455', 24200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (88, 36, 1087);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (18, 'b2cc435b-78af-4b20-9122-ebf2bf63b60f', 24200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (88, 18, 1088);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (86, 'a2e4b58d-154f-4671-94ce-17570bdeb158', 24200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (88, 86, 1089);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (87, '4edf44dc-89bb-476d-86a1-40dcf6cd3814', 24200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (88, 87, 1090);
+                        
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (88, 74, '2024-05-21 21:16:30', 19959457);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (88, 83, '2024-05-21 21:16:30', 34499329);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (88, 31, '2024-05-21 21:16:30', 47534606);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (88, 52, '2024-05-21 21:16:30', 31267295);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (88, 86, '2024-05-21 21:16:30', 32500653);
+                            
+
+                INSERT INTO car (current_owner, brand, model_code, color, class, door, seat, layout, transmission, engine_cylinders, engine_capacity, fuel, odometer, image, location, status_in_storage)
+                VALUES ('Stacey Mitchell', 'Ford', 'Ford F-150-6301', 'Red', 'Supercar', 5, 7, 'Right-hand drive', 'Automatic', 10, 3359, 'Hybrid', 185049.93470383593, 'https://i.ibb.co/nPLdXNR/2010-Mc-Laren-MP412-C3.jpg', 'Mooreville', 'Auctioning');
+            
+
+                INSERT INTO payment (user_id, transaction_id, amount)
+                VALUES (32, '2ca0d6ab-4d98-4759-a97f-c33615daba85', 136000000);
+            
+
+                INSERT INTO verification_request (seller_id, car_id, status, time, admin_id, payment_id)
+                VALUES (32, 213, 'APPROVED', '2024-04-29 04:11:28', 2, 1091);
+            
+
+                    INSERT INTO auction (name, host_id, car_id, date_created, date_started, date_expired, status, winner_id, bid_step, initial_price, deposit_price)
+                    VALUES ('Ford F-150-6301', 32, 213, '2024-04-30 04:11:28', '2024-05-02 04:11:28', '2024-07-10 04:11:28', 'ONGOING', NULL, 7470000, 68000000, 136000000);
+                
+
+                    INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                    VALUES (89, 32, '2024-05-02 04:11:28', 68000000);
+                
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (49, '89bd0541-4e92-4a31-9165-8cbe59e24e02', 136000000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (89, 49, 1092);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (6, '817ae287-3e50-4ea6-ac31-88a207c87d05', 136000000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (89, 6, 1093);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (78, 'd7516dd7-d79d-4fa5-abf2-98c5009d4b11', 136000000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (89, 78, 1094);
+                        
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (89, 49, '2024-06-29 08:26:01', 201977104);
+                            
+
+                INSERT INTO car (current_owner, brand, model_code, color, class, door, seat, layout, transmission, engine_cylinders, engine_capacity, fuel, odometer, image, location, status_in_storage)
+                VALUES ('Ian Noble Jr.', 'Hyundai', 'Hyundai E-Class-2796', 'Brown', 'Supercar', 4, 2, 'Right-hand drive', 'Manual', 8, 3003, 'Gasoline', 173194.29498616557, 'https://i.ibb.co/jR6yTTL/Lamborghini-Sesto-Elemento-1080x608.jpg', 'New Janet', 'Auctioning');
+            
+
+                INSERT INTO payment (user_id, transaction_id, amount)
+                VALUES (19, '939eb086-d0bf-4aac-bf97-2754fd0e0b72', 134600000);
+            
+
+                INSERT INTO verification_request (seller_id, car_id, status, time, admin_id, payment_id)
+                VALUES (19, 214, 'APPROVED', '2024-04-25 04:20:01', 3, 1095);
+            
+
+                    INSERT INTO auction (name, host_id, car_id, date_created, date_started, date_expired, status, winner_id, bid_step, initial_price, deposit_price)
+                    VALUES ('Hyundai E-Class-2796', 19, 214, '2024-04-26 04:20:01', '2024-04-28 04:20:01', '2024-06-18 04:20:01', 'ONGOING', NULL, 7050000, 67300000, 134600000);
+                
+
+                    INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                    VALUES (90, 19, '2024-04-28 04:20:01', 67300000);
+                
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (8, '50797aef-4d7a-4db2-bffa-a3a44cadb993', 134600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (90, 8, 1096);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (76, '222799bc-332c-4f16-8ffe-c74be1d39111', 134600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (90, 76, 1097);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (86, 'e39e2973-e225-433f-bf06-c162968ff4f6', 134600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (90, 86, 1098);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (68, '4d01de9b-7b9d-4776-bc0b-0f2d770c25b7', 134600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (90, 68, 1099);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (81, '15986454-ba20-4ac1-960e-80c02e89a00a', 134600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (90, 81, 1100);
+                        
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (90, 8, '2024-05-02 17:15:03', 149846433);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (90, 76, '2024-05-02 17:15:03', 235704151);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (90, 86, '2024-05-02 17:15:03', 129973456);
+                            
+
+                INSERT INTO car (current_owner, brand, model_code, color, class, door, seat, layout, transmission, engine_cylinders, engine_capacity, fuel, odometer, image, location, status_in_storage)
+                VALUES ('Matthew Peterson', 'Mercedes-Benz', 'Mercedes-Benz Jetta-6637', 'SlateGray', 'Hypercar', 4, 8, 'Right-hand drive', 'Manual', 6, 3391, 'Hybrid', 105923.90341996426, 'https://i.ibb.co/1rSGp9b/2012-Lexus-LFANrburgring-Package1.jpg', 'South Joshuaton', 'Auctioning');
+            
+
+                INSERT INTO payment (user_id, transaction_id, amount)
+                VALUES (63, 'b773a37c-4daf-45b2-84ec-38c14a10013c', 50400000);
+            
+
+                INSERT INTO verification_request (seller_id, car_id, status, time, admin_id, payment_id)
+                VALUES (63, 215, 'APPROVED', '2024-04-23 22:06:25', 3, 1101);
+            
+
+                    INSERT INTO auction (name, host_id, car_id, date_created, date_started, date_expired, status, winner_id, bid_step, initial_price, deposit_price)
+                    VALUES ('Mercedes-Benz Jetta-6637', 63, 215, '2024-04-26 22:06:25', '2024-04-27 22:06:25', '2024-06-08 22:06:25', 'ONGOING', NULL, 8570000, 25200000, 50400000);
+                
+
+                    INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                    VALUES (91, 63, '2024-04-27 22:06:25', 25200000);
+                
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (40, '4c492f8f-201a-44e6-b01b-e2cbabf584eb', 50400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (91, 40, 1102);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (96, 'ed7118eb-7869-4950-abd5-268279ebdf35', 50400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (91, 96, 1103);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (36, 'daf84616-0cf1-46eb-b853-960348f576c4', 50400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (91, 36, 1104);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (81, 'd2b7d52a-448f-475b-92e6-8804819bb6d9', 50400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (91, 81, 1105);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (83, '2da20722-59db-444e-99ad-04df46ef9a1f', 50400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (91, 83, 1106);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (25, '0aad41bd-1042-461b-b4b3-0b172bc6fe8a', 50400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (91, 25, 1107);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (47, '0ebe83f6-59fd-4fbc-bf29-29724530084e', 50400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (91, 47, 1108);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (11, 'f61270aa-b112-40b5-a38f-4ac850bcfd7e', 50400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (91, 11, 1109);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (72, '39750d61-2aa6-476f-8103-dad2096a8b5a', 50400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (91, 72, 1110);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (84, '1bc44eb0-4fdf-4277-a3e5-4e6a750b2402', 50400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (91, 84, 1111);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (68, '43ba655f-3ba7-47b6-a056-924ee3a9b114', 50400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (91, 68, 1112);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (65, '0650d21a-394b-4561-9abf-5518d43a0deb', 50400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (91, 65, 1113);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (15, '817344c7-27e4-401e-91bc-01c108a031bd', 50400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (91, 15, 1114);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (56, 'cb20a3c1-48f4-4fac-9639-4e72df8bcc21', 50400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (91, 56, 1115);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (14, '55e921e5-bdf9-4643-bb63-22b5308aa1c7', 50400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (91, 14, 1116);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (89, '150c39d5-ac91-40cc-887f-6bb1a35b77d4', 50400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (91, 89, 1117);
+                        
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (91, 40, '2024-05-23 23:44:18', 106338826);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (91, 96, '2024-05-23 23:44:18', 31442174);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (91, 36, '2024-05-23 23:44:18', 39301378);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (91, 83, '2024-05-23 23:44:18', 80922004);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (91, 25, '2024-05-23 23:44:18', 100055544);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (91, 72, '2024-05-23 23:44:18', 105332342);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (91, 65, '2024-05-23 23:44:18', 38954847);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (91, 56, '2024-05-23 23:44:18', 80689375);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (91, 89, '2024-05-23 23:44:18', 103622147);
+                            
+
+                INSERT INTO car (current_owner, brand, model_code, color, class, door, seat, layout, transmission, engine_cylinders, engine_capacity, fuel, odometer, image, location, status_in_storage)
+                VALUES ('Brandon Hooper', 'Mercedes-Benz', 'Mercedes-Benz Corolla-5817', 'OrangeRed', 'Supercar', 3, 5, 'Right-hand drive', 'Manual', 10, 4990, 'Hybrid', 144826.97990764776, 'https://i.ibb.co/1rSGp9b/2012-Lexus-LFANrburgring-Package1.jpg', 'New Cynthiaton', 'Auctioning');
+            
+
+                INSERT INTO payment (user_id, transaction_id, amount)
+                VALUES (35, 'f1e75810-fad0-4522-b481-bd36e021c6dc', 111200000);
+            
+
+                INSERT INTO verification_request (seller_id, car_id, status, time, admin_id, payment_id)
+                VALUES (35, 216, 'APPROVED', '2024-04-29 15:56:32', 1, 1118);
+            
+
+                    INSERT INTO auction (name, host_id, car_id, date_created, date_started, date_expired, status, winner_id, bid_step, initial_price, deposit_price)
+                    VALUES ('Mercedes-Benz Corolla-5817', 35, 216, '2024-04-30 15:56:32', '2024-05-03 15:56:32', '2024-06-15 15:56:32', 'ONGOING', NULL, 3810000, 55600000, 111200000);
+                
+
+                    INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                    VALUES (92, 35, '2024-05-03 15:56:32', 55600000);
+                
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (52, 'd9cdc11d-47e3-491b-a9e0-9987ec5246da', 111200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (92, 52, 1119);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (91, '331e88b7-0db1-4d70-a69e-c0fb142c99ca', 111200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (92, 91, 1120);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (42, 'd9f5a9d8-d344-4c60-80d6-c6b97c33ec51', 111200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (92, 42, 1121);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (39, 'f58ce266-3d61-4f3e-b06e-935a9e63eee4', 111200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (92, 39, 1122);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (56, '7afd4c2c-90ce-4b6f-bbbf-3103a2d18945', 111200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (92, 56, 1123);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (17, '27ff0da3-b936-4dae-a37a-718e9fd571a1', 111200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (92, 17, 1124);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (76, 'a6e54aa1-e71e-4c3f-b6e5-4ba723221385', 111200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (92, 76, 1125);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (29, '0e45c798-9ad1-43c6-8f46-40001bbc0b37', 111200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (92, 29, 1126);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (71, '52cfd6dc-0ae7-42f7-98e8-367922177402', 111200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (92, 71, 1127);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (14, '023cef07-eefa-4d7d-9bd3-9b47acfcfbd0', 111200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (92, 14, 1128);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (45, '951a554a-37fa-4349-8179-1ed61889e53a', 111200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (92, 45, 1129);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (21, 'c195a988-757d-4acd-900b-06f2fed924a3', 111200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (92, 21, 1130);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (19, '2d0165fc-4656-40c7-8fa7-97c9eaf537f4', 111200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (92, 19, 1131);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (59, '2c6454e2-3ccd-4dd7-8b9f-e2cd03d39c31', 111200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (92, 59, 1132);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (68, '1a56c2e6-5b04-42e2-b8a4-e1dbb1e5830f', 111200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (92, 68, 1133);
+                        
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (92, 91, '2024-05-18 11:30:34', 242641512);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (92, 39, '2024-05-18 11:30:34', 249688548);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (92, 76, '2024-05-18 11:30:34', 253210517);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (92, 29, '2024-05-18 11:30:34', 162538082);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (92, 14, '2024-05-18 11:30:34', 227520180);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (92, 45, '2024-05-18 11:30:34', 151648345);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (92, 19, '2024-05-18 11:30:34', 94979767);
+                            
+
+                INSERT INTO car (current_owner, brand, model_code, color, class, door, seat, layout, transmission, engine_cylinders, engine_capacity, fuel, odometer, image, location, status_in_storage)
+                VALUES ('Dr. Christina Mcgrath', 'Honda', 'Honda Civic-6127', 'Chartreuse', 'Hypercar', 5, 8, 'Right-hand drive', 'Automatic', 10, 4024, 'Diesel', 199106.73758628953, 'https://i.ibb.co/qNmTn3W/2012-Lamborghini-Aventador-J6.jpg', 'West Melissa', 'Auctioning');
+            
+
+                INSERT INTO payment (user_id, transaction_id, amount)
+                VALUES (87, '9f2d887f-e6f5-4302-a8ef-2a3800ab984b', 45200000);
+            
+
+                INSERT INTO verification_request (seller_id, car_id, status, time, admin_id, payment_id)
+                VALUES (87, 217, 'APPROVED', '2024-04-27 16:01:07', 1, 1134);
+            
+
+                    INSERT INTO auction (name, host_id, car_id, date_created, date_started, date_expired, status, winner_id, bid_step, initial_price, deposit_price)
+                    VALUES ('Honda Civic-6127', 87, 217, '2024-04-28 16:01:07', '2024-05-01 16:01:07', '2024-07-08 16:01:07', 'ONGOING', NULL, 1620000, 22600000, 45200000);
+                
+
+                    INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                    VALUES (93, 87, '2024-05-01 16:01:07', 22600000);
+                
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (34, '7fb1b0e1-8dcf-44e9-8e21-20f1d445ccf9', 45200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (93, 34, 1135);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (48, 'c2c99f8b-fd3a-45a6-8e0c-cb70e40309d5', 45200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (93, 48, 1136);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (73, 'b29140c3-4ba8-435b-8d12-16cacf3a1e25', 45200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (93, 73, 1137);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (60, '56dc501e-1b80-4fd2-8300-0c5926b4c6b2', 45200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (93, 60, 1138);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (25, '64853590-e45d-40a3-8721-0ae43b19f303', 45200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (93, 25, 1139);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (52, '9735da7b-f49b-49f3-a1ac-12b7845bd5af', 45200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (93, 52, 1140);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (71, 'fd4176bd-6e98-4363-af09-a8a8abbc6747', 45200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (93, 71, 1141);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (21, 'e2c6dcc4-b4ba-4530-addb-4e6b464f1981', 45200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (93, 21, 1142);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (17, '785b7a37-7876-4890-8c4d-d326e8ecfa76', 45200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (93, 17, 1143);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (28, '1890f694-62d1-41e2-a903-a86a71393b72', 45200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (93, 28, 1144);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (13, 'fe7bd53d-a112-430e-b1a9-75924a3132a5', 45200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (93, 13, 1145);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (37, '54dde38b-837e-413a-b89e-f98956a16982', 45200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (93, 37, 1146);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (45, '36a0f91d-79d6-43e7-af4b-8cea0a19a72d', 45200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (93, 45, 1147);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (40, 'aeec1e36-8808-46a2-8c07-c156863104c2', 45200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (93, 40, 1148);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (87, 'bb54b710-400c-4ab0-830f-d9098b0ecfe6', 45200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (93, 87, 1149);
+                        
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (93, 34, '2024-05-08 16:37:09', 28706226);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (93, 48, '2024-05-08 16:37:09', 58046880);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (93, 52, '2024-05-08 16:37:09', 68602567);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (93, 28, '2024-05-08 16:37:09', 59904743);
+                            
+
+                INSERT INTO car (current_owner, brand, model_code, color, class, door, seat, layout, transmission, engine_cylinders, engine_capacity, fuel, odometer, image, location, status_in_storage)
+                VALUES ('Nicole Moore', 'Chevrolet', 'Chevrolet Sportage-6964', 'DarkViolet', 'Hypercar', 5, 3, 'Right-hand drive', 'Automatic', 8, 3372, 'Diesel', 131382.8889839386, 'https://i.ibb.co/nBg2yPH/861054.jpg', 'South Kayla', 'Auctioning');
+            
+
+                INSERT INTO payment (user_id, transaction_id, amount)
+                VALUES (17, '40c50171-41a7-4c95-a2c7-f186289b63c2', 26400000);
+            
+
+                INSERT INTO verification_request (seller_id, car_id, status, time, admin_id, payment_id)
+                VALUES (17, 218, 'APPROVED', '2024-04-27 11:06:12', 3, 1150);
+            
+
+                    INSERT INTO auction (name, host_id, car_id, date_created, date_started, date_expired, status, winner_id, bid_step, initial_price, deposit_price)
+                    VALUES ('Chevrolet Sportage-6964', 17, 218, '2024-04-29 11:06:12', '2024-04-30 11:06:12', '2024-07-08 11:06:12', 'ONGOING', NULL, 7700000, 13200000, 26400000);
+                
+
+                    INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                    VALUES (94, 17, '2024-04-30 11:06:12', 13200000);
+                
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (31, 'a234d179-51b5-4a79-acc0-690b502ab880', 26400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (94, 31, 1151);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (11, 'b8296dc0-19ff-428e-aa99-41a45f003b42', 26400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (94, 11, 1152);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (84, '9007fd1c-6d1e-4d4a-b3f1-1a27e8d61113', 26400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (94, 84, 1153);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (52, 'c58c97e1-2039-42b9-a259-9f32404bd324', 26400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (94, 52, 1154);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (25, '4c40e149-9783-4d92-ba5d-e9365e99c948', 26400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (94, 25, 1155);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (72, '22e604e0-74a3-4eaf-9355-a0d16b25885b', 26400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (94, 72, 1156);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (75, 'f5024fdb-5bef-4c93-a1ba-80ede674a3bd', 26400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (94, 75, 1157);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (23, '1f89bd32-4d2f-4619-a56c-2905f31d8ed2', 26400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (94, 23, 1158);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (13, '66b1bc88-4557-4d9e-9feb-8407e59cbe00', 26400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (94, 13, 1159);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (57, '0447887d-b256-4cf3-8cfb-c3b8dd514f52', 26400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (94, 57, 1160);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (73, 'fb5b9455-0699-4381-971b-b98fa88a9f00', 26400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (94, 73, 1161);
+                        
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (94, 31, '2024-05-08 14:35:39', 17299676);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (94, 11, '2024-05-08 14:35:39', 42596147);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (94, 84, '2024-05-08 14:35:39', 34907315);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (94, 52, '2024-05-08 14:35:39', 47871913);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (94, 13, '2024-05-08 14:35:39', 60990416);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (94, 57, '2024-05-08 14:35:39', 33845407);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (94, 73, '2024-05-08 14:35:39', 47131024);
+                            
+
+                INSERT INTO car (current_owner, brand, model_code, color, class, door, seat, layout, transmission, engine_cylinders, engine_capacity, fuel, odometer, image, location, status_in_storage)
+                VALUES ('Keith Brown', 'Toyota', 'Toyota Corolla-9060', 'FireBrick', 'Supercar', 5, 4, 'Right-hand drive', 'Automatic', 6, 3361, 'Hybrid', 177425.166432993, 'https://i.ibb.co/nBg2yPH/861054.jpg', 'North Bryan', 'Auctioning');
+            
+
+                INSERT INTO payment (user_id, transaction_id, amount)
+                VALUES (86, '114bcd33-3407-40bf-a878-b07103d8c67f', 94200000);
+            
+
+                INSERT INTO verification_request (seller_id, car_id, status, time, admin_id, payment_id)
+                VALUES (86, 219, 'APPROVED', '2024-04-26 02:42:08', 3, 1162);
+            
+
+                    INSERT INTO auction (name, host_id, car_id, date_created, date_started, date_expired, status, winner_id, bid_step, initial_price, deposit_price)
+                    VALUES ('Toyota Corolla-9060', 86, 219, '2024-04-27 02:42:08', '2024-04-29 02:42:08', '2024-07-13 02:42:08', 'ONGOING', NULL, 4700000, 47100000, 94200000);
+                
+
+                    INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                    VALUES (95, 86, '2024-04-29 02:42:08', 47100000);
+                
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (88, 'a946ad63-5d1a-4374-b71d-650565026259', 94200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (95, 88, 1163);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (13, '8303ed7e-1921-41fa-9b21-7fb36da50f0a', 94200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (95, 13, 1164);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (66, 'a5896d21-d664-4a9a-9f80-de0d35938824', 94200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (95, 66, 1165);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (92, 'bb3ef7a1-4b63-4235-b29b-e86d26013191', 94200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (95, 92, 1166);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (7, 'e494a67d-f541-466a-81f5-a85f047ff7b9', 94200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (95, 7, 1167);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (69, '2a92ef07-7306-4e6b-ba05-bc7263b6012a', 94200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (95, 69, 1168);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (65, '9c9a5c06-277d-492e-89c7-b3303fc2e191', 94200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (95, 65, 1169);
+                        
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (95, 88, '2024-06-03 19:06:39', 92645837);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (95, 66, '2024-06-03 19:06:39', 79122550);
+                            
+
+                INSERT INTO car (current_owner, brand, model_code, color, class, door, seat, layout, transmission, engine_cylinders, engine_capacity, fuel, odometer, image, location, status_in_storage)
+                VALUES ('Jill Rhodes', 'Ford', 'Ford Civic-3279', 'RosyBrown', 'Supercar', 2, 7, 'Right-hand drive', 'Automatic', 6, 4357, 'Diesel', 111474.41919355106, 'https://i.ibb.co/GxGTsy3/2013-Ferrari-F12-berlinetta-1024x640.jpg', 'Richardhaven', 'Auctioning');
+            
+
+                INSERT INTO payment (user_id, transaction_id, amount)
+                VALUES (49, 'bc235b47-0cd3-40f1-91bc-0be112958250', 27600000);
+            
+
+                INSERT INTO verification_request (seller_id, car_id, status, time, admin_id, payment_id)
+                VALUES (49, 220, 'APPROVED', '2024-04-24 19:07:01', 3, 1170);
+            
+
+                    INSERT INTO auction (name, host_id, car_id, date_created, date_started, date_expired, status, winner_id, bid_step, initial_price, deposit_price)
+                    VALUES ('Ford Civic-3279', 49, 220, '2024-04-26 19:07:01', '2024-04-27 19:07:01', '2024-06-20 19:07:01', 'ONGOING', NULL, 1250000, 13800000, 27600000);
+                
+
+                    INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                    VALUES (96, 49, '2024-04-27 19:07:01', 13800000);
+                
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (82, '194a6fd0-b061-4f42-9da9-90fb8ab7a940', 27600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (96, 82, 1171);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (40, 'c4e4414d-014b-4a03-bab8-9e6dc11f6fc3', 27600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (96, 40, 1172);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (81, '5f0cd148-4343-4a37-a0f1-a4956eabc403', 27600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (96, 81, 1173);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (99, 'c45f7bcc-05a3-4bb5-8846-41e8bdb0c77d', 27600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (96, 99, 1174);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (77, '08410604-4945-45f1-b54e-d6d075e01760', 27600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (96, 77, 1175);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (49, '5c97fe9a-c7a8-4a97-ad98-7509f8352a99', 27600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (96, 49, 1176);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (27, 'f78c2bf0-0893-463a-b0b4-390cccca7ec9', 27600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (96, 27, 1177);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (64, '19bc9fb2-1b6f-49dc-a9d9-537a3eb1fc70', 27600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (96, 64, 1178);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (53, 'e3dd6080-9a17-46c0-b311-58a0a2542391', 27600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (96, 53, 1179);
+                        
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (96, 82, '2024-05-08 02:38:33', 16643025);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (96, 40, '2024-05-08 02:38:33', 66213101);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (96, 99, '2024-05-08 02:38:33', 64194063);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (96, 49, '2024-05-08 02:38:33', 38190057);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (96, 27, '2024-05-08 02:38:33', 63467289);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (96, 64, '2024-05-08 02:38:33', 38898628);
+                            
+
+                INSERT INTO car (current_owner, brand, model_code, color, class, door, seat, layout, transmission, engine_cylinders, engine_capacity, fuel, odometer, image, location, status_in_storage)
+                VALUES ('Michele Ward', 'Hyundai', 'Hyundai Civic-4909', 'DarkGreen', 'Hypercar', 3, 8, 'Left-hand drive', 'Manual', 10, 4488, 'Hybrid', 180765.3386761093, 'https://i.ibb.co/jR6yTTL/Lamborghini-Sesto-Elemento-1080x608.jpg', 'Christopherton', 'Auctioning');
+            
+
+                INSERT INTO payment (user_id, transaction_id, amount)
+                VALUES (98, '07a6860d-2e5c-40a4-9568-32ad7ec64993', 28600000);
+            
+
+                INSERT INTO verification_request (seller_id, car_id, status, time, admin_id, payment_id)
+                VALUES (98, 221, 'APPROVED', '2024-04-26 21:50:07', 1, 1180);
+            
+
+                    INSERT INTO auction (name, host_id, car_id, date_created, date_started, date_expired, status, winner_id, bid_step, initial_price, deposit_price)
+                    VALUES ('Hyundai Civic-4909', 98, 221, '2024-04-27 21:50:07', '2024-04-30 21:50:07', '2024-05-31 21:50:07', 'ONGOING', NULL, 7540000, 14300000, 28600000);
+                
+
+                    INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                    VALUES (97, 98, '2024-04-30 21:50:07', 14300000);
+                
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (86, '3ab2c5a0-c0b2-4de4-b303-93f29e4b96ca', 28600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (97, 86, 1181);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (67, '5c048494-43e9-4b52-9ecc-4721330df978', 28600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (97, 67, 1182);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (57, 'e39ce36f-7523-4644-94fe-7e4277673546', 28600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (97, 57, 1183);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (5, '5fd0ef3e-ca32-4ca1-a4c8-9831fcbfecb1', 28600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (97, 5, 1184);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (43, '3bc7cc46-2459-4d19-84cd-504cd148525d', 28600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (97, 43, 1185);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (58, '3c0a019d-6bd4-470b-900f-a3e080af9ad7', 28600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (97, 58, 1186);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (84, '80eb27ea-cf65-4af4-98b7-0eef3e8977e1', 28600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (97, 84, 1187);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (10, '35b0b177-9bc3-45d7-9fe8-69fdc13d8428', 28600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (97, 10, 1188);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (83, '4f5b8f9c-2fca-4ba6-96c7-e930a2adf07c', 28600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (97, 83, 1189);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (25, 'a233ac83-b92f-440f-a90d-5a0ced770a4f', 28600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (97, 25, 1190);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (82, '7e0acd78-2d20-4a54-bff3-88657825f2d8', 28600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (97, 82, 1191);
+                        
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (97, 67, '2024-05-22 22:05:42', 30513137);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (97, 5, '2024-05-22 22:05:42', 18531587);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (97, 10, '2024-05-22 22:05:42', 63704899);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (97, 83, '2024-05-22 22:05:42', 38790789);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (97, 82, '2024-05-22 22:05:42', 31344258);
+                            
+
+                INSERT INTO car (current_owner, brand, model_code, color, class, door, seat, layout, transmission, engine_cylinders, engine_capacity, fuel, odometer, image, location, status_in_storage)
+                VALUES ('Michele Warner', 'Honda', 'Honda E-Class-3981', 'Salmon', 'Supercar', 2, 7, 'Left-hand drive', 'Automatic', 4, 2308, 'Gasoline', 44427.854754270826, 'https://i.ibb.co/GxGTsy3/2013-Ferrari-F12-berlinetta-1024x640.jpg', 'Amandahaven', 'Auctioning');
+            
+
+                INSERT INTO payment (user_id, transaction_id, amount)
+                VALUES (46, 'ffdc9cd8-0823-4c82-9447-eaa1746327e7', 118200000);
+            
+
+                INSERT INTO verification_request (seller_id, car_id, status, time, admin_id, payment_id)
+                VALUES (46, 222, 'APPROVED', '2024-04-29 22:26:38', 2, 1192);
+            
+
+                    INSERT INTO auction (name, host_id, car_id, date_created, date_started, date_expired, status, winner_id, bid_step, initial_price, deposit_price)
+                    VALUES ('Honda E-Class-3981', 46, 222, '2024-05-02 22:26:38', '2024-05-05 22:26:38', '2024-07-27 22:26:38', 'ONGOING', NULL, 8700000, 59100000, 118200000);
+                
+
+                    INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                    VALUES (98, 46, '2024-05-05 22:26:38', 59100000);
+                
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (32, '6d985ef5-60a2-4ffa-8522-9791412189f2', 118200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (98, 32, 1193);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (7, 'd29279fe-4db5-4afb-a814-119c3eba6ece', 118200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (98, 7, 1194);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (33, 'db8acb29-cb0e-4bd7-866b-b39f6146e820', 118200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (98, 33, 1195);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (72, '1e107d9f-1c3d-4c97-9834-c34a74e72e77', 118200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (98, 72, 1196);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (67, '94788ca4-f7c0-4084-9c74-ac47be3f9ded', 118200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (98, 67, 1197);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (75, 'f5844734-da8a-4513-89f1-595a31ca6a5a', 118200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (98, 75, 1198);
+                        
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (98, 67, '2024-05-25 06:52:44', 102875477);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (98, 75, '2024-05-25 06:52:44', 243287096);
+                            
+
+                INSERT INTO car (current_owner, brand, model_code, color, class, door, seat, layout, transmission, engine_cylinders, engine_capacity, fuel, odometer, image, location, status_in_storage)
+                VALUES ('Virginia Ray', 'Toyota', 'Toyota Civic-4948', 'OliveDrab', 'Hypercar', 4, 2, 'Left-hand drive', 'Automatic', 4, 3591, 'Hybrid', 88506.0909710614, 'https://i.ibb.co/hYJ6Fcp/2010-Ferrari-599-GTO-0-1024.jpg', 'Jacksonborough', 'Auctioning');
+            
+
+                INSERT INTO payment (user_id, transaction_id, amount)
+                VALUES (62, '01656330-6128-432a-9347-b42dcc0189cb', 168400000);
+            
+
+                INSERT INTO verification_request (seller_id, car_id, status, time, admin_id, payment_id)
+                VALUES (62, 223, 'APPROVED', '2024-04-26 00:35:20', 1, 1199);
+            
+
+                    INSERT INTO auction (name, host_id, car_id, date_created, date_started, date_expired, status, winner_id, bid_step, initial_price, deposit_price)
+                    VALUES ('Toyota Civic-4948', 62, 223, '2024-04-28 00:35:20', '2024-05-01 00:35:20', '2024-06-02 00:35:20', 'ONGOING', NULL, 6150000, 84200000, 168400000);
+                
+
+                    INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                    VALUES (99, 62, '2024-05-01 00:35:20', 84200000);
+                
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (10, '7fed7c32-285e-430a-9929-8306510f88e0', 168400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (99, 10, 1200);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (75, '28191238-10b5-4b1c-add6-83b2074644b6', 168400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (99, 75, 1201);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (89, '3cc5d71a-f721-4761-88a1-6579b54eec53', 168400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (99, 89, 1202);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (26, '7b4c3b93-46e5-4473-a7bc-32e01566c750', 168400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (99, 26, 1203);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (91, '35d3efa9-73dc-479c-947a-f335f3d74d2a', 168400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (99, 91, 1204);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (42, '8d091f46-3249-4ef7-8869-26fee5d2bb08', 168400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (99, 42, 1205);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (82, '3afe0b83-3ddc-46b9-b15d-e15615b38be8', 168400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (99, 82, 1206);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (27, '1bc8233a-0d85-4647-8a2b-e4f0b51b61b2', 168400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (99, 27, 1207);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (71, '23fd6015-21ea-4b4e-a9dc-9fb1b924e79f', 168400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (99, 71, 1208);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (60, '7dfa1519-4c28-40b7-a64b-aaf5e78d77f2', 168400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (99, 60, 1209);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (13, 'f563099c-4094-40cf-bdaf-f577ef51a57f', 168400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (99, 13, 1210);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (29, '48468455-da7d-44bc-8c94-77cb36b675e5', 168400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (99, 29, 1211);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (41, '34606904-7adf-496e-b932-05004ece1768', 168400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (99, 41, 1212);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (58, '8ac0cdd8-fcef-4691-8c5a-8e5f46871518', 168400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (99, 58, 1213);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (47, '535424d4-fe04-4276-9434-2ae4a4edfa57', 168400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (99, 47, 1214);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (56, '1fea6a79-542b-40af-a0c5-d1a8d99edf2d', 168400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (99, 56, 1215);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (84, 'cf55185e-1e9e-4577-883d-8bf9fb482ae9', 168400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (99, 84, 1216);
+                        
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (99, 10, '2024-05-27 16:53:42', 362105110);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (99, 75, '2024-05-27 16:53:42', 334531361);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (99, 26, '2024-05-27 16:53:42', 149365907);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (99, 91, '2024-05-27 16:53:42', 213325921);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (99, 82, '2024-05-27 16:53:42', 354180510);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (99, 60, '2024-05-27 16:53:42', 226924481);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (99, 13, '2024-05-27 16:53:42', 137308175);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (99, 29, '2024-05-27 16:53:42', 93931962);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (99, 56, '2024-05-27 16:53:42', 197339469);
+                            
+
+                INSERT INTO car (current_owner, brand, model_code, color, class, door, seat, layout, transmission, engine_cylinders, engine_capacity, fuel, odometer, image, location, status_in_storage)
+                VALUES ('Rebecca Johnson', 'Nissan', 'Nissan Silverado-1178', 'DarkSalmon', 'Hypercar', 4, 5, 'Left-hand drive', 'Automatic', 8, 3713, 'Gasoline', 45733.157186092845, 'https://i.ibb.co/jR6yTTL/Lamborghini-Sesto-Elemento-1080x608.jpg', 'Angelamouth', 'Auctioning');
+            
+
+                INSERT INTO payment (user_id, transaction_id, amount)
+                VALUES (20, '492a8106-4705-480c-baa4-50ee3136deb0', 84800000);
+            
+
+                INSERT INTO verification_request (seller_id, car_id, status, time, admin_id, payment_id)
+                VALUES (20, 224, 'APPROVED', '2024-04-23 12:37:15', 1, 1217);
+            
+
+                    INSERT INTO auction (name, host_id, car_id, date_created, date_started, date_expired, status, winner_id, bid_step, initial_price, deposit_price)
+                    VALUES ('Nissan Silverado-1178', 20, 224, '2024-04-25 12:37:15', '2024-04-26 12:37:15', '2024-07-16 12:37:15', 'ONGOING', NULL, 1550000, 42400000, 84800000);
+                
+
+                    INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                    VALUES (100, 20, '2024-04-26 12:37:15', 42400000);
+                
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (58, '3a2fd8b5-8dd9-41d4-bdb6-3380499b79dd', 84800000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (100, 58, 1218);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (43, '6ef19d39-af87-4e49-918e-9a5055e43129', 84800000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (100, 43, 1219);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (5, 'e50134bc-7f99-464a-9f25-59ce6818bd6f', 84800000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (100, 5, 1220);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (45, 'bdaf36cb-fd9b-4411-8dd3-d824d9373810', 84800000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (100, 45, 1221);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (60, '975fbb56-e079-4701-b380-4f0f111000c6', 84800000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (100, 60, 1222);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (55, 'd9843d01-571c-4627-90f1-ccf4bb5f4099', 84800000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (100, 55, 1223);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (24, '68f5160d-0c89-4113-b205-6f217ea49c22', 84800000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (100, 24, 1224);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (13, '69ecb099-8bb8-4f58-bf5f-e11e8ca146c0', 84800000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (100, 13, 1225);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (17, '2bb2f6da-e30b-432f-bf25-c9fc76551f82', 84800000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (100, 17, 1226);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (62, 'e037ae29-01c7-4f86-98de-ab31585d4614', 84800000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (100, 62, 1227);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (76, 'f52fd45e-0edf-4cde-b7c2-afa1ba2a9fb4', 84800000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (100, 76, 1228);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (42, 'bde0c14a-d355-4b2c-b3c8-46967defe7c6', 84800000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (100, 42, 1229);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (79, '093a24f5-c6db-4a03-b90b-58df44c28cb7', 84800000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (100, 79, 1230);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (84, '8fabb039-4479-4990-9bb0-6af26dde6165', 84800000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (100, 84, 1231);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (57, '7666bd55-3968-4732-96df-91c9dc63e02d', 84800000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (100, 57, 1232);
+                        
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (100, 58, '2024-05-11 12:50:22', 116377230);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (100, 43, '2024-05-11 12:50:22', 96084405);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (100, 5, '2024-05-11 12:50:22', 106579211);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (100, 45, '2024-05-11 12:50:22', 47134842);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (100, 60, '2024-05-11 12:50:22', 89665561);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (100, 55, '2024-05-11 12:50:22', 156066877);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (100, 13, '2024-05-11 12:50:22', 45003952);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (100, 17, '2024-05-11 12:50:22', 204941801);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (100, 62, '2024-05-11 12:50:22', 142520282);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (100, 76, '2024-05-11 12:50:22', 115753412);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (100, 79, '2024-05-11 12:50:22', 205574872);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (100, 57, '2024-05-11 12:50:22', 120219342);
+                            
+
+                INSERT INTO car (current_owner, brand, model_code, color, class, door, seat, layout, transmission, engine_cylinders, engine_capacity, fuel, odometer, image, location, status_in_storage)
+                VALUES ('Thomas Diaz', 'Chevrolet', 'Chevrolet Jetta-5273', 'Plum', 'Hypercar', 4, 2, 'Right-hand drive', 'Automatic', 6, 4168, 'Gasoline', 102180.69648438973, 'https://i.ibb.co/nPLdXNR/2010-Mc-Laren-MP412-C3.jpg', 'East Tammy', 'Auctioning');
+            
+
+                INSERT INTO payment (user_id, transaction_id, amount)
+                VALUES (14, '1fb4b1ac-3a8e-4a9e-a621-76623c863f10', 141600000);
+            
+
+                INSERT INTO verification_request (seller_id, car_id, status, time, admin_id, payment_id)
+                VALUES (14, 225, 'APPROVED', '2024-04-24 12:39:09', 2, 1233);
+            
+
+                    INSERT INTO auction (name, host_id, car_id, date_created, date_started, date_expired, status, winner_id, bid_step, initial_price, deposit_price)
+                    VALUES ('Chevrolet Jetta-5273', 14, 225, '2024-04-27 12:39:09', '2024-04-28 12:39:09', '2024-07-11 12:39:09', 'ONGOING', NULL, 8390000, 70800000, 141600000);
+                
+
+                    INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                    VALUES (101, 14, '2024-04-28 12:39:09', 70800000);
+                
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (94, '510eb024-669a-4cb9-ba23-dbd486eb53dc', 141600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (101, 94, 1234);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (53, 'ca06d067-0494-425d-8a52-01182a616fce', 141600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (101, 53, 1235);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (92, 'b81b73fc-b04f-4ef7-8421-bbb39198ab78', 141600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (101, 92, 1236);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (81, '072fbcbb-d413-4a5a-825f-97277a043bbd', 141600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (101, 81, 1237);
+                        
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (101, 81, '2024-05-26 19:23:27', 262028273);
+                            
+
+                INSERT INTO car (current_owner, brand, model_code, color, class, door, seat, layout, transmission, engine_cylinders, engine_capacity, fuel, odometer, image, location, status_in_storage)
+                VALUES ('Douglas Rice', 'Kia', 'Kia Jetta-6400', 'LightYellow', 'Hypercar', 2, 3, 'Left-hand drive', 'Automatic', 10, 2474, 'Diesel', 76658.46174537178, 'https://i.ibb.co/nBg2yPH/861054.jpg', 'Jesseborough', 'Auctioning');
+            
+
+                INSERT INTO payment (user_id, transaction_id, amount)
+                VALUES (87, '446e4552-f119-4ab7-b494-eb78d9ba144b', 118400000);
+            
+
+                INSERT INTO verification_request (seller_id, car_id, status, time, admin_id, payment_id)
+                VALUES (87, 226, 'APPROVED', '2024-04-24 09:29:44', 3, 1238);
+            
+
+                    INSERT INTO auction (name, host_id, car_id, date_created, date_started, date_expired, status, winner_id, bid_step, initial_price, deposit_price)
+                    VALUES ('Kia Jetta-6400', 87, 226, '2024-04-27 09:29:44', '2024-04-29 09:29:44', '2024-06-13 09:29:44', 'ONGOING', NULL, 9680000, 59200000, 118400000);
+                
+
+                    INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                    VALUES (102, 87, '2024-04-29 09:29:44', 59200000);
+                
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (52, 'ef6bd779-fcee-4535-b8c4-091db4040f85', 118400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (102, 52, 1239);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (77, '1177b4c2-2e86-479c-9ff1-41659f7152fb', 118400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (102, 77, 1240);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (14, '1d81f795-1bff-4afb-b321-309527ebc178', 118400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (102, 14, 1241);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (62, 'c8a1833f-a959-448a-8a80-df14ef9992c6', 118400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (102, 62, 1242);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (58, 'a59d11f1-dd98-4582-aaa8-5d044c791318', 118400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (102, 58, 1243);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (42, 'e1544a5d-a765-4be4-b478-ee6f6b46efbf', 118400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (102, 42, 1244);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (70, '603cdf16-0b67-48d4-b87e-3b60020b5a30', 118400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (102, 70, 1245);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (99, '4017fcec-d1f4-43d4-aa1b-f41db6d666b4', 118400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (102, 99, 1246);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (85, '9bb0279b-5cd9-4faa-9ba6-c2822589b6fa', 118400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (102, 85, 1247);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (84, '10daf71f-7af7-4ed1-bae5-58321568da14', 118400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (102, 84, 1248);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (17, 'e9dfbcf0-6176-4106-9e89-fb5b4c239f99', 118400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (102, 17, 1249);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (87, '0650ddde-db0d-4103-840b-8258c8fa84ad', 118400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (102, 87, 1250);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (5, '6bca79ef-b332-46c0-94cc-f7bb92bff91c', 118400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (102, 5, 1251);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (37, '427827ac-1546-4553-b7fc-7adbce4e6906', 118400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (102, 37, 1252);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (71, '7a638013-585b-4f1d-b77e-82a6f6cb183a', 118400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (102, 71, 1253);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (4, 'ba54ab3d-6657-4ca2-a1b6-36216ea3ce7a', 118400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (102, 4, 1254);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (24, 'c60a1f7f-c434-4e09-841d-9851dcc5e765', 118400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (102, 24, 1255);
+                        
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (102, 62, '2024-05-03 09:38:49', 242603544);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (102, 58, '2024-05-03 09:38:49', 230386170);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (102, 70, '2024-05-03 09:38:49', 264858706);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (102, 99, '2024-05-03 09:38:49', 275342302);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (102, 85, '2024-05-03 09:38:49', 104397008);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (102, 17, '2024-05-03 09:38:49', 245609166);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (102, 87, '2024-05-03 09:38:49', 253329278);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (102, 5, '2024-05-03 09:38:49', 239875085);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (102, 37, '2024-05-03 09:38:49', 198269046);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (102, 4, '2024-05-03 09:38:49', 230649288);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (102, 24, '2024-05-03 09:38:49', 111525140);
+                            
+
+                INSERT INTO car (current_owner, brand, model_code, color, class, door, seat, layout, transmission, engine_cylinders, engine_capacity, fuel, odometer, image, location, status_in_storage)
+                VALUES ('Benjamin Davis', 'Toyota', 'Toyota 3 Series-4460', 'PapayaWhip', 'Supercar', 2, 3, 'Right-hand drive', 'Automatic', 8, 3490, 'Diesel', 169879.6307522706, 'https://i.ibb.co/qNmTn3W/2012-Lamborghini-Aventador-J6.jpg', 'Estradabury', 'Auctioning');
+            
+
+                INSERT INTO payment (user_id, transaction_id, amount)
+                VALUES (55, '1029cf3b-8320-45b9-a22d-621e234e6aa1', 52400000);
+            
+
+                INSERT INTO verification_request (seller_id, car_id, status, time, admin_id, payment_id)
+                VALUES (55, 227, 'APPROVED', '2024-04-27 20:48:50', 2, 1256);
+            
+
+                    INSERT INTO auction (name, host_id, car_id, date_created, date_started, date_expired, status, winner_id, bid_step, initial_price, deposit_price)
+                    VALUES ('Toyota 3 Series-4460', 55, 227, '2024-04-29 20:48:50', '2024-04-30 20:48:50', '2024-07-17 20:48:50', 'ONGOING', NULL, 3940000, 26200000, 52400000);
+                
+
+                    INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                    VALUES (103, 55, '2024-04-30 20:48:50', 26200000);
+                
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (43, '1c8febe5-2243-4e7e-bc1b-9dd7efad3a85', 52400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (103, 43, 1257);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (17, '2d0fe87e-a433-4f01-b79c-6e1da02e0cf7', 52400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (103, 17, 1258);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (75, 'fb0a9e9a-de7b-4062-86d4-7d5d554a1645', 52400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (103, 75, 1259);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (89, '269b966f-d3be-4ffc-8f03-c023ff161ba2', 52400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (103, 89, 1260);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (72, 'd6c66f9a-95f4-4965-9c70-a9d19d75e434', 52400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (103, 72, 1261);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (62, '34774f83-9bb6-4fbf-8302-47d8313169f3', 52400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (103, 62, 1262);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (4, '7489e845-36ec-4ceb-a09a-bb5445dc7352', 52400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (103, 4, 1263);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (78, 'f3f58959-4fef-4045-a3f6-f0a5417609b5', 52400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (103, 78, 1264);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (57, 'c27f941a-2c0c-488b-9990-334f0d4d9833', 52400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (103, 57, 1265);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (15, '0c22f04c-e6ec-4967-b77d-9827ef995cc7', 52400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (103, 15, 1266);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (97, 'a3ff07a2-611e-4c79-bf88-7de603940450', 52400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (103, 97, 1267);
+                        
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (103, 17, '2024-05-30 13:02:10', 47476923);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (103, 75, '2024-05-30 13:02:10', 39079865);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (103, 62, '2024-05-30 13:02:10', 52222965);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (103, 78, '2024-05-30 13:02:10', 78748617);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (103, 57, '2024-05-30 13:02:10', 79246683);
+                            
+
+                INSERT INTO car (current_owner, brand, model_code, color, class, door, seat, layout, transmission, engine_cylinders, engine_capacity, fuel, odometer, image, location, status_in_storage)
+                VALUES ('Christian Vance', 'BMW', 'BMW Sportage-9296', 'Purple', 'Supercar', 5, 7, 'Right-hand drive', 'Manual', 6, 2439, 'Hybrid', 182985.20806826482, 'https://i.ibb.co/GxGTsy3/2013-Ferrari-F12-berlinetta-1024x640.jpg', 'Boydport', 'Auctioning');
+            
+
+                INSERT INTO payment (user_id, transaction_id, amount)
+                VALUES (43, '97d3226e-0700-4be7-bdab-6d8bad6e66c1', 194800000);
+            
+
+                INSERT INTO verification_request (seller_id, car_id, status, time, admin_id, payment_id)
+                VALUES (43, 228, 'APPROVED', '2024-04-23 22:49:37', 1, 1268);
+            
+
+                    INSERT INTO auction (name, host_id, car_id, date_created, date_started, date_expired, status, winner_id, bid_step, initial_price, deposit_price)
+                    VALUES ('BMW Sportage-9296', 43, 228, '2024-04-25 22:49:37', '2024-04-26 22:49:37', '2024-07-19 22:49:37', 'ONGOING', NULL, 1350000, 97400000, 194800000);
+                
+
+                    INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                    VALUES (104, 43, '2024-04-26 22:49:37', 97400000);
+                
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (28, 'b6962086-b423-43dd-8577-d337b51a18bf', 194800000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (104, 28, 1269);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (14, 'ea39b01b-8267-4407-b29e-2d6af5535323', 194800000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (104, 14, 1270);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (95, 'f2a7ed5a-fbaf-4f8d-87cb-c3b356bf4975', 194800000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (104, 95, 1271);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (43, '08e7a4a4-8367-446c-a2cd-62929a29d734', 194800000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (104, 43, 1272);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (35, '6edb0e6b-661f-47ae-81b8-221a8af86400', 194800000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (104, 35, 1273);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (82, '5b1db672-166a-4229-bc70-2a9117039429', 194800000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (104, 82, 1274);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (8, '5bc6fbcd-34f5-47bf-a67c-3d9d8ab30361', 194800000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (104, 8, 1275);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (37, 'b74438f6-3197-4492-9950-19b0c414e730', 194800000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (104, 37, 1276);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (91, 'ba3900d6-f353-41f7-8a7a-a90b1d7a2d05', 194800000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (104, 91, 1277);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (67, '52fc59c4-9ffd-4c50-88b3-ebecd7c06b24', 194800000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (104, 67, 1278);
+                        
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (104, 14, '2024-05-10 20:58:41', 424159193);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (104, 35, '2024-05-10 20:58:41', 264333324);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (104, 82, '2024-05-10 20:58:41', 343907644);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (104, 91, '2024-05-10 20:58:41', 391519398);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (104, 67, '2024-05-10 20:58:41', 389495436);
+                            
+
+                INSERT INTO car (current_owner, brand, model_code, color, class, door, seat, layout, transmission, engine_cylinders, engine_capacity, fuel, odometer, image, location, status_in_storage)
+                VALUES ('Kimberly Henry', 'Toyota', 'Toyota E-Class-7386', 'PaleTurquoise', 'Hypercar', 3, 2, 'Left-hand drive', 'Manual', 10, 1889, 'Hybrid', 195010.92132761754, 'https://i.ibb.co/jR6yTTL/Lamborghini-Sesto-Elemento-1080x608.jpg', 'Port Annberg', 'Auctioning');
+            
+
+                INSERT INTO payment (user_id, transaction_id, amount)
+                VALUES (86, '18f00781-27f9-4e67-9351-f82a29f5b78a', 30600000);
+            
+
+                INSERT INTO verification_request (seller_id, car_id, status, time, admin_id, payment_id)
+                VALUES (86, 229, 'APPROVED', '2024-04-26 00:53:19', 3, 1279);
+            
+
+                    INSERT INTO auction (name, host_id, car_id, date_created, date_started, date_expired, status, winner_id, bid_step, initial_price, deposit_price)
+                    VALUES ('Toyota E-Class-7386', 86, 229, '2024-04-28 00:53:19', '2024-05-01 00:53:19', '2024-07-12 00:53:19', 'ONGOING', NULL, 6160000, 15300000, 30600000);
+                
+
+                    INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                    VALUES (105, 86, '2024-05-01 00:53:19', 15300000);
+                
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (21, '221d904d-78a9-4d30-9cd4-67bb2f83ab6d', 30600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (105, 21, 1280);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (18, 'c76f99f7-a250-49cc-b536-542eb9219ae0', 30600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (105, 18, 1281);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (14, 'dbc94cf7-241b-4a52-a6cb-ccbee8fdca8a', 30600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (105, 14, 1282);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (95, '37dd82a4-1c96-43e5-8443-db0a6a2f4bd2', 30600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (105, 95, 1283);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (12, 'c2c933a7-6751-415c-aac1-270273ad4803', 30600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (105, 12, 1284);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (46, '93f72b7e-6d7a-40a0-90ac-d52ccc81fbd9', 30600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (105, 46, 1285);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (10, '357e8240-c329-4891-b5e9-a6f88d8266c9', 30600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (105, 10, 1286);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (11, '1d6dfa0a-5557-4b66-b662-d19c9f926733', 30600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (105, 11, 1287);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (85, '4755b909-b3f2-4f70-bedc-2f06cc3fec05', 30600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (105, 85, 1288);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (60, 'c0612960-dc36-4882-8b96-83a471d1dfd2', 30600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (105, 60, 1289);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (90, '8e7430cb-5b84-4e14-9fc6-1d359be830f0', 30600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (105, 90, 1290);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (22, '8fb1fd69-918c-4c0c-b31e-6013e3eae0a2', 30600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (105, 22, 1291);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (32, '7cc33465-8929-461a-86ef-57d93121b4d7', 30600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (105, 32, 1292);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (66, '085b8994-b87d-4971-b896-1387d1b4bd03', 30600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (105, 66, 1293);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (98, '42c7c42c-8b86-4154-b122-78b0b3751c75', 30600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (105, 98, 1294);
+                        
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (105, 46, '2024-07-08 08:45:08', 70746138);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (105, 10, '2024-07-08 08:45:08', 27130572);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (105, 66, '2024-07-08 08:45:08', 66468382);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (105, 98, '2024-07-08 08:45:08', 72058383);
+                            
+
+                INSERT INTO car (current_owner, brand, model_code, color, class, door, seat, layout, transmission, engine_cylinders, engine_capacity, fuel, odometer, image, location, status_in_storage)
+                VALUES ('Christy Simpson', 'Kia', 'Kia Sportage-8578', 'LightSlateGray', 'Supercar', 5, 8, 'Left-hand drive', 'Automatic', 6, 2033, 'Diesel', 132148.4905849729, 'https://i.ibb.co/qNmTn3W/2012-Lamborghini-Aventador-J6.jpg', 'Dianeburgh', 'Auctioning');
+            
+
+                INSERT INTO payment (user_id, transaction_id, amount)
+                VALUES (94, '5b64a743-88bf-42b1-8567-a419fcb20f99', 145400000);
+            
+
+                INSERT INTO verification_request (seller_id, car_id, status, time, admin_id, payment_id)
+                VALUES (94, 230, 'APPROVED', '2024-04-28 10:24:22', 2, 1295);
+            
+
+                    INSERT INTO auction (name, host_id, car_id, date_created, date_started, date_expired, status, winner_id, bid_step, initial_price, deposit_price)
+                    VALUES ('Kia Sportage-8578', 94, 230, '2024-05-01 10:24:22', '2024-05-03 10:24:22', '2024-07-03 10:24:22', 'ONGOING', NULL, 1860000, 72700000, 145400000);
+                
+
+                    INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                    VALUES (106, 94, '2024-05-03 10:24:22', 72700000);
+                
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (20, '8687905d-3410-4026-9c0d-be1cba3e7a47', 145400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (106, 20, 1296);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (15, '35831a1a-d2d4-411c-8934-2e0bbcbd7004', 145400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (106, 15, 1297);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (51, '8c3ce36f-4aa8-4910-bbf5-7b3d3bd75592', 145400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (106, 51, 1298);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (97, '68657ca0-9631-43f8-aacc-5c8a181cdda0', 145400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (106, 97, 1299);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (41, '6a5ed6bb-4b23-4874-9d27-44ceec6b3ba0', 145400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (106, 41, 1300);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (36, 'f186df1d-3ed2-4045-b67c-76f5889e1a24', 145400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (106, 36, 1301);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (48, '89cf6e61-8f5e-42b6-92ea-3da024d8451d', 145400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (106, 48, 1302);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (4, '428435e4-08ef-43ec-8581-8058a1facca5', 145400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (106, 4, 1303);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (14, '21dc49e6-94de-4f09-a8dd-bd6c96ed3e40', 145400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (106, 14, 1304);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (21, '087049f5-6705-465c-8d44-6428085777cd', 145400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (106, 21, 1305);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (6, '0ce9c785-c829-4e45-baf6-5d43ebfc90b1', 145400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (106, 6, 1306);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (43, '56d63749-0a60-404c-b95f-e92b6afb5332', 145400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (106, 43, 1307);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (90, 'ab835795-e833-44cd-a851-76119e92b2e9', 145400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (106, 90, 1308);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (70, '02ab0acf-ead1-4737-b124-5ce68affaa86', 145400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (106, 70, 1309);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (86, 'ef6f8fd3-7367-4d14-9611-9a9eb627f071', 145400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (106, 86, 1310);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (61, '0c82c5bd-0f4c-458f-ac85-b7e8590c0069', 145400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (106, 61, 1311);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (58, '2ca5ee43-023d-4f3f-822d-92ec1f5a5527', 145400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (106, 58, 1312);
+                        
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (106, 97, '2024-06-04 11:34:40', 305689848);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (106, 4, '2024-06-04 11:34:40', 298489280);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (106, 14, '2024-06-04 11:34:40', 125863513);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (106, 21, '2024-06-04 11:34:40', 273469095);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (106, 43, '2024-06-04 11:34:40', 354270669);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (106, 90, '2024-06-04 11:34:40', 176688975);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (106, 86, '2024-06-04 11:34:40', 79810220);
+                            
+
+                INSERT INTO car (current_owner, brand, model_code, color, class, door, seat, layout, transmission, engine_cylinders, engine_capacity, fuel, odometer, image, location, status_in_storage)
+                VALUES ('Elijah Smith', 'Volkswagen', 'Volkswagen Elantra-8618', 'Navy', 'Supercar', 3, 3, 'Right-hand drive', 'Manual', 8, 2658, 'Hybrid', 131643.89770594443, 'https://i.ibb.co/GxGTsy3/2013-Ferrari-F12-berlinetta-1024x640.jpg', 'Walkermouth', 'Auctioning');
+            
+
+                INSERT INTO payment (user_id, transaction_id, amount)
+                VALUES (37, '2b519334-f843-4731-b5d4-acc77fce74bd', 104400000);
+            
+
+                INSERT INTO verification_request (seller_id, car_id, status, time, admin_id, payment_id)
+                VALUES (37, 231, 'APPROVED', '2024-04-25 14:00:21', 1, 1313);
+            
+
+                    INSERT INTO auction (name, host_id, car_id, date_created, date_started, date_expired, status, winner_id, bid_step, initial_price, deposit_price)
+                    VALUES ('Volkswagen Elantra-8618', 37, 231, '2024-04-28 14:00:21', '2024-05-01 14:00:21', '2024-07-22 14:00:21', 'ONGOING', NULL, 9290000, 52200000, 104400000);
+                
+
+                    INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                    VALUES (107, 37, '2024-05-01 14:00:21', 52200000);
+                
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (74, '07ef9bc2-2f52-4eef-87bd-c6824c8f9df6', 104400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (107, 74, 1314);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (28, 'eb7f20ee-3cf3-4f42-8a7d-97c5f6e91b23', 104400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (107, 28, 1315);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (100, '8ba63379-35de-4763-95e2-970292ac75f0', 104400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (107, 100, 1316);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (80, '891e0e17-0f43-4aab-bee6-147fc7e30466', 104400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (107, 80, 1317);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (66, '3349aeb5-d899-48d4-8616-f1146969a257', 104400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (107, 66, 1318);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (46, '8ce5fd9f-be3c-4aa5-a288-6cf63991b496', 104400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (107, 46, 1319);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (81, 'ca7192a5-34e7-4bcb-80bf-1dc27da39ce3', 104400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (107, 81, 1320);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (60, '4c616517-0f82-4779-9896-c55b20096ddc', 104400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (107, 60, 1321);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (37, '12d4cd4f-e20f-44af-9e8c-20eb39ebe9ec', 104400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (107, 37, 1322);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (85, '08cb6788-ce63-4593-b4d3-d9a67a0cab2b', 104400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (107, 85, 1323);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (17, 'e0dc10ec-534c-49b6-a971-d51c52dac8a7', 104400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (107, 17, 1324);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (75, 'b28eaccf-9b4d-47f4-a507-2cd2d5f523e8', 104400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (107, 75, 1325);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (18, '8bf75cc8-01d7-4fb5-82cc-a4da753d7e62', 104400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (107, 18, 1326);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (53, '41abca6c-34d4-4616-9c6c-098a1b93e359', 104400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (107, 53, 1327);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (16, 'dd82b04a-be99-4c38-bbf1-ffab454fa62d', 104400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (107, 16, 1328);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (82, 'aa9f6261-47bf-4c6f-895f-338e71d58c19', 104400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (107, 82, 1329);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (88, 'e6cae553-5c0a-4c63-82df-67332bce06f7', 104400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (107, 88, 1330);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (61, '75277c98-5f09-41c5-bc0d-953cf91d6411', 104400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (107, 61, 1331);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (35, 'c4e044e0-f597-42db-919d-51314fe82637', 104400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (107, 35, 1332);
+                        
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (107, 74, '2024-05-07 06:34:16', 163172508);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (107, 28, '2024-05-07 06:34:16', 259718914);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (107, 80, '2024-05-07 06:34:16', 178516150);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (107, 66, '2024-05-07 06:34:16', 86205975);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (107, 46, '2024-05-07 06:34:16', 207332516);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (107, 37, '2024-05-07 06:34:16', 234070915);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (107, 85, '2024-05-07 06:34:16', 227656982);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (107, 17, '2024-05-07 06:34:16', 52639380);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (107, 18, '2024-05-07 06:34:16', 88204013);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (107, 53, '2024-05-07 06:34:16', 198825250);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (107, 16, '2024-05-07 06:34:16', 94379665);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (107, 82, '2024-05-07 06:34:16', 93488486);
+                            
+
+                INSERT INTO car (current_owner, brand, model_code, color, class, door, seat, layout, transmission, engine_cylinders, engine_capacity, fuel, odometer, image, location, status_in_storage)
+                VALUES ('Sarah Beard', 'Ford', 'Ford F-150-3351', 'Red', 'Supercar', 3, 2, 'Right-hand drive', 'Manual', 6, 4256, 'Gasoline', 124764.00966630325, 'https://i.ibb.co/qNmTn3W/2012-Lamborghini-Aventador-J6.jpg', 'North Josephberg', 'Auctioning');
+            
+
+                INSERT INTO payment (user_id, transaction_id, amount)
+                VALUES (42, '9fb7f0e9-bc09-40b6-8580-9be8089ac2e5', 186000000);
+            
+
+                INSERT INTO verification_request (seller_id, car_id, status, time, admin_id, payment_id)
+                VALUES (42, 232, 'APPROVED', '2024-04-28 18:34:57', 1, 1333);
+            
+
+                    INSERT INTO auction (name, host_id, car_id, date_created, date_started, date_expired, status, winner_id, bid_step, initial_price, deposit_price)
+                    VALUES ('Ford F-150-3351', 42, 232, '2024-04-29 18:34:57', '2024-05-01 18:34:57', '2024-06-16 18:34:57', 'ONGOING', NULL, 8970000, 93000000, 186000000);
+                
+
+                    INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                    VALUES (108, 42, '2024-05-01 18:34:57', 93000000);
+                
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (15, '5360c130-84cf-4228-873b-00317d10c402', 186000000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (108, 15, 1334);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (18, 'ef570239-b2c2-4020-bd69-f72e486d15b6', 186000000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (108, 18, 1335);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (45, '20a02b3d-63e3-4f9d-a238-9c0d7e2a9e8a', 186000000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (108, 45, 1336);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (64, 'dab27989-f973-4e2e-b5ff-59f7bde5e685', 186000000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (108, 64, 1337);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (52, 'bd8f55ab-b1a7-4282-a100-45c7fa5d3c9c', 186000000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (108, 52, 1338);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (93, '71a89479-e99c-4199-9aaa-5d9401aafdd5', 186000000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (108, 93, 1339);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (10, '37131895-028c-4885-bfc4-e1ea3c87c8b0', 186000000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (108, 10, 1340);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (68, '1b50a887-008d-47ec-8a69-cdc3e4f910df', 186000000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (108, 68, 1341);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (7, '2cf5973d-0f84-453b-b684-0efa2c6daaba', 186000000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (108, 7, 1342);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (49, '6e54d6cd-be85-4140-9cfd-847e534dd499', 186000000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (108, 49, 1343);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (94, '3e5f4554-ac51-4bea-a13f-b489ce2bca11', 186000000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (108, 94, 1344);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (69, '16fd5a0f-436d-44e1-94e6-2dc39d9012d0', 186000000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (108, 69, 1345);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (28, '15b3e031-9572-48cf-a0a5-361e95298df8', 186000000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (108, 28, 1346);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (13, '9353c424-773c-44aa-90f0-aca4a23e80c5', 186000000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (108, 13, 1347);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (12, '258277fd-2dca-4284-9cae-73693567eb81', 186000000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (108, 12, 1348);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (24, 'b6cc7856-b3da-4088-ae00-0cb259098e75', 186000000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (108, 24, 1349);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (71, 'ebc4698b-d05b-4141-ae74-f6c395a846d1', 186000000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (108, 71, 1350);
+                        
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (108, 45, '2024-06-09 14:42:40', 347502155);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (108, 64, '2024-06-09 14:42:40', 314648850);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (108, 52, '2024-06-09 14:42:40', 247840449);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (108, 93, '2024-06-09 14:42:40', 447100334);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (108, 10, '2024-06-09 14:42:40', 172493685);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (108, 68, '2024-06-09 14:42:40', 138801423);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (108, 7, '2024-06-09 14:42:40', 259916699);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (108, 94, '2024-06-09 14:42:40', 359479771);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (108, 69, '2024-06-09 14:42:40', 147995819);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (108, 13, '2024-06-09 14:42:40', 265664568);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (108, 24, '2024-06-09 14:42:40', 428083051);
+                            
+
+                INSERT INTO car (current_owner, brand, model_code, color, class, door, seat, layout, transmission, engine_cylinders, engine_capacity, fuel, odometer, image, location, status_in_storage)
+                VALUES ('Mallory Palmer', 'Volkswagen', 'Volkswagen E-Class-1559', 'Yellow', 'Hypercar', 4, 3, 'Left-hand drive', 'Manual', 10, 1632, 'Hybrid', 47581.602315494965, 'https://i.ibb.co/nPLdXNR/2010-Mc-Laren-MP412-C3.jpg', 'Lake Valeriehaven', 'Auctioning');
+            
+
+                INSERT INTO payment (user_id, transaction_id, amount)
+                VALUES (92, 'f56f90aa-5fed-4380-9cc3-484fb3d6cc3a', 77600000);
+            
+
+                INSERT INTO verification_request (seller_id, car_id, status, time, admin_id, payment_id)
+                VALUES (92, 233, 'APPROVED', '2024-04-29 22:49:43', 2, 1351);
+            
+
+                    INSERT INTO auction (name, host_id, car_id, date_created, date_started, date_expired, status, winner_id, bid_step, initial_price, deposit_price)
+                    VALUES ('Volkswagen E-Class-1559', 92, 233, '2024-05-02 22:49:43', '2024-05-05 22:49:43', '2024-07-07 22:49:43', 'ONGOING', NULL, 2610000, 38800000, 77600000);
+                
+
+                    INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                    VALUES (109, 92, '2024-05-05 22:49:43', 38800000);
+                
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (100, '5cd3050f-58f9-4191-8a9c-820d3d8e551d', 77600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (109, 100, 1352);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (40, '05023a74-8e71-4fae-af09-a0d427924b56', 77600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (109, 40, 1353);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (75, '151425ce-7b2b-490b-86bd-5ffe1aedaa29', 77600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (109, 75, 1354);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (87, 'c03316f4-18c0-40e1-bd24-60ac0fec685f', 77600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (109, 87, 1355);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (92, 'ef84fd66-bcae-4e7d-b8ad-5d5737ae7d65', 77600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (109, 92, 1356);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (56, 'c13e573e-81ef-4ddd-a928-0427066a8fdf', 77600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (109, 56, 1357);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (42, '95fac267-69c6-4525-9e5e-d0fcf2f19d83', 77600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (109, 42, 1358);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (63, 'cb68108d-09eb-43ad-b88f-789149896688', 77600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (109, 63, 1359);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (59, '78c7e369-1ced-4685-87a8-a0094b236e2a', 77600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (109, 59, 1360);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (96, '9d531ce5-d6ee-49db-a7dd-a4d872111830', 77600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (109, 96, 1361);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (14, '7ac3d93b-da7c-475f-b7b6-2185de1b7bec', 77600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (109, 14, 1362);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (33, '78bb2c3a-4ffe-4afd-87f4-52d20ba00a4a', 77600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (109, 33, 1363);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (35, 'bf8660c8-1bec-4ad4-920d-98205de7d902', 77600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (109, 35, 1364);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (79, '9bad8334-6767-4655-a549-784852ee2a5d', 77600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (109, 79, 1365);
+                        
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (109, 75, '2024-05-31 16:28:26', 95532351);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (109, 87, '2024-05-31 16:28:26', 152214891);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (109, 42, '2024-05-31 16:28:26', 190966578);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (109, 63, '2024-05-31 16:28:26', 173453932);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (109, 96, '2024-05-31 16:28:26', 74082162);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (109, 14, '2024-05-31 16:28:26', 184701207);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (109, 33, '2024-05-31 16:28:26', 71604015);
+                            
+
+                INSERT INTO car (current_owner, brand, model_code, color, class, door, seat, layout, transmission, engine_cylinders, engine_capacity, fuel, odometer, image, location, status_in_storage)
+                VALUES ('John Holmes', 'Hyundai', 'Hyundai Jetta-3500', 'MediumSlateBlue', 'Supercar', 4, 4, 'Left-hand drive', 'Automatic', 4, 4202, 'Gasoline', 73021.28328892359, 'https://i.ibb.co/1rSGp9b/2012-Lexus-LFANrburgring-Package1.jpg', 'Jesseview', 'Auctioning');
+            
+
+                INSERT INTO payment (user_id, transaction_id, amount)
+                VALUES (17, 'f93755a1-0945-4070-a810-44dd0b904107', 56000000);
+            
+
+                INSERT INTO verification_request (seller_id, car_id, status, time, admin_id, payment_id)
+                VALUES (17, 234, 'APPROVED', '2024-04-25 13:35:27', 3, 1366);
+            
+
+                    INSERT INTO auction (name, host_id, car_id, date_created, date_started, date_expired, status, winner_id, bid_step, initial_price, deposit_price)
+                    VALUES ('Hyundai Jetta-3500', 17, 234, '2024-04-27 13:35:27', '2024-04-29 13:35:27', '2024-05-31 13:35:27', 'ONGOING', NULL, 1810000, 28000000, 56000000);
+                
+
+                    INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                    VALUES (110, 17, '2024-04-29 13:35:27', 28000000);
+                
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (34, 'eb4e4217-34c4-4311-b3c9-00473d5d8133', 56000000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (110, 34, 1367);
+                        
+
+                INSERT INTO car (current_owner, brand, model_code, color, class, door, seat, layout, transmission, engine_cylinders, engine_capacity, fuel, odometer, image, location, status_in_storage)
+                VALUES ('Bethany Davis MD', 'Nissan', 'Nissan Jetta-1782', 'Ivory', 'Hypercar', 4, 8, 'Left-hand drive', 'Manual', 4, 2273, 'Hybrid', 134068.4346262713, 'https://i.ibb.co/BcknvH4/26-Mc-Laren-P1-1024x683.jpg', 'Pamelafort', 'Auctioning');
+            
+
+                INSERT INTO payment (user_id, transaction_id, amount)
+                VALUES (63, '82a1e06f-9e7d-4b41-a639-0ed9319fc802', 154600000);
+            
+
+                INSERT INTO verification_request (seller_id, car_id, status, time, admin_id, payment_id)
+                VALUES (63, 235, 'APPROVED', '2024-04-25 18:15:08', 2, 1368);
+            
+
+                    INSERT INTO auction (name, host_id, car_id, date_created, date_started, date_expired, status, winner_id, bid_step, initial_price, deposit_price)
+                    VALUES ('Nissan Jetta-1782', 63, 235, '2024-04-28 18:15:08', '2024-05-01 18:15:08', '2024-06-19 18:15:08', 'ONGOING', NULL, 4440000, 77300000, 154600000);
+                
+
+                    INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                    VALUES (111, 63, '2024-05-01 18:15:08', 77300000);
+                
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (57, 'bbc73139-8b77-4e4b-8a81-602dc7751f96', 154600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (111, 57, 1369);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (17, 'e271a363-933d-47d0-b9b5-c9a105e756c9', 154600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (111, 17, 1370);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (74, '615f2be8-e22c-4680-be70-be6055601961', 154600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (111, 74, 1371);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (45, 'a3a990e1-6c40-4abb-97c9-715f933f9b0e', 154600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (111, 45, 1372);
+                        
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (111, 17, '2024-05-14 18:57:31', 277850795);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (111, 45, '2024-05-14 18:57:31', 293961338);
+                            
+
+                INSERT INTO car (current_owner, brand, model_code, color, class, door, seat, layout, transmission, engine_cylinders, engine_capacity, fuel, odometer, image, location, status_in_storage)
+                VALUES ('Lisa Hughes', 'Nissan', 'Nissan Civic-6287', 'RosyBrown', 'Hypercar', 4, 2, 'Left-hand drive', 'Automatic', 8, 2143, 'Hybrid', 154945.46645831416, 'https://i.ibb.co/nBg2yPH/861054.jpg', 'New Laurachester', 'Auctioning');
+            
+
+                INSERT INTO payment (user_id, transaction_id, amount)
+                VALUES (92, 'd183cf94-793e-480a-a2a0-715fdd8ccf54', 39200000);
+            
+
+                INSERT INTO verification_request (seller_id, car_id, status, time, admin_id, payment_id)
+                VALUES (92, 236, 'APPROVED', '2024-04-27 18:11:36', 3, 1373);
+            
+
+                    INSERT INTO auction (name, host_id, car_id, date_created, date_started, date_expired, status, winner_id, bid_step, initial_price, deposit_price)
+                    VALUES ('Nissan Civic-6287', 92, 236, '2024-04-30 18:11:36', '2024-05-03 18:11:36', '2024-07-31 18:11:36', 'ONGOING', NULL, 5760000, 19600000, 39200000);
+                
+
+                    INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                    VALUES (112, 92, '2024-05-03 18:11:36', 19600000);
+                
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (13, 'bd995794-3e06-41c7-9961-5c96235960f2', 39200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (112, 13, 1374);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (100, '0db37c0d-6d9c-49c5-af00-1a092921eb27', 39200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (112, 100, 1375);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (27, '8656e868-598f-481a-bb7b-793cbf344324', 39200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (112, 27, 1376);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (74, '1402035b-80e8-4a5a-bb13-68cf5b9babff', 39200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (112, 74, 1377);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (22, '08b86c28-84de-4aa8-a5ad-2f515f563e3a', 39200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (112, 22, 1378);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (40, '88b8fb54-95f2-411d-aa98-d426daab6594', 39200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (112, 40, 1379);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (34, 'a9de0c3d-77d0-4d79-bcac-50d8d9a18481', 39200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (112, 34, 1380);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (58, '6b8739c0-4db3-4148-bc72-9950333ed8da', 39200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (112, 58, 1381);
+                        
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (112, 13, '2024-07-09 04:21:25', 38022685);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (112, 100, '2024-07-09 04:21:25', 90653710);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (112, 27, '2024-07-09 04:21:25', 82038399);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (112, 74, '2024-07-09 04:21:25', 61536210);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (112, 22, '2024-07-09 04:21:25', 28089620);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (112, 34, '2024-07-09 04:21:25', 84159373);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (112, 58, '2024-07-09 04:21:25', 90961732);
+                            
+
+                INSERT INTO car (current_owner, brand, model_code, color, class, door, seat, layout, transmission, engine_cylinders, engine_capacity, fuel, odometer, image, location, status_in_storage)
+                VALUES ('Tiffany Martin', 'BMW', 'BMW Altima-1539', 'HoneyDew', 'Hypercar', 5, 8, 'Right-hand drive', 'Manual', 8, 3046, 'Hybrid', 192643.66695710897, 'https://i.ibb.co/1rSGp9b/2012-Lexus-LFANrburgring-Package1.jpg', 'Michaelburgh', 'Auctioning');
+            
+
+                INSERT INTO payment (user_id, transaction_id, amount)
+                VALUES (13, '2ab6c5b7-0303-41b4-a74b-f8bedbfecab6', 196600000);
+            
+
+                INSERT INTO verification_request (seller_id, car_id, status, time, admin_id, payment_id)
+                VALUES (13, 237, 'APPROVED', '2024-04-28 02:07:06', 2, 1382);
+            
+
+                    INSERT INTO auction (name, host_id, car_id, date_created, date_started, date_expired, status, winner_id, bid_step, initial_price, deposit_price)
+                    VALUES ('BMW Altima-1539', 13, 237, '2024-04-30 02:07:06', '2024-05-03 02:07:06', '2024-06-20 02:07:06', 'ONGOING', NULL, 9670000, 98300000, 196600000);
+                
+
+                    INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                    VALUES (113, 13, '2024-05-03 02:07:06', 98300000);
+                
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (58, '18949d25-15dd-480c-bf19-9f19f63801a2', 196600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (113, 58, 1383);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (88, '84647ef7-f4fd-4f74-baf2-d95dc0a5e42a', 196600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (113, 88, 1384);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (43, 'a0c278d1-1281-4453-a3bb-d39b42413fe8', 196600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (113, 43, 1385);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (82, '497d2a98-a1ed-44f0-8685-081419624c2c', 196600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (113, 82, 1386);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (20, '104f5866-5cc2-4de1-a191-a704c67b8a82', 196600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (113, 20, 1387);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (67, 'fd513cd2-1b22-4a30-8466-6c00f078ace3', 196600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (113, 67, 1388);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (44, 'd9dd53bd-4113-43f1-94f7-69ffe855f455', 196600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (113, 44, 1389);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (25, '656aa0f8-9192-48cb-b84e-604368f979ad', 196600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (113, 25, 1390);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (84, '141e236a-a906-414a-82c1-eda92e02edb8', 196600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (113, 84, 1391);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (97, 'c790404b-85dd-4978-9ada-7ca2d5cd93e0', 196600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (113, 97, 1392);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (71, '905c95a7-f53f-4cbb-8fc3-b042c5ba4cc8', 196600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (113, 71, 1393);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (78, '52d1903e-ec61-46a7-9e7f-4e6df0ae135a', 196600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (113, 78, 1394);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (45, '3adf55e2-0314-4a8f-a227-ec111c3112e1', 196600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (113, 45, 1395);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (92, 'd3355a97-5ad1-4adc-b3e6-fa7f58fdd8ef', 196600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (113, 92, 1396);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (30, '337ceae8-b0f6-4547-9e66-b8bb2256559d', 196600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (113, 30, 1397);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (42, '20756cac-4339-492e-9a64-b95dd8d50a12', 196600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (113, 42, 1398);
+                        
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (113, 20, '2024-05-08 06:39:54', 192793871);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (113, 44, '2024-05-08 06:39:54', 174402053);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (113, 25, '2024-05-08 06:39:54', 334608766);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (113, 84, '2024-05-08 06:39:54', 190510319);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (113, 97, '2024-05-08 06:39:54', 250563282);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (113, 45, '2024-05-08 06:39:54', 183498628);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (113, 92, '2024-05-08 06:39:54', 193468950);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (113, 42, '2024-05-08 06:39:54', 207189548);
+                            
+
+                INSERT INTO car (current_owner, brand, model_code, color, class, door, seat, layout, transmission, engine_cylinders, engine_capacity, fuel, odometer, image, location, status_in_storage)
+                VALUES ('Derek Robinson', 'Hyundai', 'Hyundai Jetta-5201', 'MidnightBlue', 'Hypercar', 5, 6, 'Left-hand drive', 'Manual', 6, 4608, 'Diesel', 51394.35214846192, 'https://i.ibb.co/hYJ6Fcp/2010-Ferrari-599-GTO-0-1024.jpg', 'Ramosburgh', 'Auctioning');
+            
+
+                INSERT INTO payment (user_id, transaction_id, amount)
+                VALUES (31, 'e8b4dc54-6e57-4da1-ade6-5fab1d955f5c', 166400000);
+            
+
+                INSERT INTO verification_request (seller_id, car_id, status, time, admin_id, payment_id)
+                VALUES (31, 238, 'APPROVED', '2024-04-27 05:17:16', 3, 1399);
+            
+
+                    INSERT INTO auction (name, host_id, car_id, date_created, date_started, date_expired, status, winner_id, bid_step, initial_price, deposit_price)
+                    VALUES ('Hyundai Jetta-5201', 31, 238, '2024-04-28 05:17:16', '2024-05-01 05:17:16', '2024-06-18 05:17:16', 'ONGOING', NULL, 5220000, 83200000, 166400000);
+                
+
+                    INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                    VALUES (114, 31, '2024-05-01 05:17:16', 83200000);
+                
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (20, '79bdaa87-77ef-4969-adfc-0f0fd53693ea', 166400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (114, 20, 1400);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (53, 'a275919a-5930-4693-b8ef-b7e87fb21ae2', 166400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (114, 53, 1401);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (21, '8f749a11-dd09-4a5b-bf32-2e776eb599ec', 166400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (114, 21, 1402);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (32, 'b6a37c48-7295-4536-891f-00801b30a988', 166400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (114, 32, 1403);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (47, '80fcf021-80d3-4a5a-bb4b-b7000e9765c8', 166400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (114, 47, 1404);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (90, '49cf78e5-8b0b-400b-973f-b7f0ebae9360', 166400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (114, 90, 1405);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (92, '2dcf7efd-b087-420e-8c97-bc8bf9c7393b', 166400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (114, 92, 1406);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (7, 'fae65b93-1763-44fd-a633-f8c8ea1e4ad0', 166400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (114, 7, 1407);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (18, '47c9ff2a-6fb5-4c7f-9534-e9242bc4cefe', 166400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (114, 18, 1408);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (61, '26800c25-dfcf-4867-babf-f3d0fcc47bb7', 166400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (114, 61, 1409);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (27, '80ad20bf-9bb5-4b21-91af-0ed61477020b', 166400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (114, 27, 1410);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (59, 'c1135bb8-66f4-467f-af2c-a652d0ead5b0', 166400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (114, 59, 1411);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (62, 'fb336046-6eb9-4964-8ae4-cc53a866de7e', 166400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (114, 62, 1412);
+                        
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (114, 20, '2024-06-18 04:27:26', 142500417);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (114, 21, '2024-06-18 04:27:26', 410620630);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (114, 7, '2024-06-18 04:27:26', 173342194);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (114, 18, '2024-06-18 04:27:26', 237786008);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (114, 61, '2024-06-18 04:27:26', 107533399);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (114, 59, '2024-06-18 04:27:26', 248020276);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (114, 62, '2024-06-18 04:27:26', 183979368);
+                            
+
+                INSERT INTO car (current_owner, brand, model_code, color, class, door, seat, layout, transmission, engine_cylinders, engine_capacity, fuel, odometer, image, location, status_in_storage)
+                VALUES ('David Rojas MD', 'Volkswagen', 'Volkswagen Elantra-2161', 'Maroon', 'Supercar', 3, 3, 'Right-hand drive', 'Automatic', 4, 1657, 'Hybrid', 57114.48994404978, 'https://i.ibb.co/BcknvH4/26-Mc-Laren-P1-1024x683.jpg', 'North Donna', 'Auctioning');
+            
+
+                INSERT INTO payment (user_id, transaction_id, amount)
+                VALUES (66, '9280e833-c2c7-46a1-941a-a14e082bf774', 88600000);
+            
+
+                INSERT INTO verification_request (seller_id, car_id, status, time, admin_id, payment_id)
+                VALUES (66, 239, 'APPROVED', '2024-04-27 22:06:11', 2, 1413);
+            
+
+                    INSERT INTO auction (name, host_id, car_id, date_created, date_started, date_expired, status, winner_id, bid_step, initial_price, deposit_price)
+                    VALUES ('Volkswagen Elantra-2161', 66, 239, '2024-04-28 22:06:11', '2024-04-29 22:06:11', '2024-06-01 22:06:11', 'ONGOING', NULL, 9820000, 44300000, 88600000);
+                
+
+                    INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                    VALUES (115, 66, '2024-04-29 22:06:11', 44300000);
+                
+
+                INSERT INTO car (current_owner, brand, model_code, color, class, door, seat, layout, transmission, engine_cylinders, engine_capacity, fuel, odometer, image, location, status_in_storage)
+                VALUES ('Paul Phillips', 'BMW', 'BMW Sportage-5069', 'SeaShell', 'Hypercar', 3, 4, 'Left-hand drive', 'Automatic', 8, 3675, 'Diesel', 158285.37748327092, 'https://i.ibb.co/jR6yTTL/Lamborghini-Sesto-Elemento-1080x608.jpg', 'Port Steve', 'Auctioning');
+            
+
+                INSERT INTO payment (user_id, transaction_id, amount)
+                VALUES (21, 'c542bfab-d7d0-4dad-b7e0-4b112ab79ea7', 23000000);
+            
+
+                INSERT INTO verification_request (seller_id, car_id, status, time, admin_id, payment_id)
+                VALUES (21, 240, 'APPROVED', '2024-04-25 03:39:16', 2, 1414);
+            
+
+                    INSERT INTO auction (name, host_id, car_id, date_created, date_started, date_expired, status, winner_id, bid_step, initial_price, deposit_price)
+                    VALUES ('BMW Sportage-5069', 21, 240, '2024-04-28 03:39:16', '2024-04-30 03:39:16', '2024-07-17 03:39:16', 'ONGOING', NULL, 5370000, 11500000, 23000000);
+                
+
+                    INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                    VALUES (116, 21, '2024-04-30 03:39:16', 11500000);
+                
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (85, '4867e199-1b97-4003-a297-743cbd95b74a', 23000000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (116, 85, 1415);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (91, 'b0c7353a-35fb-443a-89cb-ca7a39cd0b05', 23000000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (116, 91, 1416);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (65, 'c914c91a-6f9f-40ec-8a15-1b926e1a5799', 23000000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (116, 65, 1417);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (99, '7f06fd14-b37f-47d7-be32-73d92b18cb0d', 23000000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (116, 99, 1418);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (22, 'b2fd7f6a-8b87-4cf1-a393-c03801f6d3e7', 23000000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (116, 22, 1419);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (61, '2303b1a6-d27c-4022-a624-971d631fff3a', 23000000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (116, 61, 1420);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (78, '56fce43a-98a7-4bcd-a0ba-387bcdfb2b8b', 23000000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (116, 78, 1421);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (62, '5712ba11-73ca-4cc7-a549-799bdbef764a', 23000000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (116, 62, 1422);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (83, 'bbdbf0e0-fbcd-4ad9-9a43-5a1276cc759f', 23000000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (116, 83, 1423);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (49, '57c68d70-a307-4dd0-bbec-bdb5525cf0ec', 23000000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (116, 49, 1424);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (5, 'c1076c39-b674-4943-9d7f-a58a9fb700c4', 23000000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (116, 5, 1425);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (26, '5670ccdf-2833-416f-85d5-4bb5aff4888f', 23000000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (116, 26, 1426);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (36, '4ab97196-74e2-4784-a14b-451eab2a789e', 23000000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (116, 36, 1427);
+                        
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (116, 85, '2024-05-31 08:11:40', 51825708);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (116, 91, '2024-05-31 08:11:40', 42499554);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (116, 65, '2024-05-31 08:11:40', 14305161);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (116, 78, '2024-05-31 08:11:40', 56603698);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (116, 62, '2024-05-31 08:11:40', 14763837);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (116, 83, '2024-05-31 08:11:40', 41610724);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (116, 49, '2024-05-31 08:11:40', 55518355);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (116, 5, '2024-05-31 08:11:40', 13424153);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (116, 36, '2024-05-31 08:11:40', 51388791);
+                            
+
+                INSERT INTO car (current_owner, brand, model_code, color, class, door, seat, layout, transmission, engine_cylinders, engine_capacity, fuel, odometer, image, location, status_in_storage)
+                VALUES ('Mr. Mark Benitez MD', 'Kia', 'Kia Corolla-8595', 'Purple', 'Hypercar', 5, 7, 'Right-hand drive', 'Automatic', 4, 4652, 'Hybrid', 159195.4257003411, 'https://i.ibb.co/nPLdXNR/2010-Mc-Laren-MP412-C3.jpg', 'North Saraport', 'Auctioning');
+            
+
+                INSERT INTO payment (user_id, transaction_id, amount)
+                VALUES (81, '3fd3fe45-e6c8-49e7-ab6b-9f51c6e2b91f', 175800000);
+            
+
+                INSERT INTO verification_request (seller_id, car_id, status, time, admin_id, payment_id)
+                VALUES (81, 241, 'APPROVED', '2024-04-28 15:32:56', 1, 1428);
+            
+
+                    INSERT INTO auction (name, host_id, car_id, date_created, date_started, date_expired, status, winner_id, bid_step, initial_price, deposit_price)
+                    VALUES ('Kia Corolla-8595', 81, 241, '2024-04-29 15:32:56', '2024-05-02 15:32:56', '2024-07-14 15:32:56', 'ONGOING', NULL, 5790000, 87900000, 175800000);
+                
+
+                    INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                    VALUES (117, 81, '2024-05-02 15:32:56', 87900000);
+                
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (39, '66936b23-eec1-499e-89bf-a335adae80e1', 175800000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (117, 39, 1429);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (70, '9df3b35e-0932-4382-a742-d687a8a6ab58', 175800000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (117, 70, 1430);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (34, '70c8db98-b122-4c7f-9da4-8a5dd508a140', 175800000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (117, 34, 1431);
+                        
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (117, 39, '2024-05-14 12:38:32', 378355805);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (117, 70, '2024-05-14 12:38:32', 289065538);
+                            
+
+                INSERT INTO car (current_owner, brand, model_code, color, class, door, seat, layout, transmission, engine_cylinders, engine_capacity, fuel, odometer, image, location, status_in_storage)
+                VALUES ('Renee Johnson', 'Ford', 'Ford 3 Series-3573', 'RosyBrown', 'Supercar', 2, 6, 'Right-hand drive', 'Automatic', 8, 4036, 'Hybrid', 188130.83154791154, 'https://i.ibb.co/hYJ6Fcp/2010-Ferrari-599-GTO-0-1024.jpg', 'North Debra', 'Auctioning');
+            
+
+                INSERT INTO payment (user_id, transaction_id, amount)
+                VALUES (4, '66b7e9ac-3bb7-49d5-9489-d1e48ed9ab46', 40200000);
+            
+
+                INSERT INTO verification_request (seller_id, car_id, status, time, admin_id, payment_id)
+                VALUES (4, 242, 'APPROVED', '2024-04-25 01:50:01', 1, 1432);
+            
+
+                    INSERT INTO auction (name, host_id, car_id, date_created, date_started, date_expired, status, winner_id, bid_step, initial_price, deposit_price)
+                    VALUES ('Ford 3 Series-3573', 4, 242, '2024-04-26 01:50:01', '2024-04-27 01:50:01', '2024-07-06 01:50:01', 'ONGOING', NULL, 6790000, 20100000, 40200000);
+                
+
+                    INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                    VALUES (118, 4, '2024-04-27 01:50:01', 20100000);
+                
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (24, 'd877db57-2bb6-4395-ac49-5fa63ecbf314', 40200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (118, 24, 1433);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (62, 'dfbbecbc-2207-4d0f-9132-901b19a7edfa', 40200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (118, 62, 1434);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (74, '9f65a426-73d7-4203-a2a7-302d0068c237', 40200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (118, 74, 1435);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (8, '4e738311-f046-4290-95ae-d275d9fb4a97', 40200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (118, 8, 1436);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (92, '5e5e0313-1c0a-4739-a9ce-d6f7930b27ad', 40200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (118, 92, 1437);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (66, '9b2c1a70-d679-4b9d-bd56-9f82555a2f47', 40200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (118, 66, 1438);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (72, 'f112cd4f-ea99-415c-8445-40266681ebb3', 40200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (118, 72, 1439);
+                        
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (118, 92, '2024-05-27 13:45:07', 84455931);
+                            
+
+                INSERT INTO car (current_owner, brand, model_code, color, class, door, seat, layout, transmission, engine_cylinders, engine_capacity, fuel, odometer, image, location, status_in_storage)
+                VALUES ('Jennifer Rivers', 'Mercedes-Benz', 'Mercedes-Benz 3 Series-9467', 'RosyBrown', 'Supercar', 5, 6, 'Right-hand drive', 'Manual', 4, 4262, 'Gasoline', 69450.83124605732, 'https://i.ibb.co/GxGTsy3/2013-Ferrari-F12-berlinetta-1024x640.jpg', 'West Danielberg', 'Auctioning');
+            
+
+                INSERT INTO payment (user_id, transaction_id, amount)
+                VALUES (57, '0162165d-46e8-47a2-82b5-ffa49a158300', 44200000);
+            
+
+                INSERT INTO verification_request (seller_id, car_id, status, time, admin_id, payment_id)
+                VALUES (57, 243, 'APPROVED', '2024-04-29 02:08:32', 1, 1440);
+            
+
+                    INSERT INTO auction (name, host_id, car_id, date_created, date_started, date_expired, status, winner_id, bid_step, initial_price, deposit_price)
+                    VALUES ('Mercedes-Benz 3 Series-9467', 57, 243, '2024-05-01 02:08:32', '2024-05-04 02:08:32', '2024-07-28 02:08:32', 'ONGOING', NULL, 7230000, 22100000, 44200000);
+                
+
+                    INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                    VALUES (119, 57, '2024-05-04 02:08:32', 22100000);
+                
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (100, '35df1e62-a616-4b77-ab24-2df17615566a', 44200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (119, 100, 1441);
+                        
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (119, 100, '2024-05-29 21:15:06', 55572305);
+                            
+
+                INSERT INTO car (current_owner, brand, model_code, color, class, door, seat, layout, transmission, engine_cylinders, engine_capacity, fuel, odometer, image, location, status_in_storage)
+                VALUES ('Lisa Benson', 'Toyota', 'Toyota Altima-9737', 'LightSkyBlue', 'Hypercar', 2, 8, 'Left-hand drive', 'Automatic', 8, 3379, 'Hybrid', 48410.27049989746, 'https://i.ibb.co/hYJ6Fcp/2010-Ferrari-599-GTO-0-1024.jpg', 'North Matthewton', 'Auctioning');
+            
+
+                INSERT INTO payment (user_id, transaction_id, amount)
+                VALUES (24, 'c7b6efcb-fa4e-4f77-a6dc-012bf9771d83', 104400000);
+            
+
+                INSERT INTO verification_request (seller_id, car_id, status, time, admin_id, payment_id)
+                VALUES (24, 244, 'APPROVED', '2024-04-23 07:50:32', 3, 1442);
+            
+
+                    INSERT INTO auction (name, host_id, car_id, date_created, date_started, date_expired, status, winner_id, bid_step, initial_price, deposit_price)
+                    VALUES ('Toyota Altima-9737', 24, 244, '2024-04-26 07:50:32', '2024-04-27 07:50:32', '2024-07-16 07:50:32', 'ONGOING', NULL, 7690000, 52200000, 104400000);
+                
+
+                    INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                    VALUES (120, 24, '2024-04-27 07:50:32', 52200000);
+                
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (13, 'c8822ffa-cf4e-4d60-ab08-ce2000813beb', 104400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (120, 13, 1443);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (68, '3ad0db03-750a-4094-a0c8-cfaaec691f7f', 104400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (120, 68, 1444);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (87, 'fa181edc-86c6-4222-90e5-29fda6fc2152', 104400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (120, 87, 1445);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (75, 'dd4e8aca-c120-43c0-af89-77ade2043102', 104400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (120, 75, 1446);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (66, '2bfbdbb3-99dc-4cd0-b34f-82efd0e47976', 104400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (120, 66, 1447);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (33, '88b0d7ad-9500-46ca-be32-c76769ce21eb', 104400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (120, 33, 1448);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (61, '7145a577-b2ac-4611-93a8-aa9410e51fc0', 104400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (120, 61, 1449);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (45, '11d678e4-3b9d-46f0-873f-a2ca509b55d0', 104400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (120, 45, 1450);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (9, '434a23d2-aa7e-4a34-a90c-2e26011d09f5', 104400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (120, 9, 1451);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (69, '87dd6e9d-f0ca-4866-9877-45e89158ee44', 104400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (120, 69, 1452);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (74, '8c2cb050-d42f-49e8-8cce-2ff4c85129a9', 104400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (120, 74, 1453);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (50, 'd86af5b1-9b75-42f9-8696-ee4666bd4d98', 104400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (120, 50, 1454);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (86, '7b158326-a157-4193-965a-812a19803be3', 104400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (120, 86, 1455);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (58, 'c535eac5-6e4b-4908-b773-a8f989e9d2de', 104400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (120, 58, 1456);
+                        
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (120, 33, '2024-06-21 16:18:15', 132018146);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (120, 45, '2024-06-21 16:18:15', 119387041);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (120, 9, '2024-06-21 16:18:15', 82054700);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (120, 86, '2024-06-21 16:18:15', 123385395);
+                            
+
+                INSERT INTO car (current_owner, brand, model_code, color, class, door, seat, layout, transmission, engine_cylinders, engine_capacity, fuel, odometer, image, location, status_in_storage)
+                VALUES ('Kelly Lewis PhD', 'Nissan', 'Nissan Civic-4150', 'PaleTurquoise', 'Supercar', 2, 3, 'Right-hand drive', 'Manual', 10, 3045, 'Hybrid', 74752.11629218189, 'https://i.ibb.co/nBg2yPH/861054.jpg', 'Mendezville', 'Auctioning');
+            
+
+                INSERT INTO payment (user_id, transaction_id, amount)
+                VALUES (44, 'be19828d-a776-4ed1-b6c3-81ea956669bb', 127000000);
+            
+
+                INSERT INTO verification_request (seller_id, car_id, status, time, admin_id, payment_id)
+                VALUES (44, 245, 'APPROVED', '2024-04-26 23:03:42', 1, 1457);
+            
+
+                    INSERT INTO auction (name, host_id, car_id, date_created, date_started, date_expired, status, winner_id, bid_step, initial_price, deposit_price)
+                    VALUES ('Nissan Civic-4150', 44, 245, '2024-04-29 23:03:42', '2024-05-02 23:03:42', '2024-06-25 23:03:42', 'ONGOING', NULL, 8730000, 63500000, 127000000);
+                
+
+                    INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                    VALUES (121, 44, '2024-05-02 23:03:42', 63500000);
+                
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (85, '4e67eccc-cf51-49b3-83f2-01392fcdee0c', 127000000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (121, 85, 1458);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (10, '04400e9c-8e08-4be3-808f-e9bcc5ca29c9', 127000000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (121, 10, 1459);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (41, 'f5969694-0d19-46ed-9ded-e62a6c188da0', 127000000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (121, 41, 1460);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (100, '538a4a03-6f0c-44e3-a238-80ee0101f143', 127000000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (121, 100, 1461);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (32, '14e85a11-b83c-4808-a108-556d23569cf2', 127000000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (121, 32, 1462);
+                        
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (121, 85, '2024-05-23 19:38:23', 211794455);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (121, 41, '2024-05-23 19:38:23', 294763690);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (121, 100, '2024-05-23 19:38:23', 119543880);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (121, 32, '2024-05-23 19:38:23', 274062112);
+                            
+
+                INSERT INTO car (current_owner, brand, model_code, color, class, door, seat, layout, transmission, engine_cylinders, engine_capacity, fuel, odometer, image, location, status_in_storage)
+                VALUES ('Johnny Williams', 'Chevrolet', 'Chevrolet Elantra-7150', 'Magenta', 'Supercar', 3, 2, 'Right-hand drive', 'Automatic', 8, 2019, 'Diesel', 76804.2555837905, 'https://i.ibb.co/BcknvH4/26-Mc-Laren-P1-1024x683.jpg', 'Port Kathryn', 'Auctioning');
+            
+
+                INSERT INTO payment (user_id, transaction_id, amount)
+                VALUES (26, 'a2d72642-456f-4f7f-ae59-261c64ffc19f', 147400000);
+            
+
+                INSERT INTO verification_request (seller_id, car_id, status, time, admin_id, payment_id)
+                VALUES (26, 246, 'APPROVED', '2024-04-23 01:19:55', 1, 1463);
+            
+
+                    INSERT INTO auction (name, host_id, car_id, date_created, date_started, date_expired, status, winner_id, bid_step, initial_price, deposit_price)
+                    VALUES ('Chevrolet Elantra-7150', 26, 246, '2024-04-25 01:19:55', '2024-04-27 01:19:55', '2024-07-23 01:19:55', 'ONGOING', NULL, 8410000, 73700000, 147400000);
+                
+
+                    INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                    VALUES (122, 26, '2024-04-27 01:19:55', 73700000);
+                
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (57, 'b0f4df28-e255-4b9a-a99f-496185caf9e3', 147400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (122, 57, 1464);
+                        
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (122, 57, '2024-07-04 17:54:37', 350655842);
+                            
+
+                INSERT INTO car (current_owner, brand, model_code, color, class, door, seat, layout, transmission, engine_cylinders, engine_capacity, fuel, odometer, image, location, status_in_storage)
+                VALUES ('Anthony Roberts', 'Nissan', 'Nissan Silverado-7292', 'PowderBlue', 'Hypercar', 5, 8, 'Left-hand drive', 'Manual', 4, 2384, 'Gasoline', 155042.61051277103, 'https://i.ibb.co/nPLdXNR/2010-Mc-Laren-MP412-C3.jpg', 'Wrighthaven', 'Auctioning');
+            
+
+                INSERT INTO payment (user_id, transaction_id, amount)
+                VALUES (18, '46e3ee7c-6d92-41a2-90b0-3fff95ae3da4', 181800000);
+            
+
+                INSERT INTO verification_request (seller_id, car_id, status, time, admin_id, payment_id)
+                VALUES (18, 247, 'APPROVED', '2024-04-24 03:24:26', 2, 1465);
+            
+
+                    INSERT INTO auction (name, host_id, car_id, date_created, date_started, date_expired, status, winner_id, bid_step, initial_price, deposit_price)
+                    VALUES ('Nissan Silverado-7292', 18, 247, '2024-04-27 03:24:26', '2024-04-29 03:24:26', '2024-06-01 03:24:26', 'ONGOING', NULL, 8900000, 90900000, 181800000);
+                
+
+                    INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                    VALUES (123, 18, '2024-04-29 03:24:26', 90900000);
+                
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (47, 'a4fe7249-0733-4f6c-889d-a928c1a0b310', 181800000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (123, 47, 1466);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (71, 'f7de3c8d-4b87-4101-89d4-842d36cedfe7', 181800000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (123, 71, 1467);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (59, '38700239-a23c-4d53-9d9c-eb991672bf9f', 181800000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (123, 59, 1468);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (73, 'bcdaee60-f199-4e4b-878f-228930ad6d6d', 181800000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (123, 73, 1469);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (100, '6344320f-5344-4410-ba6f-5d3417b3a2f1', 181800000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (123, 100, 1470);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (16, '4c8a6210-ec84-4e7b-8603-e7e014048c58', 181800000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (123, 16, 1471);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (52, 'eab04b5e-41ce-4063-8609-011b3e3e408e', 181800000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (123, 52, 1472);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (22, '16e19328-e2ae-49bd-8726-8243cfd673c3', 181800000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (123, 22, 1473);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (40, '56ce4184-57f4-4762-9de3-4f23105554e9', 181800000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (123, 40, 1474);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (4, 'e3b1e0d4-5ece-4341-8303-8238070196e7', 181800000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (123, 4, 1475);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (18, 'e325240a-f7bd-4065-bfc7-004884da3e6a', 181800000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (123, 18, 1476);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (36, 'b79cd7d1-9169-4779-992c-5f0e9a60049f', 181800000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (123, 36, 1477);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (55, '8ea5beaa-805a-41d2-a447-be3a305ba8e9', 181800000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (123, 55, 1478);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (28, '24fc6714-43bf-43e8-b319-295b9b818bdb', 181800000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (123, 28, 1479);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (20, '47a12aa2-5af9-4220-b71b-c3d0eb3ff390', 181800000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (123, 20, 1480);
+                        
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (123, 59, '2024-05-26 00:48:41', 279723292);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (123, 73, '2024-05-26 00:48:41', 377142287);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (123, 100, '2024-05-26 00:48:41', 411241978);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (123, 22, '2024-05-26 00:48:41', 139496969);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (123, 40, '2024-05-26 00:48:41', 442153601);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (123, 18, '2024-05-26 00:48:41', 194055793);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (123, 55, '2024-05-26 00:48:41', 92163605);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (123, 20, '2024-05-26 00:48:41', 298049545);
+                            
+
+                INSERT INTO car (current_owner, brand, model_code, color, class, door, seat, layout, transmission, engine_cylinders, engine_capacity, fuel, odometer, image, location, status_in_storage)
+                VALUES ('Ebony Walls', 'BMW', 'BMW F-150-1796', 'MediumAquaMarine', 'Hypercar', 4, 3, 'Left-hand drive', 'Automatic', 10, 1649, 'Gasoline', 197380.32734732796, 'https://i.ibb.co/qNmTn3W/2012-Lamborghini-Aventador-J6.jpg', 'Mccarthystad', 'Auctioning');
+            
+
+                INSERT INTO payment (user_id, transaction_id, amount)
+                VALUES (21, 'd77bbf52-0b41-45d3-9fee-b3c499147ab7', 163600000);
+            
+
+                INSERT INTO verification_request (seller_id, car_id, status, time, admin_id, payment_id)
+                VALUES (21, 248, 'APPROVED', '2024-04-27 01:20:52', 2, 1481);
+            
+
+                    INSERT INTO auction (name, host_id, car_id, date_created, date_started, date_expired, status, winner_id, bid_step, initial_price, deposit_price)
+                    VALUES ('BMW F-150-1796', 21, 248, '2024-04-30 01:20:52', '2024-05-03 01:20:52', '2024-06-02 01:20:52', 'ONGOING', NULL, 6680000, 81800000, 163600000);
+                
+
+                    INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                    VALUES (124, 21, '2024-05-03 01:20:52', 81800000);
+                
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (75, 'ee2736f7-3205-4e63-8209-02b5e3e1dec2', 163600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (124, 75, 1482);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (55, '7bdebd93-ace0-414e-839b-cbdbef512cb1', 163600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (124, 55, 1483);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (65, 'eb006220-5624-42b8-87fb-dd4bf322fef7', 163600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (124, 65, 1484);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (76, '8f2e7f25-1878-423c-94bd-afc0d1c24105', 163600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (124, 76, 1485);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (47, 'b68f9e11-30e7-4e9b-9947-9c43f05c9f01', 163600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (124, 47, 1486);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (54, 'ab947380-7f9b-4f20-808a-19d91f439c5e', 163600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (124, 54, 1487);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (57, '8f509d20-3589-41ef-ab31-da61ec838df6', 163600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (124, 57, 1488);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (81, '20b2da34-84c3-4345-9bb5-19a0f7821412', 163600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (124, 81, 1489);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (26, 'f3d48ca0-45bb-407f-a7a6-35991be5b3f7', 163600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (124, 26, 1490);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (72, '8695c3e9-fb25-42a4-a034-24c091643d24', 163600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (124, 72, 1491);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (31, 'bd58d825-68e0-46af-81ab-52d0af832884', 163600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (124, 31, 1492);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (79, '532d6bed-e718-4b1f-bf1c-be4b474947a9', 163600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (124, 79, 1493);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (60, 'cc4ae539-101c-4671-b07b-a23ebed80ca4', 163600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (124, 60, 1494);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (41, '5e0f6981-eb04-49a1-a8bb-7b45f4630b8c', 163600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (124, 41, 1495);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (85, '63cc35dc-2b25-4395-becb-149c80ed2277', 163600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (124, 85, 1496);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (10, 'aaa29cc6-a256-49c9-a43a-115ba6cfdd35', 163600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (124, 10, 1497);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (6, 'cb9139eb-06e4-4be1-88d6-606cf4e0243e', 163600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (124, 6, 1498);
+                        
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (124, 55, '2024-05-15 18:26:44', 207251875);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (124, 65, '2024-05-15 18:26:44', 182209417);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (124, 76, '2024-05-15 18:26:44', 112801289);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (124, 47, '2024-05-15 18:26:44', 109072531);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (124, 54, '2024-05-15 18:26:44', 224261942);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (124, 57, '2024-05-15 18:26:44', 102368536);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (124, 81, '2024-05-15 18:26:44', 131877118);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (124, 72, '2024-05-15 18:26:44', 175221453);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (124, 60, '2024-05-15 18:26:44', 326377791);
+                            
+
+                INSERT INTO car (current_owner, brand, model_code, color, class, door, seat, layout, transmission, engine_cylinders, engine_capacity, fuel, odometer, image, location, status_in_storage)
+                VALUES ('Anna Shaw', 'Toyota', 'Toyota F-150-7272', 'LightPink', 'Supercar', 5, 8, 'Right-hand drive', 'Manual', 4, 4769, 'Diesel', 199847.78600969265, 'https://i.ibb.co/hYJ6Fcp/2010-Ferrari-599-GTO-0-1024.jpg', 'North Laurafort', 'Auctioning');
+            
+
+                INSERT INTO payment (user_id, transaction_id, amount)
+                VALUES (28, 'b75546c4-f453-4684-b761-f840614731cf', 185600000);
+            
+
+                INSERT INTO verification_request (seller_id, car_id, status, time, admin_id, payment_id)
+                VALUES (28, 249, 'APPROVED', '2024-04-28 04:56:51', 2, 1499);
+            
+
+                    INSERT INTO auction (name, host_id, car_id, date_created, date_started, date_expired, status, winner_id, bid_step, initial_price, deposit_price)
+                    VALUES ('Toyota F-150-7272', 28, 249, '2024-04-29 04:56:51', '2024-04-30 04:56:51', '2024-06-13 04:56:51', 'ONGOING', NULL, 7110000, 92800000, 185600000);
+                
+
+                    INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                    VALUES (125, 28, '2024-04-30 04:56:51', 92800000);
+                
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (59, 'f0ff3d27-15be-4911-9313-8d018536166c', 185600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (125, 59, 1500);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (42, '74c4b94d-7ee4-4d7d-9ec2-933ac8892e06', 185600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (125, 42, 1501);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (71, 'd7826298-6742-4fcf-8905-1350c84d8695', 185600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (125, 71, 1502);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (75, '5b4ac9d2-97ac-49f7-907d-3df325b0259a', 185600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (125, 75, 1503);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (81, '16abed58-9cb9-4000-9cc7-0ba360485367', 185600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (125, 81, 1504);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (34, '50b78ef9-066a-48a9-a943-8b9b80709e0b', 185600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (125, 34, 1505);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (88, '54d9de55-9786-4299-a577-b98f8f692f89', 185600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (125, 88, 1506);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (91, '632125bf-2941-4a45-b363-b76fc1484468', 185600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (125, 91, 1507);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (55, '78ce7bcd-bdf9-4c24-acb7-89de0fd461dc', 185600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (125, 55, 1508);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (84, '39273238-f8c1-48ab-a844-54824560369b', 185600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (125, 84, 1509);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (29, '4c40b878-c535-4137-8562-59789580f551', 185600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (125, 29, 1510);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (89, '51dfe615-5817-4c0c-86fc-25623393c381', 185600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (125, 89, 1511);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (77, '5b6f5a18-b75d-4867-b37a-4800b7ae597e', 185600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (125, 77, 1512);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (45, 'bcb5fa34-fe8b-4d29-9f6d-4cf99c9cad23', 185600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (125, 45, 1513);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (31, 'e21b2806-9692-40c9-944c-3bf8ee0dc627', 185600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (125, 31, 1514);
+                        
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (125, 75, '2024-05-17 05:51:26', 100838899);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (125, 88, '2024-05-17 05:51:26', 124500815);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (125, 91, '2024-05-17 05:51:26', 257710076);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (125, 55, '2024-05-17 05:51:26', 297384668);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (125, 84, '2024-05-17 05:51:26', 359561590);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (125, 29, '2024-05-17 05:51:26', 316602096);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (125, 89, '2024-05-17 05:51:26', 150689036);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (125, 31, '2024-05-17 05:51:26', 423116330);
+                            
+
+                INSERT INTO car (current_owner, brand, model_code, color, class, door, seat, layout, transmission, engine_cylinders, engine_capacity, fuel, odometer, image, location, status_in_storage)
+                VALUES ('Sherry Wilkinson', 'Ford', 'Ford Jetta-2341', 'Yellow', 'Supercar', 5, 5, 'Left-hand drive', 'Manual', 10, 1535, 'Hybrid', 198407.4304328322, 'https://i.ibb.co/jR6yTTL/Lamborghini-Sesto-Elemento-1080x608.jpg', 'West Julie', 'Auctioning');
+            
+
+                INSERT INTO payment (user_id, transaction_id, amount)
+                VALUES (58, '9cb64254-4faa-4fa0-9984-104f9425cd3e', 148200000);
+            
+
+                INSERT INTO verification_request (seller_id, car_id, status, time, admin_id, payment_id)
+                VALUES (58, 250, 'APPROVED', '2024-04-29 00:54:36', 2, 1515);
+            
+
+                    INSERT INTO auction (name, host_id, car_id, date_created, date_started, date_expired, status, winner_id, bid_step, initial_price, deposit_price)
+                    VALUES ('Ford Jetta-2341', 58, 250, '2024-05-02 00:54:36', '2024-05-05 00:54:36', '2024-07-14 00:54:36', 'ONGOING', NULL, 4400000, 74100000, 148200000);
+                
+
+                    INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                    VALUES (126, 58, '2024-05-05 00:54:36', 74100000);
+                
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (44, '9a08bbfd-7ed4-4f95-9861-cbd46fc10bc6', 148200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (126, 44, 1516);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (15, 'a362b550-3064-4cea-8ff1-1846ef8b0a7a', 148200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (126, 15, 1517);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (41, '19f92568-a45f-405d-9cf3-cf42d3047f46', 148200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (126, 41, 1518);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (10, '99fb87f5-8a38-4488-af7b-9ce64ddbfbf4', 148200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (126, 10, 1519);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (89, '0006e0d3-caa8-422c-8655-2e901a30c3a3', 148200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (126, 89, 1520);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (28, '96411c01-65dd-4535-a8a0-fa62aa93d193', 148200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (126, 28, 1521);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (27, '3ce799d1-f2ae-4431-aa2f-feef74844dbe', 148200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (126, 27, 1522);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (87, 'f8445863-2f8a-442e-be62-8edfa84ad8e3', 148200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (126, 87, 1523);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (48, '678af7f3-3531-48a9-8934-c1167a61e110', 148200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (126, 48, 1524);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (31, '7582c20c-05e9-4c59-9508-ed2045a7d40a', 148200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (126, 31, 1525);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (75, 'd2808a05-99c0-408d-b08a-16c7293b4a60', 148200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (126, 75, 1526);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (19, '6b99511a-7f24-4d66-a413-af3d9513e101', 148200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (126, 19, 1527);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (66, 'e2599f48-ac19-4072-b574-0f066f7a5b8f', 148200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (126, 66, 1528);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (72, '7736176f-7459-4c7c-b07c-333e41782187', 148200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (126, 72, 1529);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (56, '2146b0b4-7be0-49e0-acd9-8ef6f543c0be', 148200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (126, 56, 1530);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (53, '6257479a-ab81-4cb2-9c27-f521da43b8af', 148200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (126, 53, 1531);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (83, '2cfd9aa0-fc27-4b02-8cb4-61b250400610', 148200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (126, 83, 1532);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (26, '36fe031a-82d9-45b2-924f-82abca995898', 148200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (126, 26, 1533);
+                        
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (126, 15, '2024-05-05 22:01:39', 298409054);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (126, 28, '2024-05-05 22:01:39', 137578777);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (126, 27, '2024-05-05 22:01:39', 284714046);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (126, 87, '2024-05-05 22:01:39', 357745085);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (126, 31, '2024-05-05 22:01:39', 182911011);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (126, 19, '2024-05-05 22:01:39', 340257718);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (126, 56, '2024-05-05 22:01:39', 364757683);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (126, 53, '2024-05-05 22:01:39', 332153899);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (126, 83, '2024-05-05 22:01:39', 247033670);
+                            
+
+                INSERT INTO car (current_owner, brand, model_code, color, class, door, seat, layout, transmission, engine_cylinders, engine_capacity, fuel, odometer, image, location, status_in_storage)
+                VALUES ('Samantha Daugherty', 'Ford', 'Ford Altima-3275', 'Beige', 'Supercar', 5, 2, 'Right-hand drive', 'Manual', 6, 1323, 'Diesel', 108244.88728558541, 'https://i.ibb.co/nPLdXNR/2010-Mc-Laren-MP412-C3.jpg', 'Bradleymouth', 'Auctioning');
+            
+
+                INSERT INTO payment (user_id, transaction_id, amount)
+                VALUES (85, 'b383a171-d96c-46f9-8437-2ff525d10f9a', 111000000);
+            
+
+                INSERT INTO verification_request (seller_id, car_id, status, time, admin_id, payment_id)
+                VALUES (85, 251, 'APPROVED', '2024-04-26 13:58:03', 3, 1534);
+            
+
+                    INSERT INTO auction (name, host_id, car_id, date_created, date_started, date_expired, status, winner_id, bid_step, initial_price, deposit_price)
+                    VALUES ('Ford Altima-3275', 85, 251, '2024-04-28 13:58:03', '2024-04-29 13:58:03', '2024-06-11 13:58:03', 'ONGOING', NULL, 3170000, 55500000, 111000000);
+                
+
+                    INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                    VALUES (127, 85, '2024-04-29 13:58:03', 55500000);
+                
+
+                INSERT INTO car (current_owner, brand, model_code, color, class, door, seat, layout, transmission, engine_cylinders, engine_capacity, fuel, odometer, image, location, status_in_storage)
+                VALUES ('Jessica Reynolds', 'Toyota', 'Toyota F-150-5353', 'DarkViolet', 'Supercar', 5, 7, 'Right-hand drive', 'Manual', 10, 2077, 'Hybrid', 194393.1062605195, 'https://i.ibb.co/BcknvH4/26-Mc-Laren-P1-1024x683.jpg', 'North Cory', 'Auctioning');
+            
+
+                INSERT INTO payment (user_id, transaction_id, amount)
+                VALUES (79, '7ead25fe-c928-45e4-8ba3-dc6c6f04fcc1', 26200000);
+            
+
+                INSERT INTO verification_request (seller_id, car_id, status, time, admin_id, payment_id)
+                VALUES (79, 252, 'APPROVED', '2024-04-25 13:50:03', 1, 1535);
+            
+
+                    INSERT INTO auction (name, host_id, car_id, date_created, date_started, date_expired, status, winner_id, bid_step, initial_price, deposit_price)
+                    VALUES ('Toyota F-150-5353', 79, 252, '2024-04-26 13:50:03', '2024-04-27 13:50:03', '2024-06-19 13:50:03', 'ONGOING', NULL, 4900000, 13100000, 26200000);
+                
+
+                    INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                    VALUES (128, 79, '2024-04-27 13:50:03', 13100000);
+                
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (48, 'a2c2fd43-e42a-4f92-b87a-15249c022419', 26200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (128, 48, 1536);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (66, 'd44c1219-0f88-4d09-8dfd-cf60b3b33dcb', 26200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (128, 66, 1537);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (88, '8429ebe5-1f34-4eac-88ae-613fde8849ce', 26200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (128, 88, 1538);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (55, 'b8a16d11-ea4a-406c-9cb9-1c75eef48b28', 26200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (128, 55, 1539);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (43, '9f7e0cdb-192d-490c-b4d0-97a7d0ec622a', 26200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (128, 43, 1540);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (64, '899dffce-fe9c-4293-bcb9-614b9f686d18', 26200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (128, 64, 1541);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (30, '98c455cf-fd05-4627-a623-d8a65b20ddb6', 26200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (128, 30, 1542);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (15, 'ceb09480-c8de-473f-8ca0-a55f46d68bd6', 26200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (128, 15, 1543);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (63, '2a0f83c1-24cb-47b9-a643-8a1a7cab3d01', 26200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (128, 63, 1544);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (50, '9c2e9c72-0dd4-4e28-be63-a71db6b60320', 26200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (128, 50, 1545);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (8, '4ef1c43c-3dcb-44ba-928c-6fc780499406', 26200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (128, 8, 1546);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (65, 'a1621be7-a14f-4271-83c5-a51e872fa7e5', 26200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (128, 65, 1547);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (41, '46049ed5-8823-4b8b-a16f-76d7f242aa90', 26200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (128, 41, 1548);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (90, '720a99d4-df09-463e-bd61-27bb0747c5de', 26200000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (128, 90, 1549);
+                        
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (128, 48, '2024-05-21 14:57:19', 31267560);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (128, 66, '2024-05-21 14:57:19', 14624856);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (128, 55, '2024-05-21 14:57:19', 50500486);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (128, 43, '2024-05-21 14:57:19', 62178356);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (128, 30, '2024-05-21 14:57:19', 15157786);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (128, 63, '2024-05-21 14:57:19', 34560428);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (128, 8, '2024-05-21 14:57:19', 60715646);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (128, 41, '2024-05-21 14:57:19', 38235321);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (128, 90, '2024-05-21 14:57:19', 43351671);
+                            
+
+                INSERT INTO car (current_owner, brand, model_code, color, class, door, seat, layout, transmission, engine_cylinders, engine_capacity, fuel, odometer, image, location, status_in_storage)
+                VALUES ('Ronnie Gross', 'Toyota', 'Toyota Elantra-1173', 'Thistle', 'Hypercar', 2, 4, 'Left-hand drive', 'Automatic', 8, 2768, 'Hybrid', 114313.5406052526, 'https://i.ibb.co/nPLdXNR/2010-Mc-Laren-MP412-C3.jpg', 'New Kellyland', 'Auctioning');
+            
+
+                INSERT INTO payment (user_id, transaction_id, amount)
+                VALUES (87, '91dd6d1e-c6f0-4325-af86-c3f6c5d35ea1', 73000000);
+            
+
+                INSERT INTO verification_request (seller_id, car_id, status, time, admin_id, payment_id)
+                VALUES (87, 253, 'APPROVED', '2024-04-29 23:34:26', 1, 1550);
+            
+
+                    INSERT INTO auction (name, host_id, car_id, date_created, date_started, date_expired, status, winner_id, bid_step, initial_price, deposit_price)
+                    VALUES ('Toyota Elantra-1173', 87, 253, '2024-05-01 23:34:26', '2024-05-04 23:34:26', '2024-08-01 23:34:26', 'ONGOING', NULL, 9280000, 36500000, 73000000);
+                
+
+                    INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                    VALUES (129, 87, '2024-05-04 23:34:26', 36500000);
+                
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (43, '056fcd1b-f093-44b1-b33a-83885a199f1c', 73000000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (129, 43, 1551);
+                        
+
+                INSERT INTO car (current_owner, brand, model_code, color, class, door, seat, layout, transmission, engine_cylinders, engine_capacity, fuel, odometer, image, location, status_in_storage)
+                VALUES ('Crystal Hardy PhD', 'Toyota', 'Toyota Corolla-6577', 'Brown', 'Hypercar', 4, 5, 'Right-hand drive', 'Automatic', 10, 1623, 'Hybrid', 46924.76148953998, 'https://i.ibb.co/qNmTn3W/2012-Lamborghini-Aventador-J6.jpg', 'Brianmouth', 'Auctioning');
+            
+
+                INSERT INTO payment (user_id, transaction_id, amount)
+                VALUES (6, 'aca158ed-b7dc-449d-84e0-0ef4fa93f0af', 53400000);
+            
+
+                INSERT INTO verification_request (seller_id, car_id, status, time, admin_id, payment_id)
+                VALUES (6, 254, 'APPROVED', '2024-04-25 00:19:08', 1, 1552);
+            
+
+                    INSERT INTO auction (name, host_id, car_id, date_created, date_started, date_expired, status, winner_id, bid_step, initial_price, deposit_price)
+                    VALUES ('Toyota Corolla-6577', 6, 254, '2024-04-26 00:19:08', '2024-04-29 00:19:08', '2024-06-19 00:19:08', 'ONGOING', NULL, 1460000, 26700000, 53400000);
+                
+
+                    INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                    VALUES (130, 6, '2024-04-29 00:19:08', 26700000);
+                
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (92, '8bca102f-cad8-4380-8694-ccb0118706f9', 53400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (130, 92, 1553);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (69, 'c19915a9-e0af-49b3-9789-52f6cb6a6d4c', 53400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (130, 69, 1554);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (46, 'a9641de3-413b-4df6-8294-342bb6a5a743', 53400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (130, 46, 1555);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (98, '32977411-0694-4bb3-9630-817ec2df16ca', 53400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (130, 98, 1556);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (33, '132570d2-3cfd-457d-af12-413874b79074', 53400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (130, 33, 1557);
+                        
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (130, 92, '2024-05-23 17:14:28', 56088646);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (130, 69, '2024-05-23 17:14:28', 66672656);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (130, 46, '2024-05-23 17:14:28', 114794675);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (130, 98, '2024-05-23 17:14:28', 114956495);
+                            
+
+                INSERT INTO car (current_owner, brand, model_code, color, class, door, seat, layout, transmission, engine_cylinders, engine_capacity, fuel, odometer, image, location, status_in_storage)
+                VALUES ('Joshua Joyce', 'Kia', 'Kia E-Class-8991', 'NavajoWhite', 'Hypercar', 5, 7, 'Right-hand drive', 'Manual', 6, 4314, 'Hybrid', 11297.583946937184, 'https://i.ibb.co/BcknvH4/26-Mc-Laren-P1-1024x683.jpg', 'East John', 'Auctioning');
+            
+
+                INSERT INTO payment (user_id, transaction_id, amount)
+                VALUES (19, '0bdd6b6a-e7fc-49fb-9332-acfe0cd4255e', 107200000);
+            
+
+                INSERT INTO verification_request (seller_id, car_id, status, time, admin_id, payment_id)
+                VALUES (19, 255, 'APPROVED', '2024-04-24 12:09:52', 2, 1558);
+            
+
+                    INSERT INTO auction (name, host_id, car_id, date_created, date_started, date_expired, status, winner_id, bid_step, initial_price, deposit_price)
+                    VALUES ('Kia E-Class-8991', 19, 255, '2024-04-25 12:09:52', '2024-04-28 12:09:52', '2024-06-05 12:09:52', 'ONGOING', NULL, 8860000, 53600000, 107200000);
+                
+
+                    INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                    VALUES (131, 19, '2024-04-28 12:09:52', 53600000);
+                
+
+                INSERT INTO car (current_owner, brand, model_code, color, class, door, seat, layout, transmission, engine_cylinders, engine_capacity, fuel, odometer, image, location, status_in_storage)
+                VALUES ('Elizabeth Gutierrez', 'Toyota', 'Toyota 3 Series-4546', 'Lavender', 'Supercar', 4, 5, 'Right-hand drive', 'Manual', 10, 3141, 'Gasoline', 57059.50019604233, 'https://i.ibb.co/hYJ6Fcp/2010-Ferrari-599-GTO-0-1024.jpg', 'East Melissa', 'Auctioning');
+            
+
+                INSERT INTO payment (user_id, transaction_id, amount)
+                VALUES (66, 'ba562352-641d-4c52-9cf4-175a5329fd80', 26400000);
+            
+
+                INSERT INTO verification_request (seller_id, car_id, status, time, admin_id, payment_id)
+                VALUES (66, 256, 'APPROVED', '2024-04-27 02:34:26', 3, 1559);
+            
+
+                    INSERT INTO auction (name, host_id, car_id, date_created, date_started, date_expired, status, winner_id, bid_step, initial_price, deposit_price)
+                    VALUES ('Toyota 3 Series-4546', 66, 256, '2024-04-28 02:34:26', '2024-04-29 02:34:26', '2024-06-25 02:34:26', 'ONGOING', NULL, 1190000, 13200000, 26400000);
+                
+
+                    INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                    VALUES (132, 66, '2024-04-29 02:34:26', 13200000);
+                
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (94, '6146bfb5-1d0c-45c5-ab24-16bc9640611d', 26400000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (132, 94, 1560);
+                        
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (132, 94, '2024-06-15 03:32:21', 26706619);
+                            
+
+                INSERT INTO car (current_owner, brand, model_code, color, class, door, seat, layout, transmission, engine_cylinders, engine_capacity, fuel, odometer, image, location, status_in_storage)
+                VALUES ('Maurice Scott', 'Hyundai', 'Hyundai Sportage-5158', 'DarkSalmon', 'Hypercar', 3, 2, 'Right-hand drive', 'Automatic', 8, 3193, 'Diesel', 65906.95743279315, 'https://i.ibb.co/jR6yTTL/Lamborghini-Sesto-Elemento-1080x608.jpg', 'Robertborough', 'Auctioning');
+            
+
+                INSERT INTO payment (user_id, transaction_id, amount)
+                VALUES (77, '44111283-a634-4ea5-8cea-77e3f0a0fb99', 98600000);
+            
+
+                INSERT INTO verification_request (seller_id, car_id, status, time, admin_id, payment_id)
+                VALUES (77, 257, 'APPROVED', '2024-04-25 22:28:01', 2, 1561);
+            
+
+                    INSERT INTO auction (name, host_id, car_id, date_created, date_started, date_expired, status, winner_id, bid_step, initial_price, deposit_price)
+                    VALUES ('Hyundai Sportage-5158', 77, 257, '2024-04-26 22:28:01', '2024-04-27 22:28:01', '2024-06-06 22:28:01', 'ONGOING', NULL, 9480000, 49300000, 98600000);
+                
+
+                    INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                    VALUES (133, 77, '2024-04-27 22:28:01', 49300000);
+                
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (6, '535c65d4-2bd4-4af7-8763-7ca405d473db', 98600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (133, 6, 1562);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (11, '80018bf4-2604-4f0e-bd61-3eb922224b97', 98600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (133, 11, 1563);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (67, '658e9d6e-37fe-47ed-8036-afa01ad08038', 98600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (133, 67, 1564);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (26, 'ca7ce5d4-3767-4bd3-8672-27e329415896', 98600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (133, 26, 1565);
+                        
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (133, 67, '2024-06-06 01:44:10', 230737452);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (133, 26, '2024-06-06 01:44:10', 156776578);
+                            
+
+                INSERT INTO car (current_owner, brand, model_code, color, class, door, seat, layout, transmission, engine_cylinders, engine_capacity, fuel, odometer, image, location, status_in_storage)
+                VALUES ('Joshua Gonzalez', 'Volkswagen', 'Volkswagen Altima-2001', 'Chartreuse', 'Supercar', 2, 7, 'Left-hand drive', 'Manual', 8, 4749, 'Gasoline', 123450.177421795, 'https://i.ibb.co/nBg2yPH/861054.jpg', 'Annaview', 'Auctioning');
+            
+
+                INSERT INTO payment (user_id, transaction_id, amount)
+                VALUES (98, 'd28a021a-6aba-4b4f-8be6-f6dbe1e9230b', 83000000);
+            
+
+                INSERT INTO verification_request (seller_id, car_id, status, time, admin_id, payment_id)
+                VALUES (98, 258, 'APPROVED', '2024-04-26 10:46:26', 3, 1566);
+            
+
+                    INSERT INTO auction (name, host_id, car_id, date_created, date_started, date_expired, status, winner_id, bid_step, initial_price, deposit_price)
+                    VALUES ('Volkswagen Altima-2001', 98, 258, '2024-04-29 10:46:26', '2024-05-02 10:46:26', '2024-06-23 10:46:26', 'ONGOING', NULL, 3450000, 41500000, 83000000);
+                
+
+                    INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                    VALUES (134, 98, '2024-05-02 10:46:26', 41500000);
+                
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (45, '4f57c249-3298-47d0-82b1-00be42e79d2e', 83000000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (134, 45, 1567);
+                        
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (134, 45, '2024-06-06 21:18:37', 53760146);
+                            
+
+                INSERT INTO car (current_owner, brand, model_code, color, class, door, seat, layout, transmission, engine_cylinders, engine_capacity, fuel, odometer, image, location, status_in_storage)
+                VALUES ('Jane Gray', 'Hyundai', 'Hyundai Corolla-4432', 'Tan', 'Hypercar', 2, 7, 'Right-hand drive', 'Manual', 10, 4664, 'Gasoline', 55215.06907195958, 'https://i.ibb.co/GxGTsy3/2013-Ferrari-F12-berlinetta-1024x640.jpg', 'Patelville', 'Auctioning');
+            
+
+                INSERT INTO payment (user_id, transaction_id, amount)
+                VALUES (58, '17ef9c50-900b-4e28-874f-c71839d555f2', 33600000);
+            
+
+                INSERT INTO verification_request (seller_id, car_id, status, time, admin_id, payment_id)
+                VALUES (58, 259, 'APPROVED', '2024-04-26 21:15:48', 2, 1568);
+            
+
+                    INSERT INTO auction (name, host_id, car_id, date_created, date_started, date_expired, status, winner_id, bid_step, initial_price, deposit_price)
+                    VALUES ('Hyundai Corolla-4432', 58, 259, '2024-04-28 21:15:48', '2024-05-01 21:15:48', '2024-07-22 21:15:48', 'ONGOING', NULL, 9180000, 16800000, 33600000);
+                
+
+                    INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                    VALUES (135, 58, '2024-05-01 21:15:48', 16800000);
+                
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (41, '56e632cf-9a30-49b8-8d89-ae8cf8dd9d52', 33600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (135, 41, 1569);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (13, '08aa7b0b-a77a-4675-81d5-4816f578da26', 33600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (135, 13, 1570);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (75, '4afb35fb-6fac-482c-98ee-e07b3965cafb', 33600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (135, 75, 1571);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (70, 'e75341d1-8d2f-4656-a972-b20776605b31', 33600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (135, 70, 1572);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (95, '57ab100c-4007-45d2-baae-861c1da5df6f', 33600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (135, 95, 1573);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (97, '17671ec4-8c04-4d51-991a-4bc98f7bb896', 33600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (135, 97, 1574);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (30, '85274f29-4c07-486e-8975-1f6b62089224', 33600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (135, 30, 1575);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (74, '8b5f4baa-8fdd-45f2-8dbd-bbe4fba31f03', 33600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (135, 74, 1576);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (68, '89a32798-2d65-4e44-bff2-0ed8c5f38dcf', 33600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (135, 68, 1577);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (36, 'e053a006-fa34-4c0b-a13c-3be43175a65e', 33600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (135, 36, 1578);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (22, '8807192d-77c2-430b-8b67-fd1a9337bef8', 33600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (135, 22, 1579);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (25, '08e27f8b-d109-4990-9b2e-58957888fafd', 33600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (135, 25, 1580);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (76, '96f82124-76c6-457c-81e5-5d4ee497ca58', 33600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (135, 76, 1581);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (26, '367238da-e21d-4f03-a1e5-e1fb17c87d0c', 33600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (135, 26, 1582);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (31, 'e8db7c59-6152-4098-80e0-6e5005a6744e', 33600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (135, 31, 1583);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (54, '9d3fcae7-0127-4d16-8ce8-4859ba45ca1c', 33600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (135, 54, 1584);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (32, '2b55d531-cbb3-4ab4-80eb-9333be896116', 33600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (135, 32, 1585);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (66, '06d56cc4-0f5a-4365-a83e-66406a9c59b1', 33600000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (135, 66, 1586);
+                        
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (135, 41, '2024-06-24 03:02:57', 52106483);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (135, 75, '2024-06-24 03:02:57', 36771947);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (135, 30, '2024-06-24 03:02:57', 76113537);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (135, 22, '2024-06-24 03:02:57', 41578866);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (135, 66, '2024-06-24 03:02:57', 37489758);
+                            
+
+                INSERT INTO car (current_owner, brand, model_code, color, class, door, seat, layout, transmission, engine_cylinders, engine_capacity, fuel, odometer, image, location, status_in_storage)
+                VALUES ('Robert Marquez', 'Honda', 'Honda Corolla-5355', 'Violet', 'Hypercar', 4, 6, 'Left-hand drive', 'Automatic', 10, 4702, 'Gasoline', 134114.45336058916, 'https://i.ibb.co/GxGTsy3/2013-Ferrari-F12-berlinetta-1024x640.jpg', 'Marilynport', 'Auctioning');
+            
+
+                INSERT INTO payment (user_id, transaction_id, amount)
+                VALUES (19, '596c1373-8e3a-4733-a234-b91b4cb2306b', 45800000);
+            
+
+                INSERT INTO verification_request (seller_id, car_id, status, time, admin_id, payment_id)
+                VALUES (19, 260, 'APPROVED', '2024-04-23 16:30:25', 3, 1587);
+            
+
+                    INSERT INTO auction (name, host_id, car_id, date_created, date_started, date_expired, status, winner_id, bid_step, initial_price, deposit_price)
+                    VALUES ('Honda Corolla-5355', 19, 260, '2024-04-26 16:30:25', '2024-04-28 16:30:25', '2024-06-22 16:30:25', 'ONGOING', NULL, 1890000, 22900000, 45800000);
+                
+
+                    INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                    VALUES (136, 19, '2024-04-28 16:30:25', 22900000);
+                
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (35, '07f8b1d7-5768-4f91-99e9-956eefc3e20f', 45800000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (136, 35, 1588);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (76, 'a3e7bc75-a6a5-492e-ada5-6b7f3a6273ae', 45800000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (136, 76, 1589);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (59, '021374ac-8b92-4d72-8035-3bbaa3794930', 45800000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (136, 59, 1590);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (65, 'dc33e3ce-a0d9-4c9d-bc9e-f6313d75782f', 45800000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (136, 65, 1591);
+                        
+
+                            INSERT INTO payment (user_id, transaction_id, amount)
+                            VALUES (19, '7b93b3f5-6b11-4a1b-8156-8e25722b7f49', 45800000);
+                        
+
+                            INSERT INTO auction_registration (auction_id, customer_id, payment_id)
+                            VALUES (136, 19, 1592);
+                        
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (136, 35, '2024-05-24 14:14:45', 80139190);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (136, 76, '2024-05-24 14:14:45', 50590914);
+                            
+
+                                INSERT INTO bid (auction_id, customer_id, timestamp, price)
+                                VALUES (136, 19, '2024-05-24 14:14:45', 54237929);
+                            
+
+                
