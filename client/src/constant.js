@@ -10,6 +10,13 @@ export const Status = Object.freeze({
   REJECTED: 'REJECTED',
 });
 
+export const AuctionStatus = Object.freeze({
+  PENDING: 'PENDING',
+  INCOMING: 'INCOMING',
+  ONGOING: 'ONGOING',
+  COMPLETED: 'COMPLETED',
+});
+
 export const AuctionFilter = Object.freeze({
   ALL: 'ALL',
   REGISTERED: 'REGISTERED',
