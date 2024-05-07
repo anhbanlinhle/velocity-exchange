@@ -46,7 +46,9 @@
 
 `/car/inventory/`
 
-work in process
+|Parameter|Description|
+|-|-|
+|`userId`|User's account ID|
 
 ### 6. Regist Car
 
@@ -139,4 +141,9 @@ work in process
 
 `/auction/bid/`
 
-work in process
+|Parameter|Description|
+|-|-|
+|`userId`|User's account ID|
+|`auctionId`|Auction ID|
+|`price`|Price of the bid|
+
