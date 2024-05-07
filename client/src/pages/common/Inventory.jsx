@@ -107,7 +107,6 @@ function Inventory() {
             name={carDetails.model_code}
             image={carDetails.image}
             description={{
-              id: carDetails.id,
               'Current Owner': carDetails.current_owner,
               Class: carDetails.class,
               Doors: carDetails.door,
