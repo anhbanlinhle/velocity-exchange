@@ -7,7 +7,19 @@ import PropTypes from 'prop-types';
 import { CardType, Status, AuctionStatus } from '../constant';
 
 function CustomCard({
-  name, image, description, type, handleDetailClick, registered, auctionStatus, handleRegisterClick, handleJoinClick, handleApproveClick, handleRejectClick, status,
+  name,
+  image,
+  description,
+  type,
+  handleDetailClick,
+  registered,
+  auctionStatus,
+  handleRegisterClick,
+  handleJoinClick,
+  handleApproveClick,
+  handleRejectClick,
+  status,
+  disabledActions,
 }) {
   const navigate = useNavigate();
 
@@ -113,7 +125,7 @@ function CustomCard({
         </Typography>
       </CardContent>
 
-      <CardActions sx={{ display: 'flex', justifyContent: 'flex-end' }}>
+      <CardActions sx={{ display: 'flex', justifyContent: 'flex-end' }} hidden={disabledActions}>
         <Button variant="outlined" color="primary" onClick={handleDetailClick}>
           Detail
         </Button>
@@ -137,6 +149,7 @@ CustomCard.propTypes = {
   handleApproveClick: PropTypes.func,
   handleRejectClick: PropTypes.func,
   status: PropTypes.string,
+  disabledActions: PropTypes.bool,
 };
 
 CustomCard.defaultProps = {
@@ -148,6 +161,7 @@ CustomCard.defaultProps = {
   handleApproveClick: null,
   handleRejectClick: null,
   status: Status.PENDING,
+  disabledActions: false,
 };
 
 export default CustomCard;
