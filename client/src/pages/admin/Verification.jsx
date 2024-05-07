@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { Box, Grid, Pagination } from '@mui/material';
+import {
+  Box, Grid, Pagination, TextField, MenuItem,
+} from '@mui/material';
 import PageTitle from '../../component/PageTitle';
 import Spinner from '../../component/Spinner';
 import CustomCard from '../../component/CustomCard';
-import { CardType, Status } from '../../constant';
+import { CardType, Status, VerificationRequestFilter } from '../../constant';
 import CustomModal from '../../component/CustomModal';
 import NoDataFound from '../../component/NoDataFound';
 
@@ -16,38 +18,64 @@ function Verification() {
   const [verificationList, setVerificationList] = useState([]);
   const [verificationDetails, setVerificationDetails] = useState({});
   const [openDetail, setOpenDetail] = useState(false);
+  const [filter, setFilter] = useState(VerificationRequestFilter.PENDING);
 
   const serverUrl = import.meta.env.VITE_API_URL;
   const verificationListEndpoint = `${serverUrl}/admin/request/`;
+  const filterVerificationListEndpoint = `${serverUrl}/admin/request/filter/`;
   const verificationDetailEndpoint = `${serverUrl}/admin/request/detail/`;
   const verificationHandleEndpoint = `${serverUrl}/admin/request/handle`;
 
   const fetchVerificationList = async () => {
-    try {
-      const requestOptions = {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ pageNo: page, pageSize: itemsPerPage }),
-      };
-      const response = await fetch(verificationListEndpoint, requestOptions);
-      if (!response.ok) {
-        throw response;
+    setIsLoading(true);
+    if (filter === VerificationRequestFilter.ALL) {
+      try {
+        const requestOptions = {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ pageNo: page, pageSize: itemsPerPage }),
+        };
+        const response = await fetch(verificationListEndpoint, requestOptions);
+        if (!response.ok) {
+          throw response;
+        }
+        const data = await response.json();
+        setVerificationList(data.data);
+        setTotalPages(data.pages);
+      } catch (error) {
+        console.log(error);
+      } finally {
+        setIsLoading(false);
       }
-      const data = await response.json();
-      setVerificationList(data.data);
-      setTotalPages(data.pages);
-    } catch (error) {
-      console.log(error);
-    } finally {
-      setIsLoading(false);
+    } else {
+      try {
+        const requestOptions = {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ pageNo: page, pageSize: itemsPerPage, status: filter }),
+        };
+        const response = await fetch(filterVerificationListEndpoint, requestOptions);
+        if (!response.ok) {
+          throw response;
+        }
+        const data = await response.json();
+        setVerificationList(data.data);
+        setTotalPages(data.pages);
+      } catch (error) {
+        console.log(error);
+      } finally {
+        setIsLoading(false);
+      }
     }
   };
 
   useEffect(() => {
     fetchVerificationList();
-  }, [page]);
+  }, [page, filter]);
 
   const handlePageChange = (event, value) => {
     setPage(value);
@@ -109,7 +137,25 @@ function Verification() {
   return (
     <>
       <Spinner isLoading={isLoading} />
-      <PageTitle title="Verification Request" />
+      <Box sx={{ display: 'flex', justifyContent: 'space-between', marginTop: '1rem' }}>
+        <PageTitle title={`${filter.charAt(0) + filter.slice(1).toLowerCase()} Verification Request`} />
+        <TextField
+          select
+          id="filter"
+          label="Filter"
+          variant="outlined"
+          size="small"
+          value={filter}
+          onChange={(e) => { setPage(1); setFilter(e.target.value); }}
+          sx={{ minWidth: '14ch' }}
+        >
+          {Object.values(VerificationRequestFilter).map((option) => (
+            <MenuItem key={option} value={option}>
+              {option.charAt(0) + option.slice(1).toLowerCase()}
+            </MenuItem>
+          ))}
+        </TextField>
+      </Box>
       {(verificationList.length === 0 && !isLoading)
         ? (<NoDataFound />) : (
           <>
@@ -122,9 +168,12 @@ function Verification() {
                 <Grid item xs={12} sm={6} md={3} key={request.id} style={{ display: 'flex' }}>
 
                   <CustomCard
-                    name="Verification Request"
+                    name={request.model_code}
                     description={{
                       'Request ID': request.id,
+                      'Seller name': `${request.first_name} ${request.last_name}`,
+                      Time: request.time,
+                      Status: request.status,
                     }}
                     type={CardType.VERIFICATION_REQUEST}
                     status={request.status}
@@ -141,11 +190,11 @@ function Verification() {
             <CustomModal
               open={openDetail}
               onClose={handleCloseDetail}
-              name={`${verificationDetails.brand} ${verificationDetails.model_code}`}
+              name={verificationDetails.model_code}
               image={verificationDetails.image}
               description={{
                 Status: verificationDetails.status,
-                'Time requested': verificationDetails.time,
+                Time: verificationDetails.time,
                 'Seller name': `${verificationDetails.first_name} ${verificationDetails.last_name}`,
                 Location: verificationDetails.location,
                 'Current owner': verificationDetails.current_owner,
