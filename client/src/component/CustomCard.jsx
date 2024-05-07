@@ -2,19 +2,13 @@ import React from 'react';
 import {
   Card, CardMedia, CardContent, Typography, Button, CardActions, Box,
 } from '@mui/material';
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { CardType, Status, AuctionStatus } from '../constant';
 
 function CustomCard({
-  name, image, description, type, handleDetailClick, registered, auctionStatus, handleRegisterClick, handleJoinClick, handleApproveClick, handleRejectClick, status,
+  name, image, description, type, handleDetailClick, registered, auctionStatus, handleRegisterClick, handleJoinClick, handleApproveClick, handleRejectClick, status, carId,
 }) {
-  const navigate = useNavigate();
-
-  const handleCreateAuctionClick = () => {
-    navigate('/auction/create');
-  };
-
   const auctionButton = () => {
     if (!registered) {
       return (
@@ -39,7 +33,7 @@ function CustomCard({
     }
     return (
       <Button variant="contained" color="secondary" disabled>
-        Finished
+        Completed
       </Button>
     );
   };
@@ -64,7 +58,7 @@ function CustomCard({
       );
     default:
       return (
-        <Button variant="contained" color="secondary" onClick={handleCreateAuctionClick}>
+        <Button variant="contained" color="secondary" component={Link} to={`/auction/create/${carId}`}>
           Create Auction
         </Button>
       );
@@ -137,6 +131,7 @@ CustomCard.propTypes = {
   handleApproveClick: PropTypes.func,
   handleRejectClick: PropTypes.func,
   status: PropTypes.string,
+  carId: PropTypes.number,
 };
 
 CustomCard.defaultProps = {
@@ -148,6 +143,7 @@ CustomCard.defaultProps = {
   handleApproveClick: null,
   handleRejectClick: null,
   status: Status.PENDING,
+  carId: null,
 };
 
 export default CustomCard;
