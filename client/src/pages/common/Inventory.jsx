@@ -75,6 +75,7 @@ function Inventory() {
     setOpenDetails(false);
   };
 
+  // TODO: Add Verification Status to the card
   return (
     <>
       {/* <Spinner isLoading={isLoading} /> */}
@@ -107,6 +108,7 @@ function Inventory() {
             name={carDetails.model_code}
             image={carDetails.image}
             description={{
+              'Verification Status': carDetails.status,
               'Current Owner': carDetails.current_owner,
               Class: carDetails.class,
               Doors: carDetails.door,
