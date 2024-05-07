@@ -24,6 +24,11 @@ let updateDB = async (req, res, next) => {
           await pool.query('update car set status_in_storage = "Available" where id = ?', [allAuction[0][i].car_id])
         }
       }
+      if (new Date(allAuction[0][i].date_started).getTime() < now) {
+        if (allAuction[0][i].status === 'INCOMING') {
+          await pool.query('update auction set status = "ONGOING" where id = ?', [allAuction[0][i].id])
+        }
+      }
     }
   }
   catch (err) {
