@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import {
   Button, TextField, Grid, Box, FormControl, Snackbar, Alert, Autocomplete, Typography, MenuItem,
-  InputAdornment, CircularProgress,
+  InputAdornment, CircularProgress, Avatar,
 } from '@mui/material';
+import { DirectionsCarFilledOutlined } from '@mui/icons-material';
 import {
   brandOptions, modelOptions, colorOptions, doorOptions, seatOptions, cylinderOptions, classOptions, fuelOptions, transmissionOptions, layoutOptions, locationOptions,
 } from '../../constant';
@@ -88,7 +89,7 @@ function CarRegister() {
             capacity: engineCapacity,
             image,
             location,
-            status: 'available',
+            status: 'Available',
             fuel,
             odometer,
           }),
@@ -141,6 +142,9 @@ function CarRegister() {
           {registerError}
         </Alert>
       </Snackbar>
+      <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
+        <DirectionsCarFilledOutlined />
+      </Avatar>
       <Typography component="h1" variant="h5">
         Car Register
       </Typography>

@@ -59,14 +59,14 @@ function App() {
 
     // CUSTOMER ROUTES
     {
-      path: '/auction-room/:id',
+      path: '/auction/room/:id',
       element: <Auction />,
       allowedRoles: ['USER'],
     },
 
     // SELLER ROUTES
     {
-      path: '/auction/create',
+      path: '/auction/create/:carId',
       element: <CreateAuction />,
       allowedRoles: ['USER'],
     },
