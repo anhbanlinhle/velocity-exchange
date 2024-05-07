@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import {
   Grid, Pagination, Box, TextField, MenuItem,
 } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 import PageTitle from '../../component/PageTitle';
 import Spinner from '../../component/Spinner';
 import CustomCard from '../../component/CustomCard';
@@ -12,16 +13,19 @@ import NoDataFound from '../../component/NoDataFound';
 
 function Home() {
   const userId = localStorage.getItem('userId') || 0;
+  const navigate = useNavigate();
   const serverUrl = import.meta.env.VITE_API_URL;
   const auctionListEndpoint = `${serverUrl}/home`;
   const filteredAuctionListEndpoint = `${serverUrl}/auction/filter`;
   const auctionDetailEndpoint = `${serverUrl}/auction/detail/`;
+  const registerEndpoint = `${serverUrl}/auction/regist`;
+  const unregisterEndpoint = `${serverUrl}/auction/unregist`;
   const [auctionList, setAuctionList] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(0);
   const itemsPerPage = 8;
-  const [filter, setFilter] = useState(AuctionFilter.ALL);
+  const [filter, setFilter] = useState(userId !== 0 ? AuctionFilter.UNREGISTERED : AuctionFilter.ALL);
 
   const [openDetail, setOpenDetail] = useState(false);
   const [auctionDetails, setAuctionDetails] = useState({});
@@ -114,13 +118,62 @@ function Home() {
     setPage(value);
   };
 
+  const handleRegistClick = (auctionId, isRegistered) => {
+    if (userId === 0) {
+      navigate('/login');
+    }
+    if (!isRegistered) {
+      const registAuction = async () => {
+        try {
+          const requestOptions = {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ userId, auctionId }),
+          };
+
+          const response = await fetch(registerEndpoint, requestOptions);
+          if (!response.ok) {
+            throw response;
+          }
+          fetchAuctionList();
+        } catch (error) {
+          console.log(error);
+        }
+      };
+      registAuction();
+    } else {
+      const unregistAuction = async () => {
+        try {
+          const requestOptions = {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ userId, auctionId }),
+          };
+
+          const response = await fetch(unregisterEndpoint, requestOptions);
+          if (!response.ok) {
+            throw response;
+          }
+          fetchAuctionList();
+        } catch (error) {
+          console.log(error);
+        }
+      };
+      unregistAuction();
+    }
+  };
+
   return (
     <>
       <Spinner isLoading={isLoading} />
 
       {/* Title and filter options */}
       <Box sx={{ display: 'flex', justifyContent: 'space-between', marginTop: '1rem' }}>
-        <PageTitle title="Public Auction" />
+        <PageTitle title={`${filter.charAt(0) + filter.slice(1).toLowerCase()} Auction`} />
         {userId !== 0 && (
           <TextField
             id="filter"
@@ -160,8 +213,8 @@ function Home() {
                   }}
                   type={CardType.AUCTION}
                   handleDetailClick={() => handleDetailClick(auction.id)}
-                  // TODO: Add registered prop
                   registered={auction.isRegist || filter === AuctionFilter.REGISTERED}
+                  handleRegisterClick={() => handleRegistClick(auction.id, auction.isRegist || filter === AuctionFilter.REGISTERED)}
                 />
               </Grid>
             ))}

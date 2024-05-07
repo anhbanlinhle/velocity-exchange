@@ -110,7 +110,7 @@ function Header() {
   const handleLogout = () => {
     setAnchorElUser(null);
     localStorage.clear();
-    navigate('/');
+    window.location.href = '/';
   };
 
   return (
