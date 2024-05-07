@@ -21,7 +21,7 @@ let homepage = async (req, res) => {
       left join bid as b on a.id = b.auction_id
       left join car as c on a.car_id = c.id
       where r.customer_id = ?
-      and (a.status = 'ONGOING' or a.status = 'PENDING')
+      and (a.status = 'ONGOING' or a.status = 'INCOMING')
       group by a.id)
       union
       (select a.id, a.name, a.date_started, a.date_expired, a.bid_step, a.initial_price, a.status,
@@ -34,7 +34,7 @@ let homepage = async (req, res) => {
       from auction as a
       join auction_registration as r on a.id = r.auction_id
       where r.customer_id = ?)
-      and (a.status = 'ONGOING' or a.status = 'PENDING')
+      and (a.status = 'ONGOING' or a.status = 'INCOMING')
       group by a.id
       )
       order by id desc
@@ -44,7 +44,7 @@ let homepage = async (req, res) => {
 
     let [rows, dump1] = await pool.query(query, [userId, userId, pageSize, offset])
 
-    let [totalResult, dump2] = await pool.query('select count(*) as total from auction where status = "ONGOING"')
+    let [totalResult, dump2] = await pool.query('select count(*) as total from auction where status = "ONGOING" or status = "INCOMING"')
 
     return res.status(200).send({data: rows, pages: Math.ceil(totalResult[0].total / pageSize)})
   }
