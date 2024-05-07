@@ -20,6 +20,8 @@ let updateDB = async (req, res, next) => {
           console.log(bidder[0].customer_id, allAuction[0][i].car_id, payment.insertId)
 
           await pool.execute('insert into verification_request (seller_id, car_id, status, time, admin_id, payment_id) value (?, ?, ?, NOW(), ?, ?)', [bidder[0].customer_id, allAuction[0][i].car_id, 'APPROVED', 1, payment.insertId])
+
+          await pool.query('update car set status_in_storage = "Available" where id = ?', [allAuction[0][i].car_id])
         }
       }
     }
