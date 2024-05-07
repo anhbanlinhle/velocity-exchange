@@ -25,7 +25,7 @@ function Home() {
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(0);
   const itemsPerPage = 8;
-  const [filter, setFilter] = useState(userId !== 0 ? AuctionFilter.UNREGISTERED : AuctionFilter.ALL);
+  const [filter, setFilter] = useState(AuctionFilter.ALL);
 
   const [openDetail, setOpenDetail] = useState(false);
   const [auctionDetails, setAuctionDetails] = useState({});
@@ -113,6 +113,13 @@ function Home() {
     setIsLoading(true);
     fetchAuctionList();
   }, [page, filter]);
+
+  // TODO: Stop polling if not at Home page
+  // useEffect(() => {
+  //   setInterval(() => {
+  //     fetchAuctionList();
+  //   }, 5000);
+  // }, []);
 
   const handlePageChange = (event, value) => {
     setPage(value);
