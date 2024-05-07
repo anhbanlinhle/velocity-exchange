@@ -31,10 +31,10 @@ function CustomCard({
     case CardType.VERIFICATION_REQUEST:
       return (
         <>
-          <Button variant="outlined" color="success" onClick={handleApproveClick} disabled={!status === Status.PENDING}>
+          <Button variant="outlined" color="success" onClick={handleApproveClick} disabled={status !== Status.PENDING}>
             {status === Status.APPROVED ? 'Approved' : 'Approve'}
           </Button>
-          <Button variant="outlined" color="error" onClick={handleRejectClick} disabled={!status === Status.PENDING}>
+          <Button variant="outlined" color="error" onClick={handleRejectClick} disabled={status !== Status.PENDING}>
             {status === Status.REJECTED ? 'Rejected' : 'Reject'}
           </Button>
         </>
