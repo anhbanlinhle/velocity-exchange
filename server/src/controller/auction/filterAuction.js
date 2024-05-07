@@ -21,7 +21,7 @@ let filterAuction = async (req, res) => {
     let total = ``
     if (filter === 'REGISTERED') {
       query = `
-        select a.id, a.name, a.date_started, a.date_expired, a.bid_step, a.initial_price,
+        select a.id, a.name, a.date_started, a.date_expired, a.bid_step, a.initial_price, a.status,
           c.image, max(b.price)
         from auction as a
         join auction_registration as r on a.id = r.auction_id
@@ -41,7 +41,7 @@ let filterAuction = async (req, res) => {
     }
     else {
       query = `
-        select a.id, a.name, a.date_started, a.date_expired, a.bid_step, a.initial_price,
+        select a.id, a.name, a.date_started, a.date_expired, a.bid_step, a.initial_price, a.status,
           c.image, max(b.price)
         from auction as a
         left join bid as b on a.id = b.auction_id
@@ -51,6 +51,7 @@ let filterAuction = async (req, res) => {
         from auction as a
         join auction_registration as r on a.id = r.auction_id
         where r.customer_id = ?)
+        and (a.status = 'ONGOING' or a.status = 'PENDING')
         group by a.id
         order by a.id desc
         limit ? offset ?
@@ -63,6 +64,7 @@ let filterAuction = async (req, res) => {
         from auction as a
         join auction_registration as r on a.id = r.auction_id
         where r.customer_id = ?)
+        and (a.status = 'ONGOING' or a.status = 'PENDING')
       `
     }
     

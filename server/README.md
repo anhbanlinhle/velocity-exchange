@@ -50,13 +50,21 @@
 |-|-|
 |`userId`|User's account ID|
 
-### 6. Regist Car
+### 6. Car Detail
+
+`/car/detail/`
+
+|Parameter|Description|
+|-|-|
+|`carId`|Car's ID|
+
+### 7. Regist Car
 
 `/car/regist/`
 
 work in process
 
-### 7. Pending Requests List
+### 8. Pending Requests List
 
 `/admin/request/`
 
@@ -65,7 +73,7 @@ work in process
 |`pageNo`|Index of page|
 |`pageSize`|Number of results per page|
 
-### 8. Filter Verification Request
+### 9. Filter Verification Request
 
 `/admin/request/filter/`
 
@@ -75,7 +83,7 @@ work in process
 |`pageSize`|Number of results per page|
 |`status`|*PENDING* or *APPROVED* or *REJECTED*|
 
-### 9. Verification Request Details
+### 10. Verification Request Details
 
 `/admin/request/detail/`
 
@@ -83,7 +91,7 @@ work in process
 |-|-|
 |`requestId`|Verification request's ID|
 
-### 10. Handle Verification Requests
+### 11. Handle Verification Requests
 
 `/admin/request/handle/`
 
@@ -93,7 +101,7 @@ work in process
 |`adminId`|Admin's account ID|
 |`status`|*APPROVED* or *REJECTED*|
 
-### 11. Create Auction
+### 12. Create Auction
 
 `/auction/create/`
 
@@ -108,7 +116,7 @@ work in process
 |`initialPrice`|Minimum price|
 |`deposit`|Cost to participate in the auction|
 
-### 12. Regist Auction
+### 13. Regist Auction
 
 `/auction/regist/`
 
@@ -117,7 +125,7 @@ work in process
 |`userId`|Account's ID|
 |`auctionId`|Auction's ID|
 
-### 13. Unregist Auction
+### 14. Unregist Auction
 
 `/auction/unregist/`
 
@@ -126,7 +134,7 @@ work in process
 |`userId`|Account's ID|
 |`auctionId`|Auction's ID|
 
-### 14. Registered/Unregistered Auctions List
+### 15. Registered/Unregistered Auctions List
 
 `/auction/filter/`
 
@@ -137,7 +145,7 @@ work in process
 |`userId`|Account's ID|
 |`filter`|*REGISTERED* or *UNREGISTERED*|
 
-### 15. Place Bid
+### 16. Place Bid
 
 `/auction/bid/`
 
