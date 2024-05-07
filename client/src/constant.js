@@ -16,6 +16,13 @@ export const AuctionFilter = Object.freeze({
   UNREGISTERED: 'UNREGISTERED',
 });
 
+export const VerificationRequestFilter = Object.freeze({
+  ALL: 'ALL',
+  PENDING: 'PENDING',
+  APPROVED: 'APPROVED',
+  REJECTED: 'REJECTED',
+});
+
 export const brandOptions = [
   'Chevrolet',
   'Volkswagen',
