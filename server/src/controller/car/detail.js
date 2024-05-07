@@ -8,7 +8,9 @@ let detail = async (req, res) => {
   }
   try {
     let query = `
-      select * from car where id = ?
+    select c.*, v.status from car as c
+    join verification_request as v on v.car_id = c.id
+    where c.id = ?
     `
 
     let [rows, fields] = await pool.query(query, [carId])

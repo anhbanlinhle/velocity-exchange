@@ -4,7 +4,7 @@ let updateDB = async (req, res, next) => {
   console.log('Updating database...')
 
   try {
-    let allAuction = await pool.query('select id, car_id, date_expired from auction where status != "COMPLETED"')
+    let allAuction = await pool.query(`select id, car_id, date_started, date_expired, status from auction where status = 'INCOMING' or status = 'ONGOING'`)
     let now = new Date().getTime()
     for (let i = 0; i < allAuction[0].length; i++) {
       if (new Date(allAuction[0][i].date_expired).getTime() < now) {
@@ -22,6 +22,11 @@ let updateDB = async (req, res, next) => {
           await pool.execute('insert into verification_request (seller_id, car_id, status, time, admin_id, payment_id) value (?, ?, ?, NOW(), ?, ?)', [bidder[0].customer_id, allAuction[0][i].car_id, 'APPROVED', 1, payment.insertId])
 
           await pool.query('update car set status_in_storage = "Available" where id = ?', [allAuction[0][i].car_id])
+        }
+      }
+      else if (new Date(allAuction[0][i].date_started).getTime() < now) {
+        if (allAuction[0][i].status === 'INCOMING') {
+          await pool.query('update auction set status = "ONGOING" where id = ?', [allAuction[0][i].id])
         }
       }
     }
