@@ -39,12 +39,12 @@ function Auction() {
 
       const response = await fetch(auctionDetailEndpoint, requestOptions);
       if (!response.ok) {
-        throw new Error('Failed to fetch auction details');
+        throw response;
       }
       const data = await response.json();
       setAuctionDetail(data[0]);
     } catch (error) {
-      console.log(error.message);
+      console.log(error.ErrorCode);
     }
   };
 
