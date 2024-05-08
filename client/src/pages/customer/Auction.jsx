@@ -122,47 +122,6 @@ function Auction() {
     setOpenResult(true);
   };
 
-  const AuctionInfo = React.memo(({ detail, descript }) => (
-    <Card sx={{
-      width: '100%',
-      height: '100%',
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      justifyContent: 'center',
-      borderRadius: '0.5rem',
-      '&:hover': {
-        cursor: 'pointer',
-      },
-    }}
-    >
-      <CardMedia
-        component="img"
-        height="140"
-        image={detail.image}
-        alt={detail.name}
-      />
-      <CardContent>
-        <Typography variant="h6" component="div" sx={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
-          {detail.name}
-        </Typography>
-        <Typography variant="body2" color="text.secondary" sx={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
-          {Object.entries(descript).map(([key, value]) => (
-            <React.Fragment key={key}>
-              <Box component="span" fontWeight="fontWeightBold">
-                {key}
-                :
-              </Box>
-              {' '}
-              {value}
-              <br />
-            </React.Fragment>
-          ))}
-        </Typography>
-      </CardContent>
-    </Card>
-  ));
-
   return (
     <>
       <PageTitle title="Auction Room" />
@@ -178,9 +137,9 @@ function Auction() {
         }}
       >
         <Grid container spacing={5} sx={{ gridAutoRows: '1 fr' }}>
-          {/* <Grid item xs={12} sm={6}> */}
-          {/* Auction info */}
-          {/* <Card sx={{
+          <Grid item xs={12} sm={6}>
+            {/* Auction info */}
+            <Card sx={{
               width: '100%',
               height: '100%',
               display: 'flex',
@@ -220,9 +179,6 @@ function Auction() {
                 </Typography>
               </CardContent>
             </Card>
-          </Grid> */}
-          <Grid item xs={12} sm={6}>
-            <AuctionInfo detail={auctionDetail} descript={description} />
           </Grid>
           <Grid item xs={12} sm={6}>
             <Card sx={{
