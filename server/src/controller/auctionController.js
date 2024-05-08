@@ -5,6 +5,7 @@ import {registAuction} from './auction/registAuction'
 import {unregistAuction} from './auction/unregistAuction'
 import {makeBid} from './auction/makeBid'
 import {winner} from './auction/auctionWinner'
+import {currentPrice} from './auction/currentPrice'
 
 module.exports = {
   auctionDetail,
@@ -13,5 +14,6 @@ module.exports = {
   registAuction,
   unregistAuction,
   makeBid,
-  winner
+  winner,
+  currentPrice
 }
