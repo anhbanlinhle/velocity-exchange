@@ -61,7 +61,6 @@ class IVerificationRequestDatabase <<interface>> {
 
 
 class VerificationRequest {
-VerificationRequest
 - id: Int
 - sellerId: Int
 - carId: Int

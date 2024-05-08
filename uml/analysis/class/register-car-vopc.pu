@@ -36,7 +36,6 @@ class Car <<entity>> {
 }
 
 class VerificationRequest <<entity>> {
-VerificationRequest
   id: Int
   seller id: Int
   car id: Int
