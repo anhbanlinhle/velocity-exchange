@@ -220,7 +220,7 @@ function Home() {
                     'End Date': auction.date_expired,
                     'Bid Step': formatCurrency(auction.bid_step),
                     'Initial Price': formatCurrency(auction.initial_price),
-                    'Current Price': formatCurrency(auction.current_price),
+                    'Current Price': formatCurrency(auction['max(b.price)']),
                   }}
                   type={CardType.AUCTION}
                   auctionStatus={auction.status}
@@ -256,7 +256,7 @@ function Home() {
               Doors: auctionDetails.door,
               Seats: auctionDetails.seat,
               Layout: auctionDetails.layout,
-              Tranmission: auctionDetails.transmission,
+              Transmission: auctionDetails.transmission,
               'Engine Cylinder': auctionDetails.engine_cylinders,
               'Engine Capacity': auctionDetails.engine_capacity,
               Fuel: auctionDetails.fuel,
