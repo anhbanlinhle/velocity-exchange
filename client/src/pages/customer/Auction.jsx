@@ -9,6 +9,9 @@ import {
   InputAdornment,
   Button,
 } from '@mui/material';
+import IconButton from '@mui/material/IconButton';
+import AddIcon from '@mui/icons-material/Add';
+import RemoveIcon from '@mui/icons-material/Remove';
 import CountdownTimer from '../../component/CountdownTimer';
 import PageTitle from '../../component/PageTitle';
 import formatCurrency from '../../utils/currencyFormat';
@@ -26,6 +29,7 @@ function Auction() {
   const auctionDetailEndpoint = `${serverUrl}/auction/detail/`;
   const placeBidEndpoint = `${serverUrl}/auction/bid`;
   const winnerBidEndpoint = `${serverUrl}/auction/winner`;
+  const currentPriceEndpoint = `${serverUrl}/auction/price/`;
 
   const fetchAuctionDetails = async () => {
     try {
@@ -48,18 +52,51 @@ function Auction() {
     }
   };
 
+  const getCurrentPrice = async () => {
+    try {
+      const requestOptions = {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ auctionId: id }),
+      };
+
+      const response = await fetch(currentPriceEndpoint, requestOptions);
+      if (!response.ok) {
+        throw response;
+      }
+      const data = await response.json();
+      setCurrentPrice(data.data.currentPrice);
+    } catch (error) {
+      console.log(error.ErrorCode);
+    }
+  };
+
   useEffect(() => {
     const interval = setInterval(() => {
-      fetchAuctionDetails();
-    }, 3000);
+      getCurrentPrice();
+    }, 1000);
     return () => clearInterval(interval);
   }, []);
 
-  useEffect(() => {
-    setCurrentPrice(auctionDetail.highest_bid);
-  }, [auctionDetail]);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     fetchAuctionDetails();
+  //   }, 3000);
+  //   return () => clearInterval(interval);
+  // }, []);
 
-  const endTime = auctionDetail.date_expired;
+  useEffect(() => {
+    fetchAuctionDetails();
+    getCurrentPrice();
+  }, []);
+  const bidStep = auctionDetail.bid_step;
+
+  // useEffect(() => {
+  //   setCurrentPrice(auctionDetail.highest_bid);
+  // }, [auctionDetail]);
+
   const description = {
     'Initial Price': formatCurrency(auctionDetail.initial_price),
     Class: auctionDetail.class,
@@ -188,9 +225,11 @@ function Auction() {
               flexDirection: 'column',
               alignContent: 'center',
               justifyContent: 'space-around',
+              boxShadow: '0 8px 40px -12px #033090',
               borderRadius: '0.5rem',
               '&:hover': {
                 cursor: 'pointer',
+                boxShadow: '0 16px 70px -12.125px #033090',
               },
             }}
             >
@@ -203,7 +242,7 @@ function Auction() {
                 <Typography variant="h5" display="block">
                   Time remaining:
                 </Typography>
-                <CountdownTimer endTime={endTime} handleEnded={handleEndAuction} />
+                <CountdownTimer endTime={auctionDetail.date_expired} handleEnded={handleEndAuction} />
               </Box>
               <Box sx={{
                 display: 'flex',
@@ -247,10 +286,26 @@ function Auction() {
                 type="number"
                 InputProps={{
                   inputProps: { min: auctionDetail.highest_bid },
-                  endAdornment: <InputAdornment position="end">VND</InputAdornment>,
+                  endAdornment: (
+                    <InputAdornment position="end">
+                      <IconButton
+                        size="small"
+                        onClick={() => setBid(Math.max(bid - bidStep, currentPrice))}
+                      >
+                        <RemoveIcon />
+                      </IconButton>
+                      <IconButton
+                        size="small"
+                        onClick={() => setBid(Math.max(currentPrice + bidStep, bid + bidStep))}
+                      >
+                        <AddIcon />
+                      </IconButton>
+                      VND
+                    </InputAdornment>
+                  ),
                 }}
                 value={bid}
-                onChange={(e) => setBid(e.target.value)}
+                onChange={(e) => setBid(Number(e.target.value))}
               />
               <Button
                 variant="contained"
